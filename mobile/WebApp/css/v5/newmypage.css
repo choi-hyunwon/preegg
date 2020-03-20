@@ -1,0 +1,464 @@
+@charset "UTF-8";
+
+/* 20190906 new 마이페이지 css */
+.new-mypage-main > article {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.new-mypage-main > article.inner-banner {
+    border: none;
+}
+
+.new-mypage-main > article.inner-banner img {
+    width: 320px;
+    height: auto!important;
+}
+
+.new-mypage-main .ico-link-wrap {
+
+}
+
+.new-mypage-main .ico-link-wrap .new-dot {
+    display: inline-block;
+    border-radius: 10px;
+    width: 4px;
+    height: 4px;
+    background-color: #f8465b;
+    vertical-align: top;
+    margin-left: 2px;
+}
+
+.new-mypage-main .ico-link-wrap > li {
+    display: table;
+    width: 100%;
+}
+
+.new-mypage-main .ico-link-wrap > li .link-item {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    height: 50px;
+    padding-left: 50px;
+    padding-right: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -1.0px;
+    color: #373e46;
+}
+
+.new-mypage-main .ico-link-wrap > li .link-item.smt-receipt {
+    background: url(./../../images/mycgv/v5/ico-smtr.png) left center no-repeat;
+    background-size: 20px;
+}
+.new-mypage-main .ico-link-wrap > li .link-item.see-history {
+    background: url(./../../images/mycgv/v5/ico-paylist.png) left center no-repeat;
+    background-size: 20px;
+}
+
+.new-mypage-main .ico-link-wrap > li .link-item.use-card {
+    background: url(./../../images/mycgv/v5/ico-use-card.png) left 20px center no-repeat;
+    background-size: 20px;
+}
+.new-mypage-main .ico-link-wrap > li .link-item.fav-cgv {
+    background: url(./../../images/mycgv/v5/ico-fav-cgv.png) left 20px center no-repeat;
+    background-size: 20px;
+}
+.new-mypage-main .ico-link-wrap > li .link-item.view-submit {
+    background: url(./../../images/mycgv/v5/ico-view-add.png) left 20px center no-repeat;
+    background-size: 20px;
+}
+.new-mypage-main .ico-link-wrap > li .link-item.storept-add {
+    background: url(./../../images/mycgv/v5/ico-store-pnt.png) left 20px center no-repeat;
+    background-size: 20px;
+}
+.new-mypage-main .ico-link-wrap > li .link-item.collpt-add {
+    background: url(./../../images/mycgv/v5/ico-col-pnt.png) left 20px center no-repeat;
+    background-size: 20px;
+}
+.new-mypage-main .ico-link-wrap > li .link-item.set-privacy {
+    background: url(./../../images/mycgv/v5/ico-priv.png) left 20px center no-repeat;
+    background-size: 20px;
+}
+.new-mypage-main .ico-link-wrap > li .link-item.comm-notice {
+    background: url(./../../images/mycgv/v5/ico-notice.png) left 20px center no-repeat;
+    background-size: 20px;
+}
+.new-mypage-main .ico-link-wrap > li .link-item.info-center {
+    background: url(./../../images/mycgv/v5/ico-center.png) left 20px center no-repeat;
+    background-size: 20px;
+}
+.new-mypage-main .ico-link-wrap > li .link-item.my-setting {
+    background: url(./../../images/mycgv/v5/ico-setting.png) left 20px center no-repeat;
+    background-size: 20px;
+}
+
+
+.new-mypage-main .ico-link-wrap > li .link-item.right-arr:after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 8px;;
+    background: url(./../../images/mycgv/v5/ico-arr-right.png) no-repeat;
+    background-size: 6px 8px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.new-mypage-main .ico-link-wrap.hr-align {
+    overflow: hidden;
+}
+
+.new-mypage-main .ico-link-wrap.hr-align:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.new-mypage-main .ico-link-wrap.hr-align > li {
+    float: left;
+    width: 50%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.new-mypage-main .ico-link-wrap.hr-align > li.single-item {
+    width: 100%;
+}
+
+.new-mypage-main .ico-link-wrap.hr-align > li > div {
+    text-align: center;
+}
+
+.new-mypage-main .ico-link-wrap.hr-align > li + li > div {
+    border-left: 1px solid #eff0f1;
+}
+
+.new-mypage-main .ico-link-wrap.hr-align > li .link-item {
+    position: relative;
+    height: 30px;
+    padding-right: 4px;
+    display: inline-block;
+    padding-left: 28px;
+    line-height: 29px;
+}
+
+.new-mypage-main .ico-link-wrap.hr-align .new-dot {
+    position: absolute;
+    left: 17px;
+    top: 4px;
+}
+
+.new-mypage-main .round-ico-wrap {
+    overflow: hidden;
+    padding: 0 7px 20px;
+}
+
+.new-mypage-main .round-ico-wrap:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.new-mypage-main .round-ico-wrap > li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.new-mypage-main .round-ico-wrap > li .round-item {
+    display: block;
+    position: relative;
+    padding-top: 78px;
+    font-size: 13px;
+    color: #4b4f56;
+    letter-spacing: -1px;
+}
+
+.new-mypage-main .round-ico-wrap > li .round-item img {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 52px;
+}
+
+.new-mypage-main .round-ico-wrap > li .round-item .ico-stack {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #000;
+    top : 15px;
+    left: 50%;
+    transform: translateX(10px);
+    font-size: 11px;
+    line-height: 20px;
+    color: white;
+}
+
+.new-mypage-main .signed-club-wrap {
+    border-top: 1px solid #eff0f1;
+    position: relative;
+    min-height: 50px;
+}
+
+.new-mypage-main .signed-club-wrap .none-club-msg {
+    color: #9197a3;
+    font-size: 15px;
+    line-height: 50px;
+    white-space: nowrap;
+    padding: 0 100px 0 20px;
+}
+
+.new-mypage-main .signed-club-wrap .link-club {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    color: #373e46;
+    border-radius: 50px;
+    border: 1px solid #dedede;
+    padding: 3px 12px;
+}
+
+.new-mypage-main .stack-txt {
+    margin-left: 4px;
+    font-size: 13px;
+    color: #f8465b;
+}
+
+.new-mypage-main .signed-club-wrap .have-club {
+    display: block;
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #000;
+    background : none;
+    border: none;
+    text-align: left;
+    background: url(./../../images/mycgv/v5/ico-arr-down.png) right 20px center no-repeat;
+    background-size: 10px 4px;
+}
+
+.new-mypage-main .signed-club-wrap.__opened .have-club {
+    background: url(./../../images/mycgv/v5/ico-arr-up.png) right 20px center no-repeat;
+    background-size: 10px 4px;
+}
+
+.new-mypage-main .signed-club-wrap .club-wrap {
+    height: 0;
+    overflow: hidden;
+}
+
+.new-mypage-main .signed-club-wrap .club-wrap .item-container {
+    /* padding: 4px 20px 20px; */
+}
+
+.new-mypage-main .signed-club-wrap .club-wrap .item-inner-wrap {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 4px 20px 20px;
+}
+
+.new-mypage-main .signed-club-wrap.__opened .club-wrap {
+    height: auto;
+}
+
+.new-mypage-main .signed-club-wrap .club-wrap .item-inner-wrap > .slide-item {
+    display: inline-block;
+}
+
+.new-mypage-main .signed-club-wrap .club-wrap .item-inner-wrap > .slide-item + .slide-item {
+    margin-left: 14px;
+}
+
+.new-mypage-main .signed-club-wrap div[class^="club-item"] {
+    position: relative;
+}
+
+.new-mypage-main .signed-club-wrap .club-link{
+    display: block;
+    padding-top: 54px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-width: 54px;
+}
+
+.new-mypage-main .signed-club-wrap .club-link > img {
+    height: 54px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.new-mypage-main .signed-club-wrap .club-link > span {
+    display: inline-block;
+    font-size: 12px;
+    color: #4b4f56;
+    margin-top: 6px;
+    letter-spacing: -1px;
+}
+
+.new-mypage-main .user-info .user-info-detail {
+    padding: 26px 90px 26px 30px;
+    min-height: 112px;
+    position: relative;
+}
+
+.new-mypage-main .user-info .user-info-detail h1 {
+    font-size: 22px;
+    color: #000;
+    font-weight: 600; 
+    letter-spacing: -1px;
+    margin-top: 6px;
+}
+
+.new-mypage-main .user-info .user-info-detail h1 i {
+    font-style: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.new-mypage-main .user-info .user-info-detail .user-name {
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: -1px;
+    max-width: calc(100% - 32px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.new-mypage-main .user-info .user-info-detail .greeting {
+    margin-top: 8px;
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+
+.new-mypage-main .user-info .user-info-detail a.greeting {
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.new-mypage-main .user-info .user-info-detail .greeting > a {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 11px;
+    border-radius: 50px;
+    border: 1px solid #dedede;
+    padding: 3px 16px 3px 8px;
+    background: url(./../../images/mycgv/v5/ico-arr-right.png) right 8px center no-repeat;
+    background-size: 6px 8px;
+}
+
+.new-mypage-main .user-info .user-info-detail .user-img-wrap {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 30px;
+    top: 26px;
+    overflow: hidden;
+    background: url(./../../images/mycgv/v5/bg-user-profile.png) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border:1px solid #e6e7ea;
+}
+
+.new-mypage-main .user-info .user-info-detail .user-img-wrap > img {
+    width: auto;
+    max-width: 100%;
+    height:auto;    
+    min-height: 62px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    object-position: center;
+}
+
+.new-mypage-main .user-info .etc-info-wrap {
+    overflow: hidden;
+    padding: 25px 0 18px;
+}
+
+.new-mypage-main .user-info .user-info-detail + .etc-info-wrap {
+    padding-top: 0;
+}
+
+.new-mypage-main .user-info .etc-info-wrap:After {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.new-mypage-main .user-info .etc-info-wrap > a {
+    display: block;
+    text-align: center;
+    float: left;
+    box-sizing: border-box;
+}
+
+.new-mypage-main .user-info .etc-info-wrap > a + a {
+    border-left: 1px solid #eff0f1;
+}
+
+.new-mypage-main .user-info .etc-info-wrap > a:first-child {
+    width: 28%;
+}
+
+.new-mypage-main .user-info .etc-info-wrap > a:nth-child(2) {
+    width: 42%;
+}
+
+.new-mypage-main .user-info .etc-info-wrap > a:nth-child(3) {
+    width: 30%;
+}
+
+.new-mypage-main .user-info .etc-upper-cont {
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.new-mypage-main .user-info .etc-upper-cont.etc-grade-vip {
+    color: #995cce;
+}
+
+.new-mypage-main .user-info .etc-upper-cont.etc-grade-rvip {
+    color: #4a90e2;
+}
+
+.new-mypage-main .user-info .etc-upper-cont.etc-grade-vvip {
+    color: #12b59f;
+}
+
+.new-mypage-main .user-info .etc-upper-cont.etc-grade-svip {
+    color: #e64430
+}
+
+.new-mypage-main .user-info .etc-upper-cont.etc-grade-normal {
+    color: #ff7900;
+}
+
+.new-mypage-main .user-info .etc-tit {
+    margin-top: 9px;
+    display: inline-block;
+    color: #9197a3;
+    font-size: 13px;
+}
+
+.new-mypage-main .user-info .etc-tit.right-arr {
+    padding-right: 8px;
+    background: url(./../../images/mycgv/v5/ico-arr-right.png) right center no-repeat;
+    background-size: 6px 8px;
+}

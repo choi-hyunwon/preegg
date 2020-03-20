@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+/*
+	이미지서버 적용시 img 경로 변경 
+	../images/magazine/ -> http://img.cgv.co.kr/r2014/images/sub/magazine/
+*/
+.tit-heading-wrap.tit-mag .submenu a {margin-left:25px}
+.tit-heading-wrap.tit-mag .submenu span{font-size:15px; font-style:normal; font-weight:500; color:#333}
+.tit-heading-wrap.tit-mag .submenu a.on span{color:#e71a0f;padding-left:15px;background:url('../images/sub/magazine/ico_mag_arr1.png') no-repeat 0 2px}
+
+/* 매거진 리스트 */
+.sect-magazine-list {margin-bottom:80px;}
+.sect-magazine-list > .sect_desc {font-size:12px;margin:20px 0 25px 0;padding-left:15px; background:url('../images/sub/magazine/bul_billiard_11px.png') no-repeat 0 2px;}
+.sect-magazine-list ul {margin:-14px 0 0 -14px}
+.sect-magazine-list ul li {float:left;margin:14px 0 0 13px;border:1px solid #edeae0;width:316px; height:508px; background:#fff; box-shadow:#e5e4da 0 0 3px; }
+.sect-magazine-list ul li dl {padding:23px 20px 0}
+.sect-magazine-list ul li span {display:block}
+.sect-magazine-list ul li .thumb {margin-bottom:9px;}
+.sect-magazine-list ul#list_container li a.thumb {display: block;margin-bottom: 0;}
+.sect-magazine-list ul li .thumb > img {width:316px; height:316px;}
+.sect-magazine-list ul li .tit_txt {margin-bottom:7px; font-size:21px; color:#222; font-weight:500; letter-spacing:-1px;}
+.sect-magazine-list ul li .tit_em {margin-bottom:10px; font-size:15px; color:#e71a0f; text-decoration:underline;}
+.sect-magazine-list ul li dd:before,.sect-magazine-list ul li dd:after{content: " "; /* 1 */display: table; /* 2 */}
+.sect-magazine-list ul li dd:after{clear: both;}
+.sect-magazine-list ul li dd{*zoom: 1;letter-spacing:-1px}
+.sect-magazine-list ul li dd > p {height:67px}
+.sect-magazine-list ul li dd .date {font:normal 11px verdana,sans-serif;float:left; color:#666;}
+.sect-magazine-list ul li dd .desc {font-size:13px; font-style:normal; line-height:1.6; font-weight:300; margin-bottom:5px;color:#222}
+.sect-magazine-list ul li dd .btn_detail {font-size:13px; font-style:normal;font-weight:300;float:right; padding-right:8px; text-decoration:none;color:#898987;letter-spacing:0; background:url('../images/sub/magazine/bul_link_arrow.png') no-repeat 100% 1px;}
+
+.sect-magazine-list ul li {float:left;margin:14px 0 0 13px;border:1px solid #edeae0;width:316px;background:#fff; box-shadow:#e5e4da 0 0 3px; }
+.sect-magazine-list ul .cgv_letter {border:0; height:510px; background:url('../images/sub/magazine/bg_frame_cgvletter.gif') no-repeat 0 0;}
+.sect-magazine-list ul .cgv_letter .cgvl_inner {padding:6px; text-align:center;}
+.sect-magazine-list ul .cgv_letter .cgvl_tit {padding:52px 0 22px;}
+.sect-magazine-list ul .cgv_letter .cgvl_txt {margin-bottom:22px; font-size:16px; color:#222; line-height:140%;}
+.sect-magazine-list ul .cgv_letter .cgvl_txt > em {color:#bf0404;}
+
+.r_btn {position:relative; display:inline-block; width:107px; height:34px; line-height:33px; margin:0 2px; font-weight:500; font-size:13px; color:#222; vertical-align:middle; border:1px solid #897b73;}
+a.r_btn {height:32px;}
+.r_btn:before, .r_btn:after , .r_btn > *:before, .r_btn > *:after{ content:''; display:block; position:absolute; width:4px; height:4px; background:transparent url('../images/sub/magazine/bg_sprite_btn.png') no-repeat  0 0;}
+.r_btn:before{left:-1px; top:-1px; background-position:0 0;}
+.r_btn:after{left:-1px; bottom:-1px; background-position: 0 -4px;}
+.r_btn > *:before{right:-1px; top:-1px; background-position:-4px 0;}
+.r_btn > *:after{right:-1px; bottom:-1px; background-position:-4px -4px;}
+
+.r_btn.red {border:1px solid #b11c1c; background-color:#b11c1c; color:#fff;}
+.r_btn.red:before{left:-1px; top:-1px; background-position:0 -20px;}
+.r_btn.red:after{left:-1px; bottom:-1px; background-position: 0 -24px;}
+.r_btn.red > *:before{right:-1px; top:-1px; background-position:-4px -20px;}
+.r_btn.red > *:after{right:-1px; bottom:-1px; background-position:-4px -24px;}
+
+.r_btn2 {position:relative; display:inline-block; min-width:74px; height:34px; line-height:33px; margin:0 2px; padding:0 13px; font-weight:500; font-size:15px; color:#333; vertical-align:middle; border:1px solid #999999;}
+a.r_btn2 {height:32px;}
+.r_btn2:before, .r_btn2:after , .r_btn2 > *:before, .r_btn2 > *:after{ content:''; display:block; position:absolute; width:4px; height:4px; background:transparent url('../images/sub/magazine/bg_sprite_btn.png') no-repeat  0 0;}
+.r_btn2:before{left:-1px; top:-1px; background-position:-20px 0;}
+.r_btn2:after{left:-1px; bottom:-1px; background-position:-20px -6px;}
+.r_btn2 > *:before{right:-1px; top:-1px; background-position:-26px 0;}
+.r_btn2 > *:after{right:-1px; bottom:-1px; background-position:-26px -6px;}
+
+.r_btn2.red {border:1px solid #e71a0f; background-color:#e71a0f; color:#fff;}
+.r_btn2.red:before{left:-1px; top:-1px; background-position:-20px -20px;}
+.r_btn2.red:after{left:-1px; bottom:-1px; background-position:-20px -26px;}
+.r_btn2.red > *:before{right:-1px; top:-1px; background-position:-26px -20px;}
+.r_btn2.red > *:after{right:-1px; bottom:-1px; background-position:-26px -26px;}
+
+.r_btn.w130 {width:130px;}
+
+
+/* 매거진 디테일뷰 */
+.tit-heading-wrap2 {position:relative; min-height:51px; margin:30px 0; border-bottom:3px solid #241d1e;}
+.tit-heading-wrap2 > h3 {display:inline-block; position:relative; height:inherit; margin:0; background-image:none; color:#222; font-weight:500; font-size:36px; text-align:left; vertical-align:middle;}
+.tit-heading-wrap2 > .publ_info {overflow:hidden; padding:15px 0 12px; color:#666; font-weight:500;}
+.tit-heading-wrap2 > .publ_info > li {float:left; padding:0 6px; border-left:1px solid #666; line-height:100%;}
+.tit-heading-wrap2 > .publ_info > li:first-child {padding-left:0; border:0;}
+.tit-heading-wrap2 > .publ_info .txt_eng {display:inline-block; margin:-1px 0; font-family:Verdana; font-weight:bold;}
+.tit-heading-wrap2 > .like_box {position:absolute; right:0; bottom:15px; padding:7px 10px; width:69px; height:18px; border:1px solid #c9c9c9;}
+.tit-heading-wrap2 > .submenu {position:absolute; top:18px; right:0;}
+.tit-heading-wrap2 > .submenu > ul {overflow:hidden;}
+.tit-heading-wrap2 > .submenu > ul:after {content:''; clear:both; display:block;}
+.tit-heading-wrap2 > .submenu > ul > li {float:left; margin-left:15px;}
+.tit-heading-wrap2 > .submenu > ul > li:first-child {margin-left:0;}
+.tit-heading-wrap2 > .submenu > ul > li > a {display:inline-block; padding-left:13px; font-weight:500; font-size:15px;}
+.tit-heading-wrap2 > .submenu > ul > li.on > a,
+.tit-heading-wrap2 > .submenu > ul > li > a:hover,
+.tit-heading-wrap2 > .submenu > ul > li > a:focus {background:url('http://img.cgv.co.kr/r2014/images/common/ico/ico_arrow07.png') no-repeat 0 3px; color:#e40000;}
+.tit-heading-wrap2 .sect-sorting { display:inline-block; margin-top:0;}
+.tit-heading-wrap2 .btn_like {position:absolute;right:0;bottom:15px;width:47px;padding:8px 7px 8px 35px;border:1px solid #c9c9c9;vertical-align:middle;background:url(http://img.cgv.co.kr/r2014/images/culture/ico_like.png) no-repeat 10px 50%;text-align:center;font-size:14px;cursor:pointer;font-weight:500;cursor:pointer}
+.tit-heading-wrap2 .btn_like.on {background:url(http://img.cgv.co.kr/r2014/images/culture/ico_like_on.png) no-repeat 10px 50%;}
+
+
+/* 매거진 디테일뷰 : 슬라이드 모듈 */
+.sect-in-content {margin-top:30px !important; padding:0 64px;}
+.sect-out-content {margin-top:0 !important;}
+.slide_box {overflow:hidden; margin:0 auto 50px; width:852px; height:450px;}
+.slide_box .d_slider {overflow:hidden; position:relative; z-index:1; width:100%; height:100%;}
+.slide_box .d_slider > button[type='button'] {position:absolute; background-image:url('http://img.cgv.co.kr/r2014/images/sprite/sprite_btn.png'); background-repeat:no-repeat; font:0/0 a; zoom:1;}
+.slide_box .d_slider > .btn-prev, 
+.slide_box .d_slider > .btn-next, 
+.slide_box .d_slider > .btn-prev.dim, 
+.slide_box .d_slider > .btn-next.dim {overflow:hidden; top:50%; width:26px; height:52px; text-indent:100%; white-space:nowrap; margin-top:-26px;}
+.slide_box .d_slider > .btn-prev {left:19px; background-position:0 -97px;}
+.slide_box .d_slider > .btn-prev.dim {background-position:0 -155px;}
+.slide_box .d_slider > .btn-next {right:19px; background-position:-30px -97px;}
+.slide_box .d_slider > .btn-next.dim {background-position:-30px -155px;}
+.slide_box .d_slider .item-wrap {display:inline-block; float:left;}
+*+html .slide_box .d_slider .item-wrap {display:inline;}
+.slide_box .d_slider button[type='button'] {z-index:20;}
+.slide_box .d_slider button[type='button'].btn-pause, 
+.slide_box .d_slider button[type='button'].btn-play, 
+.slide_box .d_slider .item-wrap > button[type='button'] {overflow:hidden; position:absolute; top:415px; width:13px; height:13px; background:url('http://img.cgv.co.kr/r2014/images/sprite/sprite_icon.png') no-repeat 0 -90px; text-indent:100%; white-space:nowrap;}
+.slide_box .d_slider .item-wrap button[type='button'].on {background-position:-16px -90px;}
+.slide_box .d_slider .item-wrap > .item {position:absolute; z-index:5; text-align:center;}
+.slide_box .d_slider .item-wrap.on > .item {z-index:10;}
+.slide_box .d_slider .item-wrap.move > .item {z-index:15;}
+.slide_box .d_slider .item-wrap.on > .item > a {display:block;}
+.slide_box .d_slider .item-wrap > .item .ico-play {top:50%; left:50%; width:66px; height:66px; margin:-33px 0 0 -33px; background-position: -121px -21px;}
+.slide_box .d_slider button[type='button'].btn-play {left:534px; background-position:-32px -90px;}
+.slide_box .d_slider button[type='button'].btn-pause {left:551px; background-position:-48px -90px;}
+
+/* 매거진 디테일뷰 : 에디트 컨텐츠 */
+.edit_box {padding-bottom:50px;}
+
+/* 매거진 디테일뷰 : 영화상세/트레일러 */
+.detail_box {padding:50px 64px; background-color:#eeeade;}
+.detail_box_bg {display:none; position:absolute; left:0; top:0; right:0; bottom:0; padding:50px 64px; height:327px; background-color:#eeeade;}
+.detail_box .d_tab_wrap {position:relative;}
+.detail_box .d_tab_wrap:before {position:absolute; left:0; top:35px; width:100%; display:block; content:''; clear:both; border-bottom:2px solid #898987;}
+.detail_box .d_tab {overflow:hidden;}
+.d_tab > li {float:left; position:relative; display:inline-block; width:114px; height:37px; margin-left:2px; line-height:36px; text-align:center; background-color:#898987; font-weight:500; font-size:13px; color:#fff; /*vertical-align:middle; border:1px solid #897b73; */}
+.d_tab > li:first-child {margin-left:0;}
+.d_tab > li:before,
+.d_tab > li:after { content:''; display:block; position:absolute; width:4px; height:4px; background:#eeeade url('../images/sub/magazine/bg_sprite_tab.png') no-repeat 0 0;}
+.d_tab > li:before{left:0; top:0; background-position:0 0;}
+.d_tab > li:after{right:0; top:0; background-position:-4px 0;}
+.d_tab > li.on {background-color:#ea1400;}
+.d_tab > li.on:before{left:0; top:0; background-position:-20px 0;}
+.d_tab > li.on:after{right:0; top:0; background-position:-24px 0;}
+
+.d_tabcont {display:none;}
+.d_tabcont.on {display:block;}
+.d_tabcont .box-contents {width: 637px !important;}
+
+.d_tabcont .round:before, .d_tabcont .round:after, .d_tabcont .round > *:before, .d_tabcont .round > *:after {
+    background-color:#EEEADE;
+}
+.d_tabcont .sect-base-movie,
+.d_tabcont .sect-cols-player,
+.d_tabcont .sect-theater {margin-top:30px !important;}
+.d_tabcont .sect-cols-player{height:auto; padding:0; background:none;}
+.d_tabcont .sect-cols-player .col-playerinfo {width:194px;}
+.d_tabcont .sect-cols-player .col-playerinfo .descri-trailer textarea {background: none repeat scroll 0 0 #eeebdf; border: 1px solid #dbd7cd; color: #222; height: 316px; margin-top:8px; width: 172px;}
+.d_tabcont .sect-cols-player .col-playerinfo .title {color: #222; font-weight:500; font-size:12px;}
+
+.d_tabcont .sect-theater {overflow:hidden;}
+.d_tabcont .sect-theater .thumb {float:left;}
+.d_tabcont .sect-theater .theater_info {padding-left:520px;}
+.d_tabcont .sect-theater .tit {display:block; padding:10px 0 15px; font-weight:500; font-size:26px; color:#1a1919;}
+.d_tabcont .sect-theater .addr {margin-bottom:12px; font-weight:500; font-size:14px; color:#333333;}
+.d_tabcont .sect-theater .addr span {display:block; line-height:140%;}
+.d_tabcont .sect-theater .sub_info {margin-bottom:40px; font-size:14px; color:#333333;}
+
+/* 매거진 디테일뷰 : 댓글 */
+.comment_box {padding:0 64px;}
+.comment_box .sect-grade.comment .comment-enter .textarea textarea {width:619px;}
+
+/*매거진 디테일뷰 : 이전 다음 리스트 */
+.wrap-movie-detail > .inner {position:relative;width:980px;margin:0 auto;overflow:visible}
+.wrap-movie-detail .article-tit {margin-top:60px;text-align:left;position:relative;padding-bottom:18px;border-bottom:2px solid #222;font-weight:300;}
+.wrap-movie-detail .article-tit h3 {background-image:none;text-align:left;font:bold 40px Arial,helvetica;color:#222;margin:0 0 12px 0;padding:0}
+.wrap-movie-detail .article-tit p {font-family:Arial,helvetica}
+.wrap-movie-detail .article-tit .btn_like {position:absolute;right:0;bottom:15px;width:47px;padding:8px 7px 8px 35px;border:1px solid #c9c9c9;vertical-align:middle;background:url(http://img.cgv.co.kr/r2014/images/culture/ico_like.png) no-repeat 10px 50%;text-align:center;font-size:14px;cursor:pointer;font-weight:500;cursor:pointer}
+.wrap-movie-detail .article-tit .btn_like.on {background:url(http://img.cgv.co.kr/r2014/images/culture/ico_like_on.png) no-repeat 10px 50%;}
+.wrap-movie-detail .sect-article {padding:15px 0 0 0;width:850px!important;margin:0 auto}
+.wrap-movie-detail .sect-sns:before {border:none}
+.wrap-movie-detail .sect-sns {position:relative; padding-bottom:20px; margin-bottom:20px; border-bottom:2px solid #222;}
+.wrap-movie-detail .sect-sns .btn_go_list {position:absolute;font-size:16px; font-style:normal; font-weight:500; left:0px;bottom:20px;padding-left:25px;background:url(http://img.cgv.co.kr/r2014/images/culture/ico_prev1.png) no-repeat 2px 50%}
+.wrap-movie-detail .sect-sns ul{border:none}
+
+.wrap-movie-detail .sect-article-imglist {position:relative; margin-top:0 !important;}
+.wrap-movie-detail .sect-article-imglist .imglist_slide_box {overflow:hidden; position:relative; height:340px;}
+.wrap-movie-detail .sect-article-imglist .imglist {position:absolute; left:0; top:0;}
+.wrap-movie-detail .sect-article-imglist .imglist li {float:left; margin-left:15px; width:250px; height:310px; background:#fff; border:1px solid #edeae0; box-shadow:#e5e4da 0 0 3px;}
+.wrap-movie-detail .sect-article-imglist .imglist li:first-child {margin-left:0;}
+.wrap-movie-detail .sect-article-imglist .imglist li > a {display:block;}
+.wrap-movie-detail .sect-article-imglist .imglist li > a:focus {outline:0;}
+.wrap-movie-detail .sect-article-imglist .imglist li .tit_box {display:block; padding:13px 12px 0;}
+.wrap-movie-detail .sect-article-imglist .imglist li .tit {display:block; font-weight:500; font-size:16px; color:#222;}
+.wrap-movie-detail .sect-article-imglist .imglist li .date {display:block; font:normal 11px verdana,sans-serif; color:#666;}
+.wrap-movie-detail .sect-article-imglist .imglist li.hover {overflow:hidden; border:4px solid #222; width:244px; height:304px;}
+.wrap-movie-detail .sect-article-imglist .imglist li.hover > a {margin:-3px 0 0 -3px;}
+
+.sect-article-imglist > button[type='button'] {position:absolute; background-image:url('http://img.cgv.co.kr/r2014/images/sprite/sprite_btn.png'); background-repeat:no-repeat; font:0/0 a; zoom:1;}
+.sect-article-imglist > .btn-prev,
+.sect-article-imglist > .btn-next,
+.sect-article-imglist > .btn-prev.dim,
+.sect-article-imglist > .btn-next.dim {overflow:hidden; top:100px; width:26px; height:52px; text-indent:100%; white-space:nowrap;}
+.sect-article-imglist > .btn-prev {left:10px; background-position:0 -97px;}
+.sect-article-imglist > .btn-prev.dim {background-position:0 -155px;}
+.sect-article-imglist > .btn-next {right:10px; background-position:-30px -97px;}
+.sect-article-imglist > .btn-next.dim {background-position:-30px -155px;}
+

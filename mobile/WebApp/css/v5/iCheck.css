@@ -1,0 +1,82 @@
+/* iCheck plugin Square skin, red
+----------------------------------- */
+.icheckbox_square-red {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0 6px 0 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url('./../../images/payment/checkbox.png') no-repeat;
+	background-size: 75px 18px;
+    border: none;
+    cursor: pointer;
+}
+.icheckbox_square-red {
+    background-position: 0 0;
+}
+.icheckbox_square-red + label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    vertical-align: top;
+}
+.icheckbox_square-red.checked {
+    background-position: -25px 0;
+}
+.icheckbox_square-red.disabled {
+    background-position: -50px 0;
+}
+/* HiDPI support */
+/**** @media screen and (max-width: 1024px)  {
+    .icheckbox_square-red {
+        background-image: url(http://img.cgv.co.kr/WebApp/images/payment/checkbox.png);
+        -webkit-background-size: 75px 18px;
+        background-size: 75px 18px;
+    }
+} */
+
+/* 로그인 영역 추가 css */
+
+/* iCheck plugin circle skin, red
+----------------------------------- */
+.icheckbox_circle-red {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0 6px 0 0;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    background: url(checkbox_circle.png) no-repeat;
+    border: none;
+    cursor: pointer;
+	-webkit-background-size: 105px 28px;
+    background-size: 105px 28px;
+}
+.icheckbox_circle-red {
+    background-position: 0 0;
+}
+.icheckbox_circle-red + label {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 28px;
+    vertical-align: top;
+}
+.icheckbox_circle-red.checked {
+    background-position: -35px 0;
+}
+.icheckbox_circle-red.disabled {
+    background-position: -70px 0;
+}
+/* HiDPI support */
+/*
+@media screen and (max-width: 1024px)  {
+    .icheckbox_circle-red {
+        background-image: url(checkbox_circle.png);
+        -webkit-background-size: 105px 28px;
+        background-size: 105px 28px;
+    }
+}
+*/

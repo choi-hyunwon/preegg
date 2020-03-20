@@ -1,0 +1,489 @@
+﻿/* 
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/* 
+ *  Core Owl Carousel CSS File
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel.owl-loaded {
+  display: block;
+}
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+.owl-carousel .owl-refresh .owl-item {
+  display: none;
+}
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+.owl-carousel.owl-text-select-on .owl-item {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+.owl-carousel .owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/* 
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+}
+
+/* 
+ * 	Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: scale 100ms ease;
+  -moz-transition: scale 100ms ease;
+  -ms-transition: scale 100ms ease;
+  -o-transition: scale 100ms ease;
+  transition: scale 100ms ease;
+}
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transition: scale(1.3, 1.3);
+  -moz-transition: scale(1.3, 1.3);
+  -ms-transition: scale(1.3, 1.3);
+  -o-transition: scale(1.3, 1.3);
+  transition: scale(1.3, 1.3);
+}
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none;
+}
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+}
+
+/* 임시 해제 tbm 적용후 문제 있을 경우 해당 부분 수정예정.
+.item span {
+  display: block;
+  padding: 10px;
+  color: #000;
+  line-height: 130%;
+  background-color: #fff;
+}
+ */
+
+/*# 할인정보 카드리스트 */
+.fadebox {position:relative; border-bottom:1px solid #f2f2f2; background:#fff;}
+.fadebox:before {display:block; content:''; position:absolute; left:0; top:0; width:45px; height:63px; background:transparent url('../images/common/bg_cover_fogl.png') repeat-y 0 0; background-size:45px; z-index:10;}
+.fadebox.bhidden:before { display: none; }
+.fadebox:after {display:block; content:''; position:absolute; right:0; top:0; width:45px; height:63px; background:transparent url('../images/common/bg_cover_fogr.png') repeat-y 0 0; background-size:45px; z-index:10;}
+.fadebox.ahidden:after { display: none; }
+
+.cls_multiple_items_in {min-width:80px; width:80px; height:63px; margin:0 auto;}
+.cls_multiple_items_in > a {display:block; min-width:80px; width:80px; margin:0;}
+.cls_multiple_items_in > a > img,
+.cls_multiple_items_in > a > .img_wrapper img {width:80px !important;}
+
+.cls_multiple_items_in.on {height:61px; border-bottom:2px solid #be2424;}
+.cls_multiple_items_in.on > a {height:61px; overflow:hidden;}
+
+/*# 텍스트 네비 : 기본 - 이벤트 */
+.nav_type .cls_multiple_items_in {min-width:80px; width:auto; height:44px; margin:0 auto; text-align:left;}
+.nav_type .cls_multiple_items_in > a {display:table-cell; width:auto; height:44px; margin:0; font-size:16px; vertical-align:middle; color:#9197a3; /* font-weight:bold; */ letter-spacing:-1px;}
+.nav_type .cls_multiple_items_in.firtype > a {padding-left:10px;}
+.nav_type .cls_multiple_items_in.custom1 {margin-left:-15px;}
+.nav_type .cls_multiple_items_in.custom2 {margin-left:15px;}
+.nav_type .cls_multiple_items_in.on {height:44px; border-bottom:0;}
+.nav_type .cls_multiple_items_in.on > a {overflow:hidden; height:44px; color:#000;}
+.nav_type.fadebox:before {height:44px; background:transparent url('../images/common/bg_cover_fogl2.png') repeat-y 0 0;}
+.nav_type.fadebox:after {height:44px; background:transparent url('../images/common/bg_cover_fogr2.png') repeat-y 0 0;}
+
+.nav_type .owl-item:nth-child(1) .cls_multiple_items_in {margin-left:0px;} /* hot */
+.nav_type .owl-item:nth-child(2) .cls_multiple_items_in {margin-left:-12px;} /* 영화 */
+.nav_type .owl-item:nth-child(3) .cls_multiple_items_in {margin-left:-35px;} /* 멤버십/Club */
+.nav_type .owl-item:nth-child(4) .cls_multiple_items_in {margin-left:-12px;} /* 극장 */
+.nav_type .owl-item:nth-child(5) .cls_multiple_items_in {margin-left:-36px;} /* 제휴 */
+.nav_type .owl-item:nth-child(6) .cls_multiple_items_in {margin-left:-60px;} /* 지난이벤트 */
+
+/*# 텍스트 네비: 할인정보 */
+.nav_type.salecard_nav .owl-item {}
+.nav_type.salecard_nav .owl-item:nth-child(1) .cls_multiple_items_in {} /* hot */
+.nav_type.salecard_nav .owl-item:nth-child(2) .cls_multiple_items_in {margin-left:-10px;} /* 통신사 */
+.nav_type.salecard_nav .owl-item:nth-child(3) .cls_multiple_items_in {margin-left:-20px;} /* 신용카드 */
+.nav_type.salecard_nav .owl-item:nth-child(4) .cls_multiple_items_in {margin-left:-15px;} /* 포인트 */
+.nav_type.salecard_nav .owl-item:nth-child(5) .cls_multiple_items_in {margin-left:-25px; min-width:110px;} /* 쿠폰ㆍ제휴할인 */
+
+/*# 텍스트 네비: cgv안내 특별관 */
+.nav_type.special_nav .owl-item {}
+.nav_type.special_nav .owl-item .cls_multiple_items_in.firtype > a {padding:0;}
+.nav_type.special_nav .owl-item .cls_multiple_items_in {margin:0;}
+.nav_type.special_nav .owl-item .cls_multiple_items_in a {display:block; line-height:44px; text-align:center;}
+/*
+.nav_type.special_nav .owl-item:nth-child(1) .cls_multiple_items_in {margin-left:-5px;} /* 영화관 * /
+.nav_type.special_nav .owl-item:nth-child(2) .cls_multiple_items_in {margin-left:-10px;} /* 특별관 * /
+.nav_type.special_nav .owl-item:nth-child(3) .cls_multiple_items_in {margin-left:0px;} /* 플레이존 * /
+*/
+
+/*# 텍스트 네비 : 매거진 * /
+.nav_type.magazine_nav .owl-item:nth-child(1) .cls_multiple_items_in {} /* 전체 * /
+.nav_type.magazine_nav .owl-item:nth-child(2) .cls_multiple_items_in {margin-left:-20px;} /* Movie Pick * /
+.nav_type.magazine_nav .owl-item:nth-child(3) .cls_multiple_items_in {min-width:100px;} /* Culture Play * /
+.nav_type.magazine_nav .owl-item:nth-child(4) .cls_multiple_items_in {margin-left:10px;} /* Zoom In * /
+*/
+
+/*# 텍스트 네비: 아트하우스 */
+.nav_type.arthouse_nav {font-weight:normal;}
+.nav_type.arthouse_nav .owl-item:nth-child(1) .cls_multiple_items_in {margin-left:10px;} /* 상영작 */
+.nav_type.arthouse_nav .owl-item:nth-child(2) .cls_multiple_items_in {margin-left:-25px;} /* 시네마톡 */
+.nav_type.arthouse_nav .owl-item:nth-child(3) .cls_multiple_items_in {margin-left:-55px;} /* 큐레이터 */
+.nav_type.arthouse_nav .owl-item:nth-child(4) .cls_multiple_items_in {margin-left:-55px;} /* 주문형극장 */
+.nav_type.arthouse_nav .owl-item:nth-child(4) .cls_multiple_items_in:before {position:absolute; left:-27%; top:15px; margin-left:-55px; height:14px; width:1px; background:#cbc0b7; display:block; content:''; } /* 주문형극장 */
+.nav_type.arthouse_nav .owl-item .link-text {padding-right:12px; background:url('../images/collage/ico_arrow_link.png') no-repeat 100% 4px; background-size:8px;}
+
+@media all and (min-width:480px) {
+   .nav_type.arthouse_nav .owl-item:nth-child(4) .cls_multiple_items_in:before {left:-40%;}
+}
+
+.nav_type.arthouse_intro_nav .owl-item:nth-child(1) .cls_multiple_items_in {margin-left:0px; min-width:120px;} /* CGV아트하우스 */
+.nav_type.arthouse_intro_nav .owl-item:nth-child(2) .cls_multiple_items_in {margin-left:45px;} /* 시네마톡 */
+.nav_type.arthouse_intro_nav .owl-item:nth-child(3) .cls_multiple_items_in {margin-left:40px;} /* 큐레이터 */
+
+/* 매거진 상세 : 맵 */
+.info_mapnav {border:0;}
+.info_mapnav .owl-carousel {display:block;}
+.info_mapnav .item {padding:15px 0;}
+.info_mapnav .item > a {color:#9197a3; font-size:16px;}
+.info_mapnav .item.on > a {color:#000;}
+.info_mapnav.fadebox:before {height:44px; background:transparent url('../images/common/bg_cover_fogl2.png') repeat-y 0 0;}
+.info_mapnav.fadebox:after {height:44px; background:transparent url('../images/common/bg_cover_fogr2.png') repeat-y 0 0;}
+
+.info_mapnav .owl-nav {position:relative; top:100px;}
+
+/*# 텍스트 네비: 고객센터 */
+.nav_type.customer_nav .owl-item:nth-child(1) .cls_multiple_items_in {}
+.nav_type.customer_nav .owl-item:nth-child(2) .cls_multiple_items_in {margin-left:0px;}
+.nav_type.customer_nav .owl-item:nth-child(3) .cls_multiple_items_in {margin-left:-10px;}
+.nav_type.customer_nav .owl-item:nth-child(4) .cls_multiple_items_in {margin-left:5px;}
+.nav_type.customer_nav .owl-item:nth-child(5) .cls_multiple_items_in {margin-left:23px;}
+
+/*# 텍스트 네비: 고객센터re */
+.nav_type.customer_navre .owl-item:nth-child(1) .cls_multiple_items_in {}
+.nav_type.customer_navre .owl-item:nth-child(2) .cls_multiple_items_in {margin-left:16px;}
+.nav_type.customer_navre .owl-item:nth-child(3) .cls_multiple_items_in {margin-left:-8px;}
+.nav_type.customer_navre .owl-item:nth-child(4) .cls_multiple_items_in {margin-left:-25px;}
+
+
+/* 영화정보 포토&트레일러 슬라이더 */
+.mi_trailer_roll {padding:0 10px 15px 10px;}
+.mi_trailer_roll .owl-carousel {height:88px;}
+.mi_trailer_roll .item {height:88px;}
+.mi_trailer_roll .item img {width:auto; max-width:200px; height:100%;}
+.mi_trailer_roll .owl-carousel .owl-stage-outer {overflow:visible;}
+
+/* 스틸컷 상세 */
+#stillWrap .owl-carousel .item {text-align:center;/* height:405px; line-height:405px; */}
+#stillWrap .owl-carousel .owl-item img {display:inline-block; width:auto; max-width:320px;}
+
+/* event ban : 아이템이 하나인 경우 */
+.justone {text-align:center;}
+.justone .owl-carousel {display:inline-block; width:auto; margin:0 auto; vertical-align:top;}
+.justone .owl-carousel .item {text-align:left;}
+
+/* event ban */
+.event_ban {margin:10px 0; padding:10px 9px; /* border:solid 1px #f2f2f2; */ color:#666;box-shadow:#ddd 0 0 3px;background-color:#fff;}
+.event_ban h2.title {margin:3px 0px 10px 0px; font-size:16px; font-weight:bold; color:#000;}
+.event_ban .owl-carousel .owl-stage-outer {overflow:visible;}
+/* .event_ban .owl-carousel .owl-stage .owl-item:first-child {margin-left:-1px;} */
+.event_ban .owl-carousel .item {width:280px; /* border:1px solid #e9e9e9; background-color:#fafafa; */}
+.event_ban .event_box {position:relative; margin:0; border:solid 1px #f2f2f2; box-shadow:#ddd 0 0 3px;}
+.event_ban .event_box .fittext1 {font-size:11px;}
+.event_ban .event_box .img_look{position:relative; height:185px;background:#fff;}
+.event_ban .event_box .img_look img{width:100%; height:100%;}
+.event_ban .event_box .img_look .two {right:60px !important;}
+.event_ban .event_box .img_look .tip_round {position:absolute; right:12px;bottom:12px;width:13.5%;height:20%; border-radius:500px;}
+.event_ban .event_box .img_look .tip_area {display:table; height:100%;}
+.event_ban .event_box .img_look .tip_area .tip_txt{display:table-cell; width:60%; padding:3px 20% 0 20%; line-height:100%; color:#fff; font-weight:normal; text-align:center; vertical-align:middle; font-family:'돋움' !important;}
+.event_ban .event_box .img_look .c_black{border:solid 1px #fff; background-color:#000;}
+.event_ban .event_box .img_look .c_brown{background-color:#db3535;}
+.event_ban .event_box .img_look .c_yellow{background-color:#fc942e;}
+.event_ban .event_box .txt_look{position:relative; padding:8px 10px 0 10px; color:#000; height:72px; background-color:#fff;}
+.event_ban .event_box .txt_look .stit{display:block; margin-top:4px; line-height: 100%; font-size:13px; font-style:normal;text-decoration:underline;}
+.event_ban .event_box .txt_look .tit{
+	display:block;
+	margin-top:6px;
+	font-size:16px; 
+	height:38px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-wrap:break-word;
+}
+.event_ban .event_box .txt_look .refer{display:block; margin-top:7px; font-size:12px;}
+.event_ban .event_box .txt_look .stage_stit{display:block; margin-top:8px; margin-right:80px; line-height: 130%; font-size:12px; font-style:normal; text-decoration:underline;}
+.event_ban .event_box .txt_look .stage_tit{display:block; margin-right:38%; font-size:19px;}
+.event_ban .event_box .txt_look .stage_refer{display:block; margin-top:3px; font-size:12px;}
+.event_ban .event_box .txt_look .area{display:block;margin-top:4px;}
+.event_ban .event_box .txt_look .btn_participate{position:absolute;right:10px;top:50%;display:inline-block;padding:7px 5px;margin-top:-15px;font-size:12px;text-align:center;border:solid 2px #000;border-radius:3px;}
+.event_ban .event_box .txt_look.c_cian{background-color:#49c2b7;}
+.event_ban .event_box .txt_look.c_brown{background-color:#c25449;}
+.event_ban .event_box .txt_look.c_navy{background-color:#4f49c2;}
+.event_ban .event_box .txt_look.c_yellow{background-color:#e39705;}
+.event_ban .event_box .txt_look.c_pink{background-color:#cf2072 ;}
+.event_ban .event_box .txt_look.c_blue{background-color:#2e6dcc;}
+.event_ban .event_box .txt_look.inBgColor {color:#fff;}
+.event_ban .event_box .txt_look.inBgColor .btn_participate{border-color:#fff;}
+.event_ban .event_box .tip_poster{position:absolute;right:10px;bottom:100%;width:36%; margin-bottom:-10px;}
+.event_ban .event_box .tip_poster img{width:100%;}
+
+/* 메인 비주얼 */
+.main_visual .owl-carousel .owl-stage-outer {overflow:visible;}
+.main_visual .owl-carousel .item {width:230px;}
+
+.mselect_area .owl-carousel .owl-stage-outer {overflow:visible;}
+.mnews_area .owl-carousel .owl-stage-outer {overflow:visible;}
+.ilovecgv_area .owl-carousel .owl-stage-outer {overflow:visible;}
+
+/* 극장상세 : 빠른길 */
+.fast_track_wrap {background:#000;}
+.fast_track_wrap .owl-controls .owl-nav > div {overflow:hidden; position:absolute; top:50%; margin-top:-27px; width:26px; height:55px; background:url('../images/movieinfo/btn_arrow_prevnext.png') no-repeat 0 0; background-size:26px; text-indent:-9999em;}
+.fast_track_wrap .owl-controls .owl-nav .owl-prev {left:0;}
+.fast_track_wrap .owl-controls .owl-nav .owl-next {right:0; background-position:0 -105px;}
+
+.fast_track_wrap .owl-carousel .item {text-align:center;}
+.fast_track_wrap .owl-carousel .item img {display:inline-block; width:auto; max-width:320px; vertical-align:middle;}
+
+/* 영화상세 공유하기 같이볼래 팝업 */
+.share_layer2 .owl-carousel .owl-stage-outer {overflow:visible;}
+.share_layer2 .owl-carousel .item:after {clear:both; display:block; content:'';}
+.share_layer2 .owl-carousel .item > a {display:block; width:100%; box-sizing:border-box;}
+.share_layer2 .owl-carousel .item > a .imgbox {display:block;}
+.share_layer2 .owl-carousel .item > a .imgbox img {width:100%;}
+
+.share_layer2 .owl-dots {text-align:center;}
+.share_layer2 .owl-dots .owl-dot {display:inline-block;}
+.share_layer2 .owl-dots .owl-dot span {width:4px;height:4px; margin:0 3px; background:#d6d6d6;display:block;-webkit-backface-visibility:visible;-webkit-transition:opacity 200ms ease;-moz-transition:opacity 200ms ease;-ms-transition:opacity 200ms ease;-o-transition:opacity 200ms ease;transition:opacity 200ms ease;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;}
+.share_layer2 .owl-dots .owl-dot.active span,
+.share_layer2 .owl-dots .owl-dot:hover span {background:#c11414}
+
+/* vip lounge */
+.vip_lounge .event_ban .titbox {overflow:hidden;}
+.vip_lounge .event_ban .titbox .title {float:left;}
+.vip_lounge .event_ban .titbox .cnt {float:right; margin:3px 0px 10px 0px; font-size:16px; color:#9197a3;}
+.vip_lounge .event_ban .titbox .cnt > strong {color:#000;}
+.vip_lounge .event_ban .event_box .txt_look .tit {display:block; height:18px; -webkit-line-clamp:initial; white-space:nowrap;}
+.vip_lounge .event_ban .event_box .txt_look .refer {color:#9197a3;}
+
+/* 키즈 패밀리 클럽 */
+.kids_family_club .st_infomovie .owl-controls {position:absolute; bottom:4.4%; left:0; right:0; text-align:center; z-index:initial;}
+.kids_family_club .st_infomovie .owl-dots {display:inline-block; text-align:center; margin:0 auto;}
+.kids_family_club .st_infomovie .owl-dots .owl-dot {display:inline-block;}
+.kids_family_club .st_infomovie .owl-dots .owl-dot span {width:6px;height:6px; margin:0 2px; background:#f2f2f2;display:block;-webkit-backface-visibility:visible;-webkit-transition:opacity 200ms ease;-moz-transition:opacity 200ms ease;-ms-transition:opacity 200ms ease;-o-transition:opacity 200ms ease;transition:opacity 200ms ease;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;}
+.kids_family_club .st_infomovie .owl-dots .owl-dot.active span,
+.kids_family_club .st_infomovie .owl-dots .owl-dot:hover span {background:#dc291e}
+
+.flk_comm_bannerbox {margin:10px 0;}
+.flk_comm_bannerbox .owl-controls {position:absolute; bottom:4.4%; left:0; right:0; text-align:center; z-index:initial;}
+.flk_comm_bannerbox .owl-dots {display:inline-block; text-align:center; margin:0 auto;}
+.flk_comm_bannerbox .owl-dots .owl-dot {display:inline-block;}
+.flk_comm_bannerbox .owl-dots .owl-dot span {width:6px;height:6px; margin:0 2px; background:#f2f2f2;display:block;-webkit-backface-visibility:visible;-webkit-transition:opacity 200ms ease;-moz-transition:opacity 200ms ease;-ms-transition:opacity 200ms ease;-o-transition:opacity 200ms ease;transition:opacity 200ms ease;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;}
+.flk_comm_bannerbox .owl-dots .owl-dot.active span,
+.flk_comm_bannerbox .owl-dots .owl-dot:hover span {background:#dc291e}
+
+.club_town_detail_wrap .flk_comm_bannerbox {margin-left:-10px; margin-right:-10px;}
+
+.recomm_movie {margin:10px 0; padding:10px 9px; color:#666; box-shadow:#ddd 0 0 3px;background-color:#fff;}
+.recomm_movie h2.title {margin:3px 0px 10px 0px; font-size:16px; font-weight:bold; color:#000;}
+.recomm_movie .club_tit {position:relative; padding:0 0 10px; font-size:16px; color:#000; font-weight:bold;}
+.recomm_movie .club_tit .sort_option {position:absolute; top:-10px; right:0;}
+.recomm_movie .club_tit .sort_option li label {height:36px; line-height:36px;}
+.recomm_movie .owl-carousel .owl-stage-outer {overflow:visible;}
+.recomm_movie .owl-carousel .recomm_statbar {position:relative; left:0; top:0; right:0; margin-bottom:10px;}
+.recomm_movie .owl-carousel .recomm_statbar .rs_bar {position:relative; display:inline-block;}
+.recomm_movie .owl-carousel .recomm_statbar .rs_bar:before {position:absolute; left:0; top:50%; right:0; display:block; content:''; border-top:1px solid #f2f2f2;}
+.recomm_movie .owl-carousel .recomm_statbar .rs_bar .stat_tit {position:relative; left:0; top:0; padding-right:10px; background:#fff; color:#9197a3; font-size:12px;}
+.recomm_movie .owl-carousel .rm_box .movie_tit {overflow:hidden; display:block; margin:10px 0; text-align:center; text-overflow:ellipsis; white-space:nowrap; color:#000; font-size:11px;}
+.recomm_movie #recommMovie.owl-carousel .item {width:72px;}
+
+.movie_lineup {position:relative; padding:50px 0; border-top:1px solid #f2f2f2;}
+.movie_lineup:after {display:block; content:''; clear:both;}
+.movie_lineup:before {display:block; content:''; position:absolute; left:0; right:0; top:50%; margin:0 -9px; border-top:1px solid #d8d8d8;}
+.lineup_list .ll_tit {position:absolute; left:0; top:0; font-size:14px; color:#e62899; font-weight:normal;}
+.lineup_list > ul {margin-left:30px;}
+.lineup_list > ul > li {position:relative; float:left; margin-left:10px; text-align:center; color:#000;}
+.lineup_list > ul > li:first-child {margin-left:0;}
+.lineup_list > ul > li:before {position:absolute; left:50%; top:50%; margin:-3px 0 0 -4px; display:block; content:''; width:8px; height:8px; background:url('../images/collage/bg_bul_timeline.png') no-repeat 0 -99px; background-size:8px;}
+.lineup_list > ul > li .ll_date {display:block; margin-bottom:27px; font-size:16px;}
+.lineup_list > ul > li .ll_txt {display:block;}
+
+
+.detail_tab .owl-stage-outer {overflow:visible; border-bottom:1px solid #f2f2f2;}
+.detail_tab .item {min-width:80px; width:auto; height:44px; margin:0 auto; text-align:left;}
+.detail_tab .item > a {display:table-cell; width:auto; height:44px; margin:0; font-size:13px; vertical-align:middle; color:#9197a3; /* font-weight:bold; */ letter-spacing:-1px;}
+.detail_tab .item.firtype > a {padding-left:10px;}
+.detail_tab .item.on {height:44px; font-weight:bold;}
+.detail_tab .item.on > a {height:44px; color:#222;}
+
+.detail_tab .owl-item:nth-child(1) .item {margin-left:0px;} /* 영화혜택 */
+.detail_tab .owl-item:nth-child(2) .item {margin-left:-3px;} /* 카드혜택 */
+.detail_tab .owl-item:nth-child(3) .item {margin-left:-17px;} /* 쿠폰혜택 */
+.detail_tab .owl-item:nth-child(4) .item {margin-left:-31px;} /* 제휴혜택 */
+.detail_tab .owl-item:nth-child(5) .item {margin-left:-45px;} /* 부가혜택 */
+
+.detail_tab .owl-item .item.on a {position:relative;}
+.detail_tab .owl-item .item.on a:before {position:absolute; content:''; left:50%; bottom:-12px; margin-left:-8px; width:16px; height:12px; background:url('../images/movieinfo/ico_arrow_view.png') no-repeat 0 0; background-size:16px; text-indent:-9999px;}
+.detail_tab .owl-item:nth-child(1) .item.on a:before {margin-left:-2px;}

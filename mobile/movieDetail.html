@@ -1,0 +1,2759 @@
+<!DOCTYPE html>
+<html lang="ko">
+<style type="text/css" id="_jmc_no_tap_highlight_tag_"></style>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CGV</title>
+    <style type="text/css">
+        .allview_wrap {
+            display: none;
+        }
+
+        #vid_vplayer:-webkit-full-screen {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        #vid_vplayer:-webkit-full-screen video {
+            width: 100%;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="WebApp/images/common/favicon_cgv.png">
+    <link rel="apple-touch-icon" sizes="114×114" href="WebApp/images/common/favicon_cgv.png">
+
+    <link rel="stylesheet" type="text/css" href="WebApp/css/common.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/header.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/piemenu.css">
+    <!-- chart js / egg CSS  경로 추가 : mwpark-->
+    <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdate.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdateV4.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/v5/master.css?2020032013">
+
+    <link rel="canonical" href="http://www.cgv.co.kr/">
+
+
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/plugins/ua/ec.js"></script>
+    <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5CJXRN"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" src="WebApp/js/appinterface.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/jquery.menu.js"></script>
+
+    <script type="text/javascript" src="WebApp/js/Common/jindo.mobile.min.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/jindo.mobile.core.min.js"></script>
+
+    <script type="text/javascript">
+        //Global Variable
+        var IsWebView_Master = false;
+        var IsWebViewIPhone_Master = false;
+        var IsNewVersion_Master = false;
+        var AppVersion_Master = 0;
+        var IsIphone_Master = true;
+        var IOSVersion_Master = 13;
+
+        jQuery(document).ready(function () {
+            //아이폰 예외 처리 - 아이폰 수정 후 삭제 예정
+            var strIphonenavi = "";
+            if (IsWebViewIPhone_Master && strIphonenavi == "Y") {
+                var tmp_url = location.href;
+                history.pushState({iphonenavi: "Y"}, "iphoneNaviExHandle", tmp_url);
+                var tmp_url_rep = tmp_url.replace(/iphonenavi=Y/i, "");
+                location.href = tmp_url_rep;
+            }
+        });
+    </script>
+
+
+    <meta property="og:url" content="http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305">
+    <meta property="og:title" content="어바웃 타임">
+    <meta property="og:image" content="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000077/77305/77305_320.jpg">
+    <meta property="og:description" content="[CGV] 어바웃 타임 ">
+    <link rel="image_src" href="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000077/77305/77305_320.jpg">
+
+    <link href="WebApp/css/movieinfoV4.css?2020032013" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="WebApp/css/owl.carousel.css">
+    <script type="text/javascript" src="WebApp/js/jquery.fittext.js"></script>
+    <script type="text/javascript" src="WebApp/js/movie/common.js?2020032013"></script>
+    <script type="text/javascript" src="WebApp/js/Movie/movieDetailV4.js?2020032013"></script>
+    <script type="text/javascript" src="WebApp/js/Chart.custom.js"></script>
+    <!-- 스파이더 차트를 위한 js파일 로딩. mwpark_RR2015 -->
+    <script type="text/javascript" src="WebApp/js/Common/owl.carousel.min.js"></script>
+
+    <script type="text/javascript">
+        var mIdxCtrl = "";
+        var iTabCtrl = "";
+        var strTab = "";
+        var sAjaxUrl = ""; //ajax 호출을 위한 url
+        var strMovieIdx = "77305";
+        var shortUrl = "";
+        var strImgServ = "WebApp";
+        //var IsWebViewIPhone = False;
+        var IsWebView = "False";
+        var IsApp = "False";
+        var appVersion = 0;
+        var isPointFlag = "C";
+        var isLogin = "True";
+        var reUrl = "http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305";
+        var isWishMovie = "N";
+        var wishSeq = "";
+        var movieTitle = "어바웃 타임";
+        var isWatchMovie = "N";
+        //20160811 임의 최신순 수정
+        var ordType = "0";
+        var movieReadyStat = "RO";
+        var isOpen = "1";
+        var viewChk = "1";
+        var TotalPage = parseInt(4870);
+        var synop_height = 0;
+        var commentary_height = 0;
+
+        var isShowType = "False";
+        //로딩 팝업
+        var oLoading = "";
+        //공유하기 팝업
+        var oDialog = "";
+
+        function goOutLink(url) {
+            if (IsWebView_Master) {
+                CGVHAAppInterface.OutLink(encodeURIComponent(url));
+            } else {
+                var n_ua = navigator.userAgent.toLocaleLowerCase();
+                if (n_ua.indexOf("kakaotalk") > -1) {
+                    location.href = url;
+                } else {
+                    window.open(url);
+                }
+            }
+        }
+
+        /*매력포인트 레이어 열기. mwpark_RR2015*/
+        function charmLayer(commentIdx) {
+
+            jQuery('.charm_list li').removeClass('on');                             /* .charm_list li       초기화 2016.01.08 yjhan*/
+            jQuery('.charm_list input[type=checkbox]').prop("checked", false);      /* .charm_list checkbox 초기화 2016.01.08 yjhan*/
+
+            var fwidth = document.body.offsetWidth;
+            var fheight = document.body.clientHeight;
+
+            jQuery("#charmCommentIdx").val(commentIdx);
+            jQuery("#charmMovieIdx").val(strMovieIdx);
+
+            jQuery('body').bind('touchmove', function (e) {
+                touchScrollRemoveOnLayer(e);
+            });
+            jQuery("#charmWriteForm").attr("style", "width:100%;height:100%;position:fixed;top:" + fheight + "px;left:0px;background-color:White;display:block;z-index:20002;");
+            jQuery("#charmWriteForm").animate({top: "0px"}, {queue: false, duration: "fast"});
+        }
+
+        /*매력포인트 레이어 닫기. : mwpark_RR2015*/
+        function charmCloseWrite() {
+            jQuery('body').unbind('touchmove');
+            jQuery("#charmWriteForm").fadeOut();
+            jQuery(".score_write").hide();              //평점리스트 내 글쓰기 버튼 제어 :  2016.01.12 yjhan
+            jQuery("#writeForm").fadeOut();
+            movieTab(3);
+        }
+
+        /* 매력포인트 투표 등록. mwpark_RR2015*/
+        /* 매력지수 순서 변경(배우연기,스토리,영상미,OST,특수효과 → 감독연출,스토리,영상미,배우연기,OST)    2016.02.04 yjhan*/
+        function charmWriteProc() {
+            var param = {};
+            param.commentIdx = jQuery("#charmCommentIdx").val();
+            param.movieIdx = jQuery("#charmMovieIdx").val();
+            param.acting = "N";
+            param.story = "N";
+            param.visual = "N";
+            param.ost = "N";
+            param.effect = "N";
+
+            if (jQuery("#charm1-5").prop("checked")) {
+                param.effect = "Y";
+            }
+            if (jQuery("#charm1-2").prop("checked")) {
+                param.story = "Y";
+            }
+            if (jQuery("#charm1-3").prop("checked")) {
+                param.visual = "Y";
+            }
+            if (jQuery("#charm1-1").prop("checked")) {
+                param.acting = "Y";
+            }
+            if (jQuery("#charm1-4").prop("checked")) {
+                param.ost = "Y";
+            }
+
+            if (param.acting == "N" && param.story == "N" && param.visual == "N" && param.ost == "N" && param.effect == "N") {
+                alert("영화의 매력포인트를 선택해주세요.");
+                return;
+            }
+
+            addCharm(param);
+        }
+
+        /*에그 지수란? 클릭시 노출시킬 text. mwpark_RR2015*/
+        egg_info_btn = function () {
+            alert("CGV의 실제 관람 고객 평가로\n산정된 지수입니다.\n결과에 따라 Golden EGG 아이콘이\n정해집니다.");
+        };
+
+        function openPoint() {
+            if (IsWebView_Master == true && AppVersion_Master >= 433) {
+                jQuery(".popHeader").hide();
+                jQuery(".score_write").hide();
+                jQuery(".mi_menu_con").css("padding-top", "0px");
+                if ("" == "Y") {
+                    CGVHAAppInterface.SetNavigationBar('평점 전체보기', '|' + encodeURIComponent(getNavigationIconUrl('icon_close')) + '||12|closePoint()|', '|||||', '|||||', '|||||');
+                } else {
+                    CGVHAAppInterface.SetNavigationBar('평점 전체보기', '|' + encodeURIComponent(getNavigationIconUrl('icon_close')) + '||12|closePoint()|', '|||||', '|||||', '|' + encodeURIComponent(getNavigationIconUrl('icon_write')) + '||1|goWrite()|');
+                }
+            }
+
+            var fwidth = document.body.offsetWidth;
+            var fheight = document.body.offsetHeight;
+
+            iPage = 1;
+            ordType = "0";
+            jQuery("#posComment").html("");
+            jQuery("#headerTitle").css("visibility", "hidden");
+
+            getComment("ALL");
+
+            jQuery("#popPoint").attr("style", "width:100%;height:" + fheight + "px;position:absolute;top:" + fheight + "px;left:0px;background-color:White;display:block;padding-bottom:40px;z-index:555;");
+            //jQuery("#popPoint").show(300);
+            jQuery("#popPoint").animate({top: "0px"}, {queue: false, duration: "fast"});
+            jQuery('html,body').animate({scrollTop: 0}, 700);
+
+            fnSendGALog("0", "영화/더보기/평점", "", "", "");
+
+            if (AppVersion_Master >= 431) {
+                fnSendGALog("1", "", "MA_영화정보", "평점 모두보기", movieTitle);
+            } else {
+                fnSendGALog("1", "", "평점", "Click", "더보기");
+            }
+
+            jQuery("#mark1").addClass("checked");
+            jQuery("#mark2").removeClass("checked");
+        }
+
+        function closePoint() {
+            //공감하기 Unit Data Update
+            if (jQuery("#div_likebox_unit").html() != "") {
+                fnLikeUnitLoad();
+            }
+
+            if (IsWebView_Master == true && AppVersion_Master >= 433) {
+                if ("" == "N") {
+                    jQuery(".score_write").show();
+                }
+                var calendarButton = "|||||";
+                if ("" != "") {
+                    calendarButton = "|" + encodeURIComponent(getNavigationIconUrl('icon_schedule')) + "||1|goCalendar()|";
+                }
+                basicNavigation(1, '영화정보', calendarButton);
+            }
+            var fheight = document.body.offsetHeight;
+            jQuery("#headerTitle").css("visibility", "visible");
+            jQuery("#AllCommentList").html("");
+            movieTab(3);
+            //alert(fheight + "px");
+            jQuery("#popPoint").animate({top: fheight + "px"}, {queue: false, duration: "slow", complete: hidePoint()});
+            jQuery(".fot").css("display", "block");    /*평점 전체 보기 팝업 닫을 시 footer 다시 노출되게. mwpark_RR2015*/
+            jQuery("input:radio[name='mark']").prop("checked", "");/*레이어를 닫은 경우 해당 레이어의 radio 버튼을 초기화. mwpark_RR2015*/
+
+            jQuery("#mark1").prop("checked", "checked");
+            //20160811 임의 최신순 수정
+            //ordType = "3";  /*레이어를 닫은 경우 기본 디폴트 order(좋아요순)으로 설정. mwpark_RR2015*/
+            ordType = "0";  /*레이어를 닫은 경우 기본 디폴트 order(좋아요순)으로 설정. mwpark_RR2015*/
+        }
+
+        function fnLikeUnitLoad() {
+            jQuery.ajax({
+                type: "GET",
+                url: "/WebAPP/MovieV4/cont/ajaxReviewer.aspx",
+                data: {
+                    flag: "UNIT", MovieIdx: strMovieIdx
+                },
+                async: true,
+                dataType: 'html',
+                success: function (txt) {
+                    var result = jQuery("#div_likebox_unit", txt);
+                    if (result.html() != "") {
+                        jQuery("#div_likebox_unit").html(result.html());
+                    }
+                },
+                error: function (xhr, status, err) {
+                }
+            });
+        }
+
+        function hidePoint() {
+            //alert("ICalled");
+            jQuery("#popPoint").attr("style", "display:none;");
+        }
+
+        //더보기 토글
+        function showplay(flag, type) {
+
+            if (AppVersion_Master >= 431) {
+                fnSendGALog("1", "", "MA_영화정보", "줄거리 더보기", movieTitle);
+            }
+            if (type == "0") {
+                var SynopsisDiv = $Element('synop');
+                if (flag == "0") {
+                    SynopsisDiv.css("display", "block");
+                    SynopsisDiv.css("-webkit-line-clamp", "inherit");
+                    SynopsisDiv.css("-webkit-box-orient", "inherit");
+                    SynopsisDiv.css("height", synop_height + "px");
+                    $Element("show_synop").css("display", "none");
+                } else {
+                    synop_height = SynopsisDiv.height();
+                    SynopsisDiv.css("height", "81px");
+                    //                    SynopsisDiv.css("display", "-webkit-box");
+                    SynopsisDiv.css("-webkit-line-clamp", "4");
+                    SynopsisDiv.css("-webkit-box-orient", "vertical");
+                    SynopsisDiv.css("overflow", "hidden");
+                    $Element("show_synop").css("display", "block");
+                }
+            } else {
+                var CommentaryDiv = $Element('commentary_wrap');
+                if (flag == "0") {
+                    chkClickTrace("/CGV코멘터리/" + movieTitle.split("/").join("_"));
+                    CommentaryDiv.css("display", "block");
+                    CommentaryDiv.css("-webkit-line-clamp", "inherit");
+                    CommentaryDiv.css("-webkit-box-orient", "inherit");
+                    CommentaryDiv.css("height", commentary_height + "px");
+                    $Element("show_commentary").css("display", "none");
+                } else {
+                    commentary_height = CommentaryDiv.height();
+                    CommentaryDiv.css("height", "42px");
+                    //                    CommentaryDiv.css("display", "-webkit-box");
+                    CommentaryDiv.css("-webkit-line-clamp", "2");
+                    CommentaryDiv.css("-webkit-box-orient", "vertical");
+                    CommentaryDiv.css("overflow", "hidden");
+                    $Element("show_commentary").css("display", "block");
+                }
+            }
+        }
+
+        function closeAllPop() {
+            jQuery(document).not(".pop_mark_area on").click(function () {
+                jQuery(".pop_mark_area on").removeClass("on");
+            });
+        }
+
+        function showSharePopup() {
+            oDialog.show();
+            return false;
+        }
+
+        function goWish() {
+            //위시리스트 등록 / 삭제
+            if (isWishMovie == "Y") {
+                DelWish();
+            } else {
+                RegWish();
+            }
+
+        }
+
+        /*평점 개편 이후 별점 입력 없으므로 해당 로직 삭제. del_mwpark_RR2015
+        function point_incr() {
+            var strPoint = parseInt(document.getElementById('point').value);
+            if (strPoint < 10) {
+                strPoint = strPoint + 1;
+                document.getElementById('point').value = strPoint;
+                setPointImg(strPoint);
+            }
+        }
+        */
+        /* 평점 개편 이후 별점UI 선택이 없으므로 해당 로직 삭제. del_mwpark_RR2015
+        function point_decr() {
+            var strPoint = parseInt(document.getElementById('point').value);
+            if (strPoint > 0) {
+                if (strPoint <= 1) {
+                    alert("별 반개 이하는 선택하실 수 없습니다.");
+                    return;
+                }
+                strPoint = strPoint - 1;
+                document.getElementById('point').value = strPoint;
+                setPointImg(strPoint);
+            }
+        }
+        */
+
+        function goWrite() {
+            if (AppVersion_Master >= 431) {
+                fnSendGALog("1", "", "MA_영화정보", "평점작성", movieTitle);
+            }
+            if (IsWebView == "True" && Number(appVersion) < 430) {  //WebView 요청 이면서 AppVersion 이 430 미만 버전인 경우. mwpark_RR2015
+                alert('CGV 평점이 새롭게 바뀌었습니다!\n평점 작성은\n업데이트 후 이용하실 수 있습니다.');
+                return;
+            } else if (IsWebView == "True" && Number(appVersion) >= 430) {     //WebView 요청 이면서 AppVersion 이 430 이상 버전인 경우. mwpark_RR2015
+                if (isWatchMovie == 'N') {
+                    alert("실관람객에 한하여 관람평 작성이 가능합니다.");
+                    return;
+                } else {
+                    writeRating(strMovieIdx, movieTitle, isWatchMovie, "/WebApp/MovieV4/movieDetail.aspx?MovieIdx=" + strMovieIdx);
+                }
+            } else { // WebView 요청이 아닌 경우. mwpark_RR2015
+                if (isLogin == "True" && isWatchMovie == 'Y') {
+                    var fwidth = document.body.offsetWidth;
+                    var fheight = document.body.clientHeight;
+                    //쓰기폼 초기화
+                    jQuery("#editCommentIdx").val("");
+                    jQuery("#commentContent").val("");
+
+                    jQuery("#likeornotBox2").removeClass("on");
+                    jQuery("#likeornotBox1").addClass("on");
+                    jQuery("#likeornot1-1").prop("checked", true);
+                    jQuery("#likeornot1-2").prop("checked", "");
+
+                    jQuery('body').bind('touchmove', function (e) {
+                        touchScrollRemoveOnLayer(e);
+                    });
+                    jQuery("#writeForm").attr("style", "width:100%;height:100%;position:fixed;top:" + fheight + "px;left:0px;background-color:White;display:block;z-index:555;");
+                    jQuery("#writeForm").animate({top: "0px"}, {queue: false, duration: "fast"});
+
+                    fnSendGALog("0", "영화/평점작성", "", "", "");
+                } else if (isLogin == "True" && isWatchMovie == 'N') {
+                    alert("실관람객에 한하여 관람평 작성이 가능합니다.");
+                    return;
+                } else {
+                    if (confirm("CGV회원 로그인 후 사용 가능합니다.\n로그인 하시겠습니까?")) {
+                        location.href = g_url_login;
+                    }
+                }
+            }
+        }
+
+        /*레이어 노출에 따른 터치 이벤트 막기 추가. mwpark_RR2015*/
+        function touchScrollRemoveOnLayer(e) {
+            if (jQuery('#writeForm').css("display") != "none" || jQuery('#charmWriteForm').css("display") != "none") {
+                e.preventDefault();
+            }
+        }
+
+        function closeWrite() {
+            jQuery('body').unbind('touchmove');
+            jQuery("#writeForm").hide();
+        }
+
+
+        //goPop MY||NO , IDX
+        function goPop(my, idx, event) {
+            if (jQuery("#popPoint").css("display") == "block") {
+                jQuery("#popPoint > .dimbg_fog").show();
+                jQuery(".pop_mark_area").css("z-index", 4);
+            } else {
+                jQuery(".wrap > .dimbg_fog").show();
+                jQuery(".pop_mark_area").css("z-index", 556);
+            }
+            jQuery(".pop_mark_area").hide();
+            jQuery("#pop_mark_" + idx).show();
+        }
+
+        function goUnPop(my, idx) {
+            jQuery("#pop_mark_" + idx).hide();
+            jQuery("#btn_pop_" + idx).attr("onclick", "javascript:goPop(\"" + my + "\", \"" + idx + "\");");
+            //setTimeout(function () { jQuery("#pop_mark_" + idx).hide(); }, 5000);
+            //jQuery("#pop_mark_" + idx).focusout(jQuery("#pop_mark_" + idx).hide());
+        }
+
+        function goEdit(idx, point, showView, comm, eggPoint) {
+
+            if (IsWebView == "True" && Number(appVersion) < 430) {    // WebView 요청이면서 AppVersion 이 430 미만인 경우. mwpark_RR2015
+                alert('CGV 평점이 새롭게 바뀌었습니다!\n평점 수정은\n업데이트 후 이용하실 수 있습니다.');
+                return;
+            }
+
+            if (confirm("작성한 관람평을 수정하시겠습니까?") == false) {
+                return false;
+            }
+
+            if (IsWebView_Master) {
+                //EditComment:movieIdx:movieName:isView:isShowView:myPoint:commentText:commentIdx:nextPage
+                //function editRating(mIdx, mTitle, isView, isShowView, Point, Comm, CommIdx, reUrl)
+                //editRating(strMovieIdx, movieTitle, isWatchMovie, showView, point, comm, idx, "/WebApp/MovieV4/movieDetail.aspx?MovieIdx=" + strMovieIdx);
+                editRating(strMovieIdx, movieTitle, isWatchMovie, showView, eggPoint, cgv_decrypt(comm).replace(/&quot;/gi, "\""), idx, "/WebApp/MovieV4/movieDetail.aspx?MovieIdx=" + strMovieIdx);
+                //EditComment: function (movieIdx, movieName, isView, showView, point, comm, idx, nextPage)
+            } else {
+
+                if (isLogin == "True") {
+                    var fwidth = document.body.offsetWidth;
+                    var fheight = document.body.offsetHeight;
+                    //쓰기폼 초기화
+                    jQuery("#editCommentIdx").val(idx);
+                    jQuery("#commentContent").val(cgv_decrypt(comm).replace(/&quot;/gi, "\""));
+
+                    /* 실관람객만 평점 등록이 가능하게 기능 변경으로 삭제
+                    if (isWatchMovie == "Y") {
+                        if (showView == "Y") {
+                            jQuery("#chkShowView").prop("checked", true);
+                        }
+                        else {
+                            jQuery("#chkShowView").prop("checked", false);
+                        }
+                    }
+                    else {
+                        jQuery("#chkShowView").prop("checked", false);
+                    }
+                    */
+
+                    var strPoint = parseInt(point); /*기존 별점 불러와서 셋팅 하기. del_mwpark_RR2015*/
+
+                    //작업중
+                    document.getElementById('point').value = strPoint;  /*기존 별점 불러와서 셋팅 하기. del_mwpark_RR2015*/
+                    setPointImg(strPoint);  /*기존 별점 불러와서 셋팅 하기. del_mwpark_RR2015*/
+
+                    /* 불러온 에그포인트 값 셋팅 start . mwpark_RR2015*/
+                    if (eggPoint == "1") {
+                        jQuery("#likeornotBox1").removeClass("on");
+                        jQuery("#likeornotBox2").addClass("on");
+                        jQuery("#likeornot1-1").prop("checked", "");
+                        jQuery("#likeornot1-2").prop("checked", true);
+                    } else {
+                        jQuery("#likeornotBox2").removeClass("on");
+                        jQuery("#likeornotBox1").addClass("on");
+                        jQuery("#likeornot1-1").prop("checked", true);
+                        jQuery("#likeornot1-2").prop("checked", "");
+                    }
+                    /* 불러온 에그포인트 값 셋팅 end . mwpark_RR2015*/
+
+                    jQuery('body').bind('touchmove', function (e) {
+                        e.preventDefault();
+                    });
+                    jQuery("#writeForm").attr("style", "width:100%;height:100%;position:fixed;top:" + fheight + "px;left:0px;background-color:White;display:block;z-index:20002;");
+                    jQuery("#writeForm").animate({top: "0px"}, {queue: false, duration: "fast"});
+                } else {
+                    if (confirm("CGV회원 로그인 후 사용 가능합니다.\n로그인 하시겠습니까?")) {
+                        location.href = g_url_login;
+                    }
+                }
+
+            }
+        }
+
+        function goDel(idx) {
+            if (IsWebView == "True" && Number(appVersion) < 430) { // WebView 요청 이면서 AppVersion 이 430 미만인 경우. mwpark_RR2015
+                alert('CGV 평점이 새롭게 바뀌었습니다!\n평점 삭제는\n업데이트 후 이용하실 수 있습니다.');
+                return;
+            } else {
+                //삭제
+                DelRating("", "", strMovieIdx, movieTitle, isWatchMovie, delPoint);
+            }
+        }
+
+        function goSpoiler(idx, idid) {
+            if (isLogin == "True") {
+                if (idid == "Y") {
+                    //취소
+                    if (confirm("스포일러 신고를 취소하시겠습니까?") == true) {
+                        RegAct("cspo", idx);
+                    }
+                } else {
+                    //신고
+                    if (confirm("평점 내용에 스포일러가 포함되어 있습니까?") == true) {
+                        RegAct("spo", idx);
+                    }
+                }
+                //goUnPop("NO", idx);
+            } else {
+                if (confirm("CGV회원 로그인 후 사용 가능합니다.\n로그인 하시겠습니까?")) {
+                    location.href = g_url_login;
+                }
+            }
+
+        }
+
+        function goReport(idx, idid) {
+            if (isLogin == "True") {
+                if (idid == "Y") {
+                    //취소
+                    if (confirm("욕설/비방 신고를 취소하시겠습니까?") == true) {
+                        RegAct("crep", idx);
+                    }
+                } else {
+                    //신고
+                    if (confirm("평점 내용에 욕설/비방성 내용이 포함되어 있습니까?") == true) {
+                        RegAct("rep", idx);
+                    }
+                }
+                //goUnPop("NO", idx);
+
+            } else {
+                if (confirm("CGV회원 로그인 후 사용 가능합니다.\n로그인 하시겠습니까?")) {
+                    location.href = g_url_login;
+                }
+            }
+        }
+
+        function goLike(idx, idid) {
+            if (isLogin == "True") {
+                if (idid == "Y") {
+                    //취소
+                    RegAct("clike", idx);
+                } else {
+                    //신고
+                    RegAct("like", idx);
+                }
+            } else {
+                if (confirm("CGV회원 로그인 후 사용 가능합니다.\n로그인 하시겠습니까?")) {
+                    location.href = g_url_login;
+                }
+            }
+        }
+
+        function goMyLike(idx, idid) {
+            if (isLogin == "True") {
+                if (idid == "Y") {
+                    //취소
+                    MyRegAct("clike", idx);
+                } else {
+                    //신고
+                    MyRegAct("like", idx);
+                }
+            } else {
+                if (confirm("CGV회원 로그인 후 사용 가능합니다.\n로그인 하시겠습니까?")) {
+                    location.href = g_url_login;
+                }
+            }
+        }
+
+        function writeProc() {
+            var cidx = jQuery("#editCommentIdx").val();
+            if (cidx == "") {
+                chkPoint();
+            } else {
+                modPoint();
+            }
+        }
+
+        function goDataAlarm(dataDate, cgvDataDate, cgvDataHour) {
+            if (dataDate.length == 8 && cgvDataDate.length == 8 && cgvDataHour.length == 2) {
+                var date = "";
+                var cgvDate = "";
+                var cgvHour = "";
+
+                date = dataDate.substring(0, 4) + "." + dataDate.substring(4, 6) + "." + dataDate.substring(6, 8);
+                cgvDate = cgvDataDate.substring(0, 4) + "." + cgvDataDate.substring(4, 6) + "." + cgvDataDate.substring(6, 8) + ". ";
+                cgvHour = cgvDataHour + ":00";
+                alert("누적관객/전일관객은\n영화진흥위원회에서 제공하는\n영화입장권 통합 전산망 기준입니다.\n(" + date + " 기준)\n\nCGV당일관객은\nCGV 실시간 관람객수 기준입니다.\n(" + cgvDate + cgvHour + " 기준)");
+            } else if (dataDate.length == 8) {
+                var date = "";
+
+                date = dataDate.substring(0, 4) + "." + dataDate.substring(4, 6) + "." + dataDate.substring(6, 8);
+                alert("누적관객/전일관객은\n영화진흥위원회에서 제공하는\n영화입장권 통합 전산망 기준입니다.\n(" + date + " 기준)");
+            } else if (cgvDataDate.length == 8 && cgvDataHour.length == 2) {
+                var cgvDate = "";
+                var cgvHour = "";
+
+                cgvDate = cgvDataDate.substring(0, 4) + "." + cgvDataDate.substring(4, 6) + "." + cgvDataDate.substring(6, 8) + ". ";
+                cgvHour = cgvDataHour + ":00";
+                alert("CGV당일관객은\nCGV 실시간 관람객수 기준입니다.\n(" + cgvDate + cgvHour + " 기준)");
+            }
+        }
+
+        function photoSlider() {
+            //jQuery('body').css('overflow-x', 'hidden');
+            //jQuery('.content_wrap').addClass('solve_blink');
+
+            if (jQuery('.mi_trailer_roll .item').length <= 2) {
+                jQuery('#div_trailer_owl_box').owlCarousel({
+                    margin: 8,
+                    mouseDrag: false,
+                    autoWidth: true,
+                    items: 1
+                });
+
+            } else if (jQuery('.mi_trailer_roll .item').length >= 3) {
+                jQuery('#div_trailer_owl_box').owlCarousel({
+                    margin: 8,
+                    autoWidth: true,
+                    lazyLoad: false,
+                    items: 1,
+                    dots: false,
+                    nav: false,
+                    loop: false
+                }).on('translated.owl.carousel', function (event) {
+                    fntranslatedcallback(event);
+                }).on('initialized.owl.carousel', function (event) {
+                    if (jQuery("#div_trailer_owl_box .owl-stage").height() > 110) {
+                        var tmp_w = 0;
+                        jQuery("#div_trailer_owl_box .event_img").each(function () {
+                            tmp_w += jQuery(this).width() + 32;
+                        });
+                        jQuery("#div_trailer_owl_box .owl-stage").width(tmp_w);
+                    }
+                });
+            }
+        }
+
+        function fnFogClose() {
+            if (jQuery(".dimbg_fog").is(":visible")) {
+                jQuery(".dimbg_fog").hide();
+                jQuery(".pop_mark_area").hide();
+            }
+        }
+
+        function goReserve(rKind, sm_type) {
+            if (AppVersion_Master >= 431) {
+                if (sm_type === "IMAX") {
+                    fnSendGALog("1", "", "MA_영화정보", "영화속성_IMAX", movieTitle);
+                } else if (sm_type === "4DX") {
+                    fnSendGALog("1", "", "MA_영화정보", "영화속성_4DX", movieTitle);
+                } else if (sm_type === "SCREENX") {
+                    fnSendGALog("1", "", "MA_영화정보", "영화속성_SCREENX", movieTitle);
+                } else {
+                    fnSendGALog("1", "", "MA_영화정보", "지금예매", movieTitle);
+                }
+            } else {
+                fnSendGALog("1", "", "기능선택", "Click", "지금예매");
+            }
+
+            var mgCD = "20004283";
+            var rateCode = "02";
+            if (rKind == undefined || rKind == "") {
+                rKind = "00";
+            }
+
+
+            if (strMovieIdx == "78391") {
+                if (IsWebView_Master) {
+                    CGVHAAppInterface.ReserveFromMovieInfoV4(mgCD, encodeURIComponent(movieTitle), rateCode, rKind);
+                } else {
+                    //그냥 예약
+                    //함수 재정의가 필요하다. or window.open
+                    var smtype = sm_type || "";
+                    goOutLink("/quickReservation/Default.aspx?MovieIdx=" + strMovieIdx + "&sm_type=" + smtype);
+                }
+            } else {
+                //실제 있는지 확인이 필요하다
+                //TODO
+                //checkReserve(webViewFlag, mgCD, movieTitle, rateCode, rKind)
+                if (IsWebView_Master == false) {
+                    checkReserve(IsWebView_Master, mgCD, movieTitle, rateCode, rKind, sm_type);
+                } else {
+                    if (AppVersion_Master >= 417) {
+                        checkReserve(IsWebView_Master, mgCD, movieTitle, rateCode, rKind, sm_type);
+                    } else {
+                        if (rKind == "00") {
+                            checkReserve(IsWebView_Master, mgCD, movieTitle, rateCode, rKind, sm_type);
+                        }
+                    }
+                }
+            }
+        }
+
+        function goCalendar() {
+            if (AppVersion_Master >= 431) {
+                fnSendGALog("1", "", "MA_영화정보", "캘린더등록", movieTitle);
+            }
+            //ShortURL
+            var sUrl;
+            var sOpenData = "2020.03.05 재개봉";
+
+            //잘못된 데이터 거름
+            if (sOpenData.length > 9) {
+                jQuery.post("/WebAPP/Common/sUrl.aspx", {url: g_reUrl})
+                    .done(function (data) {
+                        sUrl = data;
+                        sOpenData = sOpenData.substring(0, 10);
+                        CGVHAAppInterface.AddToCalendar(movieTitle, sOpenData, sUrl);
+                        return data;
+                    });
+            }
+        }
+
+        jQuery(document).ready(function () {
+            mIdxCtrl = document.getElementById("MovieIdx");
+            iTabCtrl = document.getElementById("iTab");
+            strTab = document.getElementById("iTab").value;
+
+
+            //4.3.3 이상 네비게이션 적용
+            var calendarButton = "|||||";
+            if ("" != "") {
+                calendarButton = "|" + encodeURIComponent(getNavigationIconUrl('icon_schedule')) + "||1|goCalendar()|";
+            }
+            basicNavigation(1, '영화정보', calendarButton);
+
+            if (IsWebView_Master == true && AppVersion_Master >= 417) {
+
+            }
+
+            if (IsWebView_Master == true && AppVersion_Master < 417) {
+                jQuery(".cls_spl_rev img").removeAttr("onclick");
+                jQuery(".cls_spl_rev img").removeAttr("style");
+            }
+
+            //Synop 가리기
+            var SynopsisDiv = jQuery('#synop');
+            if (SynopsisDiv.height() > 85) {
+                showplay("1", "0");
+                jQuery("#show_synop").show();
+            } else {
+                jQuery("#show_synop").hide();
+            }
+
+            //Commentary 가리기
+            var SynopsisDiv = jQuery('#commentary_wrap');
+            if (SynopsisDiv.height() > 45) {
+                showplay("1", "1");
+                jQuery("#show_commentary").show();
+            } else {
+                jQuery("#show_commentary").hide();
+            }
+
+            oLoading = new jindo.m.Loading(null, {
+                nHeight: 50,
+                nWidth: 50,
+                sDefaultForeground: "gray",
+                sLoadingText: "",
+                bUseFoggy: true,
+                nFoggyOpacity: 0.6
+            });
+
+            oDialog = new jindo.m.Dialog({
+                sPosition: "center",
+                bUseEffect: false,
+                bAutoClose: false,
+                sDialogColor: "",
+                sFoggyColor: "black",
+                nFoggyOpacity: "0.6"
+            });
+
+            if ("3" == "" || "3" == "0") {
+                if (movieReadyStat == "R" || movieReadyStat == "RR") {
+                    movieTab(1);
+                } else {
+                    movieTab(3);
+                }
+            } else {
+                movieTab(3);
+            }
+
+            if (TotalPage % 10 == 0) {
+                TotalPage = TotalPage / 10 + 1;
+            } else {
+                TotalPage = TotalPage / 10;
+            }
+
+            //Event Js
+            var cnt = jQuery('#div_event_owl_box article').length;
+            var owl_margin = 8;
+            if (cnt == 1) {
+                jQuery(".event_ban").addClass("justone");
+                owl_margin = 0;
+            }
+
+            jQuery('#div_event_owl_box').owlCarousel({
+                margin: owl_margin,
+                items: 1,
+                autoWidth: true,
+                lazyLoad: true,
+                dots: false,
+                nav: false,
+                loop: false,
+                center: true,
+                onInitialized: initSet,
+                onResized: initSet
+            }).on('changed.owl.carousel', function (event) {
+                fnchangedcallback(event);
+            }).on('translated.owl.carousel', function (event) {
+                if (jQuery('body').width() >= jQuery("#div_event_owl_box .owl-stage").width()) {
+                    fntranslatedcallback(event);
+                } else {
+                    fntranslatedcallback2(event);
+                }
+            }).on('initialized.owl.carousel', function (event) {
+                if (jQuery("#div_event_owl_box .owl-stage").height() > 300) {
+                    var tmp_w = 0;
+                    jQuery("#div_event_owl_box .event_img").each(function () {
+                        tmp_w += jQuery(this).width() + 16;
+                    });
+                    jQuery("#div_event_owl_box .owl-stage").width(tmp_w);
+                }
+            });
+
+            function initSet() {
+                var m_obj = jQuery("#div_event_owl_box .owl-stage");
+                var itemW = parseInt(jQuery("#div_event_owl_box .owl-stage .owl-item").width());
+
+                if (jQuery('body').width() >= m_obj.width()) {
+                    this.settings.center = false;
+                    m_obj.find('.center').removeClass('center');
+                } else {
+                    this.settings.center = true;
+                }
+
+                var quotient = Math.round((jQuery('body').width() / 2) / itemW);
+
+                var matrix_txt = "";
+                if (m_obj.css('-webkit-transform')) {
+                    matrix_txt = "-webkit-transform";
+                } else if (m_obj.css('-moz-transform')) {
+                    matrix_txt = "-moz-transform";
+                } else if (m_obj.css('-ms-transform')) {
+                    matrix_txt = "-ms-transform";
+                } else if (m_obj.css('-o-transform')) {
+                    matrix_txt = "-o-transform";
+                } else if (m_obj.css('transform')) {
+                    matrix_txt = "transform";
+                }
+
+                m_obj.css(matrix_txt, 'translate3d(0px,0px,0px)');
+            }
+
+            jQuery(".fittext1").fitText(0.2, {minFontSize: '12px', maxFontSize: '74px'});
+
+            fninitialized_evtowl();
+
+            //var sTemplate = $("snsBox").innerHTML;
+            //oDialog.setTemplate(sTemplate);
+
+
+            //alert(isShowType);
+
+            if (isShowType == "True") {
+                jQuery(".mi_openday").hide();
+                jQuery(".audience_wrap").hide();
+                jQuery(".egg-grade").hide();
+                jQuery("#li_mi_menu_3").hide();
+                jQuery("#li_mi_menu_2").hide();
+                btnMovieTab(1);
+            }
+            jQuery('#commentary_btn').click(function () {
+                alert('CGV코멘터리란?\n영화를 더욱 재미있게 즐길 수 있도록 CGV가 제공하는 관람 포인트입니다.');
+            });
+
+        });
+
+        function fnAdvertisingCall_Handle() {
+            try {
+                //상황에 따라서 아이프레임 혹은 AJAX 사용 예정, XML 방식은 http 호출 가능 하지만 브라우저에 따라 막힐 수도 있음. - 우선 아이프레임 적용
+                var strParam_advertising_url = "";
+                if (strParam_advertising_url != "") {
+                    jQuery.ajax({
+                        url: strParam_advertising_url, data: {}, dataType: 'xml',
+                        complete: function () {
+                        }, success: function () {
+                        }
+                    });
+                }
+            } catch (e) {
+            }
+        }
+
+        function fninitialized_evtowl() {
+            var max = 2;
+            var w = jQuery(document).width();
+            if (w > 1182) {
+                max = 5;
+            } else if (w > 892) {
+                max = 4;
+            } else if (w > 600) {
+                max = 3;
+            }
+
+            for (z = 1; z <= max; ++z) {
+                var obj = jQuery("#" + "div_event_owl_box" + " .event_img").eq(z);
+                if (typeof obj != "undefined" && typeof obj.attr("src") === "undefined") {
+                    var src = obj.attr("data-src");
+                    obj.attr("data-src", "");
+                    obj.removeClass("owl-lazy");
+                    obj.attr("src", src);
+                }
+            }
+        }
+
+        function fnchangedcallback(event) {
+            var idx = event.item.index;
+            var pObj = event.target;
+            var prev_obj = jQuery("#" + pObj.id + " .event_img").eq(idx - 1);
+
+            if (pObj.id == "div_trailer_owl_box") {
+            } else {
+                for (z = 1; z < 4; ++z) {
+                    var obj = jQuery("#" + pObj.id + " .event_img").eq(idx + z);
+                    if (typeof obj != "undefined" && typeof obj.attr("src") === "undefined") {
+                        var src = obj.attr("data-src");
+                        obj.attr("data-src", "");
+                        obj.removeClass("owl-lazy");
+                        obj.attr("src", src);
+                    }
+                }
+            }
+        }
+
+        function fntranslatedcallback(event) {
+            var obj = event.target;
+            var cnt = event.item.count;
+            var idx = event.item.index;
+
+            if ((cnt - 2) < idx) {
+                var m = parseInt(jQuery("#" + obj.id + " .owl-stage").width());
+                var c = parseInt(jQuery("#" + obj.id + " .owl-stage-outer").width());
+                var p = parseInt(jQuery("#" + obj.id + " .owl-stage .owl-item").css("margin-right"));
+
+                var m_obj = jQuery("#" + obj.id + " .owl-stage");
+
+                var matrix_txt = "";
+                if (m_obj.css('-webkit-transform')) {
+                    matrix_txt = "-webkit-transform";
+                } else if (m_obj.css('-moz-transform')) {
+                    matrix_txt = "-moz-transform";
+                } else if (m_obj.css('-ms-transform')) {
+                    matrix_txt = "-ms-transform";
+                } else if (m_obj.css('-o-transform')) {
+                    matrix_txt = "-o-transform";
+                } else if (m_obj.css('transform')) {
+                    matrix_txt = "transform";
+                }
+
+                var matrix = m_obj.css(matrix_txt).toString();
+                var shift = parseFloat(matrix.split(",")[4]);
+
+                if ((m - c) < (shift * -1)) {
+                    m_obj.css(matrix_txt, 'translate3d(-' + (m - c - p) + 'px,0px,0px)');
+                }
+            }
+        }
+
+        function fntranslatedcallback2(event) {
+            var obj = event.target;
+            var cnt = event.item.count;
+            var idx = event.item.index;
+
+            var m = parseInt(jQuery("#" + obj.id + " .owl-stage").width());
+            var c = parseInt(jQuery("#" + obj.id + " .owl-stage-outer").width());
+            var p = parseInt(jQuery("#" + obj.id + " .owl-stage .owl-item").css("margin-right"));
+            var itemW = parseInt(jQuery("#" + obj.id + " .owl-stage .owl-item").width());
+            var quotient = Math.round((jQuery('body').width() / 2) / itemW);
+            //var remainder = Math.floor((jQuery('body').width()/2) % itemW);
+
+            var m_obj = jQuery("#" + obj.id + " .owl-stage");
+
+            var matrix_txt = "";
+            if (m_obj.css('-webkit-transform')) {
+                matrix_txt = "-webkit-transform";
+            } else if (m_obj.css('-moz-transform')) {
+                matrix_txt = "-moz-transform";
+            } else if (m_obj.css('-ms-transform')) {
+                matrix_txt = "-ms-transform";
+            } else if (m_obj.css('-o-transform')) {
+                matrix_txt = "-o-transform";
+            } else if (m_obj.css('transform')) {
+                matrix_txt = "transform";
+            }
+
+            var matrix = m_obj.css(matrix_txt).toString();
+            var shift = parseFloat(matrix.split(",")[4]);
+
+            if (cnt - quotient <= idx + 1) {
+                if ((m - c) < (shift * -1)) {
+                    m_obj.css(matrix_txt, 'translate3d(-' + (m - c - p) + 'px,0px,0px)');
+                }
+            } else if (quotient > idx) {
+                m_obj.css(matrix_txt, 'translate3d(0px,0px,0px)');
+            }
+
+        }
+
+        var strKakaoHtm = "";
+
+        function fnShareSns() {
+            if (AppVersion_Master >= 431) {
+                fnSendGALog("1", "", "MA_영화정보", "같이볼래", movieTitle);
+            } else {
+                fnSendGALog("1", "", "같이볼래 클릭", "Click", "같이볼래 전체 클릭");
+            }
+
+            var layer = jQuery('.share_layer2');
+
+            if (jQuery(".cls_kakao_share_img").eq(0).attr("data-src") != "") {
+                //Image First Load
+                var src, obj;
+                jQuery(".cls_kakao_share_img").each(function () {
+                    obj = jQuery(this);
+                    src = obj.attr("data-src");
+                    obj.attr("data-src", "");
+                    obj.attr("src", src);
+                });
+
+                strKakaoHtm = layer.html();
+            } else {
+                //Layer Re-Init
+                layer.html(strKakaoHtm);
+            }
+
+            layer.find('.share_board').css('top', jQuery(window).scrollTop());
+            layer.addClass('on');
+
+            var img_layer_obj = jQuery('#div_kakao_share_imgbox');
+            img_layer_obj.owlCarousel({
+                items: 1, margin: 8, onResized: function () {
+                    fnResize_ExHandle();
+                }
+            });
+
+            layer = null;
+            img_layer_obj = null;
+        }
+
+        function fnResize_ExHandle() {
+            if (jQuery('#shareLayer2').is(':visible')) {
+                var img_layer_obj = jQuery('#div_kakao_share_imgbox');
+                img_layer_obj.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+                img_layer_obj.find('.owl-stage-outer').children().unwrap();
+                img_layer_obj.addClass('owl-carousel');
+                img_layer_obj = null;
+
+                fnShareSns();
+            }
+        }
+
+        function fnLogGAKaKaoLink(cate, action, label, k_url, k_top_title, k_title, k_desc, k_img_url, k_img_w, k_img_h) {
+            var filter = "win16|win32|win64|mac";
+            if (navigator.platform) {
+                if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+                    if (IsWebView_Master) {
+                        try {
+                            CGVHAAppInterface.SendGoogleAnalyticsLog('1', '', cate, action, label);
+                        } catch (e) {
+                        }
+                        fnSendTalkLinkFull(k_url, k_top_title, k_title, k_desc, k_img_url, k_img_w, k_img_h);
+                    } else {
+                        try {
+                            ga_cgv('rollup.send', 'event', {
+                                'eventCategory': cate,
+                                'eventAction': action,
+                                'eventLabel': label,
+                                'hitCallback': function () {
+                                    fnSendTalkLinkFull(k_url, k_top_title, k_title, k_desc, k_img_url, k_img_w, k_img_h);
+                                },
+                                'hitCallbackFail': function () {
+                                    fnSendTalkLinkFull(k_url, k_top_title, k_title, k_desc, k_img_url, k_img_w, k_img_h);
+                                }
+                            });
+                        } catch (e) {
+                            fnSendTalkLinkFull(k_url, k_top_title, k_title, k_desc, k_img_url, k_img_w, k_img_h);
+                        }
+                    }
+                } else {
+                    alert("모바일 브라우저 에서 이용해주세요.");
+                }
+            }
+        }
+
+        function fnLogGAFBTWLink(flag, cate, action, label, url, title, desc) {
+            if (IsWebView_Master) {
+                CGVHAAppInterface.SendGoogleAnalyticsLog('1', '', cate, action, label);
+                if (flag == "FB") {
+                    fnShare_FaceBook('', title);
+                } else if (flag == "TW") {
+                    fnShare_Twitter('', title, '');
+                }
+            } else {
+                ga_cgv('rollup.send', 'event', {
+                    'eventCategory': cate,
+                    'eventAction': action,
+                    'eventLabel': label,
+                    'hitCallback': function () {
+                        if (flag == "FB") {
+                            fnShare_FaceBook('', title);
+                        } else if (flag == "TW") {
+                            fnShare_Twitter('', title, '');
+                        }
+                    },
+                    'hitCallbackFail': function () {
+                        if (flag == "FB") {
+                            fnShare_FaceBook('', title);
+                        } else if (flag == "TW") {
+                            fnShare_Twitter('', title, '');
+                        }
+                    }
+                });
+            }
+        }
+
+        function btnMovieTab(no) {
+            if (no == 1) {
+                if (AppVersion_Master >= 431) {
+                    fnSendGALog("1", "", "MA_영화정보", "카테고리_포토/트레일러", movieTitle);
+                } else {
+                    fnSendGALog("1", "", "탭", "Click", "포토/트레일러");
+                }
+
+                movieTab(1);
+            } else if (no == 2) {
+                if (AppVersion_Master >= 431) {
+                    fnSendGALog("1", "", "MA_영화정보", "카테고리_감독/배우", movieTitle);
+                } else {
+                    fnSendGALog("1", "", "탭", "Click", "감독/배우");
+                }
+
+                movieTab(2);
+            } else if (no == 3) {
+                if (AppVersion_Master >= 431) {
+                    fnSendGALog("1", "", "MA_영화정보", "카테고리_평점", movieTitle);
+                } else {
+                    fnSendGALog("1", "", "탭", "Click", "평점");
+                }
+
+                movieTab(3);
+            }
+        }
+    </script>
+
+    <style type="text/css" id="_loading_animation_sytle_">@-webkit-keyframes loadingfade {
+                                                              from {
+                                                                  opacity: 1
+                                                              }
+                                                              to {
+                                                                  opacity: 0
+                                                              }
+                                                          }</style>
+</head>
+<body style="">
+<form id="ssologinfrm" name="ssologinfrm" action="https://m.cgv.co.kr/WebAPP/Member/Login.aspx" method="post">
+    <input type="hidden" id="cjssoDataType" name="cjssoDataType" value="">
+    <input type="hidden" id="cjssoEncData" name="cjssoEncData" value="">
+    <input type="hidden" id="cjssoReUrl" name="hfReUrl" value="dvNz5Cd2gnRH7OFj50249A%3d%3d">
+</form>
+
+<script type="text/javascript">
+
+    //CJ SSO 로그인
+    if ((typeof _cjssoEncData) !== "undefined" && _cjssoEncData !== "") {
+        var cjssoDate = new Date();
+
+        jQuery.ajax({
+            type: "GET",
+            url: "/WebApp/Common/SetLog.aspx?dt=" + cjssoDate.getFullYear() + "-" + (parseInt(cjssoDate.getMonth().toString(), 10) + 1) + "-" + cjssoDate.getDate() + " " + cjssoDate.getHours() + ":" + cjssoDate.getMinutes() + ":" + cjssoDate.getSeconds() + "." + cjssoDate.getMilliseconds() + "&key=" + _cjssoEncData,
+            async: true,
+            success: function (txt) {
+            },
+            error: function (xhr, status, err) {
+            }
+        });
+
+        document.getElementById("cjssoDataType").value = "1";
+        document.getElementById("cjssoEncData").value = encodeURIComponent(_cjssoEncData);
+        document.ssologinfrm.submit();
+    }
+
+</script>
+<div class="header_wrap" style="display:none;" id="header_wrap"></div>
+<div class="wrap">
+
+
+    <div id="header_box">
+
+        <div style="width: 100%; display: inline-block; text-align: center;">
+            <iframe id="iframe" title="모바일광고"
+                    src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/mobile_05@web_Theaterdetail?keyword=77305"
+                    width="100%" height="50px" frameborder="0" scrolling="no" topmargin="0" leftmargin="0"
+                    marginwidth="0" marginheight="0"></iframe>
+        </div>
+
+        <script type="text/javascript">
+            function AppDownload() {
+                var app = "ios";
+
+                fnSendGALog('1', '', 'MW_홈', '앱다운유도 버튼_다운받기', app);
+
+                if (app == "and") {
+                    cgv.common.AppDeepLink.LaunchApp('CGV', '');
+                } else if (app == "ios") {
+                    cgv.common.AppDeepLink.MoveAppStore('CGV');
+                } else {
+                    alert("모바일 환경에서 이용 해 주세요.");
+                }
+            }
+
+            function downDisplay() {
+                fnSendGALog('1', '', 'MW_홈', '앱다운유도 버튼_닫기', '');
+
+                document.getElementById("downBanner").style.display = "none";
+                fnSetCookieSubDomain("boolBtnX", "none", 1);
+
+
+            }
+
+            function fnSetCookieSubDomain(cName, cValue, cDay) {
+                var expire = new Date();
+                expire.setDate(expire.getDate() + cDay);
+                cookies = cName + '=' + escape(cValue) + '; path=/ ';
+                if (typeof cDay != 'undefined') cookies += ';expires=' + expire.toGMTString() + ';domain=.cgv.co.kr;';
+                document.cookie = cookies;
+            }
+
+        </script>
+
+        <header id="headerTitle" class="cls_headertitle_box">
+            <img id="headerLeftBtn" src="" style="display:none;"><a href="javascript:fnMoveListPage();" class="txt_lt">닫기</a>
+            <div class="title" id="headerTitleArea">
+                <a href="#none">영화정보</a>
+            </div>
+
+        </header>
+        <section class="allview_wrap" id="siteMap">
+            <div id="fogbg" onclick="javascript:close_sitemap();"></div>
+            <article class="allview_box_wrap">
+                <div class="allview_box_in">
+                    <h2 class="hidden">전체메뉴</h2>
+
+                    <div class="allview_header">
+                        <a href="/" class="cgv_logo">CGV 홈</a>
+                    </div>
+                    <div class="area">
+                        <ul class="group_wrap">
+
+                            <li><a href="#" title="My CGV"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'My CGV', 'http://m.cgv.co.kr/WebApp/MyCgvV4/Default.aspx'); return false;"><b>My
+                                CGV</b></a><span class="countnum">0</span></li>
+
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '빠른예매', 'http://m.cgv.co.kr/quickReservation/'); return false;"><b>빠른예매</b></a>
+                            </li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '상영시간표', 'http://m.cgv.co.kr/Schedule/'); return false;"><b>상영시간표</b></a>
+                            </li>
+                        </ul>
+                        <ul class="group_wrap">
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'CGV안내', 'http://m.cgv.co.kr/WebApp/TheaterV4/'); return false;"
+                                   title="CGV안내">CGV안내</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '패스트오더', 'http://m.cgv.co.kr/WebApp/MobileOrder/Gateway.aspx?cType=normal&amp;gwType=M&amp;mOrderReturnUrl=%2Fmordermain'); return false;"
+                                   title="패스트오더">패스트오더</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '스토어', 'http://m.cgv.co.kr/WebApp/GiftV5/storeMain.aspx'); return false;"
+                                   title="기프트샵">기프트샵</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '아트하우스', 'http://m.cgv.co.kr/WebApp/Collage/'); return false;"
+                                   title="아트하우스">아트하우스</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'CGV할인정보', 'http://m.cgv.co.kr/WebApp/SaleCardV4/'); return false;"
+                                   title="CGV할인정보">CGV할인정보</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '이벤트', 'http://m.cgv.co.kr/WebApp/EventNotiV4/EventList.aspx'); return false;"
+                                   title="이벤트">이벤트</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '매거진', 'http://m.cgv.co.kr/WebApp/MagazineV4/'); return false;"
+                                   title="매거진">매거진</a></li>
+                        </ul>
+                        <ul class="group_wrap">
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'IMAX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=1'); return false;"
+                                   title="IMAX">IMAX</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '4DX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=2'); return false;"
+                                   title="4DX">4DX</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '씨네드쉐프', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=4'); return false;"
+                                   title="Cine de CHEF">CINE de CHEF</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '골드클래스', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=9'); return false;"
+                                   title="GOLD CLASS">GOLD CLASS</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '스타리움', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=6'); return false;"
+                                   title="STARIUM">STARIUM</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '더프라이빗씨네마', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=12'); return false;"
+                                   title="THE PRIVATE CINEMA">THE PRIVATE CINEMA</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '스윗박스', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=7'); return false;"
+                                   title="SWEETBOX">SWEETBOX</a></li>
+
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'ScreenX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=18'); return false;"
+                                   title="Screen X">Screen X</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'SoundX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=19'); return false;"
+                                   title="Sound X">Sound X</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '씨네앤포레', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=25'); return false;"
+                                   title="CINE &amp; FORET">CINE &amp; FORET</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '씨네키즈', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=21'); return false;"
+                                   title="CINE KIDS">CINE KIDS</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'SphereX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=23'); return false;"
+                                   title="SphereX">Sphere X</a></li>
+
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'SKYBOX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=26'); return false;"
+                                   title="SKYBOX">SKYBOX</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '씨네앤리빙룸', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=27'); return false;"
+                                   title="CINE &amp; LIVING ROOM">CINE &amp; LIVING ROOM</a></li>
+                        </ul>
+                        <ul class="group_wrap">
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '고객센터', 'http://m.cgv.co.kr/WebApp/Support/faq.aspx'); return false;"
+                                   title="고객센터">고객센터</a></li>
+                            <li><a href="#"
+                                   onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'Club서비스', 'http://m.cgv.co.kr/WebApp/SpecialV4/ClubTown_List.aspx'); return false;"
+                                   title="Club서비스">Club서비스</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn_close" onclick="javascript:close_sitemap();">창 닫기</button>
+                </div>
+            </article>
+        </section>
+
+
+    </div>
+
+
+    <input id="MovieIdx" name="MovieIdx" type="hidden" value="77305">
+    <input id="iTab" name="iTab" type="hidden" value="3">
+    <section class="content_wrap con_tile_block" id="ContainerView">
+
+        <article class="mi_wrap">
+            <div class="mi_movie_view">
+                <a href="javascript:goOutLink('http://m.cgv.co.kr/WebApp/MovieV4/MoviePoster.aspx?MovieIdx=77305');"
+                   onclick="fnSendGALog('1', '', '상위 영화정보', 'Click', '스틸컷', '어바웃 타임');" class="poster"><img
+                        id="topBannerImg1" src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000077/77305/77305_320.jpg"
+                        onerror="this.src='WebApp/images/common/noimg_177x260.png';" alt="어바웃 타임"></a>
+                <span class="video">
+                        <div class="loading_inlayer"><div class="load_box"><span
+                                class="loader loader-quart"></span></div></div>
+                        <img src="http://img.cgv.co.kr/Movie/Thumbnail/Trailer/77305/77305115623_148.jpg"
+                             onclick="fnSendGALogCallbackPlayTrailer('1', '', '상위 영화정보', 'Click', '트레일러', '77305', '115623', 'http://h.vod.cgv.co.kr:80/vodCGVa/77305/77305_115623_1200_128_960_540.mp4'); return false;"
+                             id="topBannerImg2"
+                             onerror="this.src='WebApp/images/common/noimg_trailer.gif';"
+                             alt="명장면 예고편 영상 - 어바웃 타임">
+                        <a href="#"
+                           onclick="fnSendGALogCallbackPlayTrailer('1', '', '상위 영화정보', 'Click', '트레일러', '77305', '115623', 'http://h.vod.cgv.co.kr:80/vodCGVa/77305/77305_115623_1200_128_960_540.mp4'); return false;"
+                           class="btn_mi_play"><img
+                                src="WebApp/images/movieinfo/movieinfo_btn_play.png"
+                                alt="play"></a>
+                        </span>
+
+            </div>
+            <ul class="mi_btn_list">
+                <li><a id="wishMark" href="javascript:goWish();" class="btn_wishlist "><span>위시리스트</span></a></li>
+                <li><a class="btn_sns" onclick="fnShareSns();"><span>같이볼래?</span></a></li>
+                <li><a onclick="javascript:goReserve('00');" title="예매하기"><span class="btn_reserve on">지금예매</span></a>
+                </li>
+            </ul>
+
+            <!-- 공유하기 레이어 -->
+            <div class="share_layer2" id="shareLayer2">
+                <div class="fogbg" onclick="jQuery('.share_layer2').removeClass('on');"></div>
+
+                <div class="share_board">
+                    <div class="sb_hd">
+                        <img src="WebApp/images/common/img_share_layer2_hd.png" alt="같이볼래?">
+                    </div>
+                    <ul class="sb_list">
+                        <li>
+                            <a class="cacao descin" href="#none">
+                                <span class="sb_tit">같이볼래? By 카카오톡</span>
+                                <span class="sb_desc">아래의 카드 중 마음에 드는 카드를 선택해주세요.</span>
+                            </a>
+                            <div id="div_kakao_share_imgbox" class="owl-carousel">
+                                <div class="item">
+                                    <a href="javascript:fnLogGAKaKaoLink('같이볼래 클릭', 'Click', '카카오톡 이미지 클릭_1', 'http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305','[CGV]','어바웃 타임', '나 이 영화 보고 싶어, 우리 같이 볼래?', 'WebApp/images/common/img_share_kakao1_big.jpg','200','200');">
+                                        <span class="imgbox"><img class="cls_kakao_share_img"
+                                                                  data-src="WebApp/images/common/img_share_kakao1_big.jpg"
+                                                                  alt="훗! 이번에는 이 영화로 정했다! 거절은 거절한다!"></span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:fnLogGAKaKaoLink('같이볼래 클릭', 'Click', '카카오톡 이미지 클릭_2', 'http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305','[CGV]','어바웃 타임', '나 이 영화 보고 싶어, 우리 같이 볼래?', 'WebApp/images/common/img_share_kakao2_big.jpg','200','200');">
+                                        <span class="imgbox"><img class="cls_kakao_share_img"
+                                                                  data-src="WebApp/images/common/img_share_kakao2_big.jpg"
+                                                                  alt="웁스~ 자기야~ 이 영화 끝나고 우리집에서 라면 먹고갈래?"></span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:fnLogGAKaKaoLink('같이볼래 클릭', 'Click', '카카오톡 이미지 클릭_3', 'http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305','[CGV]','어바웃 타임', '나 이 영화 보고 싶어, 우리 같이 볼래?', 'WebApp/images/common/img_share_kakao3_big.jpg','200','200');">
+                                        <span class="imgbox"><img class="cls_kakao_share_img"
+                                                                  data-src="WebApp/images/common/img_share_kakao3_big.jpg"
+                                                                  alt="쪼~옥 이 영화 같이 보러 가면 예뻐해줄께~ 우쭈쭈"></span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:fnLogGAKaKaoLink('같이볼래 클릭', 'Click', '카카오톡 이미지 클릭_4', 'http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305','[CGV]','어바웃 타임', '나 이 영화 보고 싶어, 우리 같이 볼래?', 'WebApp/images/common/img_share_kakao4_big.jpg','200','200');">
+                                        <span class="imgbox"><img class="cls_kakao_share_img"
+                                                                  data-src="WebApp/images/common/img_share_kakao4_big.jpg"
+                                                                  alt="드앗! 우리가 아직 이영화를 안봤다니! 당장 보러가자!"></span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:fnLogGAKaKaoLink('같이볼래 클릭', 'Click', '카카오톡 이미지 클릭_5', 'http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305','[CGV]','어바웃 타임', '나 이 영화 보고 싶어, 우리 같이 볼래?', 'WebApp/images/common/img_share_kakao5_big.jpg','200','200');">
+                                        <span class="imgbox"><img class="cls_kakao_share_img"
+                                                                  data-src="WebApp/images/common/img_share_kakao5_big.jpg"
+                                                                  alt="쳇! 이영화 안 보러 가면 나 삐질꼬야!"></span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:fnLogGAKaKaoLink('같이볼래 클릭', 'Click', '카카오톡 이미지 클릭_6', 'http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305','[CGV]','어바웃 타임', '나 이 영화 보고 싶어, 우리 같이 볼래?', 'WebApp/images/common/img_share_kakao6_big.jpg','200','200');">
+                                        <span class="imgbox"><img class="cls_kakao_share_img"
+                                                                  data-src="WebApp/images/common/img_share_kakao6_big.jpg"
+                                                                  alt="우엑~ 스트레스! 영화 보면서 스트레스 날리자!"></span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:fnLogGAKaKaoLink('같이볼래 클릭', 'Click', '카카오톡 이미지 클릭_7', 'http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305','[CGV]','어바웃 타임', '나 이 영화 보고 싶어, 우리 같이 볼래?', 'WebApp/images/common/img_share_kakao7_big.jpg','200','200');">
+                                        <span class="imgbox"><img class="cls_kakao_share_img"
+                                                                  data-src="WebApp/images/common/img_share_kakao7_big.jpg"
+                                                                  alt="메롱~ 나랑 이 영화 같이 안보면 다른 사람이랑 볼꺼지롱~"></span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:fnLogGAKaKaoLink('같이볼래 클릭', 'Click', '카카오톡 이미지 클릭_8', 'http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305','[CGV]','어바웃 타임', '나 이 영화 보고 싶어, 우리 같이 볼래?', 'WebApp/images/common/img_share_kakao8_big.jpg','200','200');">
+                                        <span class="imgbox"><img class="cls_kakao_share_img"
+                                                                  data-src="WebApp/images/common/img_share_kakao8_big.jpg"
+                                                                  alt="힝~ 기분도 우울한데 영화 한 편, 괜찮쥬?"></span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:fnLogGAKaKaoLink('같이볼래 클릭', 'Click', '카카오톡 이미지 클릭_9', 'http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305','[CGV]','어바웃 타임', '나 이 영화 보고 싶어, 우리 같이 볼래?', 'WebApp/images/common/img_share_kakao9_big.jpg','200','200');">
+                                        <span class="imgbox"><img class="cls_kakao_share_img"
+                                                                  data-src="WebApp/images/common/img_share_kakao9_big.jpg"
+                                                                  alt="힝~ 기분도 우울한데 영화 한 편, 괜찮쥬?"></span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="javascript:fnLogGAKaKaoLink('같이볼래 클릭', 'Click', '카카오톡 이미지 클릭_10', 'http://m.cgv.co.kr/WebApp/MovieV4/movieDetail.aspx?MovieIdx=77305','[CGV]','어바웃 타임', '나 이 영화 보고 싶어, 우리 같이 볼래?', 'WebApp/images/common/img_share_kakao10_big.jpg','200','200');">
+                                        <span class="imgbox"><img class="cls_kakao_share_img"
+                                                                  data-src="WebApp/images/common/img_share_kakao10_big.jpg"
+                                                                  alt="힝~ 기분도 우울한데 영화 한 편, 괜찮쥬?"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a class="facebook"
+                               href="javascript:fnLogGAFBTWLink('FB', '같이볼래 클릭', 'Click', '페이스북 공유','','어바웃 타임', '[CGV] 어바웃 타임');">같이볼래?
+                            By 페이스북 <span class="btn">보내기</span></a></li>
+                        <li><a class="twitter"
+                               href="javascript:fnLogGAFBTWLink('TW', '같이볼래 클릭', 'Click', '트위터 공유','','어바웃 타임', '');">같이볼래?
+                            By 트위터 <span class="btn">보내기</span></a></li>
+                    </ul>
+                    <button type="button" class="btn_close" onclick="jQuery('.share_layer2').removeClass('on');">창 닫기
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="mi_day_data">
+            <div class="mi_reserve">
+
+                <em class="ing">현재상영중</em>
+                <span class="txt">예매율</span>
+                <span class="point">3.8%</span>
+
+            </div>
+            <span class="mi_openday">2020.03.05 재개봉</span>
+        </article>
+        <article class="mi_movie_data ">
+            <strong class="tit">어바웃 타임</strong>
+            <span class="data">123분 · 로맨스/코미디 · 15세이상관람가</span>
+
+            <div class="btn cls_spl_rev" style="display:none;">
+
+            </div>
+
+
+            <div class="audience_wrap">
+                <a href="javascript:goDataAlarm('20200319', '20200320', '13');">
+                    <div class="audience_cnt2 ">
+                        <ul class="audience_inner">
+                            <ul class="audience_inner">
+                                <li class="day_cnt"><span class="cnt_num">430명</span><span
+                                        class="cnt_tit">CGV당일관객</span></li>
+                                <li><span class="cnt_num">3,431,882명</span><span class="cnt_tit">누적관객 (03.19 기준)</span>
+                                </li>
+                                <li><span class="cnt_num">594명</span><span class="cnt_tit">전일관객</span></li>
+                            </ul>
+                        </ul>
+                        <span class="ico_help">도움말</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="con_txt" id="synop"
+                 style="height: 81px; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">
+                모태솔로 팀(돔놀 글리슨)은 성인이 된 날, 아버지(빌 나이)로부터 놀랄만한 가문의 비밀을 듣게 된다. <br>
+                바로 시간을 되돌릴 수 있는 능력이 있다는 것! <br>
+                그것이 비록 히틀러를 죽이거나 여신과 뜨거운 사랑을 할 수 는 없지만, 여자친구는 만들어 줄 순 있으리.. <br>
+                <br>
+                꿈을 위해 런던으로 간 팀은 우연히 만난 사랑스러운 여인 메리에게 첫눈에 반하게 된다. <br>
+                그녀의 사랑을 얻기 위해 자신의 특별한 능력을 마음껏 발휘하는 팀. <br>
+                어설픈 대시, 어색한 웃음은 리와인드! 뜨거웠던 밤은 더욱 뜨겁게 리플레이! <br>
+                꿈에 그리던 그녀와 매일매일 최고의 순간을 보낸다. <br>
+                <br>
+                하지만 그와 그녀의 사랑이 완벽해 질수록 팀을 둘러싼 주변 상황들은 미묘하게 엇갈리고, <br>
+                예상치 못한 사건들이 여기저기 나타나기 시작하는데… <br>
+                <br>
+                어떠한 순간을 다시 살게 된다면, 과연 완벽한 사랑을 이룰 수 있을까?
+            </div>
+            <a href="javascript:showplay('0', '0');" id="show_synop" class="more" style="display: block;"><img
+                    src="WebApp/images/movieinfo/btn_txt_more.png" alt="더보기"></a>
+
+        </article>
+
+
+        <article class="egg-grade">
+            <a class="info1" href="javascript:void(0)" onclick="javascript:egg_info_btn();"><strong>Golden EGG
+                지수</strong> <span class="ico_help">도움말</span></a>
+            <div class="egg-grade-info">
+                <div class="egg-gage big">
+                    <span class="egg great">평점</span>
+                    <span class="percent"><strong>98%</strong></span>
+                </div>
+                <ul class="stats-info">
+                    <li>실관람객 평가 <strong>4,870</strong>명</li>
+                    <li>Movie Mania <strong>1,510</strong>명</li>
+                </ul>
+            </div>
+            <div class="radar-graphbox">
+                <div class="radar-graph">
+                    <canvas id="charmScore2" width="372" height="351" style="width: 124px; height: 117px;"></canvas>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="mi_menu_warp">
+            <div class="mi_menu_list">
+                <ul>
+                    <li id="li_mi_menu_3" class="on"><a href="#" onclick="javascript:btnMovieTab(3);">평점</a><span
+                            class="arrow_view">내용보기</span></li>
+                    <li id="li_mi_menu_1"><a href="#" onclick="javascript:btnMovieTab(1);">포토/트레일러</a><span
+                            class="arrow_view">내용보기</span></li>
+                    <li id="li_mi_menu_2"><a href="#" onclick="javascript:btnMovieTab(2);">감독/배우</a><span
+                            class="arrow_view">내용보기</span></li>
+                </ul>
+            </div>
+            <div class="mi_menu_con on" id="miCon1">
+
+                <div class="customer_score">
+                    <strong class="tit">4,870개의</strong>
+                    <span class="txt">실제 관람고객이 남긴 평점이 있습니다.</span>
+                    <a href="javascript:goWrite();" class="score_write">
+                        <img src="WebApp/images/movieinfo/btn_mi_write.png" alt="평점 글작성 하기">
+                    </a>
+                </div>
+
+
+                <ul class="customer_con" id="posComment">
+                    <li class="">
+                        <div class="mark_comment_area ">
+                            <div class="img_area">
+                                <div class="customer_poto"><img
+                                        src="http://img.cgv.co.kr//WebApp/images/couplingclub/config/img_character_04.png"
+                                        alt="관람객 사진"
+                                        onerror="this.src='WebApp/images/movieinfo/noimg_mark_poto.png';"><span
+                                        class="bg_poto"></span></div>
+                                <img src="WebApp/images/movieinfo/img_mark_imax.png"
+                                     alt="imax 관람 영화관" style="display:none;">
+                                <img src="WebApp/images/movieinfo/img_mark_4dx.png"
+                                     alt="4dx 관람 영화관" style="display:none;">
+                                <img src="WebApp/images/movieinfo/img_mark_screenx.png"
+                                     alt="screenx 관람 영화관" style="display:none;">
+                            </div>
+                            <div class="txt_area">
+                                <!--
+                                    <span class="division" style="">실관람객</span><strong class="name">영화에오</strong>
+                                        <div class="customer_star">
+                                        <div class="img_star size_small"><span style="width:00%">평점 10점중 0점</span></div><strong class="score_number">0</strong>
+                                    </div>
+                                -->
+
+                                <span class="egg-icon good"></span><strong class="name">영화에오</strong>
+                                <p class="customer_txt">인생 영화.... 배우, 음악, 연기, 색감, 스토리..뭐 하나 빠지는 게 없는 완벽한 영화...</p>
+
+
+                                <div class="write_day"><span>2020.03.20 작성</span><a
+                                        onclick="javascript:goLike('29872847', 'N');" class="write_like"
+                                        id="like_lnk_29872847"><em id="like_light_29872847"
+                                                                   class="choice_off">좋아요</em><span class="number"
+                                                                                                    id="likecnt_29872847">0</span></a>
+                                </div>
+
+                            </div>
+                            <a onclick="javascript:goPop('NO', '29872847', event);" class="customer_pop"><span
+                                    class="arrow">수정및삭제</span></a>
+                        </div>
+
+                        <div class="pop_mark_area" id="pop_mark_29872847">
+                            <ul>
+                                <li><a class="bg_mark ico_spoiler"
+                                       onclick="javascript:goSpoiler('29872847', 'N');"><span>스포일러 신고</span></a></li>
+                                <li><a class="bg_mark ico_vilification" onclick="javascript:goReport('29872847', 'N');"><span>욕설/비방 신고</span></a>
+                                </li>
+                            </ul>
+                            <span class="pop_mark_arrow"></span>
+                        </div>
+                        <!-- 기존
+                           <div class="pop_mark_area" id="pop_mark_29872847">
+                                <ul>
+                                <li style="display:none;"><a onclick="javascript:goEdit('29872847', '0', 'Y', '4TV1Dx2nuy9OfkQs4f6fFT+inn48+4xkgc1MR18EENxyxrrvxqF4sy7kb0FpJCqi53//2dSn+MLmDg9ZlZpcd+f8FKJmgoWQ9urCO1z+Cs4n8Jrm9Pfeh39v4EhqS2q+wHsFeFpGW8HCkiucaW7mEl+pdVX0wuyuEmoxUVwXIX4=');" class="bg_mark ico_modify"><span class="bno">평점 수정</span></a></li>
+                                <li style="display:none;"><a onclick="javascript:goDel('29872847');" class="bg_mark ico_delete"><span class="bno">평점 삭제</span></a></li>
+                                <li style=""><a id="spo_lnk_29872847" onclick="javascript:goSpoiler('29872847', 'N');" class="bg_mark ico_spoiler"><span class="bno" id="spo_mn_29872847">스포일러 신고 </span></a></li>
+                                <li style=""><a id="rep_lnk_29872847" onclick="javascript:goReport('29872847', 'N');" class="bg_mark ico_vilification"><span id="rep_mn_29872847">욕설/비방 신고 </span></a></li>
+                                </ul>
+                                <span class="pop_mark_arrow"></span>
+                            </div>
+                         -->
+                        <div class="msg_layer " onclick="javascript:jQuery(this).removeClass('on');">
+                            <div class="sp_area">
+                                <div class="ss_area">
+                                    <span class="mark_sp ico_sp">스포일러</span>
+                                    <p class="sp_txt">스포일러가 포함되어 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="msg_layer " onclick="javascript:jQuery(this).removeClass('on');">
+                            <div class="sp_area">
+                                <div class="ss_area">
+                                    <span class="mark_sp ico_sr">욕설/비방성</span>
+                                    <p class="sp_txt">욕설/비방성 내용이 포함되어 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="msg_layer " onclick="javascript:jQuery(this).removeClass('on');">
+                            <div class="sp_area">
+                                <div class="ss_area">
+                                    <span class="mark_sp ico_ss">스포일러와 욕설/비방성</span>
+                                    <p class="sp_txt">스포일러와 욕설/비방성<br>내용이 포함되어 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="mark_comment_area ">
+                            <div class="img_area">
+                                <div class="customer_poto"><img
+                                        src="http://img.cgv.co.kr//MyCGV/Profile/2018/0724/nghaq1_045647_M.jpg"
+                                        alt="관람객 사진"
+                                        onerror="this.src='WebApp/images/movieinfo/noimg_mark_poto.png';"><span
+                                        class="bg_poto"></span></div>
+                                <img src="WebApp/images/movieinfo/img_mark_imax.png"
+                                     alt="imax 관람 영화관" style="display:none;">
+                                <img src="WebApp/images/movieinfo/img_mark_4dx.png"
+                                     alt="4dx 관람 영화관" style="display:none;">
+                                <img src="WebApp/images/movieinfo/img_mark_screenx.png"
+                                     alt="screenx 관람 영화관" style="display:none;">
+                            </div>
+                            <div class="txt_area">
+                                <!--
+                                    <span class="division" style="">실관람객</span><strong class="name">소박했던행복했던</strong>
+                                        <div class="customer_star">
+                                        <div class="img_star size_small"><span style="width:00%">평점 10점중 0점</span></div><strong class="score_number">0</strong>
+                                    </div>
+                                -->
+
+                                <span class="egg-icon good"></span><strong class="name">소박했던행복했던</strong>
+                                <p class="customer_txt">여러 번 봐야하고 보고싶고 볼 수 있는 영화</p>
+                                <span class="vip">Movie Mania</span>
+
+                                <div class="write_day"><span>2020.03.20 작성</span><a
+                                        onclick="javascript:goLike('29872843', 'N');" class="write_like"
+                                        id="like_lnk_29872843"><em id="like_light_29872843"
+                                                                   class="choice_off">좋아요</em><span class="number"
+                                                                                                    id="likecnt_29872843">0</span></a>
+                                </div>
+
+                            </div>
+                            <a onclick="javascript:goPop('NO', '29872843', event);" class="customer_pop"><span
+                                    class="arrow">수정및삭제</span></a>
+                        </div>
+
+                        <div class="pop_mark_area" id="pop_mark_29872843">
+                            <ul>
+                                <li><a class="bg_mark ico_spoiler"
+                                       onclick="javascript:goSpoiler('29872843', 'N');"><span>스포일러 신고</span></a></li>
+                                <li><a class="bg_mark ico_vilification" onclick="javascript:goReport('29872843', 'N');"><span>욕설/비방 신고</span></a>
+                                </li>
+                            </ul>
+                            <span class="pop_mark_arrow"></span>
+                        </div>
+                        <!-- 기존
+                           <div class="pop_mark_area" id="pop_mark_29872843">
+                                <ul>
+                                <li style="display:none;"><a onclick="javascript:goEdit('29872843', '0', 'Y', 'KDEjsdLrMFfHztyiKXrvjIXfLtPhaHFajX3+jNBISz4lZQWAHyyGOanqEXMX9YzDq8FP0jR6+8xSqyLc2d5ilg==');" class="bg_mark ico_modify"><span class="bno">평점 수정</span></a></li>
+                                <li style="display:none;"><a onclick="javascript:goDel('29872843');" class="bg_mark ico_delete"><span class="bno">평점 삭제</span></a></li>
+                                <li style=""><a id="spo_lnk_29872843" onclick="javascript:goSpoiler('29872843', 'N');" class="bg_mark ico_spoiler"><span class="bno" id="spo_mn_29872843">스포일러 신고 </span></a></li>
+                                <li style=""><a id="rep_lnk_29872843" onclick="javascript:goReport('29872843', 'N');" class="bg_mark ico_vilification"><span id="rep_mn_29872843">욕설/비방 신고 </span></a></li>
+                                </ul>
+                                <span class="pop_mark_arrow"></span>
+                            </div>
+                         -->
+                        <div class="msg_layer " onclick="javascript:jQuery(this).removeClass('on');">
+                            <div class="sp_area">
+                                <div class="ss_area">
+                                    <span class="mark_sp ico_sp">스포일러</span>
+                                    <p class="sp_txt">스포일러가 포함되어 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="msg_layer " onclick="javascript:jQuery(this).removeClass('on');">
+                            <div class="sp_area">
+                                <div class="ss_area">
+                                    <span class="mark_sp ico_sr">욕설/비방성</span>
+                                    <p class="sp_txt">욕설/비방성 내용이 포함되어 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="msg_layer " onclick="javascript:jQuery(this).removeClass('on');">
+                            <div class="sp_area">
+                                <div class="ss_area">
+                                    <span class="mark_sp ico_ss">스포일러와 욕설/비방성</span>
+                                    <p class="sp_txt">스포일러와 욕설/비방성<br>내용이 포함되어 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="mark_comment_area ">
+                            <div class="img_area">
+                                <div class="customer_poto"><img
+                                        src="WebApp/images/movieinfo/noimg_mark_poto.png"
+                                        alt="관람객 사진"
+                                        onerror="this.src='WebApp/images/movieinfo/noimg_mark_poto.png';"><span
+                                        class="bg_poto"></span></div>
+                                <img src="WebApp/images/movieinfo/img_mark_imax.png"
+                                     alt="imax 관람 영화관" style="display:none;">
+                                <img src="WebApp/images/movieinfo/img_mark_4dx.png"
+                                     alt="4dx 관람 영화관" style="display:none;">
+                                <img src="WebApp/images/movieinfo/img_mark_screenx.png"
+                                     alt="screenx 관람 영화관" style="display:none;">
+                            </div>
+                            <div class="txt_area">
+                                <!--
+                                    <span class="division" style="">실관람객</span><strong class="name">hy**gguklee</strong>
+                                        <div class="customer_star">
+                                        <div class="img_star size_small"><span style="width:00%">평점 10점중 0점</span></div><strong class="score_number">0</strong>
+                                    </div>
+                                -->
+
+                                <span class="egg-icon good"></span><strong class="name">hy**gguklee</strong>
+                                <p class="customer_txt">시간지나서봐도 의미는 잇네</p>
+                                <span class="vip">Movie Mania</span>
+
+                                <div class="write_day"><span>2020.03.20 작성</span><a
+                                        onclick="javascript:goLike('29872812', 'N');" class="write_like"
+                                        id="like_lnk_29872812"><em id="like_light_29872812"
+                                                                   class="choice_off">좋아요</em><span class="number"
+                                                                                                    id="likecnt_29872812">0</span></a>
+                                </div>
+
+                            </div>
+                            <a onclick="javascript:goPop('NO', '29872812', event);" class="customer_pop"><span
+                                    class="arrow">수정및삭제</span></a>
+                        </div>
+
+                        <div class="pop_mark_area" id="pop_mark_29872812">
+                            <ul>
+                                <li><a class="bg_mark ico_spoiler"
+                                       onclick="javascript:goSpoiler('29872812', 'N');"><span>스포일러 신고</span></a></li>
+                                <li><a class="bg_mark ico_vilification" onclick="javascript:goReport('29872812', 'N');"><span>욕설/비방 신고</span></a>
+                                </li>
+                            </ul>
+                            <span class="pop_mark_arrow"></span>
+                        </div>
+                        <!-- 기존
+                           <div class="pop_mark_area" id="pop_mark_29872812">
+                                <ul>
+                                <li style="display:none;"><a onclick="javascript:goEdit('29872812', '0', 'Y', 'gKkzOFiipr9OngS2ZaWEk9LpJ2LGMwDMszSwP39d1yTqqbOpO+HiM+0bhhq/TdkN');" class="bg_mark ico_modify"><span class="bno">평점 수정</span></a></li>
+                                <li style="display:none;"><a onclick="javascript:goDel('29872812');" class="bg_mark ico_delete"><span class="bno">평점 삭제</span></a></li>
+                                <li style=""><a id="spo_lnk_29872812" onclick="javascript:goSpoiler('29872812', 'N');" class="bg_mark ico_spoiler"><span class="bno" id="spo_mn_29872812">스포일러 신고 </span></a></li>
+                                <li style=""><a id="rep_lnk_29872812" onclick="javascript:goReport('29872812', 'N');" class="bg_mark ico_vilification"><span id="rep_mn_29872812">욕설/비방 신고 </span></a></li>
+                                </ul>
+                                <span class="pop_mark_arrow"></span>
+                            </div>
+                         -->
+                        <div class="msg_layer " onclick="javascript:jQuery(this).removeClass('on');">
+                            <div class="sp_area">
+                                <div class="ss_area">
+                                    <span class="mark_sp ico_sp">스포일러</span>
+                                    <p class="sp_txt">스포일러가 포함되어 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="msg_layer " onclick="javascript:jQuery(this).removeClass('on');">
+                            <div class="sp_area">
+                                <div class="ss_area">
+                                    <span class="mark_sp ico_sr">욕설/비방성</span>
+                                    <p class="sp_txt">욕설/비방성 내용이 포함되어 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="msg_layer " onclick="javascript:jQuery(this).removeClass('on');">
+                            <div class="sp_area">
+                                <div class="ss_area">
+                                    <span class="mark_sp ico_ss">스포일러와 욕설/비방성</span>
+                                    <p class="sp_txt">스포일러와 욕설/비방성<br>내용이 포함되어 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="customer_con">
+                    <li id="load_3comm" style="display: none;">
+                        <div class="con_loading"><img src="WebApp/images/common/loading2.gif"
+                                                      alt="페이지 불러오는 중"></div>
+                    </li>
+                    <li class="btn_all"><a href="javascript:;" onclick="javascript:openPoint();">모두보기</a></li>
+                    <!-- 뒤로가기 버튼 생성 문제 때문에 href 삭제. mwpark_RR2015 -->
+                </ul>
+
+            </div>
+            <div class="mi_menu_con" id="miCon2">
+                <div class="con_loading"><img src="WebApp/images/common/loading2.gif"
+                                              alt="페이지 불러오는 중"></div>
+            </div>
+
+            <div class="mi_menu_con" id="miCon3">
+                <div class="con_loading"><img src="WebApp/images/common/loading2.gif"
+                                              alt="페이지 불러오는 중"></div>
+            </div>
+        </article>
+
+        <!-- 모바일광고 -->
+
+        <!-- 모바일광고 -->
+
+
+        <section class="event_ban">
+
+            <div id="div_event_owl_box" class="owl-carousel owl-theme owl-center owl-loaded">
+
+
+                <div class="owl-stage-outer">
+                    <div class="owl-stage"
+                         style="width: 1440px; transition: all 0s ease 0s; transform: translate3d(0px, 0px, 0px);">
+                        <div class="owl-item active center" style="width: auto; margin-right: 8px;">
+                            <div class="item">
+                                <article class="event_box">
+                                    <a href="http://m.cgv.co.kr/WebApp/EventNotiV4/Event/EventZone.aspx?idx=3085">
+                                        <div class="img_look">
+                                            <img class="event_img"
+                                                 src="WebApp/contents/eventV4/9875/15832252784600.jpg"
+                                                 alt="누군가의
+[인생영화 기획전]" onerror="javascript:this.src='WebApp/images/common/noimg_600x400.jpg'">
+
+                                            <div class="tip_round" style="background-color:#000000">
+                                                <div class="tip_area"><h1 class="fittext1 tip_txt"
+                                                                          style="font-size: 11px;">HOT</h1></div>
+                                            </div>
+                                        </div>
+                                        <div class="txt_look inBgColor" style="background-color:#A79179">
+
+                                            <em class="stit">Special</em>
+                                            <strong class="tit">누군가의 <br>[인생영화 기획전]</strong>
+                                            <span class="btn_participate" style=""> 지금참여</span>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="width: auto; margin-right: 8px;">
+                            <div class="item">
+                                <article class="event_box">
+                                    <a href="http://m.cgv.co.kr/WebApp/EventNotiV4/Event/EventZone.aspx?idx=2940">
+                                        <div class="img_look">
+                                            <img class="event_img"
+                                                 src="WebApp/contents/eventV4/9915/15846656441520.jpg"
+                                                 alt="최대 8천원 할인!
+[주디] 스피드 쿠폰" onerror="javascript:this.src='WebApp/images/common/noimg_600x400.jpg'">
+
+
+                                        </div>
+                                        <div class="txt_look inBgColor" style="background-color:#7B6BCF">
+                                            <div class="tip_poster"><img
+                                                    src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83071/83071_150.jpg"
+                                                    alt="최대 8천원 할인!
+[주디] 스피드 쿠폰" onerror="this.src='WebApp/images/common/noimg_198x111.png';"></div>
+                                            <em class="stit"></em>
+                                            <strong class="tit">최대 8천원 할인!<br>[주디] 스피드 쿠폰</strong>
+                                            <span class="btn_participate" style=""> 지금참여</span>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: auto; margin-right: 8px;">
+                            <div class="item">
+                                <article class="event_box">
+                                    <a href="http://m.cgv.co.kr/WebApp/EventNotiV4/Event/EventZone.aspx?idx=3092">
+                                        <div class="img_look">
+                                            <img class="event_img"
+                                                 src="WebApp/contents/eventV4/9916/15846669742390.jpg"
+                                                 alt="[스케어리 스토리]
+서프라이즈 쿠폰" onerror="javascript:this.src='WebApp/images/common/noimg_600x400.jpg'">
+
+
+                                        </div>
+                                        <div class="txt_look inBgColor" style="background-color:#333333">
+
+                                            <em class="stit">Special</em>
+                                            <strong class="tit">[스케어리 스토리]<br>서프라이즈 쿠폰</strong>
+                                            <span class="btn_participate" style=""> 지금참여</span>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: auto; margin-right: 8px;">
+                            <div class="item">
+                                <article class="event_box">
+                                    <a href="http://cgv.kr/e0RCs">
+                                        <div class="img_look">
+                                            <img class="event_img owl-lazy"
+                                                 data-src="/WebApp/Common/iload.aspx?url=WebApp/contents/eventV4/9741/15807832344300.jpg"
+                                                 alt="[1318클럽 졸업 이벤트]
+나이는 스물 혜택은 열아홉" onerror="javascript:this.src='WebApp/images/common/noimg_600x400.jpg'">
+
+
+                                        </div>
+                                        <div class="txt_look inBgColor" style="background-color:#E39705">
+
+                                            <em class="stit">Special</em>
+                                            <strong class="tit">[1318클럽 졸업 이벤트]<br>나이는 스물 혜택은 열아홉</strong>
+                                            <span class="btn_participate" style=""> 지금참여</span>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: auto; margin-right: 8px;">
+                            <div class="item">
+                                <article class="event_box">
+                                    <a href="/WebAPP/EventNotiV4/EventDetailGeneral.aspx?mCode=001&amp;seq=9866">
+                                        <div class="img_look">
+                                            <img class="event_img owl-lazy"
+                                                 data-src="/WebApp/Common/iload.aspx?url=WebApp/contents/eventV4/9866/15844154079670.jpg"
+                                                 alt="[씨네샵] 신학기
+신상품 출시" onerror="javascript:this.src='WebApp/images/common/noimg_600x400.jpg'">
+
+                                            <div class="tip_round" style="background-color:#000000">
+                                                <div class="tip_area"><h1 class="fittext1 tip_txt"
+                                                                          style="font-size: 11px;">HOT</h1></div>
+                                            </div>
+                                        </div>
+                                        <div class="txt_look inBgColor" style="background-color:#7B6BCF">
+
+                                            <em class="stit">Special</em>
+                                            <strong class="tit">[씨네샵] 신학기<br>신상품 출시</strong>
+                                            <span class="btn_participate" style=""> 지금참여</span>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-controls">
+                    <div class="owl-nav">
+                        <div class="owl-prev" style="display: none;">prev</div>
+                        <div class="owl-next" style="display: none;">next</div>
+                    </div>
+                    <div class="owl-dots" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+
+
+    </section>
+
+    <div id="popPoint" style="display:none;background-color:White;">
+        <div class="dimbg_fog" onclick="javascript:fnFogClose(this);"></div>
+        <div class="popHeader">
+            <a href="javascript:closePoint();">
+                <div class="ico_lt">
+                    <img src="WebApp/images/common/topBtn_closeX.png" alt="닫기">
+                </div>
+            </a>
+            <div class="title">평점 전체보기</div>
+        </div>
+        <div class="mi_menu_con on" style="background-color:White;min-height:1200px;">
+            <div class="customer_score">
+                <strong class="tit_screen">어바웃 타임</strong>
+
+                <div class="egg-grade">
+                    <div class="egg-gage big">
+                        <span class="egg great">평점</span><span class="percent"><strong>98%</strong></span>
+                    </div>
+                </div>
+                <strong class="tit">4,870개의</strong>
+                <span class="txt">실제 관람고객이 남긴 평점이 있습니다.</span>
+
+                <a href="javascript:goWrite();" class="score_write"><img
+                        src="WebApp/images/movieinfo/btn_mi_write.png" alt="평점 글작성 하기"></a>
+            </div>
+
+            <div class="menu_mark">
+                <ul class="mark_list">
+
+                    <li><input type="radio" id="mark1" name="mark" onclick="goCommentOrder('0');"
+                               checked="checked"><label for="mark1">최신순</label></li>
+                    <li><input type="radio" id="mark2" name="mark" onclick="goCommentOrder('3');"><label
+                            for="mark2">추천순</label></li>
+                </ul>
+            </div>
+
+            <ul id="AllCommentList" class="customer_con">
+            </ul>
+            <div id="load_10comm" class="con_loading"><img src="WebApp/images/common/loading2.gif"
+                                                           alt="페이지 불러오는 중"></div>
+            <div id="load_more">
+                <a href="javascript:getComment();" class="saleinfo_btn_more">더보기<span class="more_arrow"></span></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="writeForm" style="display:none;background-color:White;">
+        <input type="hidden" id="editCommentIdx" value="">
+        <input type="hidden" id="point" value="2">
+        <input type="hidden" id="chkIsShowView" value="N">
+        <div class="popHeader" id="headerTitle">
+            <a href="javascript:closeWrite();">
+                <div class="ico_lt"><img src="/WebApp/CDN/images/common/topBtn_closeX.png" alt="닫기"></div>
+            </a>
+            <div class="title" id="headerTitleArea">어바웃 타임</div>
+            <a href="javascript:writeProc();">
+                <div class="txt_rt" id="Div1">게시</div>
+            </a>
+        </div>
+
+
+        <div class="mark_writing">
+            <div class="likeornot">
+                <div id="likeornotBox1" class="likebox on">
+                    <div class="likebox-inner">
+                        <label for="likeornot1-1">
+						<span class="egg-icon good">
+							<input type="radio" name="likeornot1" value="2" id="likeornot1-1">
+						</span><span class="txt">좋았어요</span>
+                        </label>
+                    </div>
+                </div>
+                <div id="likeornotBox2" class="likebox">
+                    <div class="likebox-inner">
+                        <label for="likeornot1-2">
+						<span class="egg-icon">
+							<input type="radio" name="likeornot1" value="1" id="likeornot1-2">
+						</span><span class="txt">별로예요</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="oneline_txt">
+                <div class="customer_photo">
+
+                    <img src="WebApp/images/movieinfo/noimg_mark_poto.png" alt="관람객 사진">
+                </div>
+                <div class="textarea_box">
+                    <!-- 평점개편으로 placeHolder 문구 수정 영화의 한줄평을 남겨주세요 → 이 영화 어떠셨나요?     2016.01.28 yjhan -->
+                    <textarea name="commentContent" id="commentContent" cols="30" rows="7" placeholder="이 영화 어떠셨나요?"
+                              onfocus="javascript:this.placeholder='';"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <section id="charmWriteForm" style="display:none;" class="wrap">
+        <input type="hidden" id="charmCommentIdx" value="">
+        <input type="hidden" id="charmMovieIdx" value="">
+
+        <header id="header_wrap" class="cls_headertitle_box">
+            <div class="header_inbox">
+                <a href="javascript:charmCloseWrite();">
+                    <div class="ico_lt"><img src="/WebApp/CDN/images/common/topBtn_closeX.png" alt="닫기"></div>
+                </a>
+                <div class="title" id="charmHeaderTitleArea">어바웃 타임</div>
+                <a href="javascript:charmWriteProc()">
+                    <div class="txt_rt" id="headerRightBtn">게시</div>
+                </a>
+            </div>
+        </header>
+
+        <section class="content_wrap" id="charmContainer">
+            <div class="charm_infobox">
+                <p>이 영화의 매력포인트를 선택해주세요!<br>중복선택이 가능합니다.</p>
+            </div>
+
+
+            <div class="charm_list">
+                <ul>
+                    <li>
+                        <label for="charm1-5">감독연출</label>
+                        <input type="checkbox" id="charm1-5">
+                    </li>
+                    <li>
+                        <label for="charm1-2">스토리</label>
+                        <input type="checkbox" id="charm1-2">
+                    </li>
+                    <li>
+                        <label for="charm1-3">영상미</label>
+                        <input type="checkbox" id="charm1-3">
+                    </li>
+                    <li>
+                        <label for="charm1-1">배우연기</label>
+                        <input type="checkbox" id="charm1-1">
+                    </li>
+                    <li>
+                        <label for="charm1-4">OST</label>
+                        <input type="checkbox" id="charm1-4">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
+    <div class="dimbg_fog" onclick="javascript:fnFogClose(this);"></div>
+
+    <div style="display:none;">
+        <iframe id="ifr_advertising_VC_url" src="" style="width:1px;height:1px;"></iframe>
+    </div>
+
+</div>
+
+<script src="WebApp/js/util.js"></script>
+<script src="WebApp/js/Crypto/aes.js"></script>
+<script src="WebApp/js/Crypto/md5.js"></script>
+<script src="WebApp/js/Crypto/sha256.js"></script>
+<script src="WebApp/js/Crypto/Crypto.js"></script>
+<script src="WebApp/js/PageTitleExec.js"></script>
+
+<script type="text/javascript">
+    cgv.CreateNamespace("cgv.common");
+    cgv.common.StandardInfo = (function () {
+        var _isWebView = false;
+        var _appVersion = 0;
+        var _isLogin = true;
+        var _redirectUrl = "http%3a%2f%2fm.cgv.co.kr%2fWebApp%2fMovieV4%2fmovieDetail.aspx%3fMovieIdx%3d77305";
+        var _isNonmember = false;
+
+        return {
+            IsWebView: _isWebView,
+            AppVersion: _appVersion,
+            IsLogin: _isLogin,
+            RedirectUrl: _redirectUrl,
+            IsNonmember: _isNonmember
+        }
+    })();
+</script>
+
+
+<footer id="div_footer">
+
+    <p class="footerLink">
+        <a href="/WebAPP/Support/noti.aspx"><span>공지사항</span></a>
+        <a href="/WebApp/Support/faq.aspx"><span>고객센터</span></a>
+
+        <a title="로그아웃"
+           onclick="fnMovePageWithLog('/신규버전(ver.3.0,201501)/메인/기타/로그아웃', '/WebApp/Member/Logout.aspx');"><span>로그아웃</span></a>
+        <a id="footer_pc"
+           onclick="fnMovePageWithLog('/신규버전(ver.3.0,201501)/메인/기타/PC버전', 'http://www.cgv.co.kr/default.aspx?IsMobile=Y');"
+           title="PC버전"><span>PC버전</span></a>
+    </p>
+
+    <section class="footerContents">
+        <h1><a href="http://corp.cgv.co.kr/" target="_blank" class="spriteFooter footerLogo">CGV</a></h1>
+        <ul class="footerContentsLink">
+            <li><a href="javascript:openNewWebView('/Agreement/Agreement_Provision.aspx?type=10')" title="이용약관">이용약관</a>
+            </li>
+            <li><a href="javascript:openNewWebView('/Agreement/Agreement_Provision.aspx?type=11')" title="개인정보 처리방침">개인정보
+                처리방침</a></li>
+            <li><a href="javascript:openNewWebView('/Agreement/Agreement_disclaimer.aspx')" title="법적고지">법적고지</a></li>
+        </ul>
+        <dl class="companyInfo">
+            <dt>대표이사</dt>
+            <dd>최병환</dd>
+            <dt>사업자등록번호</dt>
+            <dd>104-81-45690</dd>
+            <dt>통신판매업신고번호</dt>
+            <dd>2017-서울용산-0662 <a
+                    href="javascript:openNewWebView('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1048145690')"
+                    title="사업자정보확인">사업자정보확인</a></dd>
+            <dt>개인정보보호 책임자</dt>
+            <dd>정종민</dd>
+            <dt>주소</dt>
+            <dd>
+                <address>(04377)서울특별시 용산구 한강대로<br>23길 55, 아이파크몰 6층(한강로동)</address>
+            </dd>
+            <dt>호스팅사업자</dt>
+            <dd>CJ 올리브네트웍스</dd>
+            <dt>대표이메일</dt>
+            <dd>cjcgvmaster@cj.net</dd>
+            <dt>고객센터</dt>
+            <dd>1544-1122</dd>
+        </dl>
+    </section>
+    <p class="footerReserved">© CJ CGV. All Rights Reserved</p>
+</footer>
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+        jQuery('#vid_vplayer').on('webkitendfullscreen', function (e) {
+            jQuery(".loading_inlayer").hide();
+            jQuery(this).hide();
+        });
+        jQuery('#vid_vplayer').on('webkitbeginfullscreen', function (e) {
+            try {
+                document.getElementById('vid_vplayer').play();
+            } catch (e) {
+            }
+        });
+    });
+
+    function openNewWebView(url) {
+        if (IsWebView_Master == true && AppVersion_Master >= 433) {
+            CGVHAAppInterface.EventBannerCall('5', encodeURIComponent(url));
+        } else {
+            location.href = url;
+        }
+    }
+
+    function openReservePopup() {
+        var oDialog = new jindo.m.Dialog({
+            sPosition: "center",
+            bAutoClose: false,
+            bUseEffect: false,
+            sFoggyColor: "black",
+            nFoggyOpacity: "0.6",
+            sDialogColor: ""
+        });
+
+        var sTemplate = $Element("reservePopupForm").html();
+        oDialog.setTemplate(sTemplate);
+
+        oDialog.show({}, {
+            confirm: function (e) {
+                //상영시간표 클릭시 이벤트
+                location.href = "/Schedule/";
+            },
+            cancel: function (e) {
+                //빠른예매 클릭시 이벤트
+                location.href = "/quickReservation/";
+            },
+            close: function (e) {
+                //취소 클릭시 이벤트
+            }
+        });
+    }
+
+    var refuseMail = function () {
+        var msg = "본 웹사이트에 게시된 이메일주소가\n전자우편수집프로그램이나\n그밖의 기술적 장치를 이용하여\n무단으로 수집되는 것을 거부하며,\n이를 위반시 정보통신망법에 의해\n 형사처벌됨을 유념하시기 바랍니다.";
+        alert(msg);
+    }
+
+    // <-- 결제 페이지에서 Footer 안보이기 시작 - 2017-11-01 변영호 -->
+    var getOpitionIdParameter = new RegExp('[\?&]option_id=([^]*)').exec(window.location.href);
+
+    if (getOpitionIdParameter != null) {
+        jQuery("#div_footer").hide();
+    }
+    // <-- 결제 페이지에서 Footer 안보이기 종료 -->
+</script>
+
+
+<script type="text/javascript">
+    var g_IsLogin = "True";
+    var g_refUrl = "http%3a%2f%2fm.cgv.co.kr%2f";
+    var g_reUrl = "http%3a%2f%2fm.cgv.co.kr%2fWebApp%2fMovieV4%2fmovieDetail.aspx%3fMovieIdx%3d77305";
+    var g_fld_login = "Member";
+
+    if (IsWebView_Master) {
+        g_fld_login = "MemberV4";
+        try {
+            setHeaderCss();
+        } catch (e) {
+        }
+    }
+
+    var g_url_login = "/WebApp/" + g_fld_login + "/Login.aspx?RedirectURL=" + g_reUrl;
+
+
+    function addLoadEvent(func) {
+        var initOnLoad = window.onload;
+        if (typeof initOnLoad == 'function') {
+            //console.log('exist onload');
+            window.onload = function () {
+                initOnLoad();
+                func();
+            }
+        } else {
+            //console.log('not exist onload');
+            window.onload = func;
+        }
+
+    }
+
+    jQuery(window).load(function () {
+        //APP TOP NAV EX Handle
+        if (IsWebView_Master) {
+            jQuery("input, select, textarea").each(function () {
+                jQuery(this).focus(function () {
+                    jQuery("#headerTitle").css("position", "absolute");
+                    jQuery("#div_customer_navre").css("position", "absolute");
+                });
+
+                jQuery(this).blur(function () {
+                    jQuery("#headerTitle").css("position", "fixed");
+                    jQuery("#div_customer_navre").css("position", "fixed");
+                });
+            });
+        }
+    });
+
+    jQuery(window).bind("pageshow", function (event) {
+        if (event.originalEvent.persisted) {
+            if (cgv.common.StandardInfo.IsWebView && cgv.common.Constants.isIPHONE) {
+                if (cgv.common.StandardInfo.AppVersion >= 455) {
+                    location.reload();
+                }
+            }
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    _TRK_CP = "영화/영화정보/어바웃 타임";
+    _TRK_PI = "";
+    _TRK_AMT = "";
+    _TRK_PNG = "";
+    _TRK_PNC = "";
+    _TRK_PNC_NM = "";
+
+    _TRK_MBR = "Y";
+    _TRK_SX = "U";
+    _TRK_AG = "";
+    _TRK_UVP1 = "A";
+    _TRK_ISLOGIN = "Y";
+
+    _TRK_IK = "";
+    _TRK_IKWDRS = "";
+    _TRK_ICMP = "";
+    _TRK_ICMP_NM = "";
+
+    //2013.12.30 통계 WebToApp 호출
+    var _TRK_MOVIEIDX = "77305";
+    var _TRK_MOVIENAME = "어바웃 타임";
+    //2014.02.15 이벤트리스트 리다이렉트 여부
+    var _TRK_ISEVENTREDIRECT = "";
+
+    var isWebView = "False";
+
+    if (isWebView == "True") {
+        try {
+            if (_TRK_ISEVENTREDIRECT == "true") {
+            } else if (_TRK_MOVIEIDX == "" && _TRK_MOVIENAME == "") {
+                CGVHAAppInterface.SendWebLog(encodeURIComponent(_TRK_CP));
+            } else {
+                CGVHAAppInterface.SendWebLogMovieDetail(encodeURIComponent(_TRK_CP), encodeURIComponent(_TRK_MOVIEIDX), encodeURIComponent(_TRK_MOVIENAME));
+            }
+        } catch (e) {
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    var GA_TITLE = "영화/영화정보/어바웃 타임";
+</script>
+
+<script type="text/javascript">
+    try {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga_cgv');
+        ga_cgv('create', 'UA-47951671-4', 'auto'); //운영
+        ga_cgv('create', 'UA-47951671-7', {'name': 'rollup'}); //롤업속성
+        ga_cgv('create', 'UA-47951671-9', {'name': 'popcorn'}); // 팝콘스토어속성
+    } catch (e) {
+    }
+
+    ga_cgv('rollup.set', 'title', GA_TITLE);
+    ga_cgv('popcorn.set', 'title', GA_TITLE);
+
+    var dimension1 = '8babea4617ca80f081f3f97b2b445489'; // User_ID
+    var dimension2 = 'M'; // User_gender
+    var dimension3 = '39'; // User_age
+    var dimension4 = '일반'; // User_rating
+    var dimension6 = navigator.userAgent;  // parma_agt
+    dimension6 += " / " + fnMobileDeviceLangChk();
+    var dimension7 = 'Member'; // 로그인여부
+    var dimension8 = fnMobileDeviceChk(); // param_dvc
+    dimension8 += " / " + fnMobileDeviceLangChk();
+
+    //rollup 속성의 dimenstion 설정
+    if (dimension1 != null && dimension1 != undefined) {
+        ga_cgv('rollup.set', 'userId', dimension1);
+        ga_cgv('rollup.set', 'dimension1', dimension1);
+    }
+    if (dimension2 != null && dimension2 != undefined) {
+        ga_cgv('rollup.set', 'dimension2', dimension2);
+    }
+    if (dimension3 != null && dimension3 != undefined) {
+        ga_cgv('rollup.set', 'dimension3', dimension3);
+    }
+    if (dimension4 != null && dimension4 != undefined) {
+        ga_cgv('rollup.set', 'dimension4', dimension4);
+    }
+    if (dimension6 != null && dimension6 != undefined) {
+        ga_cgv('rollup.set', 'dimension6', dimension6);
+    }
+    if (dimension7 != null && dimension7 != undefined) {
+        ga_cgv('rollup.set', 'dimension7', dimension7);
+    }
+    if (dimension8 != null && dimension8 != undefined) {
+        ga_cgv('rollup.set', 'dimension8', dimension8);
+    }
+
+    //popcorn 속성의 dimension 설정
+    if (dimension1 != null && dimension1 != undefined) {
+        ga_cgv('popcorn.set', 'userId', dimension1);
+        ga_cgv('popcorn.set', 'dimension1', dimension1);
+    }
+    if (dimension2 != null && dimension2 != undefined) {
+        ga_cgv('popcorn.set', 'dimension2', dimension2);
+    }
+    if (dimension3 != null && dimension3 != undefined) {
+        ga_cgv('popcorn.set', 'dimension3', dimension3);
+    }
+    if (dimension4 != null && dimension4 != undefined) {
+        ga_cgv('popcorn.set', 'dimension4', dimension4);
+    }
+    if (dimension6 != null && dimension6 != undefined) {
+        ga_cgv('popcorn.set', 'dimension6', dimension6);
+    }
+    if (dimension7 != null && dimension7 != undefined) {
+        ga_cgv('popcorn.set', 'dimension7', dimension7);
+    }
+    if (dimension8 != null && dimension8 != undefined) {
+        ga_cgv('popcorn.set', 'dimension8', dimension8);
+    }
+</script>
+
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5CJXRN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script type="text/javascript">
+    //Google Tag Manager dataLayer for global header
+    var parma_agt = navigator.userAgent;
+    parma_agt = parma_agt + " / " + fnMobileDeviceLangChk();
+    var param_dvc = fnMobileDeviceChk();
+    param_dvc += " / " + fnMobileDeviceLangChk();
+    try {
+        var dataLayer = [{
+            'cgv_cd1': '8babea4617ca80f081f3f97b2b445489',
+            'cgv_cd2': 'M',
+            'cgv_cd3': '39',
+            'cgv_cd4': '일반',
+            'cgv_cd6': parma_agt,
+            'cgv_cd7': 'Member',
+            'cgv_cd8': param_dvc,
+            'uid': '8babea4617ca80f081f3f97b2b445489'
+        }];
+    } catch (e) {
+    }
+
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5CJXRN');
+</script>
+
+
+<script type="text/javascript">
+    ///평점 연동
+    jQuery(function () {
+        function tabSet(el) {
+            var tmenu = el.find("> ul > li > a");
+            tmenu.click(function () {
+                var myMenu = jQuery(this).parent();
+                var myMenuNum = jQuery(this).parent().index() + 1;
+                var myCon = "miCon" + myMenuNum;
+                myMenu.addClass("on");
+                myMenu.siblings().removeClass("on");
+                jQuery("#" + myCon).addClass("on");
+                jQuery("#" + myCon).siblings().removeClass("on");
+
+                return false;
+            })
+        }
+
+        tabSet(jQuery(".mi_menu_list"));
+
+        function balloonPop() {
+            var markComment = jQuery(".mark_comment_area");
+            var btnDetail = markComment.find(".customer_pop");
+
+            btnDetail.click(function () {
+
+                var markCommentWrap = jQuery(this).parents(".mark_comment_area").parent();
+                //alert(markCommentWrap.hasClass("on"))
+                if (markCommentWrap.hasClass("on")) {
+                    markCommentWrap.removeClass("on")
+                } else {
+                    markCommentWrap.addClass("on")
+                }
+                return false;
+
+            })
+        }
+
+        balloonPop();
+
+        function mgsLayer() {
+            var msg = jQuery(".msg_layer");
+
+            msg.click(function () {
+                jQuery(this).fadeOut();
+            })
+
+        }
+
+        mgsLayer();
+
+        function likeOrNot() {
+            jQuery('.likebox label').on('click', function () {
+                var $wrap = jQuery(this).parents('.likebox');
+                $wrap.siblings().removeClass('on');
+                $wrap.addClass('on');
+            });
+
+            jQuery('.likebox input').on('focusin', function () {
+                var $wrap = jQuery(this).parents('.likebox');
+                $wrap.siblings().removeClass('on');
+                $wrap.addClass('on');
+            });
+        }
+
+        likeOrNot();
+
+        function initChart() {
+            /* 매력지수 순서 변경(배우연기,스토리,영상미,OST,특수효과 → 감독연출,스토리,영상미,배우연기,OST)    2016.02.04 yjhan*/
+            var radarChartData = {
+                labels: ["감독연출", "스토리", "영상미", "배우연기", "OST"],
+                datasets: [
+                    {
+                        label: "My First dataset",
+                        fillColor: "rgba(151,187,205,0.4)",
+                        strokeColor: "rgba(151,187,205,1)",
+                        pointColor: "rgba(151,187,205,1)",
+                        pointColorList: ["rgba(253,148,135,1)", "rgba(254,196,69,1)", "rgba(143,189,16664,1)", "rgba(100,169,178,1)", "rgba(178,103,183,1)"],
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        data: ["59", "82", "65", "76", "57"]
+                    }
+                ]
+            }//end ChartData
+            var charmScore2 = new Chart(document.getElementById("charmScore2").getContext("2d")).Radar(radarChartData, {
+                animation: false,
+                showTooltips: false,
+                pointDot: true,
+                pointDotRadius: 3,
+                datasetStrokeWidth: 1,
+                responsive: true,
+                scaleShowLabels: false,
+                scaleOverride: true,
+                scaleSteps: 4,
+                scaleStepWidth: 25,
+                scaleStartValue: 0,
+                pointLabelFontFamily: "Arial, Helvetica, sans-serif",
+                pointLabelFontStyle: "bold",
+                pointLabelFontColor: "#000000",
+                pointLabelsPadding: 3,
+                centerPointPadding: 3
+            });
+
+
+        } //end initChart
+
+        /*appVersion 430 이하는 스파이더 차트를 만들지 않음. mwpark_RR2015*/
+        if (!(IsWebView == "True" && Number(appVersion) < 430)) {
+            initChart();
+        }
+
+        /*평점 개편으로 매력포인트 체크시 체크 이미지 표시 : 2016.01.04 yjhan*/
+        function chkCharm() {
+            jQuery('.charm_list input[type=checkbox]').click(function () {
+
+                var $chkCharmWrap = jQuery(this).parents('li');
+                $chkCharmWrap.toggleClass('on');
+
+                if ($chkCharmWrap.hasClass('on')) {
+                    jQuery(this).prop("checked", true);
+                } else {
+                    jQuery(this).prop("checked", false);
+                }
+            });
+
+        }
+
+        chkCharm();
+
+    });
+
+    //[리뉴얼1단계] 2019-10-03 예매상세-영화정보팝업(fanpage 해당 안되는 영화)-닫기 버튼 클릭 했을때 호출됨.
+    function fnMoveListPage() {
+        history.back(-1);
+    }
+</script>
+
+
+<div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none;"
+     class="_loading_container_class_">
+    <div style="position: absolute; padding: 0px; margin: 0px; border: 0px; background-color: gray; zoom: 1; opacity: 0.6; width: 100%; height: 100%; left: 0px; top: 0px; z-index: 29099;"></div>
+    <div style="z-index: 30000; position: absolute;">
+        <div style="position: relative; margin: 0px auto; width: 50px; height: 50px; background: transparent;"><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(0deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(30deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(60deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(90deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(120deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(150deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(180deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(210deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(240deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(270deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(300deg) translate3d(0,-140%,0);"></span><span
+                style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(330deg) translate3d(0,-140%,0);"></span>
+        </div>
+    </div>
+</div>
+<div class="dialog-container"
+     style="position: absolute; overflow: hidden; width: 375px; height: 812px; left: 0px; z-index: 2050; top: 0px; display: none;">
+    <div class="dialog-fog"
+         style="position: absolute; padding: 0px; margin: 0px; border: 0px; background-color: black; zoom: 1; opacity: 0.6; width: 375px; height: 812px; left: 0px; top: 0px;"></div>
+    <div class="dialog-layer" style="position: relative;"></div>
+</div>
+<div class="dialog-clone" style="position: absolute; left: -1000px; top: -1000px; display: none;"></div>
+</body>
+</html>

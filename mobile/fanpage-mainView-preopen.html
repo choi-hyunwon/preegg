@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>CGV</title>
+    <link rel="shortcut icon" href="WebApp/images/common/favicon_cgv.png">
+    <link rel="apple-touch-icon" sizes="114×114" href="WebApp/images/common/favicon_cgv.png">
+
+    <link rel="stylesheet" type="text/css" href="css/common.css?dt=20200320120154">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/header.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/piemenu.css">
+
+    <link rel="stylesheet" type="text/css" href="css/eggupdate.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdateV4.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/v5/master.css">
+
+    <link rel="stylesheet" type="text/css" href="css/fanpage.css?dt=20200320120154">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/swiper.min.css">
+
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/plugins/ua/ec.js"></script>
+    <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5CJXRN"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="https://connect.facebook.net/signals/config/751110215269972?v=2.9.15&amp;r=stable" async=""></script>
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="WebApp/js/jquery.fittext.js"></script>
+    <!-- <script type="text/javascript" src="WebApp/js/Chart.custom.js"></script> -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="WebApp/css/v5/iCheck.css">
+    <script>var gateURL = "http://m.cgv.co.kr/WebApp/";</script>
+    <script>var ticketURL = "http://m.cgv.co.kr/";</script>
+    <script type="text/javascript" src="js/fanpageMovie.js?dt=20200320120154"></script>
+    <script type="text/javascript" src="js/fanpageCommon.js?dt=20200320120154"></script>
+    <script type="text/javascript" src="js/fanpage.appInterface.js?dt=20200320120154"></script>
+    <script type="text/javascript" src="js/fanpage.util.js"></script>
+    <script type="text/javascript" src="js/check.util.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/iphone-inline-video.js"></script>
+    <script type="text/javascript" src="js/fanpage.video.controls.js?dt=20200320120154"></script>
+    <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <style>
+        .con_loading {
+            padding: 40px 0 50px 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .reptxt p {
+            -webkit-user-select: all;
+            -moz-user-select: all;
+            -ms-user-select: all;
+            user-select: all;
+        }
+
+        .IIV::-webkit-media-controls-play-button,
+        .IIV::-webkit-media-controls-start-playback-button {
+            opacity: 0;
+            pointer-events: none;
+            width: 5px;
+        }
+
+        /* Chart.js */
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        // Global Variable
+        var IsLogin = true;
+        var IsWebView_Master = false;
+        var AppVersion_Master = 0;
+        var movieGroupTitle = "그 누구도 아닌";
+        var strMovieIdx = "83184";
+        var autoPlayYn = "9";
+        var strUcd = "1189708";
+        var strUserId = "danboys01";
+        var IsView = "N";
+        var fanpageGubunVal = "";
+        var fanpageMember = "Member";
+        var fanpageAdUrl = "";
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="No-cache">
+    <meta http-equiv="expires" content="0">
+    <meta property="og:title" content="그 누구도 아닌">
+    <meta property="og:description" content="[CGV] 그 누구도 아닌">
+    <meta property="og:image" content="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83184/83184_150.jpg">
+
+    <script type="text/javascript">
+
+        var iTab = "2";
+        var IsRun = "236";
+        var IsTicket = "0";
+        var isLikeFan = "N";
+        var seqWish = "";
+        var strChartYN = "Y";
+        var mgCD = "20022995";
+        var Grade = "231";
+        var CheckReserveYN = "N";
+        var strContentsIdx = "";
+        // 4.5.9ver 신규 공유하기 기능
+        var backgroundUrl = "http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83184/83184_1000.jpg";
+        var synopsis = "그 누구도 하나의 인생을 살지는 않는...";
+
+        var redirect = "";
+
+        $(document).ready(function () {
+
+            if (redirect == 'Y' || strMovieIdx == "") {
+                //location.href = "http://devm.cgv.co.kr:8083/WebApp/fanpage/Gateway.aspx?movieIdx="+"";
+                location.href = "http://m.cgv.co.kr/WebApp/fanpage/Gateway.aspx?movieIdx=" + "";
+            }
+
+
+            if (IsWebView_Master == true) {
+                // basicNavigation(4, movieGroupTitle, "");
+                basicNavigation(1, "", "");
+            }
+
+
+            if (fanpageGubunVal != "push") {
+                if (iTab == "") {
+                    fnTabMenu("310");
+                } else {
+                    fnMyTabBtn(iTab, "310");
+                }
+            }
+
+
+            // 커버이미지 반복
+            var $box1 = $("div.fp_slide").find("div.box1");
+            var $box2 = $("div.fp_slide").find("div.box2");
+            var reloadTime = 5000;
+
+            if ($box1.length) {
+                var box1_class = $box1.attr("class").replace(/box1 /gi, "");
+
+                if (box1_class != 'noEff') {
+                    setInterval(function () {
+                        $box1.removeClass(box1_class);
+                    }, reloadTime);
+                    setTimeout(function () {
+                        setInterval(function () {
+                            $box1.addClass(box1_class);
+                        }, reloadTime);
+                    }, 1000);
+                }
+            }
+            if ($box2.length) {
+                var box2_class = $box2.attr("class").replace(/box2 /gi, "");
+
+                setInterval(function () {
+                    $box2.removeClass(box2_class);
+                }, reloadTime);
+                setTimeout(function () {
+                    setInterval(function () {
+                        $box2.addClass(box2_class);
+                    }, reloadTime);
+                }, 1000);
+            }
+
+            callFacebookMovieDetail();
+        });
+
+    </script>
+    <!-- Start Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '751110215269972');
+    </script>
+    <script type="text/javascript">
+        function callFacebookReserve() {
+            fbq('track', 'ViewContent', {
+                content_name: '그 누구도 아닌',
+                content_ids: ['그 누구도 아닌_영화선택'],
+                content_type: 'product'
+            });
+        }
+
+        function callFacebookMovieDetail() {
+            fbq('track', 'ViewContent', {
+                content_name: '83184',
+                content_ids: ['영화상세_83184'],
+                content_type: 'product'
+            });
+        }
+    </script>
+
+    <noscript><img height="1" width="1" style="display:none"
+                   src=" https://www.facebook.com/tr?id=404656017017117&ev=PageView&noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <style type="text/css"></style>
+    <style type="text/css">/* Chart.js */
+    @-webkit-keyframes chartjs-render-animation {
+        from {
+            opacity: 0.99
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes chartjs-render-animation {
+        from {
+            opacity: 0.99
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    .chartjs-render-monitor {
+        -webkit-animation: chartjs-render-animation 0.001s;
+        animation: chartjs-render-animation 0.001s;
+    }</style>
+</head>
+<body style="">
+<div class="wrap fanpage">
+    <div id="header_box">
+        <header id="headerTitle" class="cls_headertitle_box">
+            <a href="javascript:;" onclick="fnSiteMap();">
+                <div class="ico_lt"><img id="siteMapBtn" src="WebApp/images/common/btn_gnbV4.png"
+                                         alt="전체메뉴"></div>
+            </a>
+            <div class="title" id="headerTitleArea">
+                <a href="#none"></a>
+            </div>
+        </header>
+        <section class="allview_wrap" id="siteMap">
+            <div id="fogbg" onclick="fnCloseSiteMap();"></div>
+            <article class="allview_box_wrap">
+                <div class="allview_box_in">
+                    <h2 class="hidden">전체메뉴</h2>
+                    <div class="allview_header">
+                        <a href="http://m.cgv.co.kr" class="cgv_logo">CGV 홈</a>
+                    </div>
+                    <div class="area">
+                        <ul class="group_wrap">
+                            <li><a href="http://m.cgv.co.kr/WebApp/MyCgvV4/Default.aspx"><b>My CGV</b></a></li>
+                            <li><a href="http://m.cgv.co.kr/quickReservation/"><b>빠른예매</b></a></li>
+                            <li><a href="http://m.cgv.co.kr/Schedule/"><b>상영시간표</b></a></li>
+                        </ul>
+                        <ul class="group_wrap">
+                            <li><a href="http://m.cgv.co.kr/WebApp/TheaterV4/" title="CGV안내">CGV안내</a></li>
+                            <li>
+                                <a href="http://m.cgv.co.kr/WebApp/MobileOrder/Gateway.aspx?cType=normal&amp;gwType=M&amp;mOrderReturnUrl=%2Fmordermain/"
+                                   title="패스트오더">패스트오더</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/GiftV5/storeMain.aspx" title="기프트샵">기프트샵</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/Collage/" title="아트하우스">아트하우스</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SaleCardV4/" title="CGV할인정보">CGV할인정보</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/EventNotiV4/EventList.aspx" title="이벤트">이벤트</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/MagazineV4/" title="매거진">매거진</a></li>
+                        </ul>
+                        <ul class="group_wrap">
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=1" title="IMAX">IMAX</a>
+                            </li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=2" title="4DX">4DX</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=4" title="Cine de CHEF">CINE
+                                de CHEF</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=9" title="GOLD CLASS">GOLD
+                                CLASS</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=6"
+                                   title="STARIUM">STARIUM</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=12"
+                                   title="THE PRIVATE CINEMA">THE PRIVATE CINEMA</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=7" title="SWEETBOX">SWEETBOX</a>
+                            </li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=18" title="Screen X">Screen
+                                X</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=19" title="Sound X">Sound
+                                X</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=25"
+                                   title="CINE &amp; FORET">CINE &amp; FORET</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=21" title="CINE KIDS">CINE
+                                KIDS</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=23" title="SphereX">Sphere
+                                X</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=24" title="TEMPUR CINEMA">TEMPUR
+                                CINEMA</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=26"
+                                   title="SKYBOX">SKYBOX</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=27"
+                                   title="CINE &amp; LIVING ROOM">CINE &amp; LIVING ROOM</a></li>
+                        </ul>
+                        <ul class="group_wrap">
+                            <li><a href="http://m.cgv.co.kr/WebApp/Support/faq.aspx" title="고객센터">고객센터</a></li>
+                            <li><a href="http://m.cgv.co.kr/WebApp/SpecialV4/ClubTown_List.aspx"
+                                   title="Club서비스">Club서비스</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn_close" onclick="fnCloseSiteMap();">창 닫기</button>
+                </div>
+            </article>
+        </section>
+
+    </div>
+
+    <section class="content_wrap" id="ContainerView">
+
+        <div class="fp_viewbox">
+            <div class="fp_slide" style="">
+                <div class="owl-carousel owl-theme owl-loaded">
+
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage"></div>
+                    </div>
+                </div>
+
+                <div style="height:18px;"></div>
+                <div class="etc">
+						<span style="color:#000; text-shadow:none;">
+
+
+							예매율 0.0%ㆍ
+							<span id="openDateString" style="color:#000; text-shadow:none;">2020.03.26 개봉</span>
+
+								</span>
+                </div>
+            </div>
+
+            <div class="fp_hdbox ">
+                <div class="poster">
+                    <a href="javascript:;"
+                       onclick="fnDownloadImage('http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83184/83184_1000.jpg');"><img
+                            src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83184/83184_150.jpg" alt="포스터"></a>
+                </div>
+
+                <div class="txt_group noneBadge">
+                    <h1 class="tit">그 누구도 아닌<span class="ico_grade">
+							<img src="http://img.cgv.co.kr//WebApp/images/common/ico_grade_15.png" alt="15세이상관람가">
+							</span>
+                    </h1>
+                    <span class="stit">
+							Orphan,
+							2016    </span>
+
+                    <div class="ico_theater2">
+                    </div>
+                </div>
+
+                <ul class="fp_btn_list type3">
+                    <li class="" data-src="off" id="wishFlag">
+                        <a href="javascript:;" onclick="fnMainOpt('FG', $(this));" class="see">
+								<span>
+									318</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:;" onclick="
+															fnShare_Web();
+															" class="share">
+                            <span>공유하기</span>
+                        </a>
+                    </li>
+
+                    <li><a href="javascript:;" class="reserve"
+                           onclick="alert('선택하신 영화는 현재 예매 준비중으로 상영스케줄이 없습니다.')"><span>예매준비중</span></a></li>
+
+                </ul>
+
+
+                <!-- 볼래요 알림 -->
+                <div class="moment_alert see">
+                    <div class="tit">‘볼래요’ 등록 완료</div>
+                    <p>영화소식을 생생하게<br>전해드립니다.</p>
+                </div>
+
+                <!-- 볼래요 해제 -->
+                <div class="opt_layer see">
+                    <div class="fogbg"></div>
+                    <div class="inner">
+                        <ul class="ol_list">
+                            <li><a href="javascript:;" class="opt_disable" onclick="wishDisable()"><em>볼래요 취소</em></a>
+                            </li>
+                        </ul>
+                        <div class="opt_cancel">
+                            <a href="#">취소</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="distributor" title="배급사" style="">
+                <!-- 기존 -->
+                <!-- LOGO 이미지가 있을경우 LOGO 이미지만 노출 -->
+                <span class="logo">
+						<img src="http://img.cgv.co.kr///Fanpage/BI/1257/1257_20181002102348.jpg" alt="그린나래미디어㈜">
+							</span>
+                <span class="txt"></span>
+                <!-- LOGO 이미지가 없을경우 배급사명 노출 -->
+                <input type="hidden" value="Y">
+                <input type="hidden" value="N">
+            </div>
+        </div>
+
+        <!-- 예매하기 팝업 START -->
+        <div class="layer_pop_re" id="reserveLayerPop">
+            <div class="fogbg"></div>
+            <div class="inner">
+                <div class="hdtxt">이 영화는 <em class="grade15">15세이상관람가</em>영화입니다.</div>
+
+                <ul class="lp_list">
+
+                    <li><a href="javascript:;" onclick="fnReservation('00', '', '');">전체</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 예매하기 팝업 END -->
+
+        <!-- 공유하기 모바일웹 화면 START -->
+        <div class="dimlaypop_wrap sharing" data-src="" cont-src="" style="z-index:4;">
+            <div class="fog_bg"></div>
+            <div class="laypop" style="left:50%; top:50%; margin:-120px 0 0 -135px; width:270px;">
+                <div class="laypop_con">
+                    <div class="tit">공유하기</div>
+                    <p class="txt"></p>
+
+                    <ul class="sns_share">
+                        <li class="kakao">
+                            <a href="javascript:;"
+                               onclick="fnSendTalkLinkFull('', '그 누구도 아닌', 'http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83184/83184_1000.jpg')">
+                                <span class="ss_tit">카카오톡</span>
+                            </a>
+                        </li>
+                        <li class="facebook">
+                            <a href="javascript:;" onclick="fnShare_FaceBook('', '그 누구도 아닌')">
+                                <span class="ss_tit">페이스북</span>
+                            </a>
+                        </li>
+                        <li class="twitter">
+                            <a href="javascript:;" onclick="fnShare_Twitter('', '그 누구도 아닌')">
+                                <span class="ss_tit">트위터</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="btn_box">
+                    <a href="javascript:;" onclick="fnShare_Close()">닫기</a>
+                </div>
+            </div>
+        </div>
+        <!-- 공유하기 모바일웹 END -->
+
+
+        <div class="fp_contbox" id="fp_contbox">
+            <div class="fp_tabmenu_wrap">
+
+                <div class="fp_tabmenu type3">
+                    <ul>
+                        <li id="tabMenu_1" class=""><a href="javascript:;" onclick="fnMobeTab(1);">관련소식</a></li>
+                        <li id="tabMenu_3"><a href="javascript:;" onclick="fnMobeTab(3);">영화정보</a></li>
+                        <li id="tabMenu_2" class="on"><a href="javascript:;" onclick="fnMobeTab(2);">실관람평</a></li>
+                        <!-- <li id="tabMenu_1"><a href="javascript:;" onclick="fnMobeTab(1);">관련소식</a></li>
+                        <li id="tabMenu_3" class="on"><a href="javascript:;" onclick="fnMobeTab(3);">영화정보</a></li>
+                        <li id="tabMenu_2"><a href="javascript:;" onclick="fnMobeTab(2);">실관람평</a></li> -->
+                    </ul>
+                </div>
+                <div class="fp_tabcont" id="fpTabCont1" style="display: none;">
+                    <div class="audience_stat2" style="display:none;">
+                        <div class="rep-cntinfo">
+                            <span class="num">51</span>
+                            <span class="tit">누적 관람객</span>
+                        </div>
+                        <ul class="cnt_list">
+                            <li>
+                                <span class="tit">오늘</span>
+                                <span class="num">0 명</span>
+                            </li>
+                            <li>
+                                <span class="tit">어제</span>
+                                <span class="num">25 명</span>
+                            </li>
+                        </ul>
+                        <div class="info-graphbox">
+                            <div class="gender-info">
+                                <ul>
+                                    <li class="male">
+                                        <div class="picto">
+                                            <div class="bar" style="height: 0%;"></div>
+                                            <div class="cover"></div>
+                                        </div>
+                                        <div class="per">
+                                            <span class="num">0</span>%
+                                        </div>
+                                    </li>
+                                    <li class="female">
+                                        <div class="picto">
+                                            <div class="bar" style="height: 0%;"></div>
+                                            <div class="cover"></div>
+                                        </div>
+                                        <div class="per">
+                                            <span class="num">0</span>%
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="age-info">
+                                <canvas id="audienceCnt" width="486" height="372"
+                                        style="display: block; margin-top: 15px; height: 124px; width: 162px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cover_list">
+                        <ul>
+                            <li>
+                                <div class="con_loading"><img src="../images/common/loading2.gif" alt="페이지 불러오는 중">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fp_tabcont" id="fpTabCont3" style="display: none;">
+                    <div class="con_loading"><img src="images/common/loading2.gif" alt="페이지 불러오는 중"></div>
+
+                </div>
+                <div class="fp_tabcont on" id="fpTabCont2" style="display: block;"><input type="hidden"
+                                                                                          name="scoreDataActing"
+                                                                                          id="scoreDataActing" value="">
+                    <input type="hidden" name="scoreDataEffect" id="scoreDataEffect" value="">
+                    <input type="hidden" name="scoreDataStory" id="scoreDataStory" value="">
+                    <input type="hidden" name="scoreDataVisual" id="scoreDataVisual" value="">
+                    <input type="hidden" name="scoreDataOst" id="scoreDataOst" value="">
+
+                    <div class="fp-egg-grade" style="display:none;">
+
+                        <div class="radar-graphbox">
+                            <!-- 매력지수 코멘트 -->
+                            <div class="fp-egg-tit" style="display:none;">
+                                <div>
+                                    <p>
+                                        <strong></strong><br>
+                                        영화
+                                    </p>
+                                </div>
+                            </div>
+                            <a class="ico_help" href="javascript:void(0)" onclick="javascript:egg_info_btn();">도움말</a>
+                            <div class="radar-graph">
+                                <canvas id="charmScore" width="540" height="540"
+                                        style="width: 180px; height: 180px; display: block;"></canvas>
+                            </div>
+                            <!-- 골든에그 데이터 -->
+                            <ul class="egg-data">
+                                <li>
+                                    <span class="lab egg">Golden Egg</span>
+                                    <div class="data">
+                                        <span class="egg good"></span>
+                                        <em>?</em>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span class="lab">실관람평</span>
+                                    <div class="data">
+                                        <em>0</em>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <span class="lab">Movie Mania</span>
+                                    <div class="data">
+                                        <em>0</em>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 성별, 연령별 차트 -->
+                        <div class="egg-line-graphbox" style="display:none;">
+                            <div class="line-graph">
+                                <canvas id="age_line_chart" height="0" width="0" class="chartjs-render-monitor"
+                                        style="display: block; height: 0px; width: 0px;"></canvas>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- 모바일 광고 -->
+                    <!-- 모바일 광고 -->
+
+                    <div class="comment_wrap">
+                        <div class="comment_cnt"><strong>실관람평
+                            0건 </strong>
+                            <!-- 댓글 필터 버튼 -->
+                            <div class="comment_filter" style="display:none;">
+                                <a href="javascript:;" class="btn_filter type1" onclick="popCmtOrder()">최신순</a>
+                                <a href="javascript:;" class="btn_filter type2" onclick="popCmtFilter()">전체</a>
+                            </div>
+                            <!--전체보기 팝업-->
+                            <div class="pop_cmt_filter">
+                                <div class="btn_sort_area" filter-src="0">
+                                    <a href="javascript:;" class="btn_sort_all" onclick="chkCmtsFilter(0)">전체</a>
+                                    <a href="javascript:;" class="btn_sort_good" onclick="chkCmtsFilter(1)">좋았어요</a>
+                                    <a href="javascript:;" class="btn_sort_bad" onclick="chkCmtsFilter(2)">별로에요</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 해쉬태그 슬라이더 -->
+                        <!-- 굿리뷰어 START -->
+                        <!-- 굿리뷰어 END -->
+
+
+                        <ul class="customer_con">
+                            <div class="customer_score">
+                                <span class="txt">등록된 실관람평이 아직 없습니다.</span>
+                                <em class="stit">첫번째 작성자가 되어주세요!</em>
+                            </div>
+                            <!-- 관람평 등록여부 체크 -->
+                            <div class="float_btnbox" style="z-index: 10000; bottom: 0px;">
+                                <div class="inner">
+								<span class="btn_photo">
+									<label for="regiPhoto" onclick="fnUpdCmt('C', 'Y');">사진등록하기</label>
+									<input type="file" id="regiPhoto">
+								</span>
+                                    <a href="javascript:;" class="fake_input" onclick="fnUpdCmt('C');"><span>이 영화, 어떠셨나요...</span></a>
+                                    <a href="javascript:;" class="btn_txt">등록</a>
+                                </div>
+                            </div>
+
+
+                        </ul>
+                    </div>
+
+                    <!-- 모바일광고 -->
+                    <div class="common_banner cb_type1">
+                        <iframe id="iframe" title="모바일광고"
+                                src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/mobile_05@web_Movieinfo?keyword=83184"
+                                width="100%" frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0"
+                                marginheight="0"></iframe>
+                    </div>
+                    <!-- 모바일광고 -->
+                    <div class="opt_layer">
+                        <div class="fogbg"></div>
+                        <div class="inner">
+                            <ul class="ol_list">
+                                <li><a href="javascript:;" onclick="fnUpdCmt('R');"><em>수정하기</em></a></li>
+                                <li><a href="javascript:;" onclick="fnUpdCmt('D');">삭제하기</a></li>
+                                <li><a href="javascript:;" onclick="fnUpdCmt('SC')">답글달기</a></li>
+                            </ul>
+                            <div class="opt_cancel">
+                                <a href="javascript:;" onclick="fnUpdCmt('E');">취소</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opt_layer2" style="display:none;">
+                        <div class="fogbg"></div>
+                        <div class="inner">
+                            <ul class="ol_list">
+                                <li><a href="javascript:;" onclick="fnUpdCmtReply('SR');"><em>수정하기</em></a></li>
+                                <li><a href="javascript:;" onclick="fnUpdCmtReply('SD');">삭제하기</a></li>
+                            </ul>
+                            <div class="opt_cancel">
+                                <a href="javascript:;" onclick="fnUpdCmt('E');">취소</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opt_reply_layer" style="display:none;">
+                        <div class="fogbg"></div>
+                        <div class="inner">
+                            <ul class="ol_list">
+                                <li><a href="javascript:;" onclick="fnInsComtsSpoiler('RT');"><em>신고하기</em></a></li>
+                                <li><a href="javascript:;" onclick="fnCopyclipboard(selectedReplyText);"
+                                       class="copyClipboard">복사하기</a></li>
+                                <li><a href="javascript:;" onclick="fnInsComtsSpoiler('RH');">숨기기</a></li>
+                            </ul>
+                            <div class="opt_cancel">
+                                <a href="javascript:;" onclick="fnUpdCmt('E');">취소</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <form name="frmView" id="frmView" action="/fanpage/movieCmtsList" method="post">
+                        <input type="hidden" name="gubun" id="gubun" value="">
+                        <input type="hidden" name="movieIdx" id="movieIdx" value="83184">
+                        <input type="hidden" name="commentIdx" id="commentIdx" value="">
+                        <input type="hidden" name="replyIdx" id="replyIdx" value="">
+                        <input type="hidden" name="iTab" id="iTab" value="2">
+                        <input type="hidden" name="cmtsGubun" id="cmtsGubun" value="">
+                        <input type="hidden" name="point" id="point" value="">
+                        <input type="hidden" name="fileUrl" id="fileUrl" value="">
+                        <input type="hidden" name="replyFileUrl" id="replyFileUrl" value="">
+                        <input type="hidden" name="Hashtag" id="Hashtag" value="">
+                        <input type="hidden" name="cameraClickYn" id="cameraClickYn" value="">
+                        <input type="hidden" name="cmtsRegId" id="cmtsRegId" value="">
+                        <input type="hidden" name="sAllCnt" id="sAllCnt" value="0">
+                        <input type="hidden" name="cmts" id="cmts" value="">
+                    </form>
+
+
+                    <script type="text/javascript">
+                        jQuery(document).ready(function () {
+                            $('.pop_cmt_filter').on('click', function (e) {
+                                var PopCmtInner = $('.pop_cmt_filter > .btn_sort_area');
+                                if (!PopCmtInner.is(e.targer) && PopCmtInner.has(e.tagert).length === 0) {
+                                    $('.pop_cmt_filter').hide();
+                                }
+                                e.preventDefault();
+                            })
+                        })
+
+                        //var selectedText 		= "";
+                        var selectedReplyText = "";
+
+                        //도움말
+                        egg_info_btn = function () {
+                            alert("CGV의 실제 관람 고객 평가로 산정된 지수입니다.\n결과에 따라 Golden EGG 아이콘이 정해집니다.");
+                        }
+
+                        // 방사형 그래프 NEW
+                        var radarCtx = document.getElementById('charmScore').getContext('2d');
+                        var radarCtxData = {
+                            labels: ["감독연출", "스토리", "영상미", "배우연기", "OST"],
+                            datasets: [
+                                {
+                                    label: "My First dataset",
+                                    data: [document.getElementById("scoreDataEffect").value
+                                        , document.getElementById("scoreDataStory").value
+                                        , document.getElementById("scoreDataVisual").value
+                                        , document.getElementById("scoreDataActing").value
+                                        , document.getElementById("scoreDataOst").value],	// 영화별 데이터
+                                    backgroundColor: "rgba(151,187,205,0.4)",
+                                    strokeColor: "rgba(151,187,205,1)",
+                                    pointRadius: 3,
+                                    PointPadding: 10,
+                                    pointBackgroundColor: ["rgba(253,148,135,1)", "rgba(254,196,69,1)", "rgba(143,189,16664,1)", "rgba(100,169,178,1)", "rgba(178,103,183,1)"],
+                                    pointHighlightStroke: "rgba(151,187,205,1)",
+                                    pointBorderWidth: 1,
+                                    pointBorderColor: "rgba(255,255,255,1)",
+                                    borderWidth: 1,
+                                    borderColor: 'rgba(153,189,206,1)',
+                                }
+                            ]
+                        };
+                        var radarChartOpt = {
+                            plugins: {datalabels: {display: false}},
+                            legend: {display: false},
+                            responsive: false,
+                            scale: {
+                                ticks: {
+                                    display: false,
+                                    beginAtZero: true,
+                                    stepSize: 25,
+                                },
+                                pointLabels: {
+                                    fontColor: 'rgba(165,170,180,1)',
+                                },
+                            },
+                            pointLabels: {display: false},
+                            tooltips: {enabled: false},
+                            animation: {
+                                duration: 0
+                            },
+                        };
+
+                        var charmScore;
+
+                        // 골든에그 지수 연령, 나이별 차트
+
+                        // 성별, 연령별 그래프 Y축 최소값 구하기 START
+                        var arr = [,
+                            ,
+                            ,
+                            ,
+                            ,
+                            ,
+                        ]
+                        var minData = arr[0];
+                        var maxData = arr[0];
+                        var resultData = 0;
+                        for (var i = 0; i < arr.length; i++) {
+                            if (minData >= arr[i] && arr[i] != 0) {
+                                minData = arr[i];
+                            }
+                            if (maxData <= arr[i]) {
+                                maxData = arr[i];
+                            }
+                        }
+
+                        if ((maxData - minData) >= 7) {
+                            resultData = minData - 10;
+                        } else if ((maxData - minData) >= 5 && (maxData - minData) < 7) {
+                            resultData = minData - 5;
+                        } else {
+                            resultData = minData - 1;
+                        }
+                        // 성별, 연령별 그래프 Y축 최소값 구하기 END
+
+                        var lineChart = document.getElementById('age_line_chart').getContext('2d'),
+                            ctColor1 = lineChart.createLinearGradient(0, 0, lineChart.canvas.width, 0); //차트 그라데이션 컬러 설정
+                        ctColor1.addColorStop(0.000, 'rgba(255, 255, 255, 0.5)');
+                        ctColor1.addColorStop(0.012, 'rgba(255, 255, 255, 0.4)');
+                        ctColor1.addColorStop(0.020, 'rgba(155, 205, 255, 0.200)');
+                        ctColor1.addColorStop(0.112, 'rgba(186, 186, 255, 0.700)');
+                        ctColor1.addColorStop(0.189, 'rgba(255, 127, 141, 0.450)');
+                        ctColor1.addColorStop(0.199, 'rgba(255, 127, 141, 0.400)');
+                        ctColor1.addColorStop(0.250, 'rgba(255, 163, 172, 0.400)');
+                        ctColor1.addColorStop(0.319, 'rgba(255, 224, 196, 0.600)');
+                        ctColor1.addColorStop(0.821, 'rgba(255, 224, 196, 0.300)');
+                        ctColor1.addColorStop(0.92, 'rgba(255, 243, 229, 0.200)');
+                        ctColor1.addColorStop(0.99, 'rgba(255, 255, 255, 0.200)');
+                        ctColor2 = lineChart.createLinearGradient(0, 50, 280, 0);
+                        ctColor2.addColorStop(.0, 'rgba(255, 255, 255, 0.8)');
+                        ctColor2.addColorStop(.01, 'rgba(255, 255, 255, 1)');
+                        ctColor2.addColorStop(.07, 'rgba(160, 198, 243, 0.7)');
+                        ctColor2.addColorStop(.14, 'rgba(255, 136, 147, 1)');
+                        ctColor2.addColorStop(.28, 'rgba(255, 170, 69, 1)');
+                        ctColor2.addColorStop(.85, 'rgba(255, 170, 69, 0.8)');
+                        ctColor2.addColorStop(.96, 'rgba(255, 245, 245, 1)');
+                        var data = {
+                            labels: ['남자', '여자',
+
+                            ],
+                            datasets: [{
+                                label: '골든에그 지수 성별, 연령별 선호도',
+                                data: [,
+                                    ,
+
+                                ],
+                                backgroundColor: ctColor1,
+                                pointBackgroundColor: 'white',
+                                pointBorderColor: ['#a0cbfd', '#ff7f8d', '#ffaa44', '#ffaa44', '#ffaa44', '#ffaa44', '#ffaa44'],
+                                pointBorderWidth: 1,
+                                borderWidth: 0.5,
+                                pointRadius: 2,
+                                pointHoverRadius: 1,
+                                pointHoverBackgroundColor: '#fff',
+                                borderColor: ctColor2,
+                                datalabels: {align: 'end', anchor: 'end'},
+                            }]
+                        };
+                        var options = {
+                            plugins: {
+                                datalabels: {
+                                    formatter: function (value, context) {
+                                        return value + '%';
+                                    },
+                                    font: {size: 11, style: 'bold'},
+                                    color: '#000000',
+                                    padding: {top: -35}
+                                }
+                            },
+                            legend: {display: false},
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                xAxes: [{
+                                    gridLines: {display: false,},
+                                    ticks: {
+                                        fontSize: 12,
+                                        fontStyle: 'normal',
+                                        fontColor: 'rgba(145,151,163,1)'
+                                    }
+                                }],
+                                yAxes: [{
+                                    gridLines: {display: false, color: 'rgba(255,255,255,0)'},
+                                    ticks: {
+                                        //beginAtZero: true,
+                                        display: false,
+                                        //steps: 10,
+                                        //stepValue: 10,
+                                        //max: 150,
+                                        min: resultData
+                                    }
+                                }]
+                            },
+                            elements: {line: {tension: 0}},
+                            point: {backgroundColor: 'white'},
+                            tooltips: {enabled: false},
+                            layout: {
+                                padding: {
+                                    left: 0,
+                                    right: 0,
+                                    top: 70,
+                                    bottom: 0
+                                }
+                            },
+                            animation: {
+                                duration: 0
+                            },
+                        };
+                        var chartInstance;
+
+                        function initRadarChart() {
+                            charmScore = new Chart(radarCtx, {
+                                type: 'radar',
+                                data: radarCtxData,
+                                options: radarChartOpt
+                            });
+                            chartInstance = new Chart(lineChart, {
+                                type: 'line', data: data, options: options,
+                                plugins: [{
+                                    // 가변형 그래프로 변경에 따라 윈도우 리사이즈에 맞춰 그라디언트 색상을 맞춤
+                                    afterLayout: function (chart, options) {
+                                        var scales = chart.scales;
+                                        var ctColor1 = chart.ctx.createLinearGradient(
+                                            scales["x-axis-0"].left,
+                                            scales["x-axis-0"].bottom,
+                                            scales["x-axis-0"].right,
+                                            scales["x-axis-0"].top
+                                        );
+                                        var ctColor2 = chart.ctx.createLinearGradient(
+                                            scales["x-axis-0"].left,
+                                            50,
+                                            scales["x-axis-0"].right - (scales["x-axis-0"].right / 10 / 2),
+                                            scales["x-axis-0"].top
+                                        );
+                                        ctColor1.addColorStop(0.000, 'rgba(255, 255, 255, 0.5)');
+                                        ctColor1.addColorStop(0.012, 'rgba(255, 255, 255, 0.4)');
+                                        ctColor1.addColorStop(0.020, 'rgba(155, 205, 255, 0.200)');
+                                        ctColor1.addColorStop(0.112, 'rgba(186, 186, 255, 0.700)');
+                                        ctColor1.addColorStop(0.189, 'rgba(255, 127, 141, 0.450)');
+                                        ctColor1.addColorStop(0.199, 'rgba(255, 127, 141, 0.400)');
+                                        ctColor1.addColorStop(0.250, 'rgba(255, 163, 172, 0.400)');
+                                        ctColor1.addColorStop(0.319, 'rgba(255, 224, 196, 0.600)');
+                                        ctColor1.addColorStop(0.821, 'rgba(255, 224, 196, 0.300)');
+                                        //ctColor1.addColorStop(0.92, 'rgba(255, 243, 229, 0.200)');
+                                        //ctColor1.addColorStop(0.99, 'rgba(255, 255, 255, 0.200)');
+                                        ctColor2.addColorStop(.0, 'rgba(255, 255, 255, 0.8)');
+                                        ctColor2.addColorStop(.01, 'rgba(255, 255, 255, 1)');
+                                        ctColor2.addColorStop(.07, 'rgba(160, 198, 243, 0.7)');
+                                        ctColor2.addColorStop(.14, 'rgba(255, 136, 147, 1)');
+                                        ctColor2.addColorStop(.28, 'rgba(255, 170, 69, 1)');
+                                        ctColor2.addColorStop(.85, 'rgba(255, 170, 69, 0.8)');
+                                        //ctColor2.addColorStop(.96, 'rgba(255, 245, 245, 1)');
+                                        chart.data.datasets[0].backgroundColor = ctColor1;
+                                        chart.data.datasets[0].borderColor = ctColor2;
+                                    }
+                                }]
+                            });
+                        }
+
+                        function popCmtOrder() {
+                            var x = $('.btn_filter.type1').text();
+                            if (x == '최신순') {
+                                $('.btn_filter.type1').text('공감순');
+                                $('.btn_filter.type1').attr("order-src", 1);
+                            } else {
+                                $('.btn_filter.type1').text('최신순');
+                                $('.btn_filter.type1').attr("order-src", 0);
+                            }
+
+                            var order = $('.btn_filter.type1').attr("order-src");
+                            var filter = $('.btn_sort_area').attr("filter-src");
+
+                            movieCmtsListSort(order, filter);
+                        }
+
+
+                        function popCmtFilter() {
+                            //$('.btn_filter.type2').on("click", function(e){
+                            $('.pop_cmt_filter').show();
+                            //e.preventDefault();
+                            //})
+                        }
+
+                        function chkCmtsFilter(filter) {
+                            $('.btn_sort_area').attr("filter-src", filter);
+                            var order = $('.btn_filter.type1').attr("order-src");
+                            if (filter == 0) {
+                                $('.btn_filter.type2').text("전체");
+                            } else if (filter == 1) {
+                                $('.btn_filter.type2').text("좋았어요");
+                            } else if (filter == 2) {
+                                $('.btn_filter.type2').text("별로에요");
+                            }
+                            movieCmtsListSort(order, filter);
+                        }
+
+                        // 해쉬태그 슬라이드
+                        function hashtagSlide() {
+                            var hashtagSlide = new Swiper('.hashtag_slide', {
+                                slidesPerView: 'auto',
+                                spaceBetween: 5,
+                                centerInsufficientSlides: true
+                            });
+                        }
+
+                        hashtagSlide();
+                    </script>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <form name="frmMainView" id="frmMainView" action="/fanpage/mainView" method="get" onsubmit="return false;">
+        <input type="hidden" name="movieIdx" value="83184">
+        <input type="hidden" name="iTab" value="">
+    </form>
+
+    <form name="frmWriteContentsComment" id="frmWriteContentsComment" action="/fanpage/fanpageContentsRegView"
+          method="post" onsubmit="return false;">
+        <input type="hidden" name="navKind" value="30">
+        <input type="hidden" name="gubun" value="">
+        <input type="hidden" name="movieIdx" value="">
+        <input type="hidden" name="contentsIdx" value="">
+        <input type="hidden" name="commentIdx" value="">
+    </form>
+</div><!-- // wrap -->
+
+<script type="text/javascript" src="WebApp/js/v5/payment/lib/plugins.js"></script>
+<script src="WebApp/js/v5/contents/lib/chart.js"></script>
+<script src="WebApp/js/chartjs-plugin-datalabels.min.js"></script>
+
+<script type="text/javascript">
+    //jQuery(document).ready(function() {
+
+    fpCoverImg();
+
+    /* 연령별 그래프 NEW */
+
+    /* function argMax(array) {
+        return array.map((x, i) => [x, i]).reduce((r, a) => (a[0] > r[0] ? a : r))[1];
+    }	 */
+    var ageData = [0,
+        0,
+        0,
+        0,
+        0]; // 연령별 data 10~50대
+    var max = 0;
+    var loc = 0;
+    var barColor = [];
+    var barColor2 = [];
+    for (var i = 0; i < ageData.length; i++) {
+        if (max <= ageData[i]) {
+            max = ageData[i];
+            loc = i;
+        }
+    }
+    for (var i = 0; i < ageData.length; i++) {
+        if (loc == i) {
+            barColor[i] = 'rgba(255,145,0,1)';
+            barColor2[i] = 'rgba(255,145,0,1)';
+        } else {
+            barColor[i] = 'rgba(189,193,200,1)';
+            barColor2[i] = 'rgba(0,0,0,1)';
+        }
+    }
+
+    /* var labels = ageData.map((x, i) => i.toString());
+    var barColor = ageData.map(x => 'rgba(189,193,200,1)');
+    var barColor2 = ageData.map(x => 'rgba(0,0,0,1)');
+    barColor[argMax(ageData)] = 'rgba(255,145,0,1)';
+    barColor2[argMax(ageData)] = 'rgba(255,145,0,1)';  */
+    //var barChart = document.getElementById('audienceCnt').getContext('2d');
+    var ageChartData = {
+        labels: ["10대", "20대", "30대", "40대", "50대"],
+        datasets: [
+            {
+                label: "누적 관람객 현황",
+                backgroundColor: barColor,
+                borderColor: "rgba(0,0,0,0)",
+                data: ageData,
+                datalabels: {align: 'end', anchor: 'end'},
+            }
+        ]
+    }
+    var ageChartOpt = {
+        plugins: {
+            datalabels: {
+                formatter: function (value, context) {
+                    return value + '%';
+                },
+                font: {size: 12},
+                color: barColor2,
+                padding: {top: -10}
+            }
+        },
+        legend: {display: false},
+        responsive: false,
+        scales: {
+            xAxes: [{
+                gridLines: {display: false},
+                ticks: {fontSize: 11, fontStyle: 'normal', fontColor: 'rgba(145,151,163,1)',},
+                barThickness: 18,
+                barPercentage: 1,
+                categoryPercentage: 2
+            }],
+            yAxes: [{
+                gridLines: {display: false, color: 'rgba(255,255,255,0)'},
+                ticks: {
+                    beginAtZero: true, display: false,
+                },
+            }],
+        },
+        tooltips: {enabled: false},
+        animation: {
+            duration: 0
+        },
+        layout: {padding: {top: 15}}
+    };
+
+    if ($('.fp_tabmenu_wrap').find('.fp_tabmenu li').length > 2) {
+        //var audienceCnt = new Chart(barChart, {type: 'bar',data: ageChartData,options: ageChartOpt});
+        var barChart = document.getElementById('audienceCnt').getContext('2d');
+        var audienceCnt = new Chart(barChart, {type: 'bar', data: ageChartData, options: ageChartOpt});
+    }
+
+
+    /*---- 연령별 그래프 END ----*/
+
+
+    /* 연령별 그래프 */
+    /*
+    var ageChartData = {
+        labels : ["10대","20대","30대","40대","50대"],
+        datasets: [
+            {
+                label: "My First dataset",
+                fillColor: "rgba(189,193,200,1)",
+                strokeColor: "rgba(0,0,0,0)",
+                data: [0,
+                       0,
+                       0,
+                       0,
+                       0]
+            }
+        ]
+    }
+
+    var ageChartOpt = {
+        animationSteps:1,
+        onAnimationComplete : ageChartInit,
+        showTooltips: false,
+        showScale:true,
+        scaleShowLabels:false,
+        scaleBeginAtZero:true,
+        scaleShowGridLines:false,
+        scaleLineColor: "rgba(0,0,0,0)",
+        scaleFontSize:10,
+        scaleFontColor: "rgba(145,151,163,1)",
+        barShowStroke : false,
+        barValueSpacing : 5,
+        responsive: false
+    }
+
+    if($('.fp_tabmenu_wrap').find('.fp_tabmenu li').length > 2 ){
+        var audienceCnt = new Chart(document.getElementById("audienceCnt").getContext('2d')).Bar(ageChartData, ageChartOpt);
+    }
+
+    function ageChartInit() {
+        if(!$('.age-info').find('ul.per').length >0) {
+            $('.age-info').append('<ul class="per"></ul>');
+
+            var $dataBox = $('.age-info').find('.per');
+            var _dataLen = ageChartData.datasets[0].data.length;
+            var _dataMaxIdx = 0;
+            var _dataMax = 0;
+            var _dataMaxIdx2 = null;
+
+            for (var i=0; i<_dataLen; i++)
+            {
+                $dataBox.append('<li>'+ ageChartData.datasets[0].data[i] +'</li>');
+                $dataBox.children('li').eq(i).css({
+                    top : audienceCnt.datasets[0].bars[i].y - 15,
+                    left : audienceCnt.datasets[0].bars[i].x
+                });
+
+                if(_dataMax < ageChartData.datasets[0].data[i]) {
+                    _dataMaxIdx = i;
+                    _dataMax = ageChartData.datasets[0].data[i];
+                }
+            }
+
+            audienceCnt.datasets[0].bars[_dataMaxIdx].fillColor = 'rgba(255,145,0,1)';
+            $dataBox.children('li').eq(_dataMaxIdx).css('color','rgba(255,145,0,1)');
+            audienceCnt.update();
+        }
+    }
+    */
+
+    /* 방사형 그래프 */
+    var charmScore;
+
+    function chartRePainting(obj) {
+        console.log("chartRePainting(obj) : ", obj);
+        obj.destroy();
+        if (obj === charmScore) {
+            obj = new Chart(document.getElementById("charmScore").getContext("2d")).Radar(radarChartData, radarChartOpt);
+        } else if (obj === audienceCnt) {
+            obj = new Chart(document.getElementById("audienceCnt").getContext("2d")).Line(lineChartData, lineChartOpt);
+        }
+    }
+
+
+    // 포스터n스틸컷 : 이미지 비율 체크
+    function imgCheckRatio(obj) {
+        var boxW = obj.parent().width(),
+            boxH = obj.parent().height(),
+            objW = obj.width(),
+            objH = obj.height(),
+            wRatio = Math.abs(objW / boxW),
+            hRatio = Math.abs(objH / boxH);
+
+        if (objW > objH) {
+            if (wRatio >= hRatio) {
+                obj.parent().addClass('land')
+            } else {
+                obj.parent().addClass('port')
+            }
+        } else if (objW < objH) {
+            if (wRatio <= hRatio) {
+                obj.parent().addClass('port')
+            } else {
+                obj.parent().addClass('land')
+            }
+        } else {
+            if (objW >= boxW) {
+                obj.parent().addClass('land')
+            } else {
+                obj.parent().addClass('stretch')
+            }
+        }
+    }
+
+    /* 포스터n스틸컷 : 이미지 로드 후에 실행되야 함 */
+    function movieGalleryList() {
+
+        var $gallery = jQuery('.movie_gallery'),
+            $galleryItem = $gallery.find('>ul>li');
+
+        $gallery.imagesLoaded(function () {
+            var _imgNum = $gallery.find('img').length;
+            for (var i = 0; i < _imgNum; i++) {
+                imgCheckRatio($galleryItem.eq(i).find('img'));
+            }
+        })
+
+    }//movieGalleryList();
+
+
+    /* 펜페이지 상단 슬라이드 */
+    function fpSlide() {
+        var $owl = jQuery('.fp_slide .owl-carousel');
+        $owl.owlCarousel({
+            items: 1
+        }).on('drag.owl.carousel', function (event) {
+            jQuery(window).on('touchmove', true);
+
+        }).on('dragged.owl.carousel', function (event) {
+            jQuery(window).on('touchmove', false);
+        })
+
+    }
+
+    fpSlide();
+
+
+    /* 펜페이지 버튼 리스트 */
+    function fpBtnList() {
+        var $btnWrap = jQuery('.fp_btn_list'),
+            $myBtn = $btnWrap.find('li > a');
+
+        $myBtn.click(function (e) {
+            var $this = jQuery(this).parent();
+            /*
+            if(jQuery(this).hasClass('see') || jQuery(this).hasClass('notice')) {
+
+                $this.toggleClass('on');
+
+            }
+            */
+
+            if (jQuery(this).hasClass('reserve_on')) {
+
+                var $layer = jQuery('#reserveLayerPop');
+
+                $layer.addClass('on');
+                $layer.find('.fogbg').click(function () {
+                    $layer.removeClass('on');
+                })
+            }
+
+            e.preventDefault();
+        })
+    }
+
+    fpBtnList();
+
+
+    /* 펜페이지 커버 버튼 리스트 */
+    function coverBtnList() {
+
+        var $btnWrap = jQuery('.cover_btn_list'),
+            $myBtn = $btnWrap.find('li > a');
+
+        $myBtn.click(function (e) {
+            var $this = jQuery(this).parent();
+            if (jQuery(this).hasClass('like')) {
+                $this.toggleClass('on');
+            }
+            e.preventDefault();
+        })
+
+    }
+
+    coverBtnList();
+
+
+    /* 댓글 옵션 레이어 */
+    function callOptLayer() {
+
+        var $optLayer = jQuery('.opt_layer')
+        jQuery('.customer_txt .call_opt').click(function (e) {
+            $optLayer.addClass('on');
+            e.preventDefault();
+        })
+
+        $optLayer.find('.fogbg, .opt_cancel').click(function (e) {
+            $optLayer.removeClass('on');
+            e.preventDefault();
+        })
+
+    }
+
+    callOptLayer();
+
+
+    // 펜페이지 커버 이미지
+    function fpCoverImg() {
+
+        var $imgWrap = jQuery('.cover_list > ul > li');
+
+        $imgWrap.find('.cover_imgwrap').each(function () {
+
+            var $this = jQuery(this);
+            var _imgNum = $this.find('img').length;
+
+            $this.imagesLoaded(function () {
+                for (var i = 0; i < _imgNum; i++) {
+                    imgCheckRatio($this.find('img').eq(i));
+                }
+            })
+
+            if ($this.find('video').length > 0) {
+                var _videoNum = $this.find('video').length;
+
+                for (var i = 0; i < _videoNum; i++) {
+                    imgCheckRatio($this.find('video').eq(i));
+                }
+            }
+        })
+
+    }
+
+    fpCoverImg();
+
+    /* 펜페이지 영화정보 슬라이드 */
+    function makersSlide() {
+        var $owl = jQuery('.makers_slide .owl-carousel');
+        if ($owl.find('.item').length == 1) {
+            $owl.owlCarousel({
+                items: 1,
+                responsive: false
+            })
+        } else {
+            $owl.owlCarousel({
+                items: 1,
+                responsive: false,
+                autoWidth: true
+            })
+        }
+        $owl.on('translated.owl.carousel', function (event) {
+            if (jQuery('body').width() >= jQuery('#makers .owl-stage').width()) {
+                fntranslatedcallback(event);
+            } else {
+                fntranslatedcallback2(event);
+            }
+        });
+        $owl.on('drag.owl.carousel', function (event) {
+            jQuery(window).on('touchmove', true);
+
+        }).on('dragged.owl.carousel', function (event) {
+            jQuery(window).on('touchmove', false);
+        })
+    }//makersSlide();
+
+
+    /* 트레일러 슬라이드 */
+    function trailerSlide() {
+        var $owl = jQuery('.movie_trailer .owl-carousel');
+        $owl.owlCarousel({
+            margin: 7,
+            items: 1,
+            responsive: false,
+            autoWidth: true
+        }).on('translated.owl.carousel', function (event) {
+            if (jQuery('body').width() >= jQuery('#movieTrailer .owl-stage').width()) {
+                fntranslatedcallback(event);
+            } else {
+                fntranslatedcallback2(event);
+            }
+        }).on('drag.owl.carousel', function (event) {
+            jQuery(window).on('touchmove', true);
+
+        }).on('dragged.owl.carousel', function (event) {
+            jQuery(window).on('touchmove', false);
+        })
+    }//trailerSlide();
+
+    function seriesSlide() {
+        var $owl = jQuery('.movie_series .owl-carousel');
+        $owl.owlCarousel({
+            margin: 0,
+            items: 1,
+            responsive: false,
+            autoWidth: true
+        }).on('translated.owl.carousel', function (event) {
+            if (jQuery('body').width() >= jQuery('#seriesList .owl-stage').width()) {
+                fntranslatedcallback(event);
+            } else {
+                fntranslatedcallback2(event);
+            }
+        }).on('drag.owl.carousel', function (event) {
+            jQuery(window).on('touchmove', true);
+
+        }).on('dragged.owl.carousel', function (event) {
+            jQuery(window).on('touchmove', false);
+        })
+    }
+
+
+    // 펜페이지 탭메뉴
+    function fpTab(iTab) {
+        var $tabWrap = jQuery('.fp_tabmenu_wrap'),
+            $myTabBtn = $tabWrap.find('.fp_tabmenu li > a'),
+            $myTabCont = $tabWrap.find('.fp_tabcont'),
+            _tabMenuIdx = $tabWrap.find('.fp_tabmenu li.on').index(),
+            _tabMenuSize = $tabWrap.find('.fp_tabmenu li').length;
+
+        if (_tabMenuSize == 2) {
+            $tabWrap.find('.fp_tabmenu').addClass('type2');
+        } else if (_tabMenuSize == 3) {
+            $tabWrap.find('.fp_tabmenu').addClass('type3');
+        }
+        $myTabCont.hide();
+        $tabWrap.find('.fp_tabcont').eq(_tabMenuIdx).show();
+
+        /*
+        if(_tabMenuIdx == 2) {
+            makersSlide();
+            trailerSlide();
+        }
+        */
+
+        $myTabBtn.click(function (e) {
+
+            destroySlide(jQuery('.makers_slide .owl-carousel'));
+            destroySlide(jQuery('.movie_trailer .owl-carousel'));
+
+            var $this = jQuery(this).parent();
+            var _tabIdx = $this.index();
+
+            $this.addClass('on');
+            $this.siblings().removeClass('on');
+            $myTabCont.removeClass('on').hide();
+            $myTabCont.eq(_tabIdx).addClass('on');
+
+            /*
+            if(_tabIdx == 0) {
+                fpCoverImg();
+                chartRePainting(audienceCnt);
+            }
+            else if(_tabIdx == 1) {
+                chartRePainting(charmScore)
+            }
+            else if(_tabIdx == 2) {
+                makersSlide();
+                trailerSlide();
+                movieGalleryList();
+            }
+            */
+
+            e.preventDefault();
+        })
+
+    }
+
+    fpTab();
+
+
+    /* 슬라이드 콜백1 */
+    function fntranslatedcallback(event) {
+        var obj = event.target;
+        var cnt = event.item.count;
+        var idx = event.item.index;
+
+        if ((cnt - 2) < idx) {
+            var m = parseInt(jQuery("#" + obj.id + " .owl-stage").width());
+            var c = parseInt(jQuery("#" + obj.id + " .owl-stage-outer").width());
+            var p = parseInt(jQuery("#" + obj.id + " .owl-stage .owl-item").css("margin-right"));
+
+            var m_obj = jQuery("#" + obj.id + " .owl-stage");
+
+            var matrix_txt = "";
+            if (m_obj.css('-webkit-transform')) {
+                matrix_txt = "-webkit-transform";
+            } else if (m_obj.css('-moz-transform')) {
+                matrix_txt = "-moz-transform";
+            } else if (m_obj.css('-ms-transform')) {
+                matrix_txt = "-ms-transform";
+            } else if (m_obj.css('-o-transform')) {
+                matrix_txt = "-o-transform";
+            } else if (m_obj.css('transform')) {
+                matrix_txt = "transform";
+            }
+
+            var matrix = m_obj.css(matrix_txt).toString();
+            var shift = parseFloat(matrix.split(",")[4]);
+
+            if ((m - c) < (shift * -1)) {
+                m_obj.css(matrix_txt, 'translate3d(-' + (m - c - p) + 'px,0px,0px)');
+            }
+        }
+    }
+
+
+    /* 슬라이드 콜백2 */
+    function fntranslatedcallback2(event) {
+        var obj = event.target;
+        var cnt = event.item.count;
+        var idx = event.item.index;
+
+        var m = parseInt(jQuery("#" + obj.id + " .owl-stage").width());
+        var c = parseInt(jQuery("#" + obj.id + " .owl-stage-outer").width());
+        var p = parseInt(jQuery("#" + obj.id + " .owl-stage .owl-item").css("margin-right"));
+        var itemW = parseInt(jQuery("#" + obj.id + " .owl-stage .owl-item").width());
+        var quotient = Math.round((jQuery('body').width() / 2) / itemW);
+        var m_obj = jQuery("#" + obj.id + " .owl-stage");
+
+        var matrix_txt = "";
+        if (m_obj.css('-webkit-transform')) {
+            matrix_txt = "-webkit-transform";
+        } else if (m_obj.css('-moz-transform')) {
+            matrix_txt = "-moz-transform";
+        } else if (m_obj.css('-ms-transform')) {
+            matrix_txt = "-ms-transform";
+        } else if (m_obj.css('-o-transform')) {
+            matrix_txt = "-o-transform";
+        } else if (m_obj.css('transform')) {
+            matrix_txt = "transform";
+        }
+
+        var matrix = m_obj.css(matrix_txt).toString();
+        var shift = parseFloat(matrix.split(",")[4]);
+
+        if (cnt - quotient <= idx + 1) {
+            if ((m - c) < (shift * -1)) {
+                m_obj.css(matrix_txt, 'translate3d(-' + (m - c - p) + 'px,0px,0px)');
+            }
+        } else if (quotient > idx) {
+            m_obj.css(matrix_txt, 'translate3d(0px,0px,0px)');
+
+        }
+    }
+
+    /* 슬라이드 Reroading */
+    function destroySlide(obj) {
+        obj.trigger('destroy.owl.carousel');
+        obj.html(obj.find('.owl-stage-outer').html()).removeClass('owl-loaded');
+    }
+
+    /* 슬라이드 롤링기능 */
+    // 슬라이드 개수 구하기
+    var s_tot = $('.fp_slide .owl-carousel').find('div.owl-item').length;
+    var s_cnt = 1;
+    var s_play;
+    var s_move;
+    var translate;
+
+    function slide_set() {
+        // 화면의 너비값 구하기
+        var s_wid = $('.fp_slide .owl-carousel').find('div.owl-item.active').css("width");
+        s_wid = s_wid.replace("px", "");
+        if (s_cnt < s_tot) {
+            s_move = s_wid * s_cnt;
+            translate = "translate3d(-" + s_move + "px, 0, 0)";
+            $('.fp_slide .owl-carousel').find('div.owl-stage').css("transform", translate);
+            $('.fp_slide .owl-carousel').find('div.owl-stage').css("transition", "0.25s");
+            s_cnt++;
+        } else {
+            clearInterval(s_play);
+        }
+    }
+
+    // 3초마다 화면 슬라이드
+
+    function slide_play() {
+        s_play = setInterval(slide_set, 3000);
+    }
+
+    if (s_tot > 0) {
+        slide_play();
+    }
+
+    //});
+    /* 전일대비 비율 구하기 */
+    var td = Number($('.tDay').val());
+    var yd = Number($('.yDay').val());
+    var result = Math.round(((td / yd * 100) - 100) * 10) / 10 + "%";
+    if (yd == 0) {
+        result = "--";
+        $('.rst').removeClass("incre");
+        $('.rst').removeClass("decre");
+        $('.rst').css("color", "#dc291e");
+    }
+    $('.rst').text(result);
+
+    function fnMoreview($obj) {
+        $obj.parent('.reptxt').addClass('opened');
+        $obj.parent().find('.temp_txt').hide();
+        $obj.parent().find('.hide_txt').show();
+        $obj.hide();
+    }
+
+    // 탭메뉴 스크롤 시 상단 고정
+    function tabmenuScrollTop() {
+        var headerboxHeight = $('#header_box').height();
+        var viewboxHeight = $('.fp_viewbox').height();
+        if ($(window).scrollTop() > headerboxHeight + viewboxHeight) {
+            $('#header_box').hide();
+            $('.fp_viewbox').hide();
+            $('.fp_tabmenu').css({
+                "position": "fixed",
+                "width": "100%",
+                "top": "0",
+                "z-index": "3"
+            });
+            $('.fp_tabcont').css({"margin-top": headerboxHeight + viewboxHeight + 52});
+        } else {
+            $('#header_box').show();
+            $('.fp_viewbox').show();
+            $('.fp_tabmenu').css({"position": "unset"});
+            $('.fp_tabcont').css({"margin-top": "10px"});
+        }
+    }
+
+    window.addEventListener("scroll", tabmenuScrollTop, false);
+
+</script>
+
+<!-- Fanpage AdvertisingURL -->
+<div style="display:none">
+    <iframe id="ifr_advertising_VC_url" src="" style="width:1px;height:1px">
+    </iframe>
+</div>
+
+<footer>
+    <p class="footerLink">
+        <a href="http://m.cgv.co.kr/WebApp/Support/noti.aspx"><span>공지사항</span></a>
+        <a href="http://m.cgv.co.kr/WebApp/Support/faq.aspx"><span>고객센터</span></a>
+        <a href="http://m.cgv.co.kr/WebApp/Member/Logout.aspx?RedirectUrl=http://m.cgv.co.kr/WebApp/Fanpage/Gateway.aspx?movieIdx=83184"
+           id="a_footer_login_btn" class="" onclick=""><span>로그아웃</span></a>
+        <a href="http://www.cgv.co.kr/default.aspx?IsMobile=Y" id="footer_pc" class="" onclick=""><span>PC버전</span></a>
+    </p>
+    <section class="footerContents">
+        <h1><a href="http://corp.cgv.co.kr/" class="spriteFooter footerLogo">CGV</a></h1>
+        <ul class="footerContentsLink">
+            <li><a href="http://m.cgv.co.kr/Agreement/Agreement_Provision.aspx?type=10" title="이용약관">이용약관</a></li>
+            <li><a href="http://m.cgv.co.kr/Agreement/Agreement_Provision.aspx?type=11" title="개인정보 처리방기">개인정보 처리방침</a>
+            </li>
+            <li><a href="http://m.cgv.co.kr/Agreement/Agreement_disclaimer.aspx" title="법적고지">법적고지</a></li>
+        </ul>
+        <dl class="companyInfo">
+            <dt>대표이사</dt>
+            <dd>최병환</dd>
+            <dt>사업자등록번호</dt>
+            <dd>104-81-45690</dd>
+            <dt>통신판매업신고번호</dt>
+            <dd>2017-서울용산-0662
+                <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1048145690" title="사업자정보확인">사업자정보확인</a>
+            </dd>
+            <dt>개인정보보호 책임자</dt>
+            <dd>정종민</dd>
+            <dt>주소</dt>
+            <dd>
+                <address>(04377)서울특별시 용산구 한강대로<br>23길 55, 아이파크몰 6층(한강로동)</address>
+            </dd>
+            <dt>호스팅사업자</dt>
+            <dd>CJ 올리브네트웍스</dd>
+            <dt>대표이메일</dt>
+            <dd>cjcgvmaster@cj.net</dd>
+            <dt>고객센터</dt>
+            <dd>1544-1122</dd>
+        </dl>
+    </section>
+    <p class="footerReserved">© CJ CGV. All Rights Reserved</p>
+</footer>
+<script type="text/javascript">
+    var GA_TITLE = "팬페이지/그 누구도 아닌/83184";
+</script>
+<script type="text/javascript">
+    try {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga_cgv');
+        ga_cgv('create', 'UA-47951671-4', 'auto'); //운영
+        ga_cgv('create', 'UA-47951671-7', {'name': 'rollup'}); //롤업속성
+    } catch (e) {
+    }
+
+</script>
+
+<script type="text/javascript">
+    ga_cgv('set', 'title', GA_TITLE);
+    ga_cgv('rollup.set', 'title', GA_TITLE);
+</script>
+
+<script type="text/javascript">
+    //Google Tag Manager dataLayer for global header
+    var param_agt = navigator.userAgent;
+    param_agt = param_agt + " / " + fnMobileDeviceLangChk();
+    var param_dvc = fnMobileDeviceChk();
+    param_dvc += " / " + fnMobileDeviceLangChk();
+    try {
+        var dataLayer = [{
+            'cgv_cd1': '8babea4617ca80f081f3f97b2b445489',
+            'cgv_cd2': 'M',
+            'cgv_cd3': '39',
+            'cgv_cd4': '%ec%9d%bc%eb%b0%98',
+            'cgv_cd6': param_agt,
+            'cgv_cd7': 'Member',
+            'cgv_cd8': param_dvc,
+            'uid': '8babea4617ca80f081f3f97b2b445489'
+        }];
+    } catch (e) {
+    }
+
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5CJXRN');
+</script>
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5CJXRN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+
+</body>
+</html>
