@@ -1,0 +1,232 @@
+/**
+    프리에그(preegg) css version web 0.1.0
+    최종 업데이트 : 2020.03.27
+    작성자 : 최현원
+ */
+
+/**
+    공통 아이콘
+ */
+.sprite_preegg {
+    background: url('../images/sprite/sprite_preegg@3x.png') no-repeat 0 0;
+    background-size: 100px;
+    display: inline-block;
+}
+.sprite_preegg.big{
+    width: 35px;
+    height: 40px;
+}
+.sprite_preegg.big.pre{
+    background-position: 3px -20px;
+}
+.sprite_preegg.big.bad {
+    background-position: 3px -60px;
+}
+
+.sprite_preegg.big.good {
+    background-position: -30px -60px;
+}
+
+.sprite_preegg.big.great {
+    background-position: -65px -60px;
+}
+
+
+
+
+/**
+    page : detail-view.html
+    내용 : 상세페이지 실관람평점 부분 개편
+    html : <div class="preegg-grade">...</div>
+ */
+.movie_grade {
+    position: relative;
+    border-top: 2px solid #666666;
+}
+
+.movie_grade .info {
+    position: absolute;
+    top: 11px;
+    right: 0;
+}
+.movie_grade .egg_point {
+    height: 134px;
+}
+.movie_grade .egg_point .title{
+    font-size: 24px;
+    line-height: 30px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+}
+.movie_grade .egg_point .title strong {
+    font-weight: 500;
+}
+
+
+.movie_grade .egg_point .rating {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+}
+.movie_grade .egg_point .rating .box {
+    position: relative;
+    width: 55px;
+    height: 50px;
+    float: left;
+    padding-left: 45px;
+}
+.movie_grade .egg_point .rating .box + .box {
+    margin-left: 55px;
+}
+.movie_grade .egg_point .rating .box:first-child:after {
+    content: '';
+    border-left: 1px solid #dddddd;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: -30px;
+    width: 1px;
+    height: 40px;
+}
+.movie_grade .egg_point .rating .box.box_golden {
+    width: 75px;
+}
+
+.movie_grade .egg_point .rating .box .sprite_preegg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.movie_grade .egg_point .rating .box .desc {
+    display: block;
+    font-size: 16px;
+}
+.movie_grade .egg_point .rating .box .percent {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.0;
+}
+.movie_grade .egg_point .rating .box .percent:after {
+    content: '%';
+    display: inline-block;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/* 감정차트, */
+.movie_grade .chart_total{
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    height: 310px;
+}
+
+
+.movie_grade .chart_total .box{
+    width: 50%;
+    box-sizing: border-box;
+    border-left: 1px solid #dddddd;
+    float: left;
+    height: 100%;
+    position: relative;
+}
+.movie_grade .chart_total .box:first-child{
+    border: none;
+}
+.movie_grade .chart_total .title {
+    position: relative;
+    padding-top : 28px;
+    padding-left: 30px;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #222222;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.movie_grade .chart_total .radar-graph{
+    text-align: center;
+}
+
+
+
+/**
+    page : detail-view.html
+    내용 : 상세페이지 실관람평점 부분 개편
+    html : <div class="real-rating">...</div>
+ */
+
+.real-rating {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    background: #EBEDE3;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+.real-rating .title {
+    font-size: 20px;
+    color: #212224;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.real-rating .title strong {
+    color: #BF2C1C;
+}
+
+.real-rating .desc span {
+    display: inline-block;
+}
+
+.real-rating .desc span em {
+    font-size: 14px;
+    color: #222222;
+    font-weight: 500;
+}
+
+.real-rating .desc span + span {
+    padding-left: 11px;
+}
+
+.real-rating .desc span + span:before {
+    content: '|';
+    color: #b9b9b9;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.real-rating .wrap_btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.real-rating .wrap_btn a {
+    width: 76px;
+    height: 50px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-left: 6px;
+}
+
+.real-rating .wrap_btn .link-gradewrite {
+    background-color: #BF2C1C;
+}
+
+.real-rating .wrap_btn .link-reviewwrite {
+    background-color: #666666;
+}
+
+
+
+
+
