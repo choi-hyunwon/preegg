@@ -29,6 +29,8 @@
     <link rel="stylesheet" media="all" type="text/css" href="R2014/css/eggupdate.css">
     <link rel="stylesheet" media="print" type="text/css" href="R2014/css/print.css">
 
+    <link rel="stylesheet" media="all" type="text/css" href="R2014/css/preegg.css">
+
     <link rel="stylesheet" type="text/css"
           href="R2014/js/jquery.ui/smoothness/jquery-ui-1.10.4.custom.min.css">
     <script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script>
@@ -1059,36 +1061,50 @@
 
 
                         <div class="sect-grade">
-                            <div class="heading-new">
-                                <a class="goto-link" name="commentReg"><h4>실관람객 평점</h4></a>
-                                <p class="txt-write">관람일 포함 7일 이내 관람평을 남기시면 <strong>CJ ONE 20P</strong>가 적립됩니다. <a
-                                        class="link-gradewrite" href="javascript:void(0);"><span>평점작성</span></a><a
-                                        class="link-reviewwrite" href="/movies/point/my-list.aspx"><span>내 평점</span></a>
-                                </p>
+
+                            <!-- todo : preegg.css 연관 UI -->
+                            <div class="movie_grade">
+                                <a class="info" id="goldenEggAlert" href="javascript:void(0);"><img src="R2014/images/common/ico/ico-question-mark.png" alt="?"></a>
+                                <div class="egg_point">
+                                    <div class="title">이 영화의<br><strong>관람포인트는?</strong></div>
+                                    <div class="rating">
+                                        <div class="box">
+                                            <span class="sprite_preegg big pre"></span>
+                                            <span class="desc">Pre Egg</span>
+                                            <span class="percent">78</span>
+                                        </div>
+                                        <div class="box box_golden">
+                                            <span class="sprite_preegg big great"></span>
+                                            <span class="desc">Golden Egg</span>
+                                            <span class="percent">?</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="chart_total">
+                                    <div class="box">
+                                        <div class="title">매력포인트</div>
+                                        <div class="radar-graph" id="chart2">
+                                            <canvas id="charmScore2" style="width: 250px; height: 250px;"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="title">감정포인트</div>
+                                        <div class="radar-graph" id="chart3">
+                                            <canvas id="charmScore3" style="width: 350px; height: 250px; vertical-align: middle"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-
-                            <div class="egg-grade">
-                                <a class="info1" id="goldenEggAlert" href="javascript:void(0);">Golden EGG지수<br><img
-                                        src="R2014/images/common/ico/ico-question-mark.png"
-                                        alt="?"></a>
-                                <div class="massagebox">
-                                    <p>
-                                        <span class="msg-em"><strong id="cgvEggCountTxt">0</strong>명의</span>
-                                        <em>CGV실관람객이</em> 평가해주셨습니다.
-                                    </p>
-                                </div>
-                                <!-- great , good-->
-                                <div class="egg-gage big" id="eggIconDiv">
-                                    <span class="egg good"></span>
-
-                                    <span class="percent"><strong></strong>?</span>
-                                </div>
-
-                                <div class="radar-graph" id="chart2">
-                                    <canvas id="charmScore2" width="400" height="400"
-                                            style="width: 200px; height: 200px;"></canvas>
+                            <div class="real-rating">
+                                <p class="title">관람일 포함 7일 이내 관람평을 남기시면 <strong>CJ ONE 20P</strong>가 적립됩니다. </p>
+                                <p class="desc"><span>실관람평 <em>5.8만</em></span><span>Movie Mania <em>2.9만</em></span></p>
+                                <div class="wrap_btn">
+                                    <a class="link-gradewrite" href="javascript:void(0);"><span>평점작성</span></a><a class="link-reviewwrite" href="/movies/point/my-list.aspx"><span>내 평점</span></a>
                                 </div>
                             </div>
+                            <!-- //preegg.css 연관 UI -->
 
                             <ul class="sort" id="sortTab">
                                 <li class="sortTab on" data-order-type="0" id="test"><a href="javascript:void(0);"
@@ -1657,77 +1673,73 @@
                     searchPointList(1, true, 1, 0);              // 첫 로딩시 평점 조회
 
 
-                    var charmRadarChartData = {
-                        labels: ["감독연출", "스토리", "영상미", "배우연기", "OST"],/*20160204 5대지수 항목 수정. mwpark*/
-                        datasets: [
-                            {
-                                fillColor: "rgba(218,215,204,0.2)",
-                                strokeColor: "rgba(204,192,184,1)",
-                                pointColor: "rgba(151,187,205,1)",
-                                pointColorList: ["rgba(253,148,135,1)", "rgba(254,196,69,1)", "rgba(143,189,16664,1)", "rgba(100,169,178,1)", "rgba(178,103,183,1)"],
-                                pointStrokeColor: "#fff",
-                                pointHighlightFill: "#fff",
-                                pointHighlightStroke: "rgba(151,187,205,1)",
-                                data: [0, 0, 0, 0, 0]
-                            }
-                        ]
-                    };
 
-                    if (document.getElementById("charmScore1") != null) {
-                        window.charmRadar1 = new Chart(document.getElementById("charmScore1").getContext("2d")).Radar(charmRadarChartData, {
-                            pointDot: true,
-                            datasetStrokeWidth: 1,
-                            scaleLabelsPaddingX: 15,
-                            scaleLabelsPaddingY: 3,
-                            pointLabelsPadding: 7,
-                            centerPointPadding: 7,
-                            responsive: false,
-                            animation: false,
-                            showTooltips: false,
-                            scaleShowLabels: true,
-                            showScale: true,
-                            pointLabelFontFamily: "'Trebuchet MS', Arial, Helvetica, sans-serif",
-                            pointLabelFontSize: 11,
-                            //pointLabelFontColor : "rgba(100,100,100,1)",
-                            pointLabelFontColor: "#000000",
-                            scaleFontFamily: "'Trebuchet MS', Arial, Helvetica, sans-serif",
-                            scaleFontSize: 8,
-                            scaleFontColor: "#777777",
-                            scaleOverride: true,
-                            scaleSteps: 4,
-                            scaleStepWidth: 25,
-                            scaleStartValue: 0
-                        });
+                    <!-- todo : radar 변경 버전 -->
+
+                    var RadarChartOption = {
+                        pointDot: true,
+                        datasetStrokeWidth: 1,
+                        scaleLabelsPaddingX: 15,
+                        scaleLabelsPaddingY: 3,
+                        pointLabelsPadding: 7,
+                        centerPointPadding: 7,
+                        responsive: false,
+                        animation: false,
+                        showTooltips: false,
+                        scaleShowLabels: true,
+                        showScale: true,
+                        pointLabelFontFamily: "'Trebuchet MS', Arial, Helvetica, sans-serif",
+                        pointLabelFontSize: 11,
+                        //pointLabelFontColor : "rgba(100,100,100,1)",
+                        pointLabelFontColor: "#000000",
+                        scaleFontFamily: "'Trebuchet MS', Arial, Helvetica, sans-serif",
+                        scaleFontSize: 8,
+                        scaleFontColor: "#777777",
+                        scaleOverride: true,
+                        scaleSteps: 4,
+                        scaleStepWidth: 25,
+                        scaleStartValue: 0
                     }
 
-                    //charmScore2
                     if (document.getElementById("charmScore2") != null) {
-                        window.charmRadar2 = new Chart(document.getElementById("charmScore2").getContext("2d")).Radar(charmRadarChartData, {
-                            pointDot: true,
-                            datasetStrokeWidth: 1,
-                            scaleLabelsPaddingX: 15,
-                            scaleLabelsPaddingY: 3,
-                            pointLabelsPadding: 7,
-                            centerPointPadding: 7,
-                            responsive: false,
-                            animation: false,
-                            showTooltips: false,
-                            scaleShowLabels: true,
-                            showScale: true,
-                            pointLabelFontFamily: "'Trebuchet MS', Arial, Helvetica, sans-serif",
-                            pointLabelFontSize: 11,
-                            //pointLabelFontColor : "rgba(100,100,100,1)",
-                            pointLabelFontColor: "#000000",
-                            scaleFontFamily: "'Trebuchet MS', Arial, Helvetica, sans-serif",
-                            scaleFontSize: 8,
-                            scaleFontColor: "#777777",
-                            scaleOverride: true,
-                            scaleSteps: 4,
-                            scaleStepWidth: 25,
-                            scaleStartValue: 0
-                        });
+                        var charmRadarChartData = {
+                            labels: ["감독연출", "스토리", "영상미", "배우연기", "OST"],/*20160204 5대지수 항목 수정. mwpark*/
+                            datasets: [
+                                {
+                                    fillColor: "rgba(218,215,204,0.2)",
+                                    strokeColor: "rgba(204,192,184,1)",
+                                    pointColor: "rgba(151,187,205,1)",
+                                    pointColorList: ["rgba(253,148,135,1)", "rgba(254,196,69,1)", "rgba(143,189,16664,1)", "rgba(100,169,178,1)", "rgba(178,103,183,1)"],
+                                    pointStrokeColor: "#fff",
+                                    pointHighlightFill: "#fff",
+                                    pointHighlightStroke: "rgba(151,187,205,1)",
+                                    data: [30, 30, 30, 30, 30]
+                                }
+                            ]
+                        };
+                        window.charmRadar2 = new Chart(document.getElementById("charmScore2").getContext("2d")).Radar(charmRadarChartData, RadarChartOption);
                     }
 
+                    if (document.getElementById("charmScore3") != null) {
+                        var factRadarChartData = {
+                            labels: ["몰입감", '무서운 여운이 남는', "보는 내내 긴장", "소름끼치는 오싹함", "호러틱 사운드"],/*20160204 5대지수 항목 수정. mwpark*/
+                            datasets: [
+                                {
+                                    fillColor: "rgba(218,215,204,0.2)",
+                                    strokeColor: "rgba(204,192,184,1)",
+                                    pointColor: "rgba(151,187,205,1)",
+                                    pointColorList: ["rgba(253,148,135,1)", "rgba(254,196,69,1)", "rgba(143,189,16664,1)", "rgba(100,169,178,1)", "rgba(178,103,183,1)"],
+                                    pointStrokeColor: "#fff",
+                                    pointHighlightFill: "#fff",
+                                    pointHighlightStroke: "rgba(151,187,205,1)",
+                                    data: [50, 100, 50, 100, 50]
+                                }
+                            ]
+                        };
+                        window.charmRadar3 = new Chart(document.getElementById("charmScore3").getContext("2d")).Radar(factRadarChartData, RadarChartOption);
+                    }
+
+                    <!-- //radar 변경 버전 -->
 
                     var $stillCut = $('#still_motion'),
                         $stillCutCurrent = $('#stillcut_current'),
