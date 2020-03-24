@@ -229,5 +229,13 @@
 
 
 
+/**
+    page : detail-view.html
+    내용 : 상세페이지 예매분포 부분 개편
+    html : <div id="ctl00_PlaceHolderContent_Section_Chart" class="sect-graph sect-graph-emotion">
+ */
 
 
+.sect-graph.sect-graph-emotion li {
+    width: 50% !important;
+}
