@@ -1,0 +1,65 @@
+/**
+    프리에그(preegg) css version mobile 0.1.0
+    최종 업데이트 : 2020.03.27
+    작성자 : 최현원
+ */
+
+/**
+    파일 : main-renewal
+    위치 : 메인 페이지 수정
+    내용 : 프리에그 모듈 추가, 가로형태의 UI에서 사용
+    html : <li class="moviePreegg"><span class="eggState1">?</span></li>
+ */
+
+
+.moviePreegg {
+    position: relative;
+    display: inline-block;
+}
+
+.moviePreegg span {
+    position: relative;
+    padding-left: 20px
+}
+
+.moviePreegg span:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 20px;
+    background: url('../../images/main/common/sprite_preegg.png');
+    background-size: 100px;
+}
+
+.moviePreegg span:after {
+    content: '%'
+}
+
+.moviePreegg span.eggState0:before {
+    background-position: 0px 0px;
+}
+
+.moviePreegg span.eggState1:before {
+    background-position: -20px 0px;
+}
+
+.moviePreegg span.eggState2:before {
+    background-position: -40px 0px;
+}
+
+/**
+    파일 : movieList.html
+    위치 : 무비차트 리스트 페이지
+    내용 : 프리에그 모듈 추가
+    html : <span class="moviePreegg"><span class="eggState1">?</span></span>
+ */
+.moviePreegg + .per_reserve:before {
+    display: inline-block;
+    content: 'ㆍ';
+    margin-left: -5px;
+    width: 10px;
+    height: 12px;
+    color: #666;
+}

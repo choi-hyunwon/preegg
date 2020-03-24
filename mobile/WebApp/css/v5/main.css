@@ -357,7 +357,7 @@
                 .cgvMovieChartContent > li .cgvMovieChartPer{overflow:hidden; width:100%; height:20px; margin-bottom:4px }
                 .cgvMovieChartContent > li .cgvMovieChartPer ul{width:100%; height:20px; font-size:0; text-align:center}
                 .cgvMovieChartContent > li .cgvMovieChartPer ul li{display:inline-block; height:20px; font-size:0; color:#4b4f56; line-height:20px; vertical-align:middle}
-                .cgvMovieChartContent > li .cgvMovieChartPer ul li:before{content:'·'; margin:0 3px;font-size:12px; line-height:20px; vertical-align:middle}
+                .cgvMovieChartContent > li .cgvMovieChartPer ul li:before{content:'|'; margin:0 3px;font-size:12px; line-height:20px; vertical-align:middle}
                 .cgvMovieChartContent > li .cgvMovieChartPer ul li:first-child:before{content:''; font-size:0; color:transparent; line-height:20px}
                 .cgvMovieChartContent > li .cgvMovieChartPer ul li span{display:inline-block; height:20px; font-size:12px; line-height:20px; vertical-align:middle}
 
