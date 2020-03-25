@@ -11,14 +11,51 @@
     background: url('../images/sprite/sprite_preegg@3x.png') no-repeat 0 0;
     background-size: 100px;
     display: inline-block;
+    vertical-align: middle;
 }
+.sprite_preegg.default{
+    width: 16px;
+    height: 26px;
+    background-position: 0px 0px;
+}
+.sprite_preegg.selected{
+    width: 16px;
+    height: 20px;
+    background-position: -20px 0px;
+}
+.sprite_preegg.count{
+    width: 16px;
+    height: 20px;
+    background-position: -40px 0px;
+}
+.sprite_preegg.detail{
+    width: 16px;
+    height: 20px;
+    background-position: -60px 0px;
+}
+
 .sprite_preegg.big{
     width: 35px;
     height: 40px;
 }
-.sprite_preegg.big.pre{
+.sprite_preegg.big.default{
     background-position: 3px -20px;
 }
+.sprite_preegg.big.selected{
+    background-position: 3px -20px;
+}
+.sprite_preegg.big.count{
+    background-position: 3px -20px;
+}
+.sprite_preegg.big.detail{
+    background-position: 3px -20px;
+}
+
+
+
+
+
+
 .sprite_preegg.big.bad {
     background-position: 3px -60px;
 }
@@ -107,12 +144,6 @@
     font-size: 22px;
     font-weight: bold;
     line-height: 1.0;
-}
-.movie_grade .egg_point .rating .box .percent:after {
-    content: '%';
-    display: inline-block;
-    font-size: 23px;
-    font-weight: bold;
 }
 
 /* 감정차트, */
@@ -231,6 +262,35 @@
 
 /**
     page : detail-view.html
+    내용 : 상세페이지 좋아요 버튼 관심 egg 부분 개편
+    html : <a class="link-count" href="#"><i class="sprite_preegg detail"></i>관심Egg</a>
+ */
+
+
+.link-count {
+    width: 100px;
+    height: 33px;
+    border: 1px solid #cccccc;
+    line-height: 35px;
+    text-align: center;
+    display: inline-block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-right: 2px;
+    color: #444444;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+.link-count i {
+    margin-right: 3px;
+}
+
+
+/**
+    page : detail-view.html
     내용 : 상세페이지 예매분포 부분 개편
     html : <div id="ctl00_PlaceHolderContent_Section_Chart" class="sect-graph sect-graph-emotion">
  */
@@ -239,3 +299,218 @@
 .sect-graph.sect-graph-emotion li {
     width: 50% !important;
 }
+
+
+
+
+
+
+/**
+    page : popup - 관심Egg
+    내용 : 관심Egg 선택 팝업
+    html : <div class="layer-wrap" id="movie-pre-select" style="top: 600px;">
+ */
+
+.movie-pre-select {
+    margin: -10px 5px 0;
+}
+.movie-pre-select .header {
+    position: relative;
+    text-align: center;
+    height: 48px;
+}
+.movie-pre-select .header .main{
+    font-size: 26px;
+    color: #000;
+    letter-spacing: -0.2px;
+    font-weight: 400;
+}
+.movie-pre-select .box {
+    border-top: 1px dotted #E3E3E3;
+}
+
+.movie-pre-select .box .desc {
+    text-align: center;
+    padding-top: 28px;
+    margin-bottom: 20px;
+}
+.movie-pre-select .box .main {
+    font-size: 18px;
+    color: #000000;
+    line-height: 34px;
+    font-weight: 400;
+}
+.movie-pre-select .box .sub {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666666;
+}
+.movie-pre-select .box .sub em {
+    color: #222222;
+}
+
+.movie-pre-select .box .wrap_btn {
+    height: 150px;
+    width: 325px;
+    margin: 0 auto;
+}
+.movie-pre-select .box .wrap_btn .btn{
+    width: 142px;
+    height: 142px;
+    text-align: center;
+    float: left;
+    border: 4px solid #E2E0D1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.movie-pre-select .box .wrap_btn .btn:first-child{
+    margin-right: 25px;
+}
+
+.movie-pre-select .box .wrap_btn .btn span {
+    display: block;
+    text-align: center;
+    margin: 0 auto 5px;
+    font-size: 17px;
+    color: #444444;
+}
+.movie-pre-select .box .wrap_btn .btn span.sprite_preegg {
+    margin-top: 34px;
+}
+
+.movie-pre-select .box .wrap_btn .btn.selected {
+    border-color: #B21D1B;
+}
+.movie-pre-select .box .wrap_btn .btn.selected span {
+    color: #B21D1B;
+}
+
+
+
+
+/**
+    page : popup - 영화매력 선
+    내용 : 후기 남긴 후 영화 매력 선택 팝업
+    html :<div class="layer-wrap" id="movie-emotion-select" style="top: 600px;">
+ */
+
+.movie-emotion-select {
+    margin: -7px -18px;
+}
+.movie-emotion-select .header {
+    position: relative;
+    text-align: center;
+    height: 80px;
+}
+.movie-emotion-select .header .main {
+    font-size: 22px;
+    letter-spacing: -0.2px;
+    line-height: 34px;
+    font-weight: 400;
+}
+.movie-emotion-select .header .sub {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    line-height: 18px;
+}
+.movie-emotion-select .header .sub span {
+    color: #E71A0F;
+}
+
+.movie-emotion-select .box {
+    padding: 25px 0;
+    border-top: 1px solid #E3E3E3;
+}
+
+.movie-emotion-select .box .name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.movie-emotion-select .box .wrap_input {
+    font-size: 15px;
+    height: 60px;
+}
+
+.movie-emotion-select .box .wrap_input label {
+    float: left;
+    width:33.33%;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 24px;
+    margin-bottom: 12px;
+}
+
+.movie-emotion-select .box .wrap_input label input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.movie-emotion-select .box .wrap_input label span {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1rem;
+}
+
+.movie-emotion-select .box .wrap_input label span:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    border-radius: 1px;
+    margin-top: 2px;
+    top: 0px;
+    left: 2px;
+    width: 5px;
+    height: 13px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #BEBEBE;
+    border-bottom: 2px solid #BEBEBE;
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+.movie-emotion-select .box .wrap_input label span:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #bebebe;
+    background-color: #ffffff;
+    z-index: 0;
+}
+
+
+.movie-emotion-select .box .wrap_input label input:checked + span:before {
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+.movie-emotion-select .box .wrap_input label input:checked + span:after {
+    border: 1px solid #333333;
+    background-color: #333333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

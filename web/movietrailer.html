@@ -29,6 +29,7 @@
     <link rel="stylesheet" media="all" type="text/css" href="R2014/css/eggupdate.css">
     <link rel="stylesheet" media="print" type="text/css" href="R2014/css/print.css">
 
+    <link rel="stylesheet" media="all" type="text/css" href="R2014/css/preegg.css">
 
     <link rel="stylesheet" type="text/css"
           href="R2014/js/jquery.ui/smoothness/jquery-ui-1.10.4.custom.min.css">
@@ -679,7 +680,13 @@
                                     marginheight="0" marginwidth="0" scrolling="no"></iframe>
                         </div>
                     </div><!-- .col-player -->
+
                     <div class="col-playerinfo">
+                        <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                            수정 부분 :
+                            <p>* .btn-like, .count 삭제</p>
+                            <p>* 프리에그 버튼 추가</p>
+                        </div>
                         <div class="box-image">
                             <a href="/movies/detail-view/?midx=82175">
                         <span class="thumb-image">
@@ -701,13 +708,9 @@
 
                         </span>
                     </span>
+
                             <span class="like">
-                        <button class="btn-like" value="82175">영화 찜하기</button>
-                        <span class="count">
-                            <strong><i>9,825</i><span>명이 선택</span></strong>
-                            <i class="corner-RT"></i><i class="corner-LT"></i><i class="corner-LB"></i><i
-                                class="corner-RB"></i><i class="corner-arrow"></i>
-                        </span>
+                                <a class="link-count" href="#"><i class="sprite_preegg default"></i>관심Egg</a>
 
 
                     </span>
@@ -1295,6 +1298,7 @@
     </div>
 </li>
 
+
             </script>
 
             <script type="text/javascript">
@@ -1605,6 +1609,7 @@
 {{/if}}
 </div>
 
+
 </script>
 
 <script id="temp_popup_movie_player_relation_movie_item" type="text/x-jquery-tmpl">
@@ -1619,6 +1624,7 @@
         </a>
     </div>
 </li>
+
 
 </script>
 

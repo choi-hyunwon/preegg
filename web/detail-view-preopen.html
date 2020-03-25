@@ -727,6 +727,7 @@
             </span>
                         </a>
                     </div>
+
                     <div class="box-contents">
                         <div class="title">
                             <strong>아르코라이브 뮤지컬 안테모사</strong>
@@ -735,20 +736,18 @@
                             <em class="round red"><span>D-5</span></em>
                             <p>ARKO LIVE 뮤지컬 안테모사</p>
                         </div>
+                        <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                            수정 부분 :
+                            <p>* 프리 에그 아이콘 추가 &lt; span class="sprite_preegg detail"&gt;</span></p>
+                            <p>* 실관람평 제거 &lt; strong class="count" &gt;</span></p>
+                        </div>
                         <div class="score">
                             <strong class="percent">예매율&nbsp;<span>1.5%</span></strong>
 
                             <div class="egg-gage small">
-                                <span class="egg good"></span>
+                                <span class="sprite_preegg detail"></span>
                                 <span class="percent"> ? </span>
                             </div>
-                            <!--
-                            <div class="point">
-                                <em>0.0</em>
-                            </div>
-                             -->
-                            <strong class="count">
-                                (<span class="view">실관람평 :&nbsp;<em>0명</em></span>) </strong>
                         </div>
                         <!-- 떨어지는 얘 이전 요소에 class=on을 넣는다 -->
                         <div class="spec">
@@ -781,18 +780,18 @@
                         <span class="screentype">
 
         </span>
+
+                        <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                            수정 부분 :
+                            <p>* .btn-like, .count 삭제</p>
+                            <p>* 프리 에그 버튼 추가</p>
+                        </div>
                         <span class="like">
-            <button class="btn-like" value="83171">영화 찜하기</button>
-            <span class="count">
-                <strong><i>115</i><span>명이 선택</span></strong>
-                <i class="corner-RT"></i><i class="corner-LT"></i><i class="corner-LB"></i><i class="corner-RB"></i><i
-                    class="corner-arrow"></i>
-            </span>
+                                    <a class="link-count" href="#"><i class="sprite_preegg default"></i>관심Egg</a>
 
+                                    <a class="link-reservation" href="/ticket/?MOVIE_CD=20022959&amp;MOVIE_CD_GROUP=20022959">예매</a>
 
-            <a class="link-reservation" href="/ticket/?MOVIE_CD=20022959&amp;MOVIE_CD_GROUP=20022959">예매</a>
-
-        </span>
+                        </span>
                     </div>
                 </div><!-- .sect-base -->
 
@@ -835,12 +834,12 @@
                             <br>
                             ※본 콘텐츠는 뮤지컬 &lt;안테모사&gt;를 실황으로 촬영한 작품입니다.
                         </div><!-- .sect-story -->
-                        <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 20px; color: #fff;">
+                        <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
                             수정 부분 :
                             <p>* sect-graph-emotion클래스 추가</p>
-                            <p>* radar 차트 삭제</p>
+                            <p>* radar 차트 삭제 </p>
                         </div>
-                        <div id="ctl00_PlaceHolderContent_Section_Chart" class="sect-graph sect-graph-emotion" >
+                        <div id="ctl00_PlaceHolderContent_Section_Chart" class="sect-graph sect-graph-emotion">
                             <ul class="graph">
                                 <li>
                                     <strong>성별 예매 분포</strong>
@@ -1059,11 +1058,12 @@
 
 
                         <div class="sect-grade">
-                            <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 20px; color: #fff;">
+                            <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
                                 수정 부분 :
                                 <p>* 섹션 전체 재코드 생성 </p>
                                 <p>* 차트 3번 신규 추가</p>
                                 <p>* 차트 스크립트 수정 : 'radar 차트 스크립트 변경 버전' 주석 처리</p>
+                                <p>* alert 스크립트 수정 : '프리에그 문구 추가' 주석 처리</p>
                             </div>
                             <!-- todo : preegg.css 연관 UI -->
                             <div class="movie_grade">
@@ -1072,9 +1072,9 @@
                                     <div class="title">이 영화의<br><strong>관람포인트는?</strong></div>
                                     <div class="rating">
                                         <div class="box">
-                                            <span class="sprite_preegg big pre"></span>
+                                            <span class="sprite_preegg big default"></span>
                                             <span class="desc">Pre Egg</span>
-                                            <span class="percent">78</span>
+                                            <span class="percent">78%</span>
                                         </div>
                                         <div class="box box_golden">
                                             <span class="sprite_preegg big great"></span>
@@ -1380,6 +1380,14 @@
     </div>
 </li>
 
+
+
+
+
+
+
+
+
         </script>
         <script type="text/template" id="writeGrade">
             <div class="layer-contents on-shadow" style="width:710px;">
@@ -1566,6 +1574,14 @@
 
 </li>
 
+
+
+
+
+
+
+
+
         </script>
         <script id="movie_point_template" type="text/x-jquery-tmpl">
 
@@ -1639,6 +1655,14 @@
 
 </li>
 
+
+
+
+
+
+
+
+
         </script>
         <script type="text/javascript">
             //<![CDATA[
@@ -1647,7 +1671,8 @@
                 $(function () {
                     //골든 에그 지수 add_css82
                     $("#goldenEggAlert").on("click", function () {
-                        alert("CGV의 실제 관람 고객 평가로 산정된 지수입니다.\n결과에 따라 Golden EGG 아이콘이 정해집니다.");
+                        //프리에그 문구 추가
+                        alert("Pre Egg는 개봉 전 기대 평가로 산정된 지수입니다. \n\nGolden Egg는 CGV의 실제 관람 고객 평가로 산정된 지수입니다.\n결과에 따라 Golden EGG 아이콘이 정해집니다.");
                     });
                     var myPointPage = 0;
                     var mypointYN = false;
@@ -1674,7 +1699,6 @@
                     //첫 로딩시 호출, 첫 로딩시는 "실관람객"탭이 디폴트여서 실관람객 평이 있냐 여부를 따져야 리스트 갯수가 맞게 나온다. "setMypointAttribute()"함수로 대처시 callback이 setMyPointBuild() 함수와 겹쳐 오락가락 하게 된다%>
                     setMypointAttributeFirstLoding();
                     searchPointList(1, true, 1, 0);              // 첫 로딩시 평점 조회
-
 
 
                     //todo : radar 차트 스크립트 변경 버전
@@ -2861,6 +2885,14 @@
         <input type="hidden" id="my-list-withviewer" value="${withviewer}"/>
 	</div>
 
+
+
+
+
+
+
+
+
         </script>
         <!--[2015-12-15] 평점 수정 레이어 팝업 템플릿 end : add_mwpark-->
 
@@ -2916,6 +2948,14 @@
         <button type="button" class="btn-close" id="my-list-charmCloseBtn">매력포인트 닫기</button>
     </div>
 </div>
+
+
+
+
+
+
+
+
 
         </script>
         <script type="text/javascript">
@@ -3577,6 +3617,14 @@
 {{/if}}
 </div>
 
+
+
+
+
+
+
+
+
 </script>
 
 <script id="temp_popup_movie_player_relation_movie_item" type="text/x-jquery-tmpl">
@@ -3591,6 +3639,14 @@
         </a>
     </div>
 </li>
+
+
+
+
+
+
+
+
 
 </script>
 
