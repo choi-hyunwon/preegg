@@ -271,7 +271,7 @@
     width: 100px;
     height: 33px;
     border: 1px solid #cccccc;
-    line-height: 35px;
+    line-height: 31px;
     text-align: center;
     display: inline-block;
     -webkit-border-radius: 4px;
@@ -281,7 +281,7 @@
     color: #444444;
     font-size: 14px;
     font-weight: 400;
-    background-color: #fff;
+    background-color: #fdfcf0;
 }
 
 .link-count i {
