@@ -63,6 +63,14 @@
 }
 
 
+
+.sprite_preegg.close {
+    width: 17px;
+    height: 17px;
+    background-position: -140px 0;
+}
+
+
 /**
     파일 : main-renewal
     위치 : 메인 페이지 수정
@@ -326,6 +334,160 @@
     padding: 15px 11px;
     font-size: 14px;
 }
+
+
+
+/**
+    파일 : comment-popup.html
+    위치 : 매력지수 감성지수 입력 팝업
+    내용 : 관람평 입력 후 작업 되는 플로
+    비고 : 관련 CSS - common.css:2963
+    html : <div class="box_title">
+ */
+.layer_pop2_re .inner.charm_popup {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.layer_pop2_re .inner.charm_popup .popup_title {
+    height: 40px;
+    padding: 0 20px 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 40px;
+    border-bottom: 1px solid #E6E6E6;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.layer_pop2_re .inner.charm_popup .box_title {
+    height: 57px;
+    margin-top: 24px;
+    position: relative;
+    text-align: center;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #EFEFEF;
+    margin-bottom: 20px;
+}
+
+.layer_pop2_re .inner.charm_popup .box_title .icon {
+    width: 53px;
+    height: 69px;
+    display: inline-block;
+    background-image: url(../../images/main/common/sprite_preegg.png);
+    background-size: 300px;
+    background-position: 0 -120px;
+    vertical-align: middle;
+    margin-top: -10px;
+    margin-right: 5px;
+    transform: translateY(-5px);
+}
+
+.layer_pop2_re .inner.charm_popup .box_title .desc {
+    font-size: 14px;
+    display: inline-block;
+    color: #000;
+    vertical-align: middle;
+    text-align: left;
+    padding-right: 30px;
+    line-height: 18px;
+}
+.layer_pop2_re .inner.charm_popup .box_title .desc span{
+    font-weight: bold;
+}
+.layer_pop2_re .inner.charm_popup .box_title .desc span.red{
+    color: #F8465B;
+}
+
+.layer_pop2_re .inner.charm_popup .rating {
+    position: relative;
+    padding-bottom: 10px;
+}
+.layer_pop2_re .inner.charm_popup .rating .box {
+    margin-bottom: 12px;
+    position: relative;
+}
+.layer_pop2_re .inner.charm_popup .rating .box .title{
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.layer_pop2_re .inner.charm_popup .rating .box .list{
+    position: relative;
+}
+
+.layer_pop2_re .inner.charm_popup .rating .box .list ul {
+    overflow: hidden;
+}
+.layer_pop2_re .inner.charm_popup .rating .box .list ul li {
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 8px;
+}
+.layer_pop2_re .inner.charm_popup .rating .box .list ul li a{
+    padding: 8px 20px;
+    border: 1px solid #D9D9D9;
+    font-size: 14px;
+    color: #222222;
+    display: block;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.layer_pop2_re .inner.charm_popup .rating .box .list ul li.on a{
+    background-color: #FB4357;
+    border-color: #FB4357;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.layer_pop2_re .inner.charm_popup .btn_close {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    overflow: hidden;
+    width: 17px;
+    height: 17px;
+
+    font-size: 0;
+    text-indent: -999em;
+}
+
+.layer_pop2_re .inner.charm_popup .btn_finish{
+    margin: 0 -20px -12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ko"><head>
+<html lang="ko">
+<head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,34 +16,43 @@
 
     <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdate.css">
     <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdateV4.css">
+
     <link rel="stylesheet" type="text/css" href="WebApp/css/v5/master.css">
 
-    <link rel="stylesheet" type="text/css" href="/css/fanpage.css?dt=20200326121020">
+    <link rel="stylesheet" type="text/css" href="css/fanpage.css?dt=20200326121020">
     <link rel="stylesheet" type="text/css" href="WebApp/css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="WebApp/css/swiper.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="WebApp/CDN/css/v6/preegg.css">
+
 
     <script type="text/javascript" src="WebApp/js/Common/jquery-1.11.0.min.js"></script>
 
     <script type="text/javascript" src="WebApp/js/jquery.fittext.js"></script>
     <!-- <script type="text/javascript" src="WebApp/js/Chart.custom.js"></script> -->
-    <script src="/js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
     <script type="text/javascript" src="WebApp/js/Common/owl.carousel.min.js"></script>
     <script type="text/javascript" src="WebApp/js/Common/swiper.min.js"></script>
     <link rel="stylesheet" type="text/css" href="WebApp/css/v5/iCheck.css">
     <script>var gateURL = "http://m.cgv.co.kr/WebApp/";</script>
     <script>var ticketURL = "http://m.cgv.co.kr/";</script>
-    <script type="text/javascript" src="WebApp/js/fanpageMovie.js?dt=20200326121020"></script>
-    <script type="text/javascript" src="WebApp/js/fanpageCommon.js?dt=20200326121020"></script>
-    <script type="text/javascript" src="WebApp/js/fanpage.appInterface.js?dt=20200326121020"></script>
-    <script type="text/javascript" src="WebApp/js/fanpage.util.js"></script>
-    <script type="text/javascript" src="WebApp/js/check.util.js"></script>
-    <script type="text/javascript" src="WebApp/js/date.js"></script>
-    <script type="text/javascript" src="WebApp/js/clipboard.min.js"></script>
-    <script type="text/javascript" src="WebApp/js/iphone-inline-video.js"></script>
-    <script type="text/javascript" src="WebApp/js/fanpage.video.controls.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="js/fanpageMovie.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="js/fanpageCommon.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="js/fanpage.appInterface.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="js/fanpage.util.js"></script>
+    <script type="text/javascript" src="js/check.util.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/iphone-inline-video.js"></script>
+    <script type="text/javascript" src="js/fanpage.video.controls.js?dt=20200326121020"></script>
     <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <style>
-        .con_loading {padding:40px 0 50px 0; text-align:center; background-color:#ffffff;}
+        .con_loading {
+            padding: 40px 0 50px 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
 
         .reptxt p {
             -webkit-user-select: all;
@@ -57,9 +67,30 @@
             pointer-events: none;
             width: 5px;
         }
+
         /* Chart.js */
-        @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}
-        @keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
 
     </style>
 
@@ -79,135 +110,65 @@
         var fanpageAdUrl = "";
     </script>
 
-    <link rel="stylesheet" type="text/css" href="/css/movieinfoV4.css">
+    <link rel="stylesheet" type="text/css" href="css/movieinfoV4.css">
 
     <style type="text/css">
-        .allview_wrap {display:none;}
-        .cls_headertitle_box {border:0 !important;}
+        .allview_wrap {
+            display: none;
+        }
+
+        .cls_headertitle_box {
+            border: 0 !important;
+        }
     </style>
 
 </head>
 <body class="bg_white" style="">
 
 
-<!-- 평점 쓰기 시작 -->
-<div id="writeForm" class="write_layer" style="display:block;background-color:White;">
-    <div class="popHeader cls_headertitle_box" id="headerTitle">
-        <a href="javascript:closeWrite();">
-            <div class="ico_lt"><img src="WebApp/images/common/topBtn_closeX.png" alt="닫기"></div>
-        </a>
-        <div class="title" id="headerTitleArea">'기생충'</div>
-        <a href="javascript:;" onclick="fnSave('C');">
-            <div class="txt_rt" id="headerRightBtn">
-
-                등록
-            </div>
-        </a>
-    </div>
-
-    <div class="mark_writing">
-        <div class="oneline_txt">
-
-            <div class="customer_photo">
-                <img src="http://img.cgv.co.kr//WebApp/images/movieinfo/noimg_mark_poto.png" alt="" onerror="this.src='WebApp/images/movieinfo/noimg_mark_poto.png';">
-            </div>
-
-            <div class="txt_area">
-                <strong class="name"></strong>
-
-                <div class="likeornot_btn">
-                    <div id="likeornotBox1" class="likebox on">
-                        <div class="likebox-inner">
-                            <label for="likeornot1-1">
-								<span class="egg-icon good">
-									<input type="radio" name="likeornot1" value="2" id="likeornot1-1">
-								</span><span class="txt">좋았어요</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div id="likeornotBox2" class="likebox ">
-                        <div class="likebox-inner">
-                            <label for="likeornot1-2">
-								<span class="egg-icon">
-									<input type="radio" name="likeornot1" value="1" id="likeornot1-2">
-								</span><span class="txt">별로예요</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="textarea_box">
-                <textarea name="commentContent" id="commentContent" cols="30" rows="7" placeholder="관람하신 ‘기생충’에 대한 이야기를 남겨주세요…#꿀잼 #좋았어요" title="영화 한줄평 입력"></textarea>
-                <ul class="registed_list" id="itemList"></ul>
-            </div>
-
-            <!-- 글자수 Check -->
-            <!-- <div class="chk_length" style="text-align:right;font-size:10px;text-decoration:underline;">140자</div> -->
-        </div>
-
-        <div class="float_btnbox" style="bottom: 0px;">
-            <div class="inner">
-				<span class="btn_photo">
-					<label for="itemFile">사진등록하기</label>
-					<input type="file" id="itemFile">
-				</span>
-            </div>
-        </div>
-
-        <form name="frmMainInfoView" id="frmMainInfoView" action="/fanpage/mainView" method="post">
-            <input type="hidden" name="movieIdx" id="movieIdx" value="81774">
-            <input type="hidden" name="commentIdx" id="commentIdx" value="29884555">
-            <input type="hidden" name="gubun" id="gubun" value="C">
-            <input type="hidden" name="chkIsShowView" id="chkIsShowView" value="Y">
-            <input type="hidden" id="point" value="2">
-            <input type="hidden" name="oldFileUrl" id="oldFileUrl" value="">
-            <input type="hidden" name="iTab" id="iTab" value="2">
-        </form>
-    </div>
-</div>
-
-
-
 <!-- 매력포인트 레이어 -->
 <section id="charmWriteForm" style="width: 100%; height: 100%; position: fixed; left: 0px; background-color: white; display: block; z-index: 20002; top: 0px;" class="wrap">
-    <!--     <input type="hidden" id="charmCommentIdx" value="" />
-        <input type="hidden" id="charmMovieIdx" value="" /> -->
-
     <section class="content_wrap" id="ContainerView">
-
-
         <!-- 매력포인트 레이어 -->
-        <div class="layer_pop2_re  on" id="charmLayerPop">
+        <div class="layer_pop2_re on" id="charmLayerPop">
             <div class="fogbg"></div>
-            <div class="inner">
-                <div class="hdtit">관람평이 등록되었습니다.</div>
-                <div class="hdtxt">관람하신 영화의 매력포인트도 선택해주시겠어요?<br>매력이 많다면 여러 개를 선택할 수 있답니다.</div>
-                <div class="charm_list2">
-                    <ul>
-                        <!-- label 클릭시 li 에 on 클래스 추가 -->
-                        <li class="c_ic1">
-                            <label for="charm1-1">감독연출</label>
-                            <input type="checkbox" id="charm1-1">
-                        </li>
-                        <li class="c_ic2">
-                            <label for="charm1-2">스토리</label>
-                            <input type="checkbox" id="charm1-2">
-                        </li>
-                        <li class="c_ic3">
-                            <label for="charm1-3">영상미</label>
-                            <input type="checkbox" id="charm1-3">
-                        </li>
-                        <li class="c_ic4">
-                            <label for="charm1-4">배우연기</label>
-                            <input type="checkbox" id="charm1-4">
-                        </li>
-                        <li class="c_ic5">
-                            <label for="charm1-5">OST</label>
-                            <input type="checkbox" id="charm1-5">
-                        </li>
-                    </ul>
+            <div class="inner charm_popup">
+                <div class="popup_title">영화매력 선택</div>
+                <div class="box_title">
+                    <span class="icon"></span>
+                    <span class="desc">
+                        <span>이 영화의 매력을 선택해주세요!</span><br>
+                        <span class="red">중복선택</span>이 가능합니다.
+                    </span>
                 </div>
-                <a class="btn_x" href="javascript:charmCloseWrite();">팝업 닫기</a>
+                <div class="rating">
+                    <div class="box">
+                        <div class="title">매력 포인트</div>
+                        <div class="list">
+                            <ul>
+                                <li class="on"><a href="#!">감독연출</a></li>
+                                <li><a href="#!">스토리</a></li>
+                                <li><a href="#!">영상미</a></li>
+                                <li><a href="#!">배우연기</a></li>
+                                <li><a href="#!">OST</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="title">감정 포인트</div>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#!">몰입감</a></li>
+                                <li><a href="#!">마음이 편한</a></li>
+                                <li><a href="#!">현실적 공감</a></li>
+                                <li><a href="#!">잔잔한 감동</a></li>
+                                <li><a href="#!">추억회상</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="btn_close" href="javascript:charmCloseWrite();"><i class="sprite_preegg close"></i>팝업 닫기</a>
                 <a class="btn_finish" href="javascript:charmWriteProc();">선택완료</a>
 
                 <!-- 등록 완료 시 노출
@@ -222,27 +183,38 @@
     </section>
 
 </section>
+
+<script>
+    $('.rating .list li a').on('click', function () {
+        if ($(this).parent().hasClass('on')){
+            $(this).parent().removeClass('on');
+        } else {
+            $(this).parent().addClass('on');
+        }
+    })
+</script>
+
 <!-- //평점 쓰기 끝 -->
 
 <script type="text/javascript">
 
     /** 객체 정의 */
-    var O_ATTACH_FILE_MAP		= null;// 컨텐츠 파일 임시저장 Map 객체
-    var O_DELETE_ITEM_IDX_ARRAY	= null;// 삭제한 ItemIdx 임시저장 Array
-    var V_CONTENTS_STAGE		= "";//컨텐츠스테이지
+    var O_ATTACH_FILE_MAP = null;// 컨텐츠 파일 임시저장 Map 객체
+    var O_DELETE_ITEM_IDX_ARRAY = null;// 삭제한 ItemIdx 임시저장 Array
+    var V_CONTENTS_STAGE = "";//컨텐츠스테이지
 
-    var V_RETURN_PAGE			= "";//리턴페이지
+    var V_RETURN_PAGE = "";//리턴페이지
     /**
      * ready
      */
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         // 등록화면 열기
         readyContentsEdit();
 
     });
 
-    jQuery(function() {
+    jQuery(function () {
         function likeOrNot() {
             $('.likebox label').on('click', function () {
                 var $wrap = $(this).parents('.likebox');
@@ -250,35 +222,35 @@
                 $wrap.addClass('on');
             });
 
-            $('.likebox input').on('focusin', function() {
+            $('.likebox input').on('focusin', function () {
                 var $wrap = $(this).parents('.likebox');
                 $wrap.siblings().removeClass('on');
                 $wrap.addClass('on');
             });
         }
+
         likeOrNot();
     });
     // 실관람평 등록/수정 상세화면에서 등록/업데이트 버튼 이벤트
     // gubun : C (등록) / R (수정)
-    function fnSave(gubun){
+    function fnSave(gubun) {
 
-        var sPoint         = "2";
-        var commentIdx     = document.getElementById("commentIdx").value;       //실관람평일련번호
+        var sPoint = "2";
+        var commentIdx = document.getElementById("commentIdx").value;       //실관람평일련번호
         var commentContent = document.getElementById("commentContent").value;   //영화내용 (실 관람평 내용)
-        var sGubun         = document.getElementById("gubun").value;           	//구분
-        var chkShowView    = document.getElementById("chkIsShowView").value;	//관람정보공개여부
-        var oldFileUrl     = document.getElementById("oldFileUrl").value;		//기존 파일정보
+        var sGubun = document.getElementById("gubun").value;           	//구분
+        var chkShowView = document.getElementById("chkIsShowView").value;	//관람정보공개여부
+        var oldFileUrl = document.getElementById("oldFileUrl").value;		//기존 파일정보
         var sData;
 
-        var itemIdx			= "";//일련번호
-        var fileUrl			= "";//fileUrl
-        var fileFile		= "";//파일
-        var sSvcUrl         = "";
+        var itemIdx = "";//일련번호
+        var fileUrl = "";//fileUrl
+        var fileFile = "";//파일
+        var sSvcUrl = "";
 
         if (jQuery("#likeornotBox1").hasClass('on')) {
             sPoint = "2";
-        }
-        else if (jQuery("#likeornotBox2").hasClass('on')) {
+        } else if (jQuery("#likeornotBox2").hasClass('on')) {
             sPoint = "1";
         }
 
@@ -289,54 +261,58 @@
         }
         var itemObj = $(this).find("img");
 
-        $("#itemList li").each(function(){
+        $("#itemList li").each(function () {
 
             itemObj = $(this).find("img");
 
             //항목에서 파일키 Get
             var attachKey = itemObj.attr("attachKey");
             var attachFile = null;
-            if(!isNull(attachKey)){
+            if (!isNull(attachKey)) {
                 // 임시 Map에서 파일 Read
                 attachFile = getFileFromMap(attachKey);
-                if(attachFile == null){
+                if (attachFile == null) {
                     alert(attachKey + '를 찾을 수 없습니다.');
                     check = false;
                     return false;
                 }
             }
 
-            fileFile		= attachFile;//파일
+            fileFile = attachFile;//파일
         });
 
         sSvcUrl = "/fanpage/saveMovieCmtsView";
 
 
         // 실관람평 등록일 경우
-        if(sGubun == "C"){
-            sData = {gubun: sGubun
-                , movieIdx:strMovieIdx
-                , commentContent:commentContent
-                , fileFile:fileFile
-                , point:sPoint};
+        if (sGubun == "C") {
+            sData = {
+                gubun: sGubun
+                , movieIdx: strMovieIdx
+                , commentContent: commentContent
+                , fileFile: fileFile
+                , point: sPoint
+            };
 
             // 실관람평 수정일 경우
-        }else if(sGubun == "R"){
+        } else if (sGubun == "R") {
 
 
-            sData = {gubun: 'U'
-                , commentIdx:commentIdx
-                , commentContent:commentContent
-                , fileUrl:fileUrl
-                , fileFile:fileFile
-                , itemIdx:itemIdx
-                , movieIdx:strMovieIdx
-                , point:sPoint
-                , oldFileUrl:oldFileUrl};
+            sData = {
+                gubun: 'U'
+                , commentIdx: commentIdx
+                , commentContent: commentContent
+                , fileUrl: fileUrl
+                , fileFile: fileFile
+                , itemIdx: itemIdx
+                , movieIdx: strMovieIdx
+                , point: sPoint
+                , oldFileUrl: oldFileUrl
+            };
         }
 
 
-        if(!confirm("저장 하시겠습니까?")) return;
+        if (!confirm("저장 하시겠습니까?")) return;
 
         //실관람객 작성 가능
         if (commentContent == "") {
@@ -358,17 +334,17 @@
                 contentType: false,
                 dataType: "json",
                 data: jsJsonToFormData(sData),
-                success: function(result){
+                success: function (result) {
 
                     alert(result.resultMsg);
 
                     // 매력포인트 등록 처리
-                    if(result.resultCd == "0000" && result.hmResultCd == 0){
+                    if (result.resultCd == "0000" && result.hmResultCd == 0) {
                         document.getElementById("commentIdx").value = result.commentIdx;
                         charmLayer();
                     }
                 },
-                error: function(){
+                error: function () {
                     alert('처리 중 에러가 발생하였습니다.\n잠시 후에 다시 이용해 주세요.');
                 }
             });
@@ -379,16 +355,16 @@
     /**
      * 컨텐츠 파일 임시저장 Map 객체에서 file get
      */
-    function getFileFromMap(key){
+    function getFileFromMap(key) {
 
-        if(O_ATTACH_FILE_MAP != null){
+        if (O_ATTACH_FILE_MAP != null) {
             return O_ATTACH_FILE_MAP.get(key);
         }
         return null;
 
     }
 
-    function closeWrite(){
+    function closeWrite() {
         //document.frmMainInfoView.submit();
         jQuery("#charmWriteForm").fadeOut();
         jQuery("#writeForm").fadeOut();
@@ -396,19 +372,17 @@
     }
 
 
-
     /**
      * 컨텐츠 등록 Popup Open
      */
-    function readyContentsEdit(){
+    function readyContentsEdit() {
 
         var oldFileUrl,
             element = document.getElementById('oldFileUrl');
 
         if (element != null) {
             oldFileUrl = element.value;
-        }
-        else {
+        } else {
             oldFileUrl = '';
         }
 
@@ -421,12 +395,12 @@
 
         $('#itemFile').on('change', fnAddAttachFile);
 
-        if(('C' == 'R' && oldFileUrl == '') || 'C' == 'C' ){
+        if (('C' == 'R' && oldFileUrl == '') || 'C' == 'C') {
             // 항목 초기화
             initContentsEdit();
         }
 
-        if('C' == 'R' && oldFileUrl != ''){
+        if ('C' == 'R' && oldFileUrl != '') {
             $("#itemFile").attr('disabled', true);  // 등록버튼 비활성화
         }
 
@@ -435,15 +409,15 @@
     /**
      * 사진/동영상 선택시 change Event
      */
-    function fnAddAttachFile(){
+    function fnAddAttachFile() {
 
         var file = $('#itemFile')[0].files[0];
         var prv_link = "#itemList";
 
-        if (file){
+        if (file) {
             // 올린 파일을 O_ATTACH_FILE_MAP 에 임시 보관 및 key 받기
             var fileKey = setFileToMap(file);
-            if(fileKey == null){
+            if (fileKey == null) {
                 alert('파일 키를 찾을 수 없습니다.');
                 return;
             }
@@ -452,7 +426,7 @@
             var addHtml = "";
 
             // 추가 태그 생성
-            addHtml = '<li><div class="inner"><img src="'+URL.createObjectURL(file)+'" itemIdx="" attachKey="'+ fileKey +'" OLD_URL="" alt=""></div><button type="button" class="btn_del" onclick="fnDelItem(this)">삭제</button></li>';
+            addHtml = '<li><div class="inner"><img src="' + URL.createObjectURL(file) + '" itemIdx="" attachKey="' + fileKey + '" OLD_URL="" alt=""></div><button type="button" class="btn_del" onclick="fnDelItem(this)">삭제</button></li>';
 
             // 사진/동영상 목록에 생성한 태그 추가
             $(prv_link).append(addHtml);
@@ -464,10 +438,10 @@
         }
 
         /* 사진/동영상 목록 삭제 레이어 */
-        $('.registed_list li').on('mouseover', function() {
+        $('.registed_list li').on('mouseover', function () {
             $(this).addClass('hover');
         });
-        $('.registed_list li').on('mouseout', function() {
+        $('.registed_list li').on('mouseout', function () {
             $(this).removeClass('hover');
         });
         /* 이미지 비율 처리 */
@@ -494,12 +468,12 @@
     /**
      * 사진/동영상 파일선택 항목 초기화
      */
-    function clearItemFile(obj){
+    function clearItemFile(obj) {
 
         if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
             // Explorer 일때
-            $(obj).replaceWith( $(obj).clone(true) );
-        }else{
+            $(obj).replaceWith($(obj).clone(true));
+        } else {
             // 기타 Browser 일때
             $(obj).val("");
         }
@@ -508,13 +482,13 @@
     /**
      * 컨텐츠 파일 임시저장 Map 객체에 file set
      */
-    function setFileToMap(file){
+    function setFileToMap(file) {
 
         var attachKeyDate = new Date();
-        var attachKey = attachKeyDate.format("yyyyMMddHHmmss")+attachKeyDate.getMilliseconds();
+        var attachKey = attachKeyDate.format("yyyyMMddHHmmss") + attachKeyDate.getMilliseconds();
 
-        if(O_ATTACH_FILE_MAP != null){
-            O_ATTACH_FILE_MAP.put(attachKey		, file);
+        if (O_ATTACH_FILE_MAP != null) {
+            O_ATTACH_FILE_MAP.put(attachKey, file);
             return attachKey;
         }
         return null;
@@ -523,7 +497,7 @@
     /**
      * 사진/동영상 List del item click
      */
-    function fnDelItem(btnObj){
+    function fnDelItem(btnObj) {
 
 //		debug($(btnObj).parent().html());
 
@@ -535,7 +509,7 @@
         itemIdx = $(btnObj).parent().find("img").attr("itemIdx");
 
         // itemIdx가 null이 아닌경우는 등록되어있는 항목으로 삭제 대상에 넣어주어야한다.
-        if(!isNull(itemIdx)){
+        if (!isNull(itemIdx)) {
             O_DELETE_ITEM_IDX_ARRAY.push(itemIdx);
         }
 
@@ -557,12 +531,12 @@
      */
     function registedImgs() {
 
-        setTimeout(init = function() {
+        setTimeout(init = function () {
 
             var $imgWrap = $('.registed_list');
-            $imgWrap.imagesLoaded(function() {
+            $imgWrap.imagesLoaded(function () {
                 var _imgNum = $imgWrap.find('li').length;
-                for(var i=0; i<_imgNum; i++) {
+                for (var i = 0; i < _imgNum; i++) {
                     imgCheckRatio($imgWrap.find('li').eq(i).find('img'));
                 }
             });
@@ -579,11 +553,11 @@
             objW = obj.width(),
             objH = obj.height();
 
-        if(objW > objH) {
+        if (objW > objH) {
             obj.parent().addClass('land');
-        }else if (objW < objH) {
+        } else if (objW < objH) {
             obj.parent().addClass('port');
-        }else {
+        } else {
             obj.parent().addClass('stretch');
         }
     }
@@ -605,14 +579,16 @@
         var fwidth = document.body.offsetWidth;
         var fheight = document.body.clientHeight;
 
-        jQuery('body').bind('touchmove', function (e) { touchScrollRemoveOnLayer(e);});
+        jQuery('body').bind('touchmove', function (e) {
+            touchScrollRemoveOnLayer(e);
+        });
         jQuery("#charmWriteForm").attr("style", "width:100%;height:100%;position:fixed;top:" + fheight + "px;left:0px;background-color:White;display:block;z-index:20002;");
-        jQuery("#charmWriteForm").animate({ top: "0px" }, { queue: false, duration: "fast" });
+        jQuery("#charmWriteForm").animate({top: "0px"}, {queue: false, duration: "fast"});
     }
 
     /*레이어 노출에 따른 터치 이벤트 막기 추가. mwpark_RR2015*/
     function touchScrollRemoveOnLayer(e) {
-        if(jQuery('#writeForm').css("display") != "none" || jQuery('#charmWriteForm').css("display") != "none") {
+        if (jQuery('#writeForm').css("display") != "none" || jQuery('#charmWriteForm').css("display") != "none") {
             e.preventDefault();
         }
     }
@@ -627,53 +603,55 @@
     /* 매력지수 순서 변경(배우연기,스토리,영상미,OST,특수효과 → 감독연출,스토리,영상미,배우연기,OST)    2016.02.04 yjhan*/
     function charmWriteProc() {
 
-        var sActing 		= "N";
-        var sStory 			= "N";
-        var sVisual 		= "N";
-        var sOst 			= "N";
-        var sEffect 		= "N";
+        var sActing = "N";
+        var sStory = "N";
+        var sVisual = "N";
+        var sOst = "N";
+        var sEffect = "N";
 
-        if(jQuery("#charm1-5").prop("checked")){   //감독연출
+        if (jQuery("#charm1-5").prop("checked")) {   //감독연출
             sEffect = "Y";
         }
-        if(jQuery("#charm1-2").prop("checked")){   //스토리
+        if (jQuery("#charm1-2").prop("checked")) {   //스토리
             sStory = "Y";
         }
-        if(jQuery("#charm1-3").prop("checked")){   //영상미
+        if (jQuery("#charm1-3").prop("checked")) {   //영상미
             sVisual = "Y";
         }
-        if(jQuery("#charm1-1").prop("checked")){   //배우연기
+        if (jQuery("#charm1-1").prop("checked")) {   //배우연기
             sActing = "Y";
         }
-        if(jQuery("#charm1-4").prop("checked")){   //OST
+        if (jQuery("#charm1-4").prop("checked")) {   //OST
             sOst = "Y";
         }
 
-        if(sActing == "N" && sStory == "N" && sVisual== "N" && sOst == "N" && sEffect == "N"){
+        if (sActing == "N" && sStory == "N" && sVisual == "N" && sOst == "N" && sEffect == "N") {
             alert("영화의 매력포인트를 선택해주세요.");
             return;
         }
 
         var sCommentIdx = document.getElementById("commentIdx").value;
-        var sData = {MovieIdx:strMovieIdx, CommentIdx:sCommentIdx
-            , Effect:sEffect
-            , Story:sStory
-            , Visual:sVisual
-            , Acting:sActing
-            , Ost:sOst};
+        var sData = {
+            MovieIdx: strMovieIdx, CommentIdx: sCommentIdx
+            , Effect: sEffect
+            , Story: sStory
+            , Visual: sVisual
+            , Acting: sActing
+            , Ost: sOst
+        };
 
         //alert(V_MOVIE_IDX + "::"+ V_CONTENTS_IDX);
         $.ajax({
             method: "post",
             url: "/fanpage/saveMovieCmtsCharmPnt",
             dataType: "json",
-            data:sData ,
-            success: function(result){
+            data: sData,
+            success: function (result) {
 
                 alert(result.resultHmMsg);
 
-                if(result.resultCD == '00000'){
-                    if(result.resultHmCd == '00000'){
+                if (result.resultCD == '00000') {
+                    if (result.resultHmCd == '00000') {
                         //document.frmMainInfoView.submit();
                         jQuery("#charmWriteForm").fadeOut();
                         jQuery("#writeForm").fadeOut();
@@ -681,7 +659,7 @@
                     }
                 }
             },
-            error: function(){
+            error: function () {
                 alert('처리 중 에러가 발생하였습니다.\n잠시 후에 다시 이용해 주세요.');
             }
         });
@@ -704,7 +682,7 @@
 </script>
 
 
-
 <!-- 파일업로드 관련 스크립트 include -->
 <!-- //평점 쓰기 끝 -->
-</body></html>
+</body>
+</html>
