@@ -19,15 +19,17 @@
     <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdateV4.css">
     <link rel="stylesheet" type="text/css" href="WebApp/css/v5/master.css">
 
+
+
+
     <link rel="stylesheet" type="text/css" href="css/fanpage.css?dt=20200320140958">
     <link rel="stylesheet" type="text/css" href="WebApp/css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="WebApp/css/swiper.min.css">
 
-    <script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script>
-    <script type="text/javascript" async="" src="http://www.google-analytics.com/plugins/ua/ec.js"></script>
-    <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5CJXRN"></script>
-    <script async="" src="//www.google-analytics.com/analytics.js"></script>
-    <script src="https://connect.facebook.net/signals/config/751110215269972?v=2.9.15&amp;r=stable" async=""></script>
+
+    <link rel="stylesheet" type="text/css" href="WebApp/CDN/css/v6/preegg.css">
+
+
     <script type="text/javascript" src="WebApp/js/Common/jquery-1.11.0.min.js"></script>
 
     <script type="text/javascript" src="WebApp/js/jquery.fittext.js"></script>
@@ -112,8 +114,6 @@
     </script>
 
 
-    <noscript><img height="1" width="1" style="display:none"
-                   src=" https://www.facebook.com/tr?id=404656017017117&ev=PageView&noscript=1"/></noscript>
     <!-- End Facebook Pixel Code -->
 
     <style type="text/css"></style>
@@ -358,9 +358,8 @@
 
                 <ul class="fp_btn_list type3">
                     <li class="" data-src="off" id="wishFlag">
-                        <a href="javascript:;" onclick="fnMainOpt('FG', $(this));" class="see">
-								<span>
-									7,638</span>
+                        <a href="javascript:;" onclick="fnMainOpt('FG', $(this));" class="preegg">
+								<span>프리에그</span>
                         </a>
                     </li>
                     <li class="">
@@ -515,10 +514,6 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="age-info">
-                                <canvas id="audienceCnt" width="486" height="372"
-                                        style="display: block; margin-top: 15px; height: 124px; width: 162px;"></canvas>
-                            </div>
                         </div>
                     </div>
                     <div class="cover_list">
@@ -530,76 +525,63 @@
                         </ul>
                     </div>
                 </div>
-                <div class="fp_tabcont on" id="fpTabCont2" style="display: block; margin-top: 10px;"><input
-                        type="hidden" name="scoreDataActing" id="scoreDataActing" value="67.0">
+                <div class="fp_tabcont on" id="fpTabCont2" style="display: block; margin-top: 10px;">
+
+                    <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                        수정 부분 :
+                        <p>* 프리 에그 섹션 생성 &lt;div class="movie-chart"&gt;</p>
+                        <p>* 차트 스크립트 내용 수정 : 주석 '프리에그 차트 데이터 수정본 샘플'</p>
+                        <p>* 비고 : 서버사이드에서 작성 되어서 내려옴</p>
+                    </div>
+                    <input type="hidden" name="scoreDataActing" id="scoreDataActing" value="67.0">
                     <input type="hidden" name="scoreDataEffect" id="scoreDataEffect" value="75.0">
                     <input type="hidden" name="scoreDataStory" id="scoreDataStory" value="46.0">
                     <input type="hidden" name="scoreDataVisual" id="scoreDataVisual" value="78.0">
                     <input type="hidden" name="scoreDataOst" id="scoreDataOst" value="41.0">
 
-                    <div class="fp-egg-grade" style="">
 
-                        <div class="radar-graphbox">
-                            <!-- 매력지수 코멘트 -->
-                            <div class="fp-egg-tit" style="">
-                                <div>
-                                    <p>
-                                        <strong>남녀노소</strong> <strong>모두</strong> 좋아하는<br>
-                                        영상미가 뛰어난 영화
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="movie-chart">
+                        <div class="comment">
+                            <p><strong>배우연기</strong>가 메소드급인<br><strong>무서운 여운이 오래가는</strong> 영화</p>
+                        </div>
+                        <div class="count">
+                            <span><span>실관람평</span><strong>503만</strong></span>
+                            <span><span>실관람평</span><strong>503만</strong></span>
+                        </div>
+
+                        <div class="rating">
                             <a class="ico_help" href="javascript:void(0)" onclick="javascript:egg_info_btn();">도움말</a>
-                            <div class="radar-graph">
-                                <canvas id="charmScore" width="540" height="540"
-                                        style="width: 180px; height: 180px; display: block;"></canvas>
+                            <div class="box">
+                                <span class="sprite_preegg big default"></span>
+                                <span class="percent">78%</span>
+                                <span class="desc">Pre Egg</span>
                             </div>
-                            <!-- 골든에그 데이터 -->
-                            <ul class="egg-data">
-                                <li>
-                                    <span class="lab egg">Golden Egg</span>
-                                    <div class="data">
-                                        <span class="egg great"></span>
-                                        <em>96%</em>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <span class="lab">실관람평</span>
-                                    <div class="data">
-                                        <em>2.3만</em>
-                                    </div>
-
-                                </li>
-                                <li>
-                                    <span class="lab">Movie Mania</span>
-                                    <div class="data">
-                                        <em>1.3만</em>
-                                    </div>
-                                </li>
-                            </ul>
+                            <div class="box box_golden">
+                                <span class="sprite_preegg big good"></span>
+                                <span class="percent">85%</span>
+                                <span class="desc">Golden Egg</span>
+                            </div>
                         </div>
-                        <!-- 성별, 연령별 차트 -->
-                        <div class="egg-line-graphbox" style="">
-                            <div class="line-graph">
-                                <div class="chartjs-size-monitor"
-                                     style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                                    <div class="chartjs-size-monitor-expand"
-                                         style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                        <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                                    </div>
-                                    <div class="chartjs-size-monitor-shrink"
-                                         style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                        <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                                    </div>
+
+                        <div class="chart_total">
+                            <div class="box">
+                                <div class="title">매력포인트</div>
+                                <div class="radar-graph" id="chart2">
+                                    <canvas id="charmScore" style="width: 250px; height: 200px;"></canvas>
                                 </div>
-                                <canvas id="age_line_chart" height="480" width="1005" class="chartjs-render-monitor"
-                                        style="display: block; height: 160px; width: 335px;"></canvas>
+                            </div>
+                            <div class="box">
+                                <div class="title">감정포인트</div>
+                                <div class="radar-graph" id="chart3">
+                                    <canvas id="emotionScore" style="width: 250px; height: 200px; vertical-align: middle"></canvas>
+                                </div>
                             </div>
                         </div>
-
 
                     </div>
+
+
+
 
                     <!-- 모바일 광고 -->
                     <div class="common_banner cb_type1">
@@ -859,7 +841,7 @@
                                                                         </ul>
                                                                     </div>		 -->
                             </li>
-                            <li data-sidx="29872877">
+                            <li data-sidx="29872877">C
 
 
                                 <div class="mark_comment_area ">
@@ -1259,6 +1241,11 @@
                     </form>
 
 
+
+                    <script type="text/javascript" src="WebApp/js/v5/payment/lib/plugins.js"></script>
+                    <script src="WebApp/js/v5/contents/lib/chart.js"></script>
+                    <script src="WebApp/js/chartjs-plugin-datalabels.min.js"></script>
+
                     <script type="text/javascript">
                         jQuery(document).ready(function () {
                             $('.pop_cmt_filter').on('click', function (e) {
@@ -1275,13 +1262,43 @@
 
                         //도움말
                         egg_info_btn = function () {
-                            alert("CGV의 실제 관람 고객 평가로 산정된 지수입니다.\n결과에 따라 Golden EGG 아이콘이 정해집니다.");
+                            alert("Pre Egg는 개봉 전 기대 평가로 산정된 지수입니다. \n\nGolden Egg는 CGV의 실제 관람 고객 평가로 산정된 지수입니다.\n결과에 따라 Golden EGG 아이콘이 정해집니다.");
                         }
 
-                        // 방사형 그래프 NEW
-                        var radarCtx = document.getElementById('charmScore').getContext('2d');
-                        var radarCtxData = {
-                            labels: ["감독연출", "스토리", "영상미", "배우연기", "OST"],
+
+                        /**
+                         * 프리에그 차트 데이터 수정본 샘플
+                         * 비고 : chart.js 2.7.2 사용 되어있음
+                         *
+                         */
+                            // 방사형 그래프 NEW
+                        var charmCtx = document.getElementById('charmScore').getContext('2d');
+                        var emotionCtx = document.getElementById('emotionScore').getContext('2d');
+                        var charmCtxData = {
+                            labels: ["감독연출", "스토리", ["영상미"," "], ["배우연기"," "], "OST"],
+                            datasets: [
+                                {
+                                    label: "My First dataset",
+                                    data: [document.getElementById("scoreDataEffect").value
+                                        , document.getElementById("scoreDataStory").value
+                                        , document.getElementById("scoreDataVisual").value
+                                        , document.getElementById("scoreDataActing").value
+                                        , document.getElementById("scoreDataOst").value],	// 영화별 데이터
+                                    backgroundColor: "rgba(151,187,205,0.4)",
+                                    strokeColor: "rgba(151,187,205,1)",
+                                    pointRadius: 3,
+                                    PointPadding: 10,
+                                    pointBackgroundColor: ["rgba(253,148,135,1)", "rgba(254,196,69,1)", "rgba(143,189,16664,1)", "rgba(100,169,178,1)", "rgba(178,103,183,1)"],
+                                    pointHighlightStroke: "rgba(151,187,205,1)",
+                                    pointBorderWidth: 1,
+                                    pointBorderColor: "rgba(255,255,255,1)",
+                                    borderWidth: 1,
+                                    borderColor: 'rgba(153,189,206,1)',
+                                }
+                            ]
+                        };
+                        var emotionCtxData = {
+                            labels: ["몰입감",["무서운","여운이 남는"], ["보는 내내","긴장"], ["소름끼치","오싹"], ["호러틱","사운드"]],
                             datasets: [
                                 {
                                     label: "My First dataset",
@@ -1325,195 +1342,27 @@
                         };
 
                         var charmScore;
-
-                        // 골든에그 지수 연령, 나이별 차트
-
-                        // 성별, 연령별 그래프 Y축 최소값 구하기 START
-                        var arr = [95,
-                            97,
-                            97,
-                            98,
-                            96,
-                            94,
-                            95]
-                        var minData = arr[0];
-                        var maxData = arr[0];
-                        var resultData = 0;
-                        for (var i = 0; i < arr.length; i++) {
-                            if (minData >= arr[i] && arr[i] != 0) {
-                                minData = arr[i];
-                            }
-                            if (maxData <= arr[i]) {
-                                maxData = arr[i];
-                            }
-                        }
-
-                        if ((maxData - minData) >= 7) {
-                            resultData = minData - 10;
-                        } else if ((maxData - minData) >= 5 && (maxData - minData) < 7) {
-                            resultData = minData - 5;
-                        } else {
-                            resultData = minData - 1;
-                        }
-                        // 성별, 연령별 그래프 Y축 최소값 구하기 END
-
-                        var lineChart = document.getElementById('age_line_chart').getContext('2d'),
-                            ctColor1 = lineChart.createLinearGradient(0, 0, lineChart.canvas.width, 0); //차트 그라데이션 컬러 설정
-                        ctColor1.addColorStop(0.000, 'rgba(255, 255, 255, 0.5)');
-                        ctColor1.addColorStop(0.012, 'rgba(255, 255, 255, 0.4)');
-                        ctColor1.addColorStop(0.020, 'rgba(155, 205, 255, 0.200)');
-                        ctColor1.addColorStop(0.112, 'rgba(186, 186, 255, 0.700)');
-                        ctColor1.addColorStop(0.189, 'rgba(255, 127, 141, 0.450)');
-                        ctColor1.addColorStop(0.199, 'rgba(255, 127, 141, 0.400)');
-                        ctColor1.addColorStop(0.250, 'rgba(255, 163, 172, 0.400)');
-                        ctColor1.addColorStop(0.319, 'rgba(255, 224, 196, 0.600)');
-                        ctColor1.addColorStop(0.821, 'rgba(255, 224, 196, 0.300)');
-                        ctColor1.addColorStop(0.92, 'rgba(255, 243, 229, 0.200)');
-                        ctColor1.addColorStop(0.99, 'rgba(255, 255, 255, 0.200)');
-                        ctColor2 = lineChart.createLinearGradient(0, 50, 280, 0);
-                        ctColor2.addColorStop(.0, 'rgba(255, 255, 255, 0.8)');
-                        ctColor2.addColorStop(.01, 'rgba(255, 255, 255, 1)');
-                        ctColor2.addColorStop(.07, 'rgba(160, 198, 243, 0.7)');
-                        ctColor2.addColorStop(.14, 'rgba(255, 136, 147, 1)');
-                        ctColor2.addColorStop(.28, 'rgba(255, 170, 69, 1)');
-                        ctColor2.addColorStop(.85, 'rgba(255, 170, 69, 0.8)');
-                        ctColor2.addColorStop(.96, 'rgba(255, 245, 245, 1)');
-                        var data = {
-                            labels: ['남자', '여자',
-
-                                '10대',
-
-                                '20대',
-
-                                '30대',
-
-                                '40대',
-
-                                '50대+',
-
-                            ],
-                            datasets: [{
-                                label: '골든에그 지수 성별, 연령별 선호도',
-                                data: [95,
-                                    97,
-                                    97,
-                                    98,
-                                    96,
-                                    94,
-                                    95
-                                ],
-                                backgroundColor: ctColor1,
-                                pointBackgroundColor: 'white',
-                                pointBorderColor: ['#a0cbfd', '#ff7f8d', '#ffaa44', '#ffaa44', '#ffaa44', '#ffaa44', '#ffaa44'],
-                                pointBorderWidth: 1,
-                                borderWidth: 0.5,
-                                pointRadius: 2,
-                                pointHoverRadius: 1,
-                                pointHoverBackgroundColor: '#fff',
-                                borderColor: ctColor2,
-                                datalabels: {align: 'end', anchor: 'end'},
-                            }]
-                        };
-                        var options = {
-                            plugins: {
-                                datalabels: {
-                                    formatter: function (value, context) {
-                                        return value + '%';
-                                    },
-                                    font: {size: 11, style: 'bold'},
-                                    color: '#000000',
-                                    padding: {top: -35}
-                                }
-                            },
-                            legend: {display: false},
-                            responsive: true,
-                            maintainAspectRatio: false,
-                            scales: {
-                                xAxes: [{
-                                    gridLines: {display: false,},
-                                    ticks: {
-                                        fontSize: 12,
-                                        fontStyle: 'normal',
-                                        fontColor: 'rgba(145,151,163,1)'
-                                    }
-                                }],
-                                yAxes: [{
-                                    gridLines: {display: false, color: 'rgba(255,255,255,0)'},
-                                    ticks: {
-                                        //beginAtZero: true,
-                                        display: false,
-                                        //steps: 10,
-                                        //stepValue: 10,
-                                        //max: 150,
-                                        min: resultData
-                                    }
-                                }]
-                            },
-                            elements: {line: {tension: 0}},
-                            point: {backgroundColor: 'white'},
-                            tooltips: {enabled: false},
-                            layout: {
-                                padding: {
-                                    left: 0,
-                                    right: 0,
-                                    top: 70,
-                                    bottom: 0
-                                }
-                            },
-                            animation: {
-                                duration: 0
-                            },
-                        };
-                        var chartInstance;
-
+                        var emotionScore;
                         function initRadarChart() {
-                            charmScore = new Chart(radarCtx, {
+                            charmScore = new Chart(charmCtx, {
                                 type: 'radar',
-                                data: radarCtxData,
+                                data: charmCtxData,
                                 options: radarChartOpt
                             });
-                            chartInstance = new Chart(lineChart, {
-                                type: 'line', data: data, options: options,
-                                plugins: [{
-                                    // 가변형 그래프로 변경에 따라 윈도우 리사이즈에 맞춰 그라디언트 색상을 맞춤
-                                    afterLayout: function (chart, options) {
-                                        var scales = chart.scales;
-                                        var ctColor1 = chart.ctx.createLinearGradient(
-                                            scales["x-axis-0"].left,
-                                            scales["x-axis-0"].bottom,
-                                            scales["x-axis-0"].right,
-                                            scales["x-axis-0"].top
-                                        );
-                                        var ctColor2 = chart.ctx.createLinearGradient(
-                                            scales["x-axis-0"].left,
-                                            50,
-                                            scales["x-axis-0"].right - (scales["x-axis-0"].right / 10 / 2),
-                                            scales["x-axis-0"].top
-                                        );
-                                        ctColor1.addColorStop(0.000, 'rgba(255, 255, 255, 0.5)');
-                                        ctColor1.addColorStop(0.012, 'rgba(255, 255, 255, 0.4)');
-                                        ctColor1.addColorStop(0.020, 'rgba(155, 205, 255, 0.200)');
-                                        ctColor1.addColorStop(0.112, 'rgba(186, 186, 255, 0.700)');
-                                        ctColor1.addColorStop(0.189, 'rgba(255, 127, 141, 0.450)');
-                                        ctColor1.addColorStop(0.199, 'rgba(255, 127, 141, 0.400)');
-                                        ctColor1.addColorStop(0.250, 'rgba(255, 163, 172, 0.400)');
-                                        ctColor1.addColorStop(0.319, 'rgba(255, 224, 196, 0.600)');
-                                        ctColor1.addColorStop(0.821, 'rgba(255, 224, 196, 0.300)');
-                                        //ctColor1.addColorStop(0.92, 'rgba(255, 243, 229, 0.200)');
-                                        //ctColor1.addColorStop(0.99, 'rgba(255, 255, 255, 0.200)');
-                                        ctColor2.addColorStop(.0, 'rgba(255, 255, 255, 0.8)');
-                                        ctColor2.addColorStop(.01, 'rgba(255, 255, 255, 1)');
-                                        ctColor2.addColorStop(.07, 'rgba(160, 198, 243, 0.7)');
-                                        ctColor2.addColorStop(.14, 'rgba(255, 136, 147, 1)');
-                                        ctColor2.addColorStop(.28, 'rgba(255, 170, 69, 1)');
-                                        ctColor2.addColorStop(.85, 'rgba(255, 170, 69, 0.8)');
-                                        //ctColor2.addColorStop(.96, 'rgba(255, 245, 245, 1)');
-                                        chart.data.datasets[0].backgroundColor = ctColor1;
-                                        chart.data.datasets[0].borderColor = ctColor2;
-                                    }
-                                }]
+                            emotionScore = new Chart(emotionCtx, {
+                                type: 'radar',
+                                data: emotionCtxData,
+                                options: radarChartOpt
                             });
                         }
+                        initRadarChart()
+
+                        /* //프리에그 차트 데이터 수정본 샘플 */
+
+
+
+
+
 
                         function popCmtOrder() {
                             var x = $('.btn_filter.type1').text();
@@ -1588,9 +1437,7 @@
     </form>
 </div><!-- // wrap -->
 
-<script type="text/javascript" src="WebApp/js/v5/payment/lib/plugins.js"></script>
-<script src="WebApp/js/v5/contents/lib/chart.js"></script>
-<script src="WebApp/js/chartjs-plugin-datalabels.min.js"></script>
+
 
 <script type="text/javascript">
     //jQuery(document).ready(function() {
