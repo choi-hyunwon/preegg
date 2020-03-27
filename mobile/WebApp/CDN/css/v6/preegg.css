@@ -459,8 +459,92 @@
     text-indent: -999em;
 }
 
-.layer_pop2_re .inner.charm_popup .btn_finish{
+.layer_pop2_re .inner.charm_popup .btn_confirm{
     margin: 0 -20px -12px;
+    display: block;
+    padding: 15px 12px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(to right,  #f1318a 0%,#ef642f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.layer_pop2_re .inner.charm_popup .btn_confirm.disabled{
+    background: #999999 ;
+}
+
+
+
+.layer_pop2_re .inner.emotion_popup{
+
+}
+.layer_pop2_re .inner.emotion_popup .box {
+}
+
+.layer_pop2_re .inner.emotion_popup .box .desc {
+    text-align: center;
+    padding-top: 28px;
+    margin-bottom: 24px;
+}
+.layer_pop2_re .inner.emotion_popup .box .main {
+    font-size: 20px;
+    color: #000000;
+    line-height: 34px;
+    font-weight: 600;
+}
+.layer_pop2_re .inner.emotion_popup .box .sub em {
+    color: #222222;
+}
+
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn {
+    height: 135px;
+    width: 325px;
+    margin: 0 auto 25px ;
+}
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn{
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    float: left;
+    border: 2px solid #F5F5F5;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+}
+
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn:first-child{
+    margin-right: 25px;
+}
+
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn span {
+    display: block;
+    text-align: center;
+    margin: 0 auto 5px;
+    font-size: 14px;
+    color: #444444;
+    font-weight: bold;
+    letter-spacing: -1px;
+    
+}
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn span.sprite_preegg {
+    margin-top: 34px;
+}
+
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn.selected {
+    border-color: #FB4357;
+    background-color: #fff;
+}
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn.selected span {
+    color: #FB4357;
+}
+.layer_pop2_re .inner.emotion_popup .box .desc_sub {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 40px;
+}
+.layer_pop2_re .inner.emotion_popup .box .desc_sub strong{
+    font-weight: bold;
 }
 
 
