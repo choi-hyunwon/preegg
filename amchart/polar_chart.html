@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- Styles -->
+	<style>
+	#chartdiv {
+		width: 100%;
+		height: 500px;
+	}
+	</style>
+
+	<!-- Resources -->
+	<script src="http://210.122.97.182:8080/js/amcharts/amcharts.js"></script>
+	<script src="http://210.122.97.182:8080/js/amcharts//radar.js"></script>
+	<script src="http://210.122.97.182:8080/js/amcharts//plugins/export/export.min.js"></script>
+	<link rel="stylesheet" href="http://210.122.97.182:8080/js/amcharts/plugins/export/export.css" type="text/css" media="all" />
+
+	<!-- Chart code -->
+	<script>
+		var chart = AmCharts.makeChart("chartdiv", {
+			"type" : "radar",
+			"theme" : "none",
+			"dataProvider" : [ {
+				"key" : "세글자",
+				"value" : 99,
+				"color": "#0066CC"
+			}, {
+				"key" : "네글자로",
+				"value" : 80,
+				"color": "#19d228"
+			}, {
+				"key" : "세글자\n한줄내리고",
+				"value" : 60,
+				"color": "#CC3333"
+			}, {
+				"key" : "다섯글자후\n한줄내리고",
+				"value" : 40,
+				"color": "#b4dd1e"
+			}, {
+				"key" : "그냥저냥",
+				"value" : 20,
+				"color": "#fb7116"
+			} ],
+			"valueAxes" : [ {
+				"axisTitleOffset" : 20,
+				"minimum" : 0,
+				"axisAlpha" : 0.15
+			} ],
+			"startDuration" : 0,
+			"graphs" : [ {
+				"bullet" : "round",
+				"lineThickness" : 2,
+				"lineColor" : "#FF007F",
+				"fillAlphas": 0.1,
+				"valueField" : "value",
+				"lineColorField" : "color"
+			} ],
+			"categoryField" : "key",
+			"export" : {
+				"enabled" : false
+			}
+		});
+	</script>
+
+	<!-- HTML -->
+	<div id="chartdiv"></div>
+
+</body>
+</html>
