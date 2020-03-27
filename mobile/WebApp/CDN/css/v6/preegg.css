@@ -86,7 +86,7 @@
 
 .moviePreegg span {
     position: relative;
-    padding-left: 20px
+    padding-left: 15px
 }
 
 .moviePreegg span:before {
@@ -94,11 +94,12 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 16px;
+    width: 11px;
     height: 20px;
-    background: url('../../images/main/common/sprite_preegg.png');
-    background-size: 100px;
+    background: url('../../images/main/common/sprite_preegg@3x.png');
+    background-size: 300px;
 }
+
 
 .moviePreegg span:after {
     content: '%'
@@ -107,6 +108,25 @@
 .moviePreegg span.eggState:before {
     background-position: 0px 0px;
 }
+
+/**
+    small
+ */
+
+
+.moviePreegg span.small {
+    padding-left: 11px;
+}
+.moviePreegg span.small:before {
+    content: '';
+    width: 9px;
+    height: 13px;
+}
+
+.moviePreegg span.eggState.small:before {
+    background-position: -80px 0px;
+}
+
 
 
 /**
@@ -152,63 +172,86 @@
 
 .movie-chart {
     position: relative;
-    padding: 40px 20px;
+    padding: 20px 20px;
     background-color: #fff;
 }
 
 .movie-chart .comment {
-    font-size: 20px;
-    line-height: 26px;
+    position: relative;
+    margin-bottom: 40px;
+
+}
+.movie-chart .comment.no_comment {
+    margin-bottom: 13px;
+}
+
+
+.movie-chart .comment p {
+    text-align: center;
+}
+.movie-chart .comment span{
+    font-size: 18px;
+    line-height: 21px;
     color: #222222;
     text-align: center;
-    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
 }
+
+.movie-chart .comment .line1:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -35px;
+    width: 24px;
+    height: 18px;
+    background-image: url(../../images/main/common/sprite_preegg@3x.png);
+    background-position: -170px 0;
+    background-size: 300px;
+}
+.movie-chart .comment .line2:after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: -40px;
+    width: 24px;
+    height: 18px;
+    background-image: url(../../images/main/common/sprite_preegg@3x.png);
+    background-position: -200px 0;
+    background-size: 300px;
+}
+
+
+
+
+
 
 .movie-chart .comment strong {
     font-weight: bold;
 }
 
-.movie-chart .count {
-    position: relative;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.movie-chart .count > span {
-    font-size: 12px;
-    line-height: 1.5em;
-    display: inline-block;
-    position: relative;
-}
-
-.movie-chart .count > span > strong {
-    margin-left: 10px;
-}
-
-.movie-chart .count > span:first-child {
-    margin-right: 5px;
-    padding-right: 10px;
-}
-
-.movie-chart .count > span:first-child:after {
-    content: "|";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 15px;
-    color: #EBECEE;
-}
-
 .movie-chart .rating {
     position: relative;
-    border: 1px solid #dddddd;
-    height: 37px;
+    border: 1px solid #F9F9F9;
+    background-color: #F9F9F9;
+    height: 82px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
-    padding: 25px 0px;
+    padding-top: 29px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
+    box-sizing: border-box;
+}
+.movie-chart .rating:before {
+    content: '';
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    background-color: #efefef;
 }
 
 .movie-chart .rating .ico_help {
@@ -229,14 +272,27 @@
 
 .movie-chart .rating .box {
     position: relative;
-    padding-left: 37px;
+
     display: inline-block;
+    text-align: center;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+.movie-chart .rating .box p{
+    width: 50px;
     text-align: left;
+    padding-left: 37px;
+    margin: 0 auto;
+    position: relative;
+    height: 36px;
 }
 
-.movie-chart .rating .box.box_golden {
-    margin-left: 50px;
+.movie-chart .rating .box.box_golden p{
+    width: 60px;
 }
+
+
 
 .movie-chart .rating .box .sprite_preegg {
     position: absolute;
@@ -253,10 +309,31 @@
 
 .movie-chart .rating .box .desc {
     display: block;
-    font-size: 12px;
-    color: #9197A3;
+    font-size: 11px;
+    color: #e37220;
     font-weight: 300;
+    padding-top: 3px;
 }
+.movie-chart .rating .box .tooltip {
+    width: 49px;
+    height: 15px;
+    background-image: url(../../images/main/common/sprite_preegg@3x.png);
+    background-size: 300px;
+    background-position: -230px 0;
+    position: absolute;
+    top: -12px;
+    left: 37px;
+    font-size: 7px;
+    color: #ffffff;
+    font-size: 0px;
+    line-height: 0px;
+    color: transparent;
+}
+
+.movie-chart .rating .box.box_golden .tooltip {
+    background-position: -230px -20px;
+}
+
 
 .movie-chart .chart_total {
     position: relative;

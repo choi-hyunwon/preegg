@@ -1615,18 +1615,34 @@
         </article>
         <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
             수정 부분 :
-            <p>* 내용 : 관람평 지수가 ? 일 경우</p>
-            <p>* 비고 : fanpage에서 가져옴, css는 preegg.css에 있음</p>
+            <p>* 에그 점수 영역 생성</p>
+            <p>* 코멘트 부분 변경</p>
+            <p>* 코멘트가 없는 경우 .no_comment 추가 (하단 여백이 줄어듬) </p>
         </div>
-        <div class="comment_wrap">
-            <div class="comment_cnt"><strong>실관람평
-                0건 </strong>
-            </div>
-            <div class="customer_con">
-                <div class="customer_score">
-                    <span class="txt">등록된 실관람평이 아직 없습니다.</span>
-                    <em class="stit">첫번째 작성자가 되어주세요!</em>
+        <div class="movie-chart">
+            <div class="rating">
+                <a class="ico_help" href="javascript:void(0)" onclick="javascript:egg_info_btn();">도움말</a>
+                <div class="box">
+                    <p>
+                        <span class="sprite_preegg big default"></span>
+                        <span class="desc">Pre Egg</span>
+                        <span class="percent">78%</span>
+                        <span class="tooltip">사전기대지수</span>
+                    </p>
                 </div>
+                <div class="box box_golden">
+                    <p>
+                        <span class="sprite_preegg big good"></span>
+                        <span class="desc">Golden Egg</span>
+                        <span class="percent">?</span>
+                        <span class="tooltip">실관람평지수</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="comment no_comment">
+                <p><span class="line1">등록된 실관람평이 아직 없습니다.</span></p>
+                <p><span class="line2"><strong>첫번째 작성자</strong>가 되어주세요!</span></p>
             </div>
         </div>
         <!--//관람평 지수가 ? 일 경우-->
@@ -1644,27 +1660,33 @@
         <input type="hidden" name="scoreDataOst" id="scoreDataOst" value="41.0">
 
         <div class="movie-chart">
-            <div class="comment">
-                <p><strong>배우연기</strong>가 메소드급인<br><strong>무서운 여운이 오래가는</strong> 영화</p>
-            </div>
-            <div class="count">
-                <span><span>실관람평</span><strong>503만</strong></span>
-                <span><span>실관람평</span><strong>503만</strong></span>
-            </div>
 
             <div class="rating">
                 <a class="ico_help" href="javascript:void(0)" onclick="javascript:egg_info_btn();">도움말</a>
                 <div class="box">
+                    <p>
                     <span class="sprite_preegg big default"></span>
-                    <span class="percent">78%</span>
                     <span class="desc">Pre Egg</span>
+                    <span class="percent">78%</span>
+                    <span class="tooltip">사전기대지수</span>
+                    </p>
                 </div>
                 <div class="box box_golden">
+                    <p>
                     <span class="sprite_preegg big good"></span>
-                    <span class="percent">85%</span>
                     <span class="desc">Golden Egg</span>
+                    <span class="percent">85%</span>
+                    <span class="tooltip">실관람평지수</span>
+                    </p>
                 </div>
             </div>
+
+            <div class="comment">
+                <p><span class="line1"><strong>배우연기가</strong> 메소드급인</span></p>
+                <p><span class="line2"><strong>몰입하기 좋은</strong> 영화</span></p>
+            </div>
+
+
 
             <div class="chart_total">
                 <div class="box">

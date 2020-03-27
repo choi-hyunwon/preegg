@@ -102,9 +102,20 @@
 <section id="emotionWriteForm" style="width: 100%; height: 100%; position: fixed; left: 0px; background-color: white; display: block; z-index: 20002; top: 0px;" class="wrap">
     <section class="content_wrap" id="ContainerView">
         <!-- 매력포인트 레이어 -->
+
+
         <div class="layer_pop2_re on" id="emotionLayerPop">
             <div class="fogbg"></div>
+
             <div class="inner charm_popup emotion_popup">
+                <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                    수정 부분 :
+                    <p>* .emotion_popup 클래스 추가</p>
+                    <p>* 팝업 추가 생성 </p>
+                    <p>* 버튼 .selected 상태 추가 (초기값 선택 없어야함)</p>
+                    <p>* 버튼 .disabled 상태 추가 (초기값 disabled 상태여야함)</p>
+                    <p>* script 추가 됨</p>
+                </div>
                 <div class="box">
                     <div class="desc">
                         <div class="main">이 영화가 기대되시나요?</div>
@@ -124,7 +135,6 @@
 
                 <a class="btn_close" href="javascript:charmCloseWrite();"><i class="sprite_preegg close"></i>팝업 닫기</a>
                 <a class="btn_confirm disabled" href="javascript:charmWriteProc();">확인</a>
-                <a class="btn_confirm" href="javascript:charmWriteProc();">확인</a>
 
                 <!-- 등록 완료 시 노출
                 <div class="result_noti">
