@@ -1,74 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
 </head>
 <body>
 
-	<!-- Styles -->
-	<style>
-	#chartdiv {
-		width: 100%;
-		height: 500px;
-	}
-	</style>
+<!-- Styles -->
+<style>
+    #chartdiv {
+        width: 370px;
+        height: 150px;
+    }
+</style>
 
-	<!-- Resources -->
-	<script src="http://210.122.97.182:8080/js/amcharts/amcharts.js"></script>
-	<script src="http://210.122.97.182:8080/js/amcharts//radar.js"></script>
-	<script src="http://210.122.97.182:8080/js/amcharts//plugins/export/export.min.js"></script>
-	<link rel="stylesheet" href="http://210.122.97.182:8080/js/amcharts/plugins/export/export.css" type="text/css" media="all" />
+<!-- Resources -->
+<script src="amcharts.js"></script>
+<script src="radar.js"></script>
 
-	<!-- Chart code -->
-	<script>
-		var chart = AmCharts.makeChart("chartdiv", {
-			"type" : "radar",
-			"theme" : "none",
-			"dataProvider" : [ {
-				"key" : "세글자",
-				"value" : 99,
-				"color": "#0066CC"
-			}, {
-				"key" : "네글자로",
-				"value" : 80,
-				"color": "#19d228"
-			}, {
-				"key" : "세글자\n한줄내리고",
-				"value" : 60,
-				"color": "#CC3333"
-			}, {
-				"key" : "다섯글자후\n한줄내리고",
-				"value" : 40,
-				"color": "#b4dd1e"
-			}, {
-				"key" : "그냥저냥",
-				"value" : 20,
-				"color": "#fb7116"
-			} ],
-			"valueAxes" : [ {
-				"axisTitleOffset" : 20,
-				"minimum" : 0,
-				"axisAlpha" : 0.15
-			} ],
-			"startDuration" : 0,
-			"graphs" : [ {
-				"bullet" : "round",
-				"lineThickness" : 2,
-				"lineColor" : "#FF007F",
-				"fillAlphas": 0.1,
-				"valueField" : "value",
-				"lineColorField" : "color"
-			} ],
-			"categoryField" : "key",
-			"export" : {
-				"enabled" : false
-			}
-		});
-	</script>
+<!-- Chart code -->
+<script>
+    var chart = AmCharts.makeChart("chartdiv", {
+        "type": "radar",
+        "radius": "28%", //넓이
 
-	<!-- HTML -->
-	<div id="chartdiv"></div>
+        "dataProvider": [{
+            "key": "세글자",
+            "value": 99,
+            "color": "rgb(255,133,179)",
+			"rollOverColor" : "rgb(0,0,0)",
+			"selectedColor" : "rgb(0,0,0)",
+        }, {
+            "key": "글자로",
+            "value": 80,
+            "color": "rgb(254,196,70)",
+			"rollOverColor" : "rgb(0,0,0)",
+			"selectedColor" : "rgb(0,0,0)",
+        }, {
+            "key": "세글자\n한줄내리고",
+            "value": 0,
+            "color": "rgb(142,189,255)",
+			"rollOverColor" : "rgb(0,0,0)",
+			"selectedColor" : "rgb(0,0,0)",
+        }, {
+            "key": "다섯글자후\n한줄내리고",
+            "value": 60,
+            "color": "rgb(100,169,178)",
+			"rollOverColor" : "rgb(0,0,0)",
+			"selectedColor" : "rgb(0,0,0)",
+        }, {
+            "key": "그냥저냥",
+            "value": 50,
+            "color": "rgb(178,103,183)",
+			"rollOverColor" : "rgb(0,0,0)",
+			"selectedColor" : "rgb(0,0,0)",
+        }],
+        "valueAxes": [{
+            "axisTitleOffset": 5,
+            "minimum": 0,
+            "maximum": 100,
+            "axisAlpha": 0.15,
+            "unitPosition": "right",
+            "gridColor": "#000000",
+            "autoGridCount": false,
+            "gridCount": 5,
+            "labelsEnabled" : false,
+			"tickLength" : 1
+        }],
+        "guides": [
+            {
+                "fillAlpha": 0.10,
+                "value": 0,
+                "toValue": 10,
+                "color": "#060"
+            }
+        ],
+        "balloon": {
+            "enabled": false
+        },
+        "startDuration": 0,
+        "graphs": [{
+            "bullet": "round",
+            "bulletSize": 5,
+            "bulletBorderAlpha": "1",
+            "bulletBorderColor": "rgb(255,255,255)",
+            "bulletBorderThickness": "1",
+            "lineThickness": 1,
+            "lineColor": "#FB4357",
+            "fillAlphas": 0.1,
+            "valueField": "value",
+            "lineColorField": "color"
+        }],
+        "categoryField": "key",
+        "export": {
+            "enabled": false
+        },
+        "autoResize": false,
+        "color": "rgb(22,22,22)",
+        "fontSize": 10,
+        "fontFamily": "Helvetica",
+        "tapToActivate": false,
+        "rollOverGraphItem": function () {
+            console.log('rollOverGraphItem')
+
+        },
+		"chartCursor": {
+			"bulletSize": 3
+		}
+
+
+    });
+</script>
+<!-- HTML -->
+<div id="chartdiv"></div>
 
 </body>
 </html>
