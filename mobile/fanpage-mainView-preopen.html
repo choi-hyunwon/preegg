@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdateV4.css">
     <link rel="stylesheet" type="text/css" href="WebApp/css/v5/master.css">
 
+    <link rel="stylesheet" type="text/css" href="WebApp/CDN/css/v6/preegg.css">
+
     <link rel="stylesheet" type="text/css" href="css/fanpage.css?dt=20200320120154">
     <link rel="stylesheet" type="text/css" href="WebApp/css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="WebApp/css/swiper.min.css">
@@ -392,9 +394,8 @@
 
                 <ul class="fp_btn_list type3">
                     <li class="" data-src="off" id="wishFlag">
-                        <a href="javascript:;" onclick="fnMainOpt('FG', $(this));" class="see">
-								<span>
-									318</span>
+                        <a href="javascript:;" onclick="fnMainOpt('FG', $(this));" class="preegg">
+                            <span>프리에그</span>
                         </a>
                     </li>
                     <li class="">
@@ -629,49 +630,39 @@
                     <!-- 모바일 광고 -->
                     <!-- 모바일 광고 -->
 
-                    <div class="comment_wrap">
-                        <div class="comment_cnt"><strong>실관람평
-                            0건 </strong>
-                            <!-- 댓글 필터 버튼 -->
-                            <div class="comment_filter" style="display:none;">
-                                <a href="javascript:;" class="btn_filter type1" onclick="popCmtOrder()">최신순</a>
-                                <a href="javascript:;" class="btn_filter type2" onclick="popCmtFilter()">전체</a>
+                    <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                        수정 부분 :
+                        <p>* 에그 점수 영역 생성</p>
+                        <p>* 코멘트 부분 변경</p>
+                        <p>* 코멘트가 없는 경우 .no_comment 추가 (하단 여백이 줄어듬) </p>
+                    </div>
+                    <div class="movie-chart">
+                        <div class="rating">
+                            <a class="ico_help" href="javascript:void(0)" onclick="javascript:egg_info_btn();">도움말</a>
+                            <div class="box">
+                                <p>
+                                    <span class="sprite_preegg big default"></span>
+                                    <span class="desc">Pre Egg</span>
+                                    <span class="percent">78%</span>
+                                    <span class="tooltip">사전기대지수</span>
+                                </p>
                             </div>
-                            <!--전체보기 팝업-->
-                            <div class="pop_cmt_filter">
-                                <div class="btn_sort_area" filter-src="0">
-                                    <a href="javascript:;" class="btn_sort_all" onclick="chkCmtsFilter(0)">전체</a>
-                                    <a href="javascript:;" class="btn_sort_good" onclick="chkCmtsFilter(1)">좋았어요</a>
-                                    <a href="javascript:;" class="btn_sort_bad" onclick="chkCmtsFilter(2)">별로에요</a>
-                                </div>
+                            <div class="box box_golden">
+                                <p>
+                                    <span class="sprite_preegg big good"></span>
+                                    <span class="desc">Golden Egg</span>
+                                    <span class="percent">?</span>
+                                    <span class="tooltip">실관람평지수</span>
+                                </p>
                             </div>
                         </div>
 
-                        <!-- 해쉬태그 슬라이더 -->
-                        <!-- 굿리뷰어 START -->
-                        <!-- 굿리뷰어 END -->
-
-
-                        <ul class="customer_con">
-                            <div class="customer_score">
-                                <span class="txt">등록된 실관람평이 아직 없습니다.</span>
-                                <em class="stit">첫번째 작성자가 되어주세요!</em>
-                            </div>
-                            <!-- 관람평 등록여부 체크 -->
-                            <div class="float_btnbox" style="z-index: 10000; bottom: 0px;">
-                                <div class="inner">
-								<span class="btn_photo">
-									<label for="regiPhoto" onclick="fnUpdCmt('C', 'Y');">사진등록하기</label>
-									<input type="file" id="regiPhoto">
-								</span>
-                                    <a href="javascript:;" class="fake_input" onclick="fnUpdCmt('C');"><span>이 영화, 어떠셨나요...</span></a>
-                                    <a href="javascript:;" class="btn_txt">등록</a>
-                                </div>
-                            </div>
-
-
-                        </ul>
+                        <div class="comment no_comment">
+                            <p><span class="line1">등록된 실관람평이 아직 없습니다.</span></p>
+                            <p><span class="line2"><strong>첫번째 작성자</strong>가 되어주세요!</span></p>
+                        </div>
                     </div>
+
 
                     <!-- 모바일광고 -->
                     <div class="common_banner cb_type1">

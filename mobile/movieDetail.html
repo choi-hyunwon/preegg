@@ -34,6 +34,10 @@
     <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdateV4.css">
     <link rel="stylesheet" type="text/css" href="WebApp/css/v5/master.css?2020032013">
 
+
+    <link rel="stylesheet" type="text/css" href="WebApp/CDN/css/v6/preegg.css">
+
+
     <link rel="canonical" href="http://www.cgv.co.kr/">
 
 
@@ -83,7 +87,7 @@
     <script type="text/javascript" src="WebApp/js/jquery.fittext.js"></script>
     <script type="text/javascript" src="WebApp/js/movie/common.js?2020032013"></script>
     <script type="text/javascript" src="WebApp/js/Movie/movieDetailV4.js?2020032013"></script>
-    <script type="text/javascript" src="WebApp/js/Chart.custom.js"></script>
+    <script type="text/javascript" src="WebApp/js/v5/contents/lib/chart.js"></script>
     <!-- 스파이더 차트를 위한 js파일 로딩. mwpark_RR2015 -->
     <script type="text/javascript" src="WebApp/js/Common/owl.carousel.min.js"></script>
 
@@ -1440,8 +1444,13 @@
                         </span>
 
             </div>
+            <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                수정 부분 :
+                <p>* 위시리스트 > 프리에그로 변경</p>
+                <p>* .btn_preegg 클래스명 변경</p>
+            </div>
             <ul class="mi_btn_list">
-                <li><a id="wishMark" href="javascript:goWish();" class="btn_wishlist "><span>위시리스트</span></a></li>
+                <li><a id="wishMark" href="javascript:goWish();" class="btn_preegg"><span>프리에그</span></a></li>
                 <li><a class="btn_sns" onclick="fnShareSns();"><span>같이볼래?</span></a></li>
                 <li><a onclick="javascript:goReserve('00');" title="예매하기"><span class="btn_reserve on">지금예매</span></a>
                 </li>
@@ -1604,27 +1613,196 @@
                     src="WebApp/images/movieinfo/btn_txt_more.png" alt="더보기"></a>
 
         </article>
+        <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+            수정 부분 :
+            <p>* 에그 점수 영역 생성</p>
+            <p>* 코멘트 부분 변경</p>
+            <p>* 코멘트가 없는 경우 .no_comment 추가 (하단 여백이 줄어듬) </p>
+        </div>
+        <div class="movie-chart">
+            <div class="rating">
+                <a class="ico_help" href="javascript:void(0)" onclick="javascript:egg_info_btn();">도움말</a>
+                <div class="box">
+                    <p>
+                        <span class="sprite_preegg big default"></span>
+                        <span class="desc">Pre Egg</span>
+                        <span class="percent">78%</span>
+                        <span class="tooltip">사전기대지수</span>
+                    </p>
+                </div>
+                <div class="box box_golden">
+                    <p>
+                        <span class="sprite_preegg big good"></span>
+                        <span class="desc">Golden Egg</span>
+                        <span class="percent">?</span>
+                        <span class="tooltip">실관람평지수</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="comment no_comment">
+                <p><span class="line1">등록된 실관람평이 아직 없습니다.</span></p>
+                <p><span class="line2"><strong>첫번째 작성자</strong>가 되어주세요!</span></p>
+            </div>
+        </div>
+        <!--//관람평 지수가 ? 일 경우-->
+
+        <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+            수정 부분 :
+            <p>* 프리 에그 섹션 생성 &lt;div class="movie-chart"&gt;</p>
+            <p>* 차트 스크립트 내용 수정 : 주석 '프리에그 차트 데이터 수정본 샘플'</p>
+            <p>* 비고 : 서버사이드에서 작성 되어서 내려옴</p>
+        </div>
+        <input type="hidden" name="scoreDataActing" id="scoreDataActing" value="67.0">
+        <input type="hidden" name="scoreDataEffect" id="scoreDataEffect" value="75.0">
+        <input type="hidden" name="scoreDataStory" id="scoreDataStory" value="46.0">
+        <input type="hidden" name="scoreDataVisual" id="scoreDataVisual" value="78.0">
+        <input type="hidden" name="scoreDataOst" id="scoreDataOst" value="41.0">
+
+        <div class="movie-chart">
+
+            <div class="rating">
+                <a class="ico_help" href="javascript:void(0)" onclick="javascript:egg_info_btn();">도움말</a>
+                <div class="box">
+                    <p>
+                    <span class="sprite_preegg big default"></span>
+                    <span class="desc">Pre Egg</span>
+                    <span class="percent">78%</span>
+                    <span class="tooltip">사전기대지수</span>
+                    </p>
+                </div>
+                <div class="box box_golden">
+                    <p>
+                    <span class="sprite_preegg big good"></span>
+                    <span class="desc">Golden Egg</span>
+                    <span class="percent">85%</span>
+                    <span class="tooltip">실관람평지수</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="comment">
+                <p><span class="line1"><strong>배우연기가</strong> 메소드급인</span></p>
+                <p><span class="line2"><strong>몰입하기 좋은</strong> 영화</span></p>
+            </div>
 
 
-        <article class="egg-grade">
-            <a class="info1" href="javascript:void(0)" onclick="javascript:egg_info_btn();"><strong>Golden EGG
-                지수</strong> <span class="ico_help">도움말</span></a>
-            <div class="egg-grade-info">
-                <div class="egg-gage big">
-                    <span class="egg great">평점</span>
-                    <span class="percent"><strong>98%</strong></span>
+
+            <div class="chart_total">
+                <div class="box">
+                    <div class="title">매력포인트</div>
+                    <div class="radar-graph" id="chart2">
+                        <canvas id="charmScore" style="width: 250px; height: 200px;"></canvas>
+                    </div>
                 </div>
-                <ul class="stats-info">
-                    <li>실관람객 평가 <strong>4,870</strong>명</li>
-                    <li>Movie Mania <strong>1,510</strong>명</li>
-                </ul>
-            </div>
-            <div class="radar-graphbox">
-                <div class="radar-graph">
-                    <canvas id="charmScore2" width="372" height="351" style="width: 124px; height: 117px;"></canvas>
+                <div class="box">
+                    <div class="title">감정포인트</div>
+                    <div class="radar-graph" id="chart3">
+                        <canvas id="emotionScore" style="width: 250px; height: 200px; vertical-align: middle"></canvas>
+                    </div>
                 </div>
             </div>
-        </article>
+
+        </div>
+
+
+        <script>
+            /**
+             * 프리에그 차트 데이터 수정본 샘플
+             * 비고 : chart.js 2.7.2 사용 되어있음
+             *
+             */
+                // 방사형 그래프 NEW
+            var charmCtx = document.getElementById('charmScore').getContext('2d');
+            var emotionCtx = document.getElementById('emotionScore').getContext('2d');
+            var charmCtxData = {
+                labels: ["감독연출", "스토리", ["영상미", " "], ["배우연기", " "], "OST"],
+                datasets: [
+                    {
+                        label: "My First dataset",
+                        data: [document.getElementById("scoreDataEffect").value
+                            , document.getElementById("scoreDataStory").value
+                            , document.getElementById("scoreDataVisual").value
+                            , document.getElementById("scoreDataActing").value
+                            , document.getElementById("scoreDataOst").value],	// 영화별 데이터
+                        backgroundColor: "rgba(151,187,205,0.4)",
+                        strokeColor: "rgba(151,187,205,1)",
+                        pointRadius: 3,
+                        PointPadding: 10,
+                        pointBackgroundColor: ["rgba(253,148,135,1)", "rgba(254,196,69,1)", "rgba(143,189,16664,1)", "rgba(100,169,178,1)", "rgba(178,103,183,1)"],
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        pointBorderWidth: 1,
+                        pointBorderColor: "rgba(255,255,255,1)",
+                        borderWidth: 1,
+                        borderColor: 'rgba(153,189,206,1)',
+                    }
+                ]
+            };
+            var emotionCtxData = {
+                labels: ["몰입감", ["무서운", "여운이 남는"], ["보는 내내", "긴장"], ["소름끼치", "오싹"], ["호러틱", "사운드"]],
+                datasets: [
+                    {
+                        label: "My First dataset",
+                        data: [document.getElementById("scoreDataEffect").value
+                            , document.getElementById("scoreDataStory").value
+                            , document.getElementById("scoreDataVisual").value
+                            , document.getElementById("scoreDataActing").value
+                            , document.getElementById("scoreDataOst").value],	// 영화별 데이터
+                        backgroundColor: "rgba(151,187,205,0.4)",
+                        strokeColor: "rgba(151,187,205,1)",
+                        pointRadius: 3,
+                        PointPadding: 10,
+                        pointBackgroundColor: ["rgba(253,148,135,1)", "rgba(254,196,69,1)", "rgba(143,189,16664,1)", "rgba(100,169,178,1)", "rgba(178,103,183,1)"],
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        pointBorderWidth: 1,
+                        pointBorderColor: "rgba(255,255,255,1)",
+                        borderWidth: 1,
+                        borderColor: 'rgba(153,189,206,1)',
+                    }
+                ]
+            };
+            var radarChartOpt = {
+                plugins: {datalabels: {display: false}},
+                legend: {display: false},
+                responsive: false,
+                scale: {
+                    ticks: {
+                        display: false,
+                        beginAtZero: true,
+                        stepSize: 25,
+                    },
+                    pointLabels: {
+                        fontColor: 'rgba(165,170,180,1)',
+                    },
+                },
+                pointLabels: {display: false},
+                tooltips: {enabled: false},
+                animation: {
+                    duration: 0
+                },
+            };
+
+            var charmScore;
+            var emotionScore;
+
+            function initRadarChart() {
+                charmScore = new Chart(charmCtx, {
+                    type: 'radar',
+                    data: charmCtxData,
+                    options: radarChartOpt
+                });
+                emotionScore = new Chart(emotionCtx, {
+                    type: 'radar',
+                    data: emotionCtxData,
+                    options: radarChartOpt
+                });
+            }
+
+            initRadarChart()
+
+            /* //프리에그 차트 데이터 수정본 샘플 */
+
+        </script>
 
 
         <article class="mi_menu_warp">
@@ -2656,50 +2834,6 @@
 
         likeOrNot();
 
-        function initChart() {
-            /* 매력지수 순서 변경(배우연기,스토리,영상미,OST,특수효과 → 감독연출,스토리,영상미,배우연기,OST)    2016.02.04 yjhan*/
-            var radarChartData = {
-                labels: ["감독연출", "스토리", "영상미", "배우연기", "OST"],
-                datasets: [
-                    {
-                        label: "My First dataset",
-                        fillColor: "rgba(151,187,205,0.4)",
-                        strokeColor: "rgba(151,187,205,1)",
-                        pointColor: "rgba(151,187,205,1)",
-                        pointColorList: ["rgba(253,148,135,1)", "rgba(254,196,69,1)", "rgba(143,189,16664,1)", "rgba(100,169,178,1)", "rgba(178,103,183,1)"],
-                        pointStrokeColor: "#fff",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(151,187,205,1)",
-                        data: ["59", "82", "65", "76", "57"]
-                    }
-                ]
-            }//end ChartData
-            var charmScore2 = new Chart(document.getElementById("charmScore2").getContext("2d")).Radar(radarChartData, {
-                animation: false,
-                showTooltips: false,
-                pointDot: true,
-                pointDotRadius: 3,
-                datasetStrokeWidth: 1,
-                responsive: true,
-                scaleShowLabels: false,
-                scaleOverride: true,
-                scaleSteps: 4,
-                scaleStepWidth: 25,
-                scaleStartValue: 0,
-                pointLabelFontFamily: "Arial, Helvetica, sans-serif",
-                pointLabelFontStyle: "bold",
-                pointLabelFontColor: "#000000",
-                pointLabelsPadding: 3,
-                centerPointPadding: 3
-            });
-
-
-        } //end initChart
-
-        /*appVersion 430 이하는 스파이더 차트를 만들지 않음. mwpark_RR2015*/
-        if (!(IsWebView == "True" && Number(appVersion) < 430)) {
-            initChart();
-        }
 
         /*평점 개편으로 매력포인트 체크시 체크 이미지 표시 : 2016.01.04 yjhan*/
         function chkCharm() {

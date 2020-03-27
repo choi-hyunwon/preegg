@@ -28,6 +28,7 @@
     <link rel="stylesheet" media="all" type="text/css" href="R2014/css/eggupdate.css">
     <link rel="stylesheet" media="print" type="text/css" href="R2014/css/print.css">
 
+    <link rel="stylesheet" media="all" type="text/css" href="R2014/css/preegg.css">
 
     <link rel="stylesheet" type="text/css"
           href="R2014/js/jquery.ui/smoothness/jquery-ui-1.10.4.custom.min.css">
@@ -175,8 +176,6 @@
 
         //]]>
     </script>
-    <script type="text/javascript"
-            src="https://nsso.cjone.com/findCookieSecured.jsp?cjssoq=kOrrMtxLuWGiRjYB0IIDA7EUhoynjc%2bbKguJOggJEgktCxWG0aCQPQBlUer7dLqIJSLz9bp5NwSvr2X0RKIm5VJJRlI4dndqc2VmR1h1bDN6U0Z5MnVBR3NBNVhZQW9JTFUzU2hyclJsMFJzbEZPUW0vU0U4WUhLbHlWRy9xdFk%3d"></script>
     <script type="text/javascript" src="R2014//js/system/system.packed.js"></script>
 </head>
 <body class="" style="">
@@ -751,11 +750,16 @@
 
                                                 <p>Underdog</p>
                                             </div>
+                                            <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                                                수정 부분 :
+                                                <p>* 프리 에그 아이콘 추가 &lt; span class="sprite_preegg detail"&gt;</span></p>
+                                                <p>* 실관람평 제거 &lt; strong class="count" &gt;</span></p>
+                                            </div>
                                             <div class="score">
                                                 <strong class="percent">예매율&nbsp;<span>0.0%</span></strong>
                                                 <!--[2015-12-15] 평점 개편이후 에그 지수 및 에그 이미지 노출 영역 start : add_mwpark-->
                                                 <div class="egg-gage small">
-                                                    <span class="egg great"></span>
+                                                    <span class="sprite_preegg default"></span>
                                                     <span class="percent">97%</span>
                                                 </div>
                                                 <!--[2015-12-15] 평점 개편이후 에그 지수 및 에그 이미지 노출 영역 end : add_mwpark-->
@@ -764,8 +768,6 @@
                   <em>97.0</em>
                 </div>
                 -->
-                                                <strong class="count">(<span
-                                                        class="view">실관람객 :&nbsp;<em>4,479명</em></span>) </strong>
                                             </div>
                                             <!-- 떨어지는 얘 이전 요소에 class=on을 넣는다 -->
                                             <div class="spec">
@@ -806,16 +808,10 @@
                                             <span class="screentype">
 
             </span>
-                                            <span class="like">
-                <button class="btn-like" value="81531">영화 찜하기</button>
-                <span class="count">
-                    <strong><i>4,050</i><span>명이 선택</span></strong>
-                    <i class="corner-RT"></i><i class="corner-LT"></i><i class="corner-LB"></i><i class="corner-RB"></i><i
-                        class="corner-arrow"></i>
-                </span>
-
-
-            </span>
+                                            <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                                                수정 부분 :
+                                                <p>* .count 삭제</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -5904,6 +5900,7 @@
 {{/if}}
 </div>
 
+
 </script>
 
 <script id="temp_popup_movie_player_relation_movie_item" type="text/x-jquery-tmpl">
@@ -5918,6 +5915,7 @@
         </a>
     </div>
 </li>
+
 
 </script>
 

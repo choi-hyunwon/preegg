@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>CGV</title>
+    <link rel="shortcut icon" href="WebApp/images/common/favicon_cgv.png">
+    <link rel="apple-touch-icon" sizes="114×114" href="WebApp/images/common/favicon_cgv.png">
+
+    <link rel="stylesheet" type="text/css" href="WebApp/css/common.css?dt=20200326121020">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/header.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/piemenu.css">
+
+    <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdate.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdateV4.css">
+
+    <link rel="stylesheet" type="text/css" href="WebApp/css/v5/master.css">
+
+    <link rel="stylesheet" type="text/css" href="css/fanpage.css?dt=20200326121020">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/swiper.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="WebApp/CDN/css/v6/preegg.css">
+
+
+    <script type="text/javascript" src="WebApp/js/Common/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="WebApp/js/jquery.fittext.js"></script>
+    <!-- <script type="text/javascript" src="WebApp/js/Chart.custom.js"></script> -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="WebApp/css/v5/iCheck.css">
+    <script>var gateURL = "http://m.cgv.co.kr/WebApp/";</script>
+    <script>var ticketURL = "http://m.cgv.co.kr/";</script>
+    <script type="text/javascript" src="js/fanpageMovie.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="js/fanpageCommon.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="js/fanpage.appInterface.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="js/fanpage.util.js"></script>
+    <script type="text/javascript" src="js/check.util.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/iphone-inline-video.js"></script>
+    <script type="text/javascript" src="js/fanpage.video.controls.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <style>
+        .con_loading {
+            padding: 40px 0 50px 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .reptxt p {
+            -webkit-user-select: all;
+            -moz-user-select: all;
+            -ms-user-select: all;
+            user-select: all;
+        }
+
+        .IIV::-webkit-media-controls-play-button,
+        .IIV::-webkit-media-controls-start-playback-button {
+            opacity: 0;
+            pointer-events: none;
+            width: 5px;
+        }
+
+        /* Chart.js */
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+
+    </style>
+
+</head>
+<body class="bg_white" style="">
+
+
+<!-- 매력포인트 레이어 -->
+<section id="emotionWriteForm" style="width: 100%; height: 100%; position: fixed; left: 0px; background-color: white; display: block; z-index: 20002; top: 0px;" class="wrap">
+    <section class="content_wrap" id="ContainerView">
+        <!-- 매력포인트 레이어 -->
+
+
+        <div class="layer_pop2_re on" id="emotionLayerPop">
+            <div class="fogbg"></div>
+
+            <div class="inner charm_popup emotion_popup">
+                <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                    수정 부분 :
+                    <p>* .emotion_popup 클래스 추가</p>
+                    <p>* 팝업 추가 생성 </p>
+                    <p>* 버튼 .selected 상태 추가 (초기값 선택 없어야함)</p>
+                    <p>* 버튼 .disabled 상태 추가 (초기값 disabled 상태여야함)</p>
+                    <p>* script 추가 됨</p>
+                </div>
+                <div class="box">
+                    <div class="desc">
+                        <div class="main">이 영화가 기대되시나요?</div>
+                    </div>
+                    <div class="wrap_btn">
+                        <a href="#!" class="btn good selected">
+                            <span class="sprite_preegg big default"></span>
+                            <span>기대돼요!</span>
+                        </a>
+                        <a href="#!" class="btn bad">
+                            <span class="sprite_preegg big default"></span>
+                            <span>글쎄요..</span>
+                        </a>
+                    </div>
+                    <p class="desc_sub"><strong>'기대돼요!'</strong>를 선택하시면 <strong>위시리스트에 추가</strong>됩니다.</p>
+                </div>
+
+                <a class="btn_close" href="javascript:charmCloseWrite();"><i class="sprite_preegg close"></i>팝업 닫기</a>
+                <a class="btn_confirm disabled" href="javascript:charmWriteProc();">확인</a>
+
+                <!-- 등록 완료 시 노출
+                <div class="result_noti">
+                    <p>매력포인트가 등록되었습니다.</p>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+</section>
+<script>
+    $('.emotion_popup .wrap_btn .btn').on('click', function () {
+        $(this).addClass('selected').siblings().removeClass('selected');
+    })
+</script>
+
+</body>
+</html>
