@@ -35,8 +35,8 @@
 }*/
 
 .sprite_preegg.big{
-    width: 35px;
-    height: 40px;
+    width: 54px;
+    height: 54px;
     background-position: 0px -40px;
 }
 .sprite_preegg.big.default{
@@ -114,7 +114,7 @@
     width: 55px;
     height: 50px;
     float: left;
-    padding-left: 45px;
+    padding-left: 60px;
 }
 .movie_grade .egg_point .rating .box + .box {
     margin-left: 55px;
@@ -124,7 +124,7 @@
     border-left: 1px solid #dddddd;
     display: inline-block;
     position: absolute;
-    top: 0px;
+    top: 10px;
     right: -30px;
     width: 1px;
     height: 40px;
@@ -139,15 +139,35 @@
     left: 0px;
 }
 .movie_grade .egg_point .rating .box .desc {
+    padding-top: 14px;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
+    color: #c2291c;
+    font-weight: 400;
 }
 .movie_grade .egg_point .rating .box .percent {
     display: block;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     line-height: 1.0;
+    color: #000;
 }
+.movie_grade .egg_point .rating .box .tooltip {
+    position: absolute;
+    top: -10px;
+    left: 60px;
+    width: 73px;
+    height: 22px;
+    background-image: url(../images/sprite/sprite_preegg.png);
+    background-position: -150px 0;
+    background-size: 300px;
+    font-size: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 4px;
+}
+
 
 /* 감정차트, */
 .movie_grade .chart_total{

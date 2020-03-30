@@ -839,83 +839,11 @@
                             <ul class="graph">
                                 <li>
                                     <strong>성별 예매 분포</strong>
-                                    <div id="jqplot_sex" class="chart jqplot-target" style="position: relative;">
-                                        <canvas width="266" height="192" class="jqplot-base-canvas"
-                                                style="position: absolute; left: 0px; top: 0px;"></canvas>
-                                        <div class="jqplot-title" style="height: 0px; width: 0px;"></div>
-                                        <canvas width="266" height="192" class="jqplot-grid-canvas"
-                                                style="position: absolute; left: 0px; top: 0px;"></canvas>
-                                        <canvas width="246" height="159" class="jqplot-series-shadowCanvas"
-                                                style="position: absolute; left: 10px; top: 10px;"></canvas>
-                                        <canvas width="246" height="159" class="jqplot-series-canvas"
-                                                style="position: absolute; left: 10px; top: 10px;"></canvas>
-                                        <canvas width="246" height="159" class="jqplot-donutRenderer-highlight-canvas"
-                                                style="position: absolute; left: 10px; top: 10px;"></canvas>
-                                        <span class="jqplot-donut-series jqplot-data-label"
-                                              style="position: absolute; left: 77px; top: 164px;">남 11.4%</span><span
-                                            class="jqplot-donut-series jqplot-data-label"
-                                            style="position: absolute; left: 141px; top: 0px;">여 88.6%</span>
-                                        <canvas width="246" height="159" class="jqplot-event-canvas"
-                                                style="position: absolute; left: 10px; top: 10px;"></canvas>
-                                    </div>
+                                    <div id="jqplot_sex" class="chart"></div>
                                 </li>
                                 <li>
                                     <strong>연령별 예매 분포</strong>
-                                    <div id="jqplot_age" class="chart jqplot-target" style="position: relative;">
-                                        <canvas width="266" height="192" class="jqplot-base-canvas"
-                                                style="position: absolute; left: 0px; top: 0px;"></canvas>
-                                        <div class="jqplot-title" style="height: 0px; width: 0px;"></div>
-                                        <div class="jqplot-axis jqplot-xaxis"
-                                             style="position: absolute; width: 266px; height: 14px; left: 0px; bottom: 0px;">
-                                            <div class="jqplot-xaxis-tick"
-                                                 style="position: absolute; font-size: 12px; left: 23.1px;">10대
-                                            </div>
-                                            <div class="jqplot-xaxis-tick"
-                                                 style="position: absolute; font-size: 12px; left: 72.3px;">20대
-                                            </div>
-                                            <div class="jqplot-xaxis-tick"
-                                                 style="position: absolute; font-size: 12px; left: 121.5px;">30대
-                                            </div>
-                                            <div class="jqplot-xaxis-tick"
-                                                 style="position: absolute; font-size: 12px; left: 170.7px;">40대
-                                            </div>
-                                            <div class="jqplot-xaxis-tick"
-                                                 style="position: absolute; font-size: 12px; left: 219.9px;">50대
-                                            </div>
-                                        </div>
-                                        <div class="jqplot-axis jqplot-yaxis"
-                                             style="position: absolute; height: 192px; width: 0px; left: 0px; top: 0px;"></div>
-                                        <canvas width="266" height="192" class="jqplot-grid-canvas"
-                                                style="position: absolute; left: 0px; top: 0px;"></canvas>
-                                        <canvas width="246" height="158" class="jqplot-series-shadowCanvas"
-                                                style="position: absolute; left: 10px; display: block; top: 10px;"></canvas>
-                                        <canvas width="246" height="158" class="jqplot-series-canvas"
-                                                style="position: absolute; left: 10px; display: block; top: 10px;"></canvas>
-                                        <div class="jqplot-point-label jqplot-series-0 jqplot-point-4"
-                                             style="position: absolute; left: 224.4px; top: 139.335px; display: block;">
-                                            5.4
-                                        </div>
-                                        <div class="jqplot-point-label jqplot-series-0 jqplot-point-3"
-                                             style="position: absolute; left: 172.7px; top: 128.67px; display: block;">
-                                            10.8
-                                        </div>
-                                        <div class="jqplot-point-label jqplot-series-0 jqplot-point-2"
-                                             style="position: absolute; left: 123.5px; top: 99.2425px; display: block;">
-                                            25.7
-                                        </div>
-                                        <div class="jqplot-point-label jqplot-series-0 jqplot-point-1"
-                                             style="position: absolute; left: 74.3px; top: 37.82px; display: block;">
-                                            56.8
-                                        </div>
-                                        <div class="jqplot-point-label jqplot-series-0 jqplot-point-0"
-                                             style="position: absolute; left: 27.6px; top: 147.433px; display: block;">
-                                            1.3
-                                        </div>
-                                        <canvas width="246" height="158" class="jqplot-barRenderer-highlight-canvas"
-                                                style="position: absolute; left: 10px; top: 10px;"></canvas>
-                                        <canvas width="246" height="158" class="jqplot-event-canvas"
-                                                style="position: absolute; left: 10px; top: 10px;"></canvas>
-                                    </div>
+                                    <div id="jqplot_age" class="chart"></div>
                                 </li>
                             </ul>
                         </div>
@@ -1053,52 +981,41 @@
                         </div><!-- .sect-stillcut -->
 
 
+                        <!-- preegg.css 연관 UI -->
+
                         <div class="sect-grade">
                             <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
                                 수정 부분 :
                                 <p>* 섹션 전체 재코드 생성 </p>
-                                <p>* 차트 3번 신규 추가</p>
-                                <p>* 차트 스크립트 수정 : 'radar 차트 스크립트 변경 버전' 주석 처리</p>
+                                <p>* Movie Mania 2.9만 삭제 후 문구 변경 (스토리보드 0.5) =>15,403 명의 실관람객이 평가해주셨습니다. </p>
+                                <p>* 차트는 없습니다.</p>
                                 <p>* alert 스크립트 수정 : '프리에그 문구 추가' 주석 처리</p>
                             </div>
                             <!-- preegg.css 연관 UI -->
                             <div class="movie_grade">
                                 <a class="info" id="goldenEggAlert" href="javascript:void(0);"><img src="R2014/images/common/ico/ico-question-mark.png" alt="?"></a>
                                 <div class="egg_point">
-                                    <div class="title">이 영화의<br><strong>관람포인트는?</strong></div>
+                                    <div class="title">등록된 실관람평이 아직 없습니다.<br><strong>첫번째 작성자가 되어주세요!</strong></div>
                                     <div class="rating">
                                         <div class="box">
                                             <span class="sprite_preegg big default"></span>
                                             <span class="desc">Pre Egg</span>
                                             <span class="percent">78%</span>
+                                            <span class="tooltip">사전기대지</span>
                                         </div>
                                         <div class="box box_golden">
                                             <span class="sprite_preegg big default"></span>
                                             <span class="desc">Golden Egg</span>
                                             <span class="percent">?</span>
+                                            <span class="tooltip">실관람평지수</span>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="chart_total">
-                                    <div class="box">
-                                        <div class="title">매력포인트</div>
-                                        <div class="radar-graph" id="chart2">
-                                            <canvas id="charmScore2" style="width: 250px; height: 250px;"></canvas>
-                                        </div>
-                                    </div>
-                                    <div class="box">
-                                        <div class="title">감정포인트</div>
-                                        <div class="radar-graph" id="chart3">
-                                            <canvas id="charmScore3" style="width: 350px; height: 250px; vertical-align: middle"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                             <div class="real-rating">
                                 <p class="title">관람일 포함 7일 이내 관람평을 남기시면 <strong>CJ ONE 20P</strong>가 적립됩니다. </p>
-                                <p class="desc"><span>실관람평 <em>5.8만</em></span><span>Movie Mania <em>2.9만</em></span></p>
+                                <p class="desc"><span><em>15,403</em> 명의 실관람객이 평가해주셨습니다.</span></p>
                                 <div class="wrap_btn">
                                     <a class="link-gradewrite" href="javascript:void(0);"><span>평점작성</span></a><a class="link-reviewwrite" href="/movies/point/my-list.aspx"><span>내 평점</span></a>
                                 </div>

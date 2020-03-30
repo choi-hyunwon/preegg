@@ -807,6 +807,27 @@
                             </div>
                         </div><!-- .sect-story -->
 
+
+                        <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                            수정 부분 :
+                            <p>* sect-graph-emotion클래스 추가</p>
+                            <p>* radar 차트 삭제 </p>
+                        </div>
+                        <div id="ctl00_PlaceHolderContent_Section_Chart" class="sect-graph sect-graph-emotion">
+                            <ul class="graph">
+                                <li>
+                                    <strong>성별 예매 분포</strong>
+                                    <div id="jqplot_sex" class="chart"></div>
+                                </li>
+                                <li>
+                                    <strong>연령별 예매 분포</strong>
+                                    <div id="jqplot_age" class="chart"></div>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
                         <!-- .sect-graph -->
 
                         <div class="movie-detail-ad">
@@ -1040,9 +1061,10 @@
                             <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
                                 수정 부분 :
                                 <p>* 섹션 전체 재코드 생성 </p>
-                                <p>* 차트 3번 신규 추가</p>
-                                <p>* 차트 스크립트 수정 : 'radar 차트 스크립트 변경 버전' 주석 처리</p>
-                                <p>* alert 스크립트 수정 : '프리에그 문구 추가' 주석 처리</p>
+                                <p>* 차트 chart.js > amchart.js 로 교체</p>
+                                <p>* 차트 스크립트 수정 : var chart = AmCharts.makeChart 으로 변경</p>
+                                <p>* alert 스크립트 수정 :  alert("Pre Egg는 개봉 전 기대 평가로 산정된 지수입니다. \n\nGolden Egg는 CGV의 실제 관람 고객 평가로 산정된 지수입니다.\n결과에 따라 Golden EGG 아이콘이 정해집니다.");
+                                </p>
                             </div>
                             <!-- preegg.css 연관 UI -->
                             <div class="movie_grade">
@@ -1054,11 +1076,13 @@
                                             <span class="sprite_preegg big default"></span>
                                             <span class="desc">Pre Egg</span>
                                             <span class="percent">78%</span>
+                                            <span class="tooltip">사전기대지</span>
                                         </div>
                                         <div class="box box_golden">
                                             <span class="sprite_preegg big default"></span>
                                             <span class="desc">Golden Egg</span>
                                             <span class="percent">?</span>
+                                            <span class="tooltip">실관람평지수</span>
                                         </div>
 
                                     </div>
@@ -1067,7 +1091,7 @@
                                     <div class="box">
                                         <div class="title">매력포인트</div>
                                         <div class="radar-graph" id="chart2">
-                                            <div id="charm" style="width: 250px; height: 250px; margin: 0 auto;"></div>
+                                            <div id="charm" style="width: 350px; height: 250px; margin: 0 auto;"></div>
                                         </div>
                                     </div>
                                     <div class="box">
@@ -1087,7 +1111,7 @@
                             <script>
                                 var chart = AmCharts.makeChart("charm", {
                                     "type": "radar",
-                                    "radius": "28%", //넓이
+                                    "radius": "35%", //넓이
 
                                     "dataProvider": [{
                                         "key": "세글자",
@@ -1121,7 +1145,7 @@
                                         "selectedColor" : "rgb(0,0,0)",
                                     }],
                                     "valueAxes": [{
-                                        "axisTitleOffset": 5,
+                                        "axisTitleOffset": 10,
                                         "minimum": 0,
                                         "maximum": 100,
                                         "axisAlpha": 0.15,
@@ -1146,12 +1170,12 @@
                                     "startDuration": 0,
                                     "graphs": [{
                                         "bullet": "round",
-                                        "bulletSize": 5,
+                                        "bulletSize": 7,
                                         "bulletBorderAlpha": "1",
                                         "bulletBorderColor": "rgb(255,255,255)",
                                         "bulletBorderThickness": "1",
                                         "lineThickness": 1,
-                                        "lineColor": "#FB4357",
+                                        "lineColor": "#fb8c43",
                                         "fillAlphas": 0.1,
                                         "valueField": "value",
                                         "lineColorField": "color"
@@ -1161,23 +1185,19 @@
                                         "enabled": false
                                     },
                                     "autoResize": false,
-                                    "color": "rgb(22,22,22)",
-                                    "fontSize": 10,
+                                    "color": "rgb(0,0,0)",
+                                    "fontSize": 12,
                                     "fontFamily": "Helvetica",
                                     "tapToActivate": false,
                                     "rollOverGraphItem": function () {
                                         console.log('rollOverGraphItem')
 
-                                    },
-                                    "chartCursor": {
-                                        "bulletSize": 3
                                     }
-
 
                                 });
                                 var chart = AmCharts.makeChart("emotion", {
                                     "type": "radar",
-                                    "radius": "28%", //넓이
+                                    "radius": "35%", //넓이
 
                                     "dataProvider": [{
                                         "key": "세글자",
@@ -1193,7 +1213,7 @@
                                         "selectedColor" : "rgb(0,0,0)",
                                     }, {
                                         "key": "세글자\n한줄내리고",
-                                        "value": 0,
+                                        "value": 99,
                                         "color": "rgb(142,189,255)",
                                         "rollOverColor" : "rgb(0,0,0)",
                                         "selectedColor" : "rgb(0,0,0)",
@@ -1211,7 +1231,7 @@
                                         "selectedColor" : "rgb(0,0,0)",
                                     }],
                                     "valueAxes": [{
-                                        "axisTitleOffset": 5,
+                                        "axisTitleOffset": 10,
                                         "minimum": 0,
                                         "maximum": 100,
                                         "axisAlpha": 0.15,
@@ -1236,7 +1256,7 @@
                                     "startDuration": 0,
                                     "graphs": [{
                                         "bullet": "round",
-                                        "bulletSize": 5,
+                                        "bulletSize": 7,
                                         "bulletBorderAlpha": "1",
                                         "bulletBorderColor": "rgb(255,255,255)",
                                         "bulletBorderThickness": "1",
@@ -1251,16 +1271,13 @@
                                         "enabled": false
                                     },
                                     "autoResize": false,
-                                    "color": "rgb(22,22,22)",
-                                    "fontSize": 10,
+                                    "color": "rgb(0,0,0)",
+                                    "fontSize": 12,
                                     "fontFamily": "Helvetica",
                                     "tapToActivate": false,
                                     "rollOverGraphItem": function () {
                                         console.log('rollOverGraphItem')
 
-                                    },
-                                    "chartCursor": {
-                                        "bulletSize": 3
                                     }
 
 
@@ -1270,7 +1287,7 @@
 
                             <div class="real-rating">
                                 <p class="title">관람일 포함 7일 이내 관람평을 남기시면 <strong>CJ ONE 20P</strong>가 적립됩니다. </p>
-                                <p class="desc"><span>실관람평 <em>5.8만</em></span><span>Movie Mania <em>2.9만</em></span></p>
+                                <p class="desc"><span><em>15,403</em> 명의 실관람객이 평가해주셨습니다.</span></p>
                                 <div class="wrap_btn">
                                     <a class="link-gradewrite" href="javascript:void(0);"><span>평점작성</span></a><a class="link-reviewwrite" href="/movies/point/my-list.aspx"><span>내 평점</span></a>
                                 </div>
@@ -1868,9 +1885,15 @@
                     var mypointShowViewYN = false;
 
                     var data = {
-                        period: [],
-                        age: [],
-                        sex: []
+                        period: [
+                            ["5주전", 0], ["4주전", 0], ["3주전", 0], ["2주전", 0], ["1주전", 0]
+                        ],
+                        age: [
+                            ["10대", 1.3], ["20대", 56.8], ["30대", 25.7], ["40대", 10.8], ["50대", 5.4]
+                        ],
+                        sex: [
+                            ["남 11.4%", 51.4], ["여 88.6%", 48.6]
+                        ]
 
                     };
 
