@@ -766,11 +766,14 @@
                 <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
                     수정 부분 :
                     <p>* 관심에그 팝업 선택 : id="movie-pre-select"</p>
+                    <p>* 초기값 : 아무것도 선택 안됨</p>
+                    <p>* 클릭시 : 선택된경우 토글 해제</p>
+                    <p>* 클릭시 : 미선택 경우 활성화</p>
                 </div>
 
                 <div class="layer-wrap" id="movie-pre-select" style="top: 100px;">
                     <div class="popwrap" style="width:516px;margin-top:0px;margin-left:-268px">
-                        <h1>관심Egg</h1>
+                        <h1>프리에그 선택</h1>
                         <div class="pop-contents">
                             <!-- Contents Addon -->
                             <div class="movie-pre-select">
@@ -783,7 +786,7 @@
                                         <div class="sub"><em>'기대돼요!'</em>를 선택하시면 <em>위시리스트에 추가</em>됩니다.</div>
                                     </div>
                                     <div class="wrap_btn">
-                                        <a href="#!" class="btn good selected">
+                                        <a href="#!" class="btn good">
                                             <span class="sprite_preegg big default"></span>
                                             <span>기대돼요!</span>
                                         </a>
@@ -805,7 +808,12 @@
                 <!-- //영화 매력 선택 팝업 팝업 -->
                 <script>
                     $('.movie-pre-select .wrap_btn .btn').on('click', function () {
-                        $(this).addClass('selected').siblings().removeClass('selected');
+                        if ($(this).hasClass('selected')) {
+                            $(this).removeClass('selected');
+                        } else {
+                            $(this).addClass('selected').siblings().removeClass('selected');
+                        }
+
                     })
                 </script>
 
