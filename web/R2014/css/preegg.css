@@ -75,7 +75,7 @@
 
 
 /**
-    page : detail-view.html
+    page : W-012-detail-view.html
     내용 : 상세페이지 실관람평점 부분 개편
     html : <div class="preegg-grade">...</div>
  */
@@ -185,7 +185,7 @@
 
 
 /**
-    page : detail-view.html
+    page : W-012-detail-view.html
     내용 : 상세페이지 실관람평점 부분 개편
     html : <div class="real-rating">...</div>
  */
@@ -264,7 +264,7 @@
 
 
 /**
-    page : detail-view.html
+    page : W-012-detail-view.html
     내용 : 상세페이지 좋아요 버튼 관심 egg 부분 개편
     html : <a class="link-count" href="#"><i class="sprite_preegg detail"></i>관심Egg</a>
  */
@@ -293,7 +293,7 @@
 
 
 /**
-    page : detail-view.html
+    page : W-012-detail-view.html
     내용 : 상세페이지 예매분포 부분 개편
     html : <div id="ctl00_PlaceHolderContent_Section_Chart" class="sect-graph sect-graph-emotion">
  */
