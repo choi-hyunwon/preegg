@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+
+<html lang="ko"><style type="text/css" id="_jmc_no_tap_highlight_tag_"></style><head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CGV</title>
+    <style type="text/css">
+        .allview_wrap {display:none;}
+
+        #vid_vplayer:-webkit-full-screen { width:100%;height:100%;background-color:black; }
+        #vid_vplayer:-webkit-full-screen video { width:100%; }
+    </style>
+
+    <link rel="shortcut icon" href="WebApp/images/common/favicon_cgv.png">
+    <link rel="apple-touch-icon" sizes="114×114" href="WebApp/images/common/favicon_cgv.png">
+
+    <link rel="stylesheet" type="text/css" href="WebApp/css/common.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/header.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/piemenu.css">
+    <!-- chart js / egg CSS  경로 추가 : mwpark-->
+    <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdate.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdateV4.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/v5/master.css?2020033011">
+
+    <link rel="canonical" href="http://www.cgv.co.kr/">
+
+    <link rel="stylesheet" type="text/css" href="WebApp/CDN/css/v6/preegg.css">
+
+    <script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/plugins/ua/ec.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5CJXRN"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="WebApp/js/appinterface.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/jquery.menu.js"></script>
+
+    <script type="text/javascript" src="WebApp/js/Common/jindo.mobile.min.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/jindo.mobile.core.min.js"></script>
+
+    <script type="text/javascript">
+        //Global Variable
+        var IsWebView_Master = false;
+        var IsWebViewIPhone_Master = false;
+        var IsNewVersion_Master = false;
+        var AppVersion_Master = 0;
+        var IsIphone_Master = true;
+        var IOSVersion_Master = 13;
+
+        jQuery(document).ready(function () {
+            //아이폰 예외 처리 - 아이폰 수정 후 삭제 예정
+            var strIphonenavi = "";
+            if (IsWebViewIPhone_Master && strIphonenavi == "Y") {
+                var tmp_url = location.href;
+                history.pushState({ iphonenavi: "Y" }, "iphoneNaviExHandle", tmp_url);
+                var tmp_url_rep = tmp_url.replace(/iphonenavi=Y/i, "");
+                location.href = tmp_url_rep;
+            }
+        });
+    </script>
+
+
+    <meta property="og:title" content="CGV모두보기/개봉예정">
+    <meta property="og:image" content="WebApp/images/common/logo_new_kakao_prevw.png">
+    <meta property="og:description" content="CGV에서 다양한 영화를 만나보세요!">
+
+    <link href="WebApp/css/main_201412.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .cls_headertitle_box { border-bottom : 1px solid #FFF !important; }
+    </style>
+
+    <style type="text/css" id="_loading_animation_sytle_">@-webkit-keyframes loadingfade{from{opacity:1}to{opacity:0}}</style></head>
+<body>
+<form id="ssologinfrm" name="ssologinfrm" action="https://m.cgv.co.kr/WebAPP/Member/Login.aspx" method="post">
+    <input type="hidden" id="cjssoDataType" name="cjssoDataType" value="">
+    <input type="hidden" id="cjssoEncData" name="cjssoEncData" value="">
+    <input type="hidden" id="cjssoReUrl" name="hfReUrl" value="dvNz5Cd2gnRH7OFj50249A%3d%3d">
+</form>
+
+<script type="text/javascript">
+
+    //CJ SSO 로그인
+    if ((typeof _cjssoEncData) !== "undefined" && _cjssoEncData !== "") {
+        var cjssoDate = new Date();
+
+        jQuery.ajax({
+            type: "GET",
+            url: "/WebApp/Common/SetLog.aspx?dt=" + cjssoDate.getFullYear() + "-" + (parseInt(cjssoDate.getMonth().toString(), 10) + 1) + "-" + cjssoDate.getDate() + " " + cjssoDate.getHours() + ":" + cjssoDate.getMinutes() + ":" + cjssoDate.getSeconds() + "." + cjssoDate.getMilliseconds() + "&key=" + _cjssoEncData,
+            async: true,
+            success: function (txt) {
+            },
+            error: function (xhr, status, err) {
+            }
+        });
+
+        document.getElementById("cjssoDataType").value = "1";
+        document.getElementById("cjssoEncData").value = encodeURIComponent(_cjssoEncData);
+        document.ssologinfrm.submit();
+    }
+
+</script>
+<div class="header_wrap" style="display:none;" id="header_wrap"></div>
+<div class="wrap">
+
+
+    <div id="header_box">
+
+        <div style="width: 100%; display: inline-block; text-align: center;">
+            <iframe id="iframe" title="모바일광고" src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/mobile_05@web_Movielist" width="100%" height="50px" frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0"></iframe>
+        </div>
+
+        <script type="text/javascript">
+            function AppDownload() {
+                var app = "ios";
+
+                fnSendGALog('1', '', 'MW_홈', '앱다운유도 버튼_다운받기', app);
+
+                if (app == "and") {
+                    cgv.common.AppDeepLink.LaunchApp('CGV','');
+                }
+                else if (app == "ios") {
+                    cgv.common.AppDeepLink.MoveAppStore('CGV');
+                }
+                else {
+                    alert("모바일 환경에서 이용 해 주세요.");
+                }
+            }
+            function downDisplay() {
+                fnSendGALog('1', '', 'MW_홈', '앱다운유도 버튼_닫기', '');
+
+                document.getElementById("downBanner").style.display = "none";
+                fnSetCookieSubDomain("boolBtnX", "none", 1);
+
+
+            }
+            function fnSetCookieSubDomain(cName, cValue, cDay) {
+                var expire = new Date();
+                expire.setDate(expire.getDate() + cDay);
+                cookies = cName + '=' + escape(cValue) + '; path=/ ';
+                if (typeof cDay != 'undefined') cookies += ';expires=' + expire.toGMTString() + ';domain=.cgv.co.kr;';
+                document.cookie = cookies;
+            }
+
+        </script>
+
+        <header id="headerTitle" class="cls_headertitle_box">
+
+            <a href="javascript:siteMap();">
+                <div class="ico_lt">
+                    <img id="siteMapBtn" src="WebApp/images/common/btn_gnbV4.png" alt="전체메뉴"><img id="headerLeftBtn" src="" style="display: none;">
+                </div>
+            </a>
+
+            <div class="title" id="headerTitleArea">
+                <a href="/WebApp/MovieV4/movieList.aspx">영화</a>
+            </div>
+
+        </header>
+        <section class="allview_wrap" id="siteMap">
+            <div id="fogbg" onclick="javascript:close_sitemap();"></div>
+            <article class="allview_box_wrap">
+                <div class="allview_box_in">
+                    <h2 class="hidden">전체메뉴</h2>
+
+                    <div class="allview_header">
+                        <a href="/" class="cgv_logo">CGV 홈</a>
+                    </div>
+                    <div class="area">
+                        <ul class="group_wrap">
+
+                            <li><a href="#" title="My CGV" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'My CGV', 'http://m.cgv.co.kr/WebApp/MyCgvV4/Default.aspx'); return false;"><b>My CGV</b></a><span class="countnum">0</span></li>
+
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '빠른예매', 'http://m.cgv.co.kr/quickReservation/'); return false;"><b>빠른예매</b></a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '상영시간표', 'http://m.cgv.co.kr/Schedule/'); return false;"><b>상영시간표</b></a></li>
+                        </ul>
+                        <ul class="group_wrap">
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'CGV안내', 'http://m.cgv.co.kr/WebApp/TheaterV4/'); return false;" title="CGV안내">CGV안내</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '패스트오더', 'http://m.cgv.co.kr/WebApp/MobileOrder/Gateway.aspx?cType=normal&amp;gwType=M&amp;mOrderReturnUrl=%2Fmordermain'); return false;" title="패스트오더">패스트오더</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '스토어', 'http://m.cgv.co.kr/WebApp/GiftV5/storeMain.aspx'); return false;" title="기프트샵">기프트샵</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '아트하우스', 'http://m.cgv.co.kr/WebApp/Collage/'); return false;" title="아트하우스">아트하우스</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'CGV할인정보', 'http://m.cgv.co.kr/WebApp/SaleCardV4/'); return false;" title="CGV할인정보">CGV할인정보</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '이벤트', 'http://m.cgv.co.kr/WebApp/EventNotiV4/EventList.aspx'); return false;" title="이벤트">이벤트</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '매거진', 'http://m.cgv.co.kr/WebApp/MagazineV4/'); return false;" title="매거진">매거진</a></li>
+                        </ul>
+                        <ul class="group_wrap">
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'IMAX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=1'); return false;" title="IMAX">IMAX</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '4DX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=2'); return false;" title="4DX">4DX</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '씨네드쉐프', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=4'); return false;" title="Cine de CHEF">CINE de CHEF</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '골드클래스', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=9'); return false;" title="GOLD CLASS">GOLD CLASS</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '스타리움', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=6'); return false;" title="STARIUM">STARIUM</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '더프라이빗씨네마', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=12'); return false;" title="THE PRIVATE CINEMA">THE PRIVATE CINEMA</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '스윗박스', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=7'); return false;" title="SWEETBOX">SWEETBOX</a></li>
+
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'ScreenX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=18'); return false;" title="Screen X">Screen X</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'SoundX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=19'); return false;" title="Sound X">Sound X</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '씨네앤포레', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=25'); return false;" title="CINE &amp; FORET">CINE &amp; FORET</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '씨네키즈', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=21'); return false;" title="CINE KIDS">CINE KIDS</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'SphereX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=23'); return false;" title="SphereX">Sphere X</a></li>
+
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'SKYBOX', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=26'); return false;" title="SKYBOX">SKYBOX</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '씨네앤리빙룸', 'http://m.cgv.co.kr/WebApp/SpecialV4/Detail.aspx?seq=27'); return false;" title="CINE &amp; LIVING ROOM">CINE &amp; LIVING ROOM</a></li>
+                        </ul>
+                        <ul class="group_wrap">
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', '고객센터', 'http://m.cgv.co.kr/WebApp/Support/faq.aspx'); return false;" title="고객센터">고객센터</a></li>
+                            <li><a href="#" onclick="fnSendGALogCallbackPageMove('1', '', '목록', 'Click', 'Club서비스', 'http://m.cgv.co.kr/WebApp/SpecialV4/ClubTown_List.aspx'); return false;" title="Club서비스">Club서비스</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn_close" onclick="javascript:close_sitemap();">창 닫기</button>
+                </div>
+            </article>
+        </section>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="movie_list_nav">
+        <ul>
+            <li class="">
+                <a onclick="javascript:fnListChartDis('now');">무비차트</a>
+            </li>
+            <li class="">
+                <a onclick="javascript:fnListChartDis('art');">아트하우스</a>
+            </li>
+            <li class="on">
+                <a onclick="javascript:fnListChartDis('plan');">개봉예정</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main_sorting_menu">
+        <ul class="sort_option">
+            <li><input type="radio" id="rdoMOrder_3" name="rdoMOrder" onclick="javascript:fnSearchTab('rdoMOrder_3', '개봉순');" value="REALOPENDATE" checked=""><label for="rdoMOrder_3">개봉순</label></li><li><input type="radio" id="rdoMOrder_1" name="rdoMOrder" onclick="javascript:fnSearchTab('rdoMOrder_1', '예매율순');" value="TicketRate"><label for="rdoMOrder_1">예매율순</label></li>
+        </ul>
+        <span class="now_on" id="spnMNowFlag" style="display:none;"><input type="checkbox" name="chkMNowFlag" id="chkMNowFlag" onclick="javascript: fnSearchTab('chkMNowFlag', '현재상영작보기');"><label for="chkMNowFlag">현재상영작보기</label></span>
+    </div>
+
+    <section class="content_wrap bg_none" id="ContainerView">
+
+        <div class="main_movie_list clsAjaxList">
+            <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                수정 부분 :
+                <p>* 프리에그 아이콘 변경 9*13 (small) </p>
+                <p>* .small 클랙스 관리 필요</p>
+            </div>
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.03</span></div>
+
+            <div class="mm_list_item event_seq_83106">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83106','83106','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83106/83106_150.jpg" alt="결백"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">결백</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_15.png" alt="15세 관람가"></span>
+                        </div>
+
+                        <!-- 프리에그 추가 -->
+                        <span class="moviePreegg small"><span class="eggState small">97</span></span>
+                        <!-- //프리에그 추기 -->
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.03 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_83080">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83080','83080','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83080/83080_150.jpg" alt="뮬란"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">뮬란</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_no.png" alt="미정"></span>
+                        </div>
+
+                        <!-- 프리에그 추가 -->
+                        <span class="moviePreegg small"><span class="eggState small">97</span></span>
+                        <!-- //프리에그 추기 -->
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.03 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_83108">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83108','83108','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83108/83108_150.jpg" alt="침입자"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">침입자</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_no.png" alt="미정"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.03 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_83111">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83111','83111','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83111/83111_150.jpg" alt="콜"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">콜</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_no.png" alt="미정"></span>
+                        </div>
+
+                        <!-- 프리에그 추가 -->
+                        <span class="moviePreegg small"><span class="eggState small">97</span></span>
+                        <!-- //프리에그 추기 -->
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.03 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.01 (수)</span></div>
+
+            <div class="mm_list_item event_seq_83155">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83155','83155','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83155/83155_150.jpg" alt="엽문4-더 파이널"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">엽문4-더 파이널</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_12.png" alt="12세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>3.8%</em></span>
+                        <span class="rel_date">2020.04.01 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83155', '20022859', '엽문4-더 파이널', '03', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.02 (목)</span></div>
+
+            <div class="mm_list_item event_seq_81619">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=81619','81619','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000081/81619/81619_150.jpg" alt="스파이더맨-파 프롬 홈"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">스파이더맨-파 프롬 홈</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_12.png" alt="12세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg great">평점</span><span class="percent">96%</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>2.5%</em></span>
+                        <span class="rel_date">2020.04.02 재개봉</span>
+                        <span class="accur_count">누적관객 802.2만  명</span>
+                        <div class="ico_theater2">
+                            <span class="imax">IMAX</span><span class="fourdx">4DX</span><span class="screenx">SCREENX</span>
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('81619', '20018712', '스파이더맨-파 프롬 홈', '03', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_81319">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=81319','81319','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000081/81319/81319_150.jpg" alt="아쿠아맨"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">아쿠아맨</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_12.png" alt="12세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg great">평점</span><span class="percent">94%</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>2.1%</em></span>
+                        <span class="rel_date">2020.04.02 재개봉</span>
+                        <span class="accur_count">누적관객 503.8만  명</span>
+                        <div class="ico_theater2">
+                            <span class="imax">IMAX</span><span class="fourdx">4DX</span><span class="screenx">SCREENX</span>
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('81319', '20017777', '아쿠아맨', '03', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_4552">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=4552','4552','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000004/4552/4552_150.jpg" alt="봄날은 간다"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">봄날은 간다</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_15.png" alt="15세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.6%</em></span>
+                        <span class="rel_date">2020.04.02 재개봉</span>
+                        <span class="accur_count">누적관객 6,266 명</span>
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('4552', '00010914', '봄날은 간다', '02', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_83198">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83198','83198','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83198/83198_150.jpg" alt="동감"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">동감</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_12.png" alt="12세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.3%</em></span>
+                        <span class="rel_date">2020.04.02 재개봉</span>
+                        <span class="accur_count">누적관객 422 명</span>
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83198', '00000511', '동감', '03', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_82375">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=82375','82375','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000082/82375/82375_150.jpg" alt="비트"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">비트</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_19.png" alt="청소년관람불가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.3%</em></span>
+                        <span class="rel_date">2020.04.02 재개봉</span>
+                        <span class="accur_count">누적관객 573 명</span>
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('82375', '20020830', '비트', '01', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_39318">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=39318','39318','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000039/39318/39318_150.jpg" alt="부당거래"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">부당거래</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_19.png" alt="청소년관람불가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg great">평점</span><span class="percent">97%</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.2%</em></span>
+                        <span class="rel_date">2020.04.02 재개봉</span>
+                        <span class="accur_count">누적관객 272.4만  명</span>
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('39318', '00100788', '부당거래', '01', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_83170">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83170','83170','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83170/83170_150.jpg" alt="더 터닝"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">더 터닝</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_15.png" alt="15세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.5%</em></span>
+                        <span class="rel_date">2020.04.02 개봉</span>
+                        <span class="accur_count">누적관객 132 명</span>
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83170', '20022954', '더 터닝', '02', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_83190">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83190','83190','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83190/83190_150.jpg" alt="펠리칸 베이커리"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">펠리칸 베이커리</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.1%</em></span>
+                        <span class="rel_date">2020.04.02 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83190', '20023020', '펠리칸 베이커리', '04', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_83157">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83157','83157','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83157/83157_150.jpg" alt="프리저베이션 홀 재즈 밴드"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">프리저베이션 홀 재즈 밴드</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.1%</em></span>
+                        <span class="rel_date">2020.04.02 개봉</span>
+
+                        <div class="ico_theater2">
+                            <span class="arthouse">CGV아트하우스</span>
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83157', '20022866', '프리저베이션 홀 재즈 밴드', '04', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_83139">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83139','83139','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83139/83139_150.jpg" alt="아웃사이더"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">아웃사이더</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_19.png" alt="청소년관람불가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.1%</em></span>
+                        <span class="rel_date">2020.04.02 개봉</span>
+                        <span class="accur_count">누적관객 154 명</span>
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83139', '20022793', '아웃사이더', '01', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_83204">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83204','83204','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83204/83204_150.jpg" alt="쉬 네버 다이"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">쉬 네버 다이</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_19.png" alt="청소년관람불가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.02 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83204', '20023082', '쉬 네버 다이', '01', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+
+
+            <div class="mm_list_item event_seq_83189">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83189','83189','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83189/83189_150.jpg" alt="행복의 단추를 채우는 완벽한 방법"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">행복의 단추를 채우는 완벽한 방법</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_12.png" alt="12세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.02 개봉</span>
+                        <span class="accur_count">누적관객 81 명</span>
+                        <div class="ico_theater2">
+                            <span class="arthouse">CGV아트하우스</span>
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83189', '20023013', '행복의 단추를 채우는 완벽한 방법', '03', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.03 (금)</span></div>
+
+            <div class="mm_list_item event_seq_83188">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83188','83188','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83188/83188_150.jpg" alt="(월간오페라)아틸라"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">(월간오페라)아틸라</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.6%</em></span>
+                        <span class="rel_date">2020.04.03 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83188', '20023001', '(월간오페라)아틸라', '04', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.07 (화)</span></div>
+
+            <div class="mm_list_item event_seq_83182">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83182','83182','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83182/83182_150.jpg" alt="[사이다경제_사계강의(봄)]중국 주식으로 10년 후 중국의 미래를 사라"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">[사이다경제_사계강의(봄)]중국 주식으로 10년 후 중국의 미래를 사라</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.1%</em></span>
+                        <span class="rel_date">2020.04.07 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83182', '20022992', '[사이다경제_사계강의(봄)]중국 주식으로 10년 후 중국의 미래를 사라', '04', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.08 (수)</span></div>
+
+            <div class="mm_list_item event_seq_83176">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83176','83176','plan','REALOPENDATE','0')">
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83176/83176_150.jpg" alt="신과 나- 100일간의 거래"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">신과 나- 100일간의 거래</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_15.png" alt="15세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그 UI 추가. mwpark-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.08 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.09 (목)</span></div>
+
+            <div class="mm_list_item event_seq_83177">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83177','83177','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83177/83177_150.jpg" alt="다니엘 이즌 리얼"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">다니엘 이즌 리얼</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_19.png" alt="청소년관람불가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.2%</em></span>
+                        <span class="rel_date">2020.04.09 개봉</span>
+
+                        <div class="ico_theater2">
+                            <span class="arthouse">CGV아트하우스</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+
+
+            <div class="mm_list_item event_seq_83180">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83180','83180','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83180/83180_150.jpg" alt="사랑이 뭘까"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">사랑이 뭘까</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_15.png" alt="15세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.1%</em></span>
+                        <span class="rel_date">2020.04.09 개봉</span>
+
+                        <div class="ico_theater2">
+                            <span class="arthouse">CGV아트하우스</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+
+
+            <div class="mm_list_item event_seq_83175">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83175','83175','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83175/83175_150.jpg" alt="서치 아웃"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">서치 아웃</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_15.png" alt="15세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.09 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+
+
+            <div class="mm_list_item event_seq_83196">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83196','83196','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83196/83196_150.jpg" alt="선생님과 길고양이"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">선생님과 길고양이</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_no.png" alt="미정"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.09 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+
+
+            <div class="mm_list_item event_seq_83201">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83201','83201','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83201/83201_150.jpg" alt="시체들의 새벽- 컨테이젼"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">시체들의 새벽- 컨테이젼</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_no.png" alt="미정"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.09 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.15 (수)</span></div>
+
+            <div class="mm_list_item event_seq_83173">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83173','83173','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83173/83173_150.jpg" alt="건즈 아킴보"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">건즈 아킴보</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_19.png" alt="청소년관람불가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.15 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+
+
+            <div class="mm_list_item event_seq_83195">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83195','83195','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83195/83195_150.jpg" alt="라라걸"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">라라걸</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.15 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+
+
+            <div class="mm_list_item event_seq_83109">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83109','83109','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83109/83109_150.jpg" alt="비밀정보원- 인 더 프리즌"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">비밀정보원- 인 더 프리즌</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_19.png" alt="청소년관람불가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.15 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.16 (목)</span></div>
+
+            <div class="mm_list_item event_seq_83156">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83156','83156','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83156/83156_150.jpg" alt="너의 새는 노래할 수 있어"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">너의 새는 노래할 수 있어</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_15.png" alt="15세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.2%</em></span>
+                        <span class="rel_date">2020.04.16 개봉</span>
+
+                        <div class="ico_theater2">
+                            <span class="arthouse">CGV아트하우스</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.21 (화)</span></div>
+
+            <div class="mm_list_item event_seq_83183">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83183','83183','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83183/83183_150.jpg" alt="[사이다경제_사계강의(봄)]지금 당장 시작하는 주식 공부 5일 완성"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">[사이다경제_사계강의(봄)]지금 당장 시작하는 주식 공부 5일 완성</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.1%</em></span>
+                        <span class="rel_date">2020.04.21 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83183', '20022993', '[사이다경제_사계강의(봄)]지금 당장 시작하는 주식 공부 5일 완성', '04', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+
+
+            <div class="mm_list_item event_seq_83187">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83187','83187','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83187/83187_150.jpg" alt="아르코라이브 완창판소리프로젝트2 강산제 수궁가"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">아르코라이브 완창판소리프로젝트2 강산제 수궁가</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.21 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.22 (수)</span></div>
+
+            <div class="mm_list_item event_seq_83165">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83165','83165','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83165/83165_150.jpg" alt="이누야시키- 히어로VS빌런"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">이누야시키- 히어로VS빌런</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_15.png" alt="15세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.22 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.23 (목)</span></div>
+
+            <div class="mm_list_item event_seq_83192">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83192','83192','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83192/83192_150.jpg" alt="고양이와 할아버지"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">고양이와 할아버지</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.23 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.28 (화)</span></div>
+
+            <div class="mm_list_item event_seq_83191">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83191','83191','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83191/83191_150.jpg" alt="[퇴근길, 지식충전소]영화 스포트라이트로 배우는 인문학 특강"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">[퇴근길, 지식충전소]영화 스포트라이트로 배우는 인문학 특강</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.5%</em></span>
+                        <span class="rel_date">2020.04.28 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+                <a onclick="javascript:fnQuickReserve('83191', '20023021', '[퇴근길, 지식충전소]영화 스포트라이트로 배우는 인문학 특강', '04', '00');" class="btn_reserve">지금 예매</a>
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.29 (수)</span></div>
+
+            <div class="mm_list_item event_seq_83199">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83199','83199','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83199/83199_150.jpg" alt="나의 청춘은 너의 것"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">나의 청춘은 너의 것</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_12.png" alt="12세 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.29 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+
+
+            <div class="mm_list_item event_seq_83132">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83132','83132','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83132/83132_150.jpg" alt="트롤- 월드 투어"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">트롤- 월드 투어</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_no.png" alt="미정"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.29 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04.30 (목)</span></div>
+
+            <div class="mm_list_item event_seq_83087">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83087','83087','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83087/83087_150.jpg" alt="캣츠토피아"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">캣츠토피아</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_no.png" alt="미정"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04.30 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+            <div class="open_datebox clsMListDateTitleDiv"><span class="open_date clsMListDateTitle">2020.04</span></div>
+
+            <div class="mm_list_item event_seq_83148">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83148','83148','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83148/83148_150.jpg" alt="나는보리"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">나는보리</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04 개봉</span>
+
+                        <div class="ico_theater2">
+                            <span class="arthouse">CGV아트하우스</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+
+
+            <div class="mm_list_item event_seq_83096">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83096','83096','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83096/83096_150.jpg" alt="맛있는 녀석들"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">맛있는 녀석들</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_no.png" alt="미정"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+
+
+
+            <div class="mm_list_item event_seq_83103">
+                <a onclick="fnPageMove_Detail('/WebApp/MovieV4/movieDetail.aspx?MovieIdx=83103','83103','plan','REALOPENDATE','0')">
+
+                    <span class="imgbox"><img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83103/83103_150.jpg" alt="밥정"></span>
+                    <div class="txtbox">
+                        <div class="tit_area">
+                            <strong class="tit">밥정</strong>
+                            <span class="ico_grade"><img src="WebApp/images/common/level_l_all.png" alt="전체 관람가"></span>
+                        </div>
+
+                        <!--신규 에그포인트 UI 추가. mwpark_RR2015-->
+                        <div class="egg-gage small">
+                            <span class="egg good">평점</span><span class="percent">?</span>
+                        </div>
+
+                        <span class="per_reserve">예매율 <em>0.0%</em></span>
+                        <span class="rel_date">2020.04 개봉</span>
+
+                        <div class="ico_theater2">
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <input type="hidden" name="hid_TotCnt" title="" value="68">
+
+        </div>
+
+        <span id="sp_loading" style="display: none;"></span>
+
+
+        <div class="dialog-fog" id="fog"></div>
+    </section>
+
+
+</div>
+
+<script src="WebApp/js/util.js"></script>
+<script src="WebApp/js/Crypto/aes.js"></script>
+<script src="WebApp/js/Crypto/md5.js"></script>
+<script src="WebApp/js/Crypto/sha256.js"></script>
+<script src="WebApp/js/Crypto/Crypto.js"></script>
+<script src="WebApp/js/PageTitleExec.js"></script>
+
+<script type="text/javascript">
+    cgv.CreateNamespace("cgv.common");
+    cgv.common.StandardInfo = (function() {
+        var _isWebView = false;
+        var _appVersion = 0;
+        var _isLogin = true;
+        var _redirectUrl = "http%3a%2f%2fm.cgv.co.kr%2fWebAPP%2fMovieV4%2fmovieList.aspx%3fmtype%3dplan%26iPage%3d1";
+        var _isNonmember = false;
+
+        return {
+            IsWebView: _isWebView,
+            AppVersion: _appVersion,
+            IsLogin: _isLogin,
+            RedirectUrl: _redirectUrl,
+            IsNonmember: _isNonmember
+        }
+    })();
+</script>
+
+
+<footer id="div_footer">
+
+    <p class="footerLink">
+        <a href="/WebAPP/Support/noti.aspx"><span>공지사항</span></a>
+        <a href="/WebApp/Support/faq.aspx"><span>고객센터</span></a>
+
+        <a title="로그아웃" onclick="fnMovePageWithLog('/신규버전(ver.3.0,201501)/메인/기타/로그아웃', '/WebApp/Member/Logout.aspx');"><span>로그아웃</span></a>
+        <a id="footer_pc" onclick="fnMovePageWithLog('/신규버전(ver.3.0,201501)/메인/기타/PC버전', 'http://www.cgv.co.kr/default.aspx?IsMobile=Y');" title="PC버전"><span>PC버전</span></a>
+    </p>
+
+    <section class="footerContents">
+        <h1><a href="http://corp.cgv.co.kr/" target="_blank" class="spriteFooter footerLogo">CGV</a></h1>
+        <ul class="footerContentsLink">
+            <li><a href="javascript:openNewWebView('/Agreement/Agreement_Provision.aspx?type=10')" title="이용약관">이용약관</a></li>
+            <li><a href="javascript:openNewWebView('/Agreement/Agreement_Provision.aspx?type=11')" title="개인정보 처리방침">개인정보 처리방침</a></li>
+            <li><a href="javascript:openNewWebView('/Agreement/Agreement_disclaimer.aspx')" title="법적고지">법적고지</a></li>
+        </ul>
+        <dl class="companyInfo">
+            <dt>대표이사</dt>
+            <dd>최병환</dd>
+            <dt>사업자등록번호</dt>
+            <dd>104-81-45690</dd>
+            <dt>통신판매업신고번호</dt>
+            <dd>2017-서울용산-0662 <a href="javascript:openNewWebView('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1048145690')" title="사업자정보확인">사업자정보확인</a></dd>
+            <dt>개인정보보호 책임자</dt>
+            <dd>정종민</dd>
+            <dt>주소</dt>
+            <dd><address>(04377)서울특별시 용산구 한강대로<br>23길 55, 아이파크몰 6층(한강로동)</address></dd>
+            <dt>호스팅사업자</dt>
+            <dd>CJ 올리브네트웍스</dd>
+            <dt>대표이메일</dt>
+            <dd>cjcgvmaster@cj.net</dd>
+            <dt>고객센터</dt>
+            <dd>1544-1122</dd>
+        </dl>
+    </section>
+    <p class="footerReserved">© CJ CGV. All Rights Reserved</p>
+</footer>
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+        jQuery('#vid_vplayer').on('webkitendfullscreen', function (e) {
+            jQuery(".loading_inlayer").hide();
+            jQuery(this).hide();
+        });
+        jQuery('#vid_vplayer').on('webkitbeginfullscreen', function (e) {
+            try {
+                document.getElementById('vid_vplayer').play();
+            } catch (e) { }
+        });
+    });
+
+    function openNewWebView(url) {
+        if (IsWebView_Master == true && AppVersion_Master >= 433) {
+            CGVHAAppInterface.EventBannerCall('5', encodeURIComponent(url));
+        }
+        else {
+            location.href = url;
+        }
+    }
+
+    function openReservePopup() {
+        var oDialog = new jindo.m.Dialog({
+            sPosition: "center",
+            bAutoClose: false,
+            bUseEffect: false,
+            sFoggyColor: "black",
+            nFoggyOpacity: "0.6",
+            sDialogColor: ""
+        });
+
+        var sTemplate = $Element("reservePopupForm").html();
+        oDialog.setTemplate(sTemplate);
+
+        oDialog.show({}, {
+            confirm: function (e) {
+                //상영시간표 클릭시 이벤트
+                location.href = "/Schedule/";
+            },
+            cancel: function (e) {
+                //빠른예매 클릭시 이벤트
+                location.href = "/quickReservation/";
+            },
+            close: function (e) {
+                //취소 클릭시 이벤트
+            }
+        });
+    }
+
+    var refuseMail = function () {
+        var msg = "본 웹사이트에 게시된 이메일주소가\n전자우편수집프로그램이나\n그밖의 기술적 장치를 이용하여\n무단으로 수집되는 것을 거부하며,\n이를 위반시 정보통신망법에 의해\n 형사처벌됨을 유념하시기 바랍니다.";
+        alert(msg);
+    }
+
+    // <-- 결제 페이지에서 Footer 안보이기 시작 - 2017-11-01 변영호 -->
+    var getOpitionIdParameter = new RegExp('[\?&]option_id=([^]*)').exec(window.location.href);
+
+    if (getOpitionIdParameter != null) {
+        jQuery("#div_footer").hide();
+    }
+    // <-- 결제 페이지에서 Footer 안보이기 종료 -->
+</script>
+
+
+<script type="text/javascript">
+    var g_IsLogin = "True";
+    var g_refUrl = "http%3a%2f%2fm.cgv.co.kr%2fWebAPP%2fMovieV4%2fmovieList.aspx%3fiPage%3d1%26Seq%3d83154%26mtype%3dart%26morder%3dTicketRate%26mnowflag%3d0";
+    var g_reUrl = "http%3a%2f%2fm.cgv.co.kr%2fWebAPP%2fMovieV4%2fmovieList.aspx%3fmtype%3dplan%26iPage%3d1";
+    var g_fld_login = "Member";
+
+    if(IsWebView_Master){
+        g_fld_login = "MemberV4";
+        try{
+            setHeaderCss();
+        }catch(e){}
+    }
+
+    var g_url_login = "/WebApp/" + g_fld_login + "/Login.aspx?RedirectURL=" + g_reUrl;
+
+
+    function addLoadEvent(func) {
+        var initOnLoad = window.onload;
+        if (typeof initOnLoad == 'function') {
+            //console.log('exist onload');
+            window.onload = function () {
+                initOnLoad();
+                func();
+            }
+        }
+        else {
+            //console.log('not exist onload');
+            window.onload = func;
+        }
+
+    }
+
+    jQuery(window).load(function () {
+        //APP TOP NAV EX Handle
+        if (IsWebView_Master) {
+            jQuery("input, select, textarea").each(function () {
+                jQuery(this).focus(function () {
+                    jQuery("#headerTitle").css("position", "absolute");
+                    jQuery("#div_customer_navre").css("position", "absolute");
+                });
+
+                jQuery(this).blur(function () {
+                    jQuery("#headerTitle").css("position", "fixed");
+                    jQuery("#div_customer_navre").css("position", "fixed");
+                });
+            });
+        }
+    });
+
+    jQuery(window).bind("pageshow", function (event) {
+        if (event.originalEvent.persisted) {
+            if(cgv.common.StandardInfo.IsWebView && cgv.common.Constants.isIPHONE) {
+                if(cgv.common.StandardInfo.AppVersion >= 455) {
+                    location.reload();
+                }
+            }
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    _TRK_CP = "영화/모두보기/개봉예정";
+    _TRK_PI = "";
+    _TRK_AMT = "";
+    _TRK_PNG = "";
+    _TRK_PNC = "";
+    _TRK_PNC_NM = "";
+
+    _TRK_MBR = "Y";
+    _TRK_SX = "U";
+    _TRK_AG = "";
+    _TRK_UVP1 = "A";
+    _TRK_ISLOGIN = "Y";
+
+    _TRK_IK = "";
+    _TRK_IKWDRS = "";
+    _TRK_ICMP = "";
+    _TRK_ICMP_NM = "";
+
+    //2013.12.30 통계 WebToApp 호출
+    var _TRK_MOVIEIDX = "";
+    var _TRK_MOVIENAME = "";
+    //2014.02.15 이벤트리스트 리다이렉트 여부
+    var _TRK_ISEVENTREDIRECT = "";
+
+    var isWebView = "False";
+
+    if (isWebView == "True") {
+        try {
+            if (_TRK_ISEVENTREDIRECT == "true") {
+            }
+            else if (_TRK_MOVIEIDX == "" && _TRK_MOVIENAME == "") {
+                CGVHAAppInterface.SendWebLog(encodeURIComponent(_TRK_CP));
+            }
+            else {
+                CGVHAAppInterface.SendWebLogMovieDetail(encodeURIComponent(_TRK_CP), encodeURIComponent(_TRK_MOVIEIDX), encodeURIComponent(_TRK_MOVIENAME));
+            }
+        } catch (e) { }
+    }
+</script>
+
+<script type="text/javascript">
+    var GA_TITLE = "영화/모두보기/개봉예정";
+</script>
+
+<script type="text/javascript">
+    try {
+        (function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga_cgv');
+        ga_cgv('create', 'UA-47951671-4', 'auto'); //운영
+        ga_cgv('create', 'UA-47951671-7', { 'name': 'rollup' }); //롤업속성
+        ga_cgv('create', 'UA-47951671-9', { 'name': 'popcorn' }); // 팝콘스토어속성
+    } catch (e) { }
+
+    ga_cgv('rollup.set', 'title', GA_TITLE);
+    ga_cgv('popcorn.set', 'title', GA_TITLE);
+
+    var dimension1 = '8babea4617ca80f081f3f97b2b445489'; // User_ID
+    var dimension2 = 'M'; // User_gender
+    var dimension3= '39'; // User_age
+    var dimension4 = '일반'; // User_rating
+    var dimension6 = navigator.userAgent;  // parma_agt
+    dimension6 += " / " + fnMobileDeviceLangChk();
+    var dimension7 = 'Member'; // 로그인여부
+    var dimension8 = fnMobileDeviceChk(); // param_dvc
+    dimension8 += " / " + fnMobileDeviceLangChk();
+
+    //rollup 속성의 dimenstion 설정
+    if (dimension1 != null && dimension1 != undefined) {
+        ga_cgv('rollup.set', 'userId', dimension1);
+        ga_cgv('rollup.set', 'dimension1', dimension1);
+    }
+    if (dimension2 != null && dimension2 != undefined) {
+        ga_cgv('rollup.set', 'dimension2', dimension2);
+    }
+    if (dimension3 != null && dimension3 != undefined) {
+        ga_cgv('rollup.set', 'dimension3', dimension3);
+    }
+    if (dimension4 != null && dimension4 != undefined) {
+        ga_cgv('rollup.set', 'dimension4', dimension4);
+    }
+    if (dimension6 != null && dimension6 != undefined) {
+        ga_cgv('rollup.set', 'dimension6', dimension6);
+    }
+    if (dimension7 != null && dimension7 != undefined) {
+        ga_cgv('rollup.set', 'dimension7', dimension7);
+    }
+    if (dimension8 != null && dimension8 != undefined) {
+        ga_cgv('rollup.set', 'dimension8', dimension8);
+    }
+
+    //popcorn 속성의 dimension 설정
+    if (dimension1 != null && dimension1 != undefined) {
+        ga_cgv('popcorn.set', 'userId', dimension1);
+        ga_cgv('popcorn.set', 'dimension1', dimension1);
+    }
+    if (dimension2 != null && dimension2 != undefined) {
+        ga_cgv('popcorn.set', 'dimension2', dimension2);
+    }
+    if (dimension3 != null && dimension3 != undefined) {
+        ga_cgv('popcorn.set', 'dimension3', dimension3);
+    }
+    if (dimension4 != null && dimension4 != undefined) {
+        ga_cgv('popcorn.set', 'dimension4', dimension4);
+    }
+    if (dimension6 != null && dimension6 != undefined) {
+        ga_cgv('popcorn.set', 'dimension6', dimension6);
+    }
+    if (dimension7 != null && dimension7 != undefined) {
+        ga_cgv('popcorn.set', 'dimension7', dimension7);
+    }
+    if (dimension8 != null && dimension8 != undefined) {
+        ga_cgv('popcorn.set', 'dimension8', dimension8);
+    }
+</script>
+
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5CJXRN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script type="text/javascript">
+    //Google Tag Manager dataLayer for global header
+    var parma_agt = navigator.userAgent;
+    parma_agt = parma_agt + " / " + fnMobileDeviceLangChk();
+    var param_dvc = fnMobileDeviceChk();
+    param_dvc += " / " + fnMobileDeviceLangChk();
+    try {
+        var dataLayer = [{
+            'cgv_cd1': '8babea4617ca80f081f3f97b2b445489',
+            'cgv_cd2': 'M',
+            'cgv_cd3': '39',
+            'cgv_cd4': '일반',
+            'cgv_cd6': parma_agt,
+            'cgv_cd7': 'Member',
+            'cgv_cd8': param_dvc,
+            'uid': '8babea4617ca80f081f3f97b2b445489'
+        }];
+    } catch (e) { }
+
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5CJXRN');
+</script>
+
+<script type="text/javascript">
+    var iPage = parseInt("2");
+    var iTotalCnt = "68";
+    var iPageRow = "20"
+
+    var MType = "plan";
+    var MOrder = "REALOPENDATE";
+    var MNowFlag = "0";
+    var MDisType = "";
+
+    var iSeq = "0";
+
+    var isPreviousEventComplete = "False" != "True";
+    var isListComplete = false;
+    jQuery(window).scroll(function () {
+        if (jQuery(window).scrollTop() >= (jQuery(document).height() - jQuery(window).height()) * 0.7) {
+
+            if (isPreviousEventComplete) {
+                moreAction();
+            }
+
+            if (isListComplete) {
+                isListComplete = false;
+                //alert("마지막 페이지 입니다.");
+                return false;
+            }
+        }
+    });
+
+
+    var oLoading_Main = new jindo.m.Loading(null, {
+        nWidth: 50,
+        nHeight: 50,
+        sDefaultForeground: "gray",
+        sDefaultBackground: "transparent",
+        sLoadingText: "",
+        bUseFoggy: false
+    });
+
+    function fnQuickReserve(strMovieIdx, mgCD, movTitle, rateCode, rKind)
+    {
+        fnSendGALogCallbackQuickReserve('1', '', '지금예매', 'Click', '', strMovieIdx, mgCD, movTitle, rateCode, rKind);
+    }
+
+    moreAction = function () {
+        fnSendGALog('1', '', '리스트 더보기', 'Click', '');
+        fnSearchAjax("");
+    }
+
+    function fnSearchTab(id, label) {
+        fnSendGALog('1', '', '정렬선택 버튼', 'Click', label);
+        fnSearchAjax(id);
+    }
+
+    function fnSearchAjax(id) {
+        isPreviousEventComplete = false;
+
+        if (id != "") {
+            jQuery(".clsAjaxList").html("");
+            jQuery(".clsstrMore").hide();
+            iPage = 1;
+        }
+
+        MOrder = jQuery("input:radio[name='rdoMOrder']:checked").val();
+        MNowFlag = jQuery("input:checkbox[name='chkMNowFlag']:checked").length;
+        //MDisType = jQuery("select[name='selMDisType']").val();
+        //location.href = "movieList.aspx?mtype=" + MType + "&iPage=" + iPage + "&morder=" + MOrder + "&mnowflag=" + MNowFlag + "&mdistype=" + MDisType;
+
+        $Element('sp_loading').show('block');
+
+        var woAjax = $Ajax("/WebAPP/MovieV4/ajaxMovie.aspx", {
+            type: 'xhr',
+            onload: function (res) {
+                if (res.status() == 200) {
+
+                    jQuery(".clsAjaxList").append(res.text());
+                    var cnt = jQuery('.clsAjaxList .mm_list_item').length;
+                    iPage++;
+
+                    //clsMListDateTitle Ex Handle
+                    jQuery(".clsMListDateTitle").each(function (idx) {
+                        if (jQuery(".clsMListDateTitle").eq(idx - 1) && jQuery(".clsMListDateTitle").eq(idx - 1).html() == jQuery(this).html()) {
+                            jQuery(".clsMListDateTitleDiv").eq(idx).hide();
+                        }
+                    });
+                    jQuery(".clsMListDateTitleDiv").each(function (idx) {
+                        if (jQuery(this).css("display") == "none") { jQuery(this).remove(); }
+                    });
+
+                    var hidcnt = jQuery("input:hidden[name='hid_TotCnt']").length;
+                    if (hidcnt > 0) {
+                        iTotalCnt = parseInt(jQuery("input:hidden[name='hid_TotCnt']").eq(hidcnt - 1).val());
+                    }
+                    else {
+                        iTotalCnt = 0;
+
+                        jQuery(".clsAjaxList").append("<div><p>현재 선택 하신 영화는 없습니다.<br />무비차트에서 현재 상영증인 영화를 찾아보세요!</p></div>");
+                    }
+
+                    if (iTotalCnt == cnt) {
+                        jQuery(".clsstrMore").hide();
+                        isListComplete = true;
+                    }
+                    else {
+                        //jQuery(".clsstrMore").show();
+                        isPreviousEventComplete = true;
+                        isListComplete = false;
+                    }
+
+                    if (iTotalCnt == 0) { jQuery(".noData").show(); }
+                    else {
+                        jQuery(".noData").hide();
+                    }
+
+                } else {
+                    alert('데이터를 불러오는데 실패했습니다.\n잠시 후에 다시 이용해 주세요.');
+                }
+
+                try {
+                    $Element('sp_loading').hide();
+                } catch (e) { }
+            }
+        }).request({ iPage: iPage, pageRow: iPageRow, mtype: MType, morder: MOrder, mnowflag: MNowFlag, mdistype: MDisType, flag: "MLIST" });
+    }
+
+    function fnListChartDis(flag) {
+        var label;
+        if (flag == "now") { label = "무비차트"; }
+        else if (flag == "art") { label = "아트하우스"; }
+        else if (flag == "plan") { label = "개봉예정"; }
+        MType = flag;
+        iPage = 1;
+        fnSendGALogCallbackPageMove('1', '', '카테고리선택', 'Click', label, "movieList.aspx?mtype=" + MType + "&iPage=" + iPage, false, "rep");
+    }
+
+    jQuery(document).ready(function () {
+
+        /*jQuery("input:radio[name='rdoMOrder']").each(function () {
+        if (MOrder == jQuery(this).val()) {
+        jQuery(this).attr("checked", true);
+        return;
+        }
+        });*/
+
+        //4.3.3 이상 네비게이션 적용
+        if (IsWebView_Master == true && AppVersion_Master >= 433) {
+
+            jQuery(".movie_list_nav").css("position", "fixed");
+            jQuery(".movie_list_nav").css("width", "100%");
+            jQuery(".movie_list_nav").css("z-index", "99999");
+            jQuery(".movie_list_nav").next().css("padding-top", "45px");
+            basicNavigation(1, '영화', '');
+        }
+
+        if (MType != "plan") { jQuery("#spnMNowFlag").show(); }
+
+        if (MNowFlag == "1") {
+            jQuery("input:checkbox[name='chkMNowFlag']").attr("checked", true);
+        }
+
+        //jQuery("select[name='selMDisType']").val(MDisType);
+
+        //clsMListDateTitle Ex Handle
+        jQuery(".clsMListDateTitle").each(function (idx) {
+            if (jQuery(".clsMListDateTitle").eq(idx - 1) && jQuery(".clsMListDateTitle").eq(idx - 1).html() == jQuery(this).html()) {
+                jQuery(".clsMListDateTitleDiv").eq(idx).hide();
+            }
+        });
+        jQuery(".clsMListDateTitleDiv").each(function (idx) {
+            if (jQuery(this).css("display") == "none") { jQuery(this).remove(); }
+        });
+
+        try {
+            if (parseInt(iSeq) > 0) {
+                fnScrollExHandle(iSeq);
+            }
+        } catch (e) { }
+
+    });
+
+    function fnPageMove_Detail(url, seq, mtype, morder, mnowflag) {
+        try {
+            //History Ex Handle
+            history.replaceState(
+                { iPage: (iPage - 1), Seq: seq, mtype: mtype, morder: morder, mnowflag: mnowflag },
+                "무비차트 리스트",
+                "?iPage=" + (iPage - 1) + "&Seq=" + seq + "&mtype=" + mtype + "&morder=" + morder + "&mnowflag=" + mnowflag
+            );
+        } catch (e) { }
+
+        url = url + "&iPage=" + (iPage - 1);
+        if (url.toLowerCase().indexOf("seq=") < 0) {
+            url = url + "&Seq=" + seq;
+        }
+
+        setTimeout(function () {
+            location.href = url;
+        }, 100);
+    }
+
+    function fnScrollExHandle(iLastSeq) {
+        setTimeout(function () {
+            var position = jQuery(".event_seq_" + iLastSeq).position();
+            try {
+                if (IsWebView_Master == true) {
+                    jQuery("body").animate({ scrollTop: (position.top - 50 - parseInt(((jQuery(window).height() - jQuery(".event_seq_" + iLastSeq).height()) / 2), 10)) }, 50);
+                }
+                else {
+                    jQuery("body").animate({ scrollTop: (position.top - parseInt(((jQuery(window).height() - jQuery(".event_seq_" + iLastSeq).height()) / 2), 10)) }, 50);
+                }
+            } catch (e) { }
+        }, 100);
+    }
+</script><div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none;" class="_loading_container_class_"><div style="z-index: 30000; position: absolute;"><div style="position: relative; margin: 0px auto; width: 50px; height: 50px; background: transparent;"><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(0deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(30deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(60deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(90deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(120deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(150deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(180deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(210deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(240deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(270deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(300deg) translate3d(0,-140%,0);"></span><span style="display:block;position:absolute;top:40%;left:48%;width:11%;height:24%;border-radius:6px;background:gray; opacity:0; -webkit-transform:rotate(330deg) translate3d(0,-140%,0);"></span></div></div></div>
+
+
+
+</body></html>
