@@ -337,25 +337,35 @@
 
 .movie-chart .chart_total {
     position: relative;
+    height: 150px;
+    margin: 0 -20px;
 }
 
 .movie-chart .chart_total .box {
     position: relative;
 }
-
-.movie-chart .chart_total .box:first-child {
-    margin-bottom: 40px;
+.movie-chart .chart_total .box:after {
+    content: '';
+    width: 1px;
+    height: 125px;
+    position: absolute;
+    top: 25px;
+    right: -1px;
+    background-color: #eeeeee;
 }
+
+
 
 .movie-chart .chart_total .box .title {
     font-size: 12px;
     font-weight: bold;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 20px;
 }
 
 .movie-chart .chart_total .box .radar-graph {
+    padding-top: 10px;
     text-align: center;
 }
 
