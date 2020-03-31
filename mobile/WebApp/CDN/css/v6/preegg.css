@@ -431,14 +431,24 @@
     비고 : 관련 CSS - common.css:2963
     html : <div class="box_title">
  */
-.layer_pop2_re .inner.charm_popup {
+.charm_popup {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     padding-left: 20px;
     padding-right: 20px;
+    background-color: #fff;
+}
+.charm_popup_full {
+    background: #fff;
+    padding-top: 10px;
+}
+.charm_popup_full .charm_popup{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
-.layer_pop2_re .inner.charm_popup .popup_title {
+
+.charm_popup .popup_title {
     height: 40px;
     padding: 0 20px 10px 20px;
     font-size: 17px;
@@ -449,7 +459,7 @@
     margin-left: -20px;
     margin-right: -20px;
 }
-.layer_pop2_re .inner.charm_popup .box_title {
+.charm_popup .box_title {
     height: 57px;
     margin-top: 24px;
     position: relative;
@@ -461,7 +471,7 @@
     margin-bottom: 20px;
 }
 
-.layer_pop2_re .inner.charm_popup .box_title .icon {
+.charm_popup .box_title .icon {
     width: 53px;
     height: 69px;
     display: inline-block;
@@ -474,7 +484,7 @@
     transform: translateY(-5px);
 }
 
-.layer_pop2_re .inner.charm_popup .box_title .desc {
+.charm_popup .box_title .desc {
     font-size: 14px;
     display: inline-block;
     color: #000;
@@ -483,40 +493,40 @@
     padding-right: 30px;
     line-height: 18px;
 }
-.layer_pop2_re .inner.charm_popup .box_title .desc span{
+.charm_popup .box_title .desc span{
     font-weight: bold;
 }
-.layer_pop2_re .inner.charm_popup .box_title .desc span.red{
+.charm_popup .box_title .desc span.red{
     color: #F8465B;
 }
 
-.layer_pop2_re .inner.charm_popup .rating {
+.charm_popup .rating {
     position: relative;
     padding-bottom: 10px;
 }
-.layer_pop2_re .inner.charm_popup .rating .box {
+.charm_popup .rating .box {
     margin-bottom: 12px;
     position: relative;
 }
-.layer_pop2_re .inner.charm_popup .rating .box .title{
+.charm_popup .rating .box .title{
     font-size: 14px;
     color: #000;
     font-weight: bold;
     margin-bottom: 10px;
 }
-.layer_pop2_re .inner.charm_popup .rating .box .list{
+.charm_popup .rating .box .list{
     position: relative;
 }
 
-.layer_pop2_re .inner.charm_popup .rating .box .list ul {
+.charm_popup .rating .box .list ul {
     overflow: hidden;
 }
-.layer_pop2_re .inner.charm_popup .rating .box .list ul li {
+.charm_popup .rating .box .list ul li {
     float: left;
     margin-right: 6px;
     margin-bottom: 8px;
 }
-.layer_pop2_re .inner.charm_popup .rating .box .list ul li a{
+.charm_popup .rating .box .list ul li a{
     padding: 8px 20px;
     border: 1px solid #D9D9D9;
     font-size: 14px;
@@ -527,14 +537,14 @@
     border-radius: 16px;
     overflow: hidden;
 }
-.layer_pop2_re .inner.charm_popup .rating .box .list ul li.on a{
+.charm_popup .rating .box .list ul li.on a{
     background-color: #FB4357;
     border-color: #FB4357;
     color: #ffffff;
     font-weight: bold;
 }
 
-.layer_pop2_re .inner.charm_popup .btn_close {
+.charm_popup .btn_close {
     position: absolute;
     right: 20px;
     top: 24px;
@@ -546,7 +556,7 @@
     text-indent: -999em;
 }
 
-.layer_pop2_re .inner.charm_popup .btn_confirm{
+.charm_popup .btn_confirm{
     margin: 0 -20px -12px;
     display: block;
     padding: 15px 12px;
@@ -556,12 +566,14 @@
     background: linear-gradient(to right,  #f1318a 0%,#ef642f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.layer_pop2_re .inner.charm_popup .btn_confirm.disabled{
+.charm_popup .btn_confirm.disabled{
     background: #999999 ;
 }
 
 
-
+/** 
+    내용 : 감성 팝업
+ */
 .layer_pop2_re .inner.emotion_popup{
 
 }
