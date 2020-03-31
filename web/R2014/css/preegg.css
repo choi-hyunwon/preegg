@@ -42,33 +42,14 @@
 .sprite_preegg.big.default{
     background-position: 0px -40px;
 }
-/*
-.sprite_preegg.big.selected{
-    background-position: 3px -20px;
+.sprite_preegg.big.bad{
+    background-position: -60px -40px;
 }
-.sprite_preegg.big.count{
-    background-position: 3px -20px;
+.sprite_preegg.big.good{
+    background-position: -120px -40px;
 }
-.sprite_preegg.big.detail{
-    background-position: 3px -20px;
-}
-*/
-
-
-
-
-
-
-.sprite_preegg.big.bad {
-    background-position: 3px -60px;
-}
-
-.sprite_preegg.big.good {
-    background-position: -30px -60px;
-}
-
-.sprite_preegg.big.great {
-    background-position: -65px -60px;
+.sprite_preegg.big.great{
+    background-position: -180px -40px;
 }
 
 
