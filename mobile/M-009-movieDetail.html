@@ -1666,36 +1666,36 @@
         <script src="WebApp/CDN/js/radar.js"></script>
         <!-- Chart code -->
         <script>
-            var chart = AmCharts.makeChart("charm", {
+            var optionCharm = {
                 "type": "radar",
                 "radius": "28%", //넓이
 
                 "dataProvider": [{
-                    "key": "세글자",
+                    "key": "몰입감",
                     "value": 99,
                     "color": "rgb(255,133,179)",
                     "rollOverColor" : "rgb(0,0,0)",
                     "selectedColor" : "rgb(0,0,0)",
                 }, {
-                    "key": "글자로",
+                    "key": "무서운\n여운이\n남는",
                     "value": 80,
                     "color": "rgb(254,196,70)",
                     "rollOverColor" : "rgb(0,0,0)",
                     "selectedColor" : "rgb(0,0,0)",
                 }, {
-                    "key": "세글자\n한줄내리고",
+                    "key": "손에\n땀을\n쥐는",
                     "value": 0,
                     "color": "rgb(142,189,255)",
                     "rollOverColor" : "rgb(0,0,0)",
                     "selectedColor" : "rgb(0,0,0)",
                 }, {
-                    "key": "다섯글자후\n한줄내리고",
+                    "key": "호러틱\n사운드",
                     "value": 60,
                     "color": "rgb(100,169,178)",
                     "rollOverColor" : "rgb(0,0,0)",
                     "selectedColor" : "rgb(0,0,0)",
                 }, {
-                    "key": "그냥저냥",
+                    "key": "소름끼치는\n악역\n최대5글짜",
                     "value": 50,
                     "color": "rgb(178,103,183)",
                     "rollOverColor" : "rgb(0,0,0)",
@@ -1705,7 +1705,7 @@
                     "axisTitleOffset": 5,
                     "minimum": 0,
                     "maximum": 100,
-                    "axisAlpha": 0.15,
+                    "axisAlpha": 0.05,
                     "unitPosition": "right",
                     "gridColor": "#000000",
                     "autoGridCount": false,
@@ -1743,7 +1743,7 @@
                 },
                 "autoResize": false,
                 "color": "rgb(22,22,22)",
-                "fontSize": 10,
+                "fontSize": 9,
                 "fontFamily": "Helvetica",
                 "tapToActivate": false,
                 "rollOverGraphItem": function () {
@@ -1755,8 +1755,8 @@
                 }
 
 
-            });
-            var chart = AmCharts.makeChart("emotion", {
+            };
+            var optionEmotion = {
                 "type": "radar",
                 "radius": "28%", //넓이
 
@@ -1767,7 +1767,7 @@
                     "rollOverColor" : "rgb(0,0,0)",
                     "selectedColor" : "rgb(0,0,0)",
                 }, {
-                    "key": "글자로",
+                    "key": "다섯글자용",
                     "value": 80,
                     "color": "rgb(254,196,70)",
                     "rollOverColor" : "rgb(0,0,0)",
@@ -1795,7 +1795,7 @@
                     "axisTitleOffset": 5,
                     "minimum": 0,
                     "maximum": 100,
-                    "axisAlpha": 0.15,
+                    "axisAlpha": 0.05,
                     "unitPosition": "right",
                     "gridColor": "#000000",
                     "autoGridCount": false,
@@ -1833,7 +1833,7 @@
                 },
                 "autoResize": false,
                 "color": "rgb(22,22,22)",
-                "fontSize": 10,
+                "fontSize": 9,
                 "fontFamily": "Helvetica",
                 "tapToActivate": false,
                 "rollOverGraphItem": function () {
@@ -1843,9 +1843,14 @@
                 "chartCursor": {
                     "bulletSize": 3
                 }
+            };
 
-
-            });
+            if( $('body').width() == 320) {
+                optionCharm.radius = "20%";
+                optionEmotion.radius = "20%";
+            }
+            var chart = AmCharts.makeChart("charm", optionCharm);
+            var chart = AmCharts.makeChart("emotion", optionEmotion);
         </script>
         <!-- HTML -->
 
