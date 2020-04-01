@@ -9,11 +9,23 @@
     공통 아이콘
  */
 .sprite_preegg {
-    background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+    background: url('../../images/main/common/sprite_preegg.png') no-repeat 0 0;
     background-size: 300px;
     display: inline-block;
     vertical-align: middle;
 }
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .sprite_preegg {
+        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .sprite_preegg {
+        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+    }
+}
+
+
 
 .sprite_preegg.default {
     width: 16px;
@@ -96,10 +108,19 @@
     top: 0;
     width: 11px;
     height: 20px;
-    background: url('../../images/main/common/sprite_preegg@3x.png');
+    background: url('../../images/main/common/sprite_preegg.png');
     background-size: 300px;
 }
-
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .moviePreegg span:before {
+        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .moviePreegg span:before {
+        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+    }
+}
 
 .moviePreegg span:after {
     content: '%'
@@ -157,6 +178,17 @@
     background: url('../../images/main/common/sprite_preegg.png') no-repeat 0 0;
     background-size: 300px;
 }
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .fp_btn_list li .preegg:before {
+        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .fp_btn_list li .preegg:before {
+        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+    }
+}
 
 .fp_btn_list li .preegg:before {
     background-position: 0 -40px;
@@ -205,7 +237,7 @@
     left: -35px;
     width: 24px;
     height: 18px;
-    background-image: url(../../images/main/common/sprite_preegg@3x.png);
+    background-image: url(../../images/main/common/sprite_preegg.png);
     background-position: -170px 0;
     background-size: 300px;
 }
@@ -216,12 +248,22 @@
     right: -40px;
     width: 24px;
     height: 18px;
-    background-image: url(../../images/main/common/sprite_preegg@3x.png);
+    background-image: url(../../images/main/common/sprite_preegg.png);
     background-position: -200px 0;
     background-size: 300px;
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .movie-chart .comment .line1:before {
+        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+    }
+}
 
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .movie-chart .comment .line2:after {
+        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+    }
+}
 
 
 
@@ -317,7 +359,7 @@
 .movie-chart .rating .box .tooltip {
     width: 49px;
     height: 15px;
-    background-image: url(../../images/main/common/sprite_preegg@3x.png);
+    background-image: url(../../images/main/common/sprite_preegg.png);
     background-size: 300px;
     background-position: -230px 0;
     position: absolute;
@@ -329,6 +371,21 @@
     line-height: 0px;
     color: transparent;
 }
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .movie-chart .rating .box .tooltip {
+        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .movie-chart .rating .box .tooltip {
+        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+    }
+}
+
+
+
+
 
 .movie-chart .rating .box.box_golden .tooltip {
     background-position: -230px -20px;
@@ -395,6 +452,17 @@
     background-image: url("../../images/main/common/sprite_preegg.png");
     background-size: 300px;
     background-position: 0 -40px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .mi_btn_list .btn_preegg::before {
+        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .mi_btn_list .btn_preegg::before {
+        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+    }
 }
 
 
@@ -482,6 +550,18 @@
     margin-top: -10px;
     margin-right: 5px;
     transform: translateY(-5px);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .charm_popup .box_title .icon {
+        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .charm_popup .box_title .icon {
+        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+    }
 }
 
 .charm_popup .box_title .desc {
