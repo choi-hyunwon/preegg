@@ -16,12 +16,12 @@
 }
 @media only screen and (-webkit-min-device-pixel-ratio:2){
     .sprite_preegg {
-        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@2x.png'); 
     }
 }
 @media only screen and (-webkit-min-device-pixel-ratio:3){
     .sprite_preegg {
-        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
     }
 }
 
@@ -113,12 +113,12 @@
 }
 @media only screen and (-webkit-min-device-pixel-ratio:2){
     .moviePreegg span:before {
-        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
     }
 }
 @media only screen and (-webkit-min-device-pixel-ratio:3){
     .moviePreegg span:before {
-        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
     }
 }
 
@@ -180,13 +180,13 @@
 }
 @media only screen and (-webkit-min-device-pixel-ratio:2){
     .fp_btn_list li .preegg:before {
-        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:3){
     .fp_btn_list li .preegg:before {
-        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
     }
 }
 
@@ -255,13 +255,13 @@
 
 @media only screen and (-webkit-min-device-pixel-ratio:2){
     .movie-chart .comment .line1:before {
-        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:3){
     .movie-chart .comment .line2:after {
-        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
     }
 }
 
@@ -373,13 +373,13 @@
 }
 @media only screen and (-webkit-min-device-pixel-ratio:2){
     .movie-chart .rating .box .tooltip {
-        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:3){
     .movie-chart .rating .box .tooltip {
-        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
     }
 }
 
@@ -455,13 +455,13 @@
 }
 @media only screen and (-webkit-min-device-pixel-ratio:2){
     .mi_btn_list .btn_preegg::before {
-        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:3){
     .mi_btn_list .btn_preegg::before {
-        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
     }
 }
 
@@ -554,13 +554,13 @@
 
 @media only screen and (-webkit-min-device-pixel-ratio:2){
     .charm_popup .box_title .icon {
-        background: url('../../images/main/common/sprite_preegg@2x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:3){
     .charm_popup .box_title .icon {
-        background: url('../../images/main/common/sprite_preegg@3x.png') no-repeat 0 0;
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
     }
 }
 
