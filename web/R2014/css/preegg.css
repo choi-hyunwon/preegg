@@ -4,6 +4,7 @@
     작성자 : 최현원
  */
 
+
 /**
     공통 아이콘
  */
@@ -13,11 +14,13 @@
     display: inline-block;
     vertical-align: middle;
 }
-.sprite_preegg.default{
+
+.sprite_preegg.default {
     width: 16px;
     height: 26px;
     background-position: 0px 0px;
 }
+
 /*.sprite_preegg.selected{
     width: 16px;
     height: 20px;
@@ -34,25 +37,27 @@
     background-position: -60px 0px;
 }*/
 
-.sprite_preegg.big{
+.sprite_preegg.big {
     width: 54px;
     height: 54px;
     background-position: 0px -40px;
 }
-.sprite_preegg.big.default{
+
+.sprite_preegg.big.default {
     background-position: 0px -40px;
 }
-.sprite_preegg.big.bad{
+
+.sprite_preegg.big.bad {
     background-position: -60px -40px;
 }
-.sprite_preegg.big.good{
+
+.sprite_preegg.big.good {
     background-position: -120px -40px;
 }
-.sprite_preegg.big.great{
+
+.sprite_preegg.big.great {
     background-position: -180px -40px;
 }
-
-
 
 
 /**
@@ -70,16 +75,19 @@
     top: 11px;
     right: 0;
 }
+
 .movie_grade .egg_point {
     height: 134px;
 }
-.movie_grade .egg_point .title{
+
+.movie_grade .egg_point .title {
     font-size: 24px;
     line-height: 30px;
     position: absolute;
     top: 35px;
     left: 0;
 }
+
 .movie_grade .egg_point .title strong {
     font-weight: 500;
 }
@@ -90,6 +98,7 @@
     top: 40px;
     right: 30px;
 }
+
 .movie_grade .egg_point .rating .box {
     position: relative;
     width: 55px;
@@ -97,9 +106,11 @@
     float: left;
     padding-left: 60px;
 }
+
 .movie_grade .egg_point .rating .box + .box {
     margin-left: 55px;
 }
+
 .movie_grade .egg_point .rating .box:first-child:after {
     content: '';
     border-left: 1px solid #dddddd;
@@ -110,6 +121,7 @@
     width: 1px;
     height: 40px;
 }
+
 .movie_grade .egg_point .rating .box.box_golden {
     width: 85px;
 }
@@ -119,6 +131,7 @@
     top: 0px;
     left: 0px;
 }
+
 .movie_grade .egg_point .rating .box .desc {
     padding-top: 14px;
     display: block;
@@ -126,6 +139,7 @@
     color: #c2291c;
     font-weight: 400;
 }
+
 .movie_grade .egg_point .rating .box .percent {
     display: block;
     font-size: 24px;
@@ -133,6 +147,7 @@
     line-height: 1.0;
     color: #000;
 }
+
 .movie_grade .egg_point .rating .box .tooltip {
     position: absolute;
     top: -10px;
@@ -151,14 +166,14 @@
 
 
 /* 감정차트, */
-.movie_grade .chart_total{
+.movie_grade .chart_total {
     border: 1px solid #ddd;
     margin-bottom: 20px;
     height: 310px;
 }
 
 
-.movie_grade .chart_total .box{
+.movie_grade .chart_total .box {
     width: 50%;
     box-sizing: border-box;
     border-left: 1px solid #dddddd;
@@ -166,23 +181,25 @@
     height: 100%;
     position: relative;
 }
-.movie_grade .chart_total .box:first-child{
+
+.movie_grade .chart_total .box:first-child {
     border: none;
 }
+
 .movie_grade .chart_total .title {
     position: relative;
-    padding-top : 28px;
+    padding-top: 28px;
     padding-left: 30px;
     font-size: 20px;
     line-height: 1.5em;
     color: #222222;
     font-weight: 500;
 }
-.movie_grade .chart_total .radar-graph{
+
+.movie_grade .chart_total .radar-graph {
     text-align: center;
 
 }
-
 
 
 /**
@@ -263,7 +280,6 @@
 }
 
 
-
 /**
     page : W-012-detail-view.html
     내용 : 상세페이지 좋아요 버튼 관심 egg 부분 개편
@@ -305,10 +321,6 @@
 }
 
 
-
-
-
-
 /**
     page : popup - 관심Egg
     내용 : 관심Egg 선택 팝업
@@ -318,17 +330,20 @@
 .movie-pre-select {
     margin: -10px 5px 0;
 }
+
 .movie-pre-select .header {
     position: relative;
     text-align: center;
     height: 48px;
 }
-.movie-pre-select .header .main{
+
+.movie-pre-select .header .main {
     font-size: 26px;
     color: #000;
     letter-spacing: -0.2px;
     font-weight: 400;
 }
+
 .movie-pre-select .box {
     border-top: 1px dotted #E3E3E3;
 }
@@ -338,17 +353,20 @@
     padding-top: 28px;
     margin-bottom: 20px;
 }
+
 .movie-pre-select .box .main {
     font-size: 18px;
     color: #000000;
     line-height: 34px;
     font-weight: 400;
 }
+
 .movie-pre-select .box .sub {
     font-size: 13px;
     line-height: 1.5;
     color: #666666;
 }
+
 .movie-pre-select .box .sub em {
     color: #222222;
 }
@@ -358,7 +376,8 @@
     width: 325px;
     margin: 0 auto;
 }
-.movie-pre-select .box .wrap_btn .btn{
+
+.movie-pre-select .box .wrap_btn .btn {
     width: 142px;
     height: 142px;
     text-align: center;
@@ -369,7 +388,7 @@
     border-radius: 50%;
 }
 
-.movie-pre-select .box .wrap_btn .btn:first-child{
+.movie-pre-select .box .wrap_btn .btn:first-child {
     margin-right: 25px;
 }
 
@@ -380,6 +399,7 @@
     font-size: 17px;
     color: #444444;
 }
+
 .movie-pre-select .box .wrap_btn .btn span.sprite_preegg {
     margin-top: 34px;
 }
@@ -387,11 +407,10 @@
 .movie-pre-select .box .wrap_btn .btn.selected {
     border-color: #B21D1B;
 }
+
 .movie-pre-select .box .wrap_btn .btn.selected span {
     color: #B21D1B;
 }
-
-
 
 
 /**
@@ -403,22 +422,26 @@
 .movie-emotion-select {
     margin: -7px -18px;
 }
+
 .movie-emotion-select .header {
     position: relative;
     text-align: center;
     height: 80px;
 }
+
 .movie-emotion-select .header .main {
     font-size: 22px;
     letter-spacing: -0.2px;
     line-height: 34px;
     font-weight: 400;
 }
+
 .movie-emotion-select .header .sub {
     font-size: 16px;
     letter-spacing: -0.2px;
     line-height: 18px;
 }
+
 .movie-emotion-select .header .sub span {
     color: #E71A0F;
 }
@@ -442,7 +465,7 @@
 
 .movie-emotion-select .box .wrap_input label {
     float: left;
-    width:33.33%;
+    width: 33.33%;
     display: inline-block;
     box-sizing: border-box;
     height: 24px;
@@ -454,6 +477,7 @@
     opacity: 0;
     pointer-events: none;
 }
+
 .movie-emotion-select .box .wrap_input label span {
     position: relative;
     padding-left: 35px;
@@ -483,6 +507,7 @@
     -webkit-transform-origin: 100% 100%;
     transform-origin: 100% 100%;
 }
+
 .movie-emotion-select .box .wrap_input label span:after {
     content: '';
     position: absolute;
@@ -500,21 +525,27 @@
     border-right: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
 }
+
 .movie-emotion-select .box .wrap_input label input:checked + span:after {
     border: 1px solid #333333;
     background-color: #333333;
 }
 
+/**
+    page : 무비차트 공통 영역
+    내용 : 하트를 삭제 후 버튼의 사이즈 와 레이아웃 변
+    html : <a class="link-reservation" href="#">예매</a>
+ */
+[class|="sect"][class*="wishlist"] .like,
+[class|="sect"][class*="chart"] .like {
+    text-align: left !important;
+}
+[class|="sect"][class*="wishlist"] .like .link-reservation,
+[class|="sect"][class*="chart"] .like .link-reservation {
+    width: 97px !important;
+    height: 25px !important;
+    background: url(../images/sprite/sprite_preegg.png) 0 -110px no-repeat !important;
 
-
-
-
-
-
-
-
-
-
-
+}
 
 
