@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>CGV</title>
+    <link rel="shortcut icon" href="WebApp/images/common/favicon_cgv.png">
+    <link rel="apple-touch-icon" sizes="114×114" href="WebApp/images/common/favicon_cgv.png">
+
+    <link rel="stylesheet" type="text/css" href="WebApp/css/common.css?dt=20200326121020">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/header.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/piemenu.css">
+
+    <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdate.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/eggupdateV4.css">
+
+    <link rel="stylesheet" type="text/css" href="WebApp/css/v5/master.css">
+
+    <link rel="stylesheet" type="text/css" href="css/fanpage.css?dt=20200326121020">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="WebApp/css/swiper.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="WebApp/CDN/css/v6/preegg.css">
+
+
+    <script type="text/javascript" src="WebApp/js/Common/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="WebApp/js/jquery.fittext.js"></script>
+    <!-- <script type="text/javascript" src="WebApp/js/Chart.custom.js"></script> -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="WebApp/js/Common/swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="WebApp/css/v5/iCheck.css">
+    <script>var gateURL = "http://m.cgv.co.kr/WebApp/";</script>
+    <script>var ticketURL = "http://m.cgv.co.kr/";</script>
+    <script type="text/javascript" src="js/fanpageMovie.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="js/fanpageCommon.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="js/fanpage.appInterface.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="js/fanpage.util.js"></script>
+    <script type="text/javascript" src="js/check.util.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/iphone-inline-video.js"></script>
+    <script type="text/javascript" src="js/fanpage.video.controls.js?dt=20200326121020"></script>
+    <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <style>
+        .con_loading {
+            padding: 40px 0 50px 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .reptxt p {
+            -webkit-user-select: all;
+            -moz-user-select: all;
+            -ms-user-select: all;
+            user-select: all;
+        }
+
+        .IIV::-webkit-media-controls-play-button,
+        .IIV::-webkit-media-controls-start-playback-button {
+            opacity: 0;
+            pointer-events: none;
+            width: 5px;
+        }
+
+        /* Chart.js */
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        // Global Variable
+        var IsLogin = true;
+        var IsWebView_Master = false;
+        var AppVersion_Master = 0;
+        var movieGroupTitle = "기생충";
+        var strMovieIdx = "81774";
+        var autoPlayYn = "9";
+        var strUcd = "8940889";
+        var strUserId = "jh850403";
+        var IsView = "Y";
+        var fanpageGubunVal = "";
+        var fanpageMember = "Member";
+        var fanpageAdUrl = "";
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/movieinfoV4.css">
+
+    <style type="text/css">
+        .allview_wrap {
+            display: none;
+        }
+
+        .cls_headertitle_box {
+            border: 0 !important;
+        }
+    </style>
+
+</head>
+<body class="bg_white" style="">
+
+
+<!-- 매력 포인트 레이어 -->
+<section id="charmWriteForm" style="width: 100%; height: 100%; position: fixed; left: 0px; background-color: white; display: block; z-index: 20002; top: 0px;" class="wrap">
+    <section class="content_wrap" id="ContainerView">
+        <!-- 매력 포인트 레이어 -->
+        <div class="layer_pop2_re on" id="charmLayerPop">
+            <div class="fogbg"></div>
+            <div class="inner charm_popup">
+                <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
+                    수정 부분 :
+                    <p>* .charm_popup 클래스 추가</p>
+                    <p>* 팝업 변경 (기존팝업있음)</p>
+                    <p>* 버튼 .on 상태 추가 (초기값 선택 없어야함)</p>
+                    <p>* 버튼 .disabled 상태 추가 (초기값 disabled 상태여야함)</p>
+                    <p>* script 추가 됨</p>
+                </div>
+                <div class="popup_title">영화매력 선택</div>
+                <div class="box_title">
+                    <span class="icon"></span>
+                    <span class="desc">
+                        <span>이 영화의 매력과 감정 포인트를 선택해주세요!</span><br>
+                        <span class="red">중복선택</span>이 가능합니다.
+                    </span>
+                </div>
+                <div class="rating">
+                    <div class="box">
+                        <div class="title">매력 포인트</div>
+                        <div class="list">
+                            <ul>
+                                <li class="on"><a href="#!">감독연출</a></li>
+                                <li><a href="#!">스토리</a></li>
+                                <li><a href="#!">영상미</a></li>
+                                <li><a href="#!">배우연기</a></li>
+                                <li><a href="#!">OST</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="title">감정 포인트</div>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#!">몰입감</a></li>
+                                <li><a href="#!">마음이 편한</a></li>
+                                <li><a href="#!">현실적 공감</a></li>
+                                <li><a href="#!">잔잔한 감동</a></li>
+                                <li><a href="#!">추억회상</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn_close" href="javascript:charmCloseWrite();"><i class="sprite_preegg close"></i>팝업 닫기</a>
+                <a class="btn_confirm" href="javascript:charmWriteProc();">확인</a>
+            </div>
+        </div>
+
+
+    </section>
+
+</section>
+
+<script>
+    $('.rating .list li a').on('click', function () {
+        if ($(this).parent().hasClass('on')){
+            $(this).parent().removeClass('on');
+        } else {
+            $(this).parent().addClass('on');
+        }
+    })
+</script>
+
+<!-- //평점 쓰기 끝 -->
+
+<script type="text/javascript">
+
+    /** 객체 정의 */
+    var O_ATTACH_FILE_MAP = null;// 컨텐츠 파일 임시저장 Map 객체
+    var O_DELETE_ITEM_IDX_ARRAY = null;// 삭제한 ItemIdx 임시저장 Array
+    var V_CONTENTS_STAGE = "";//컨텐츠스테이지
+
+    var V_RETURN_PAGE = "";//리턴페이지
+    /**
+     * ready
+     */
+    $(document).ready(function () {
+
+        // 등록화면 열기
+        readyContentsEdit();
+
+    });
+
+    jQuery(function () {
+        function likeOrNot() {
+            $('.likebox label').on('click', function () {
+                var $wrap = $(this).parents('.likebox');
+                $wrap.siblings().removeClass('on');
+                $wrap.addClass('on');
+            });
+
+            $('.likebox input').on('focusin', function () {
+                var $wrap = $(this).parents('.likebox');
+                $wrap.siblings().removeClass('on');
+                $wrap.addClass('on');
+            });
+        }
+
+        likeOrNot();
+    });
+    // 실관람평 등록/수정 상세화면에서 등록/업데이트 버튼 이벤트
+    // gubun : C (등록) / R (수정)
+    function fnSave(gubun) {
+
+        var sPoint = "2";
+        var commentIdx = document.getElementById("commentIdx").value;       //실관람평일련번호
+        var commentContent = document.getElementById("commentContent").value;   //영화내용 (실 관람평 내용)
+        var sGubun = document.getElementById("gubun").value;           	//구분
+        var chkShowView = document.getElementById("chkIsShowView").value;	//관람정보공개여부
+        var oldFileUrl = document.getElementById("oldFileUrl").value;		//기존 파일정보
+        var sData;
+
+        var itemIdx = "";//일련번호
+        var fileUrl = "";//fileUrl
+        var fileFile = "";//파일
+        var sSvcUrl = "";
+
+        if (jQuery("#likeornotBox1").hasClass('on')) {
+            sPoint = "2";
+        } else if (jQuery("#likeornotBox2").hasClass('on')) {
+            sPoint = "1";
+        }
+
+        // 실관람객 여부 Check
+        if (chkShowView == "N") {
+            alert('실관람객에 한하여 관람평 작성이 가능합니다.');
+            return;
+        }
+        var itemObj = $(this).find("img");
+
+        $("#itemList li").each(function () {
+
+            itemObj = $(this).find("img");
+
+            //항목에서 파일키 Get
+            var attachKey = itemObj.attr("attachKey");
+            var attachFile = null;
+            if (!isNull(attachKey)) {
+                // 임시 Map에서 파일 Read
+                attachFile = getFileFromMap(attachKey);
+                if (attachFile == null) {
+                    alert(attachKey + '를 찾을 수 없습니다.');
+                    check = false;
+                    return false;
+                }
+            }
+
+            fileFile = attachFile;//파일
+        });
+
+        sSvcUrl = "/fanpage/saveMovieCmtsView";
+
+
+        // 실관람평 등록일 경우
+        if (sGubun == "C") {
+            sData = {
+                gubun: sGubun
+                , movieIdx: strMovieIdx
+                , commentContent: commentContent
+                , fileFile: fileFile
+                , point: sPoint
+            };
+
+            // 실관람평 수정일 경우
+        } else if (sGubun == "R") {
+
+
+            sData = {
+                gubun: 'U'
+                , commentIdx: commentIdx
+                , commentContent: commentContent
+                , fileUrl: fileUrl
+                , fileFile: fileFile
+                , itemIdx: itemIdx
+                , movieIdx: strMovieIdx
+                , point: sPoint
+                , oldFileUrl: oldFileUrl
+            };
+        }
+
+
+        if (!confirm("저장 하시겠습니까?")) return;
+
+        //실관람객 작성 가능
+        if (commentContent == "") {
+            alert("140자평 내용을 입력해 주세요.");
+        } else {
+
+            if (commentContent.length > 140) {
+                alert("내용은 140자 이하로 등록하셔야 합니다.");
+                return false;
+            }
+
+            // 140자 테스트 //
+            // alert("글자수 : " + commentContent.length+"\n내용 : " + commentContent);
+
+            $.ajax({
+                method: "post",
+                url: sSvcUrl,
+                processData: false,
+                contentType: false,
+                dataType: "json",
+                data: jsJsonToFormData(sData),
+                success: function (result) {
+
+                    alert(result.resultMsg);
+
+                    // 매력 포인트 등록 처리
+                    if (result.resultCd == "0000" && result.hmResultCd == 0) {
+                        document.getElementById("commentIdx").value = result.commentIdx;
+                        charmLayer();
+                    }
+                },
+                error: function () {
+                    alert('처리 중 에러가 발생하였습니다.\n잠시 후에 다시 이용해 주세요.');
+                }
+            });
+        }
+    }
+
+
+    /**
+     * 컨텐츠 파일 임시저장 Map 객체에서 file get
+     */
+    function getFileFromMap(key) {
+
+        if (O_ATTACH_FILE_MAP != null) {
+            return O_ATTACH_FILE_MAP.get(key);
+        }
+        return null;
+
+    }
+
+    function closeWrite() {
+        //document.frmMainInfoView.submit();
+        jQuery("#charmWriteForm").fadeOut();
+        jQuery("#writeForm").fadeOut();
+        location.replace("/fanpage/mainView?movieIdx=81774&iTab=2");
+    }
+
+
+    /**
+     * 컨텐츠 등록 Popup Open
+     */
+    function readyContentsEdit() {
+
+        var oldFileUrl,
+            element = document.getElementById('oldFileUrl');
+
+        if (element != null) {
+            oldFileUrl = element.value;
+        } else {
+            oldFileUrl = '';
+        }
+
+        // 사진/동영상 File 복사 임시저장 객체 초기화
+        O_ATTACH_FILE_MAP = new Map();
+        // 삭제한 ItemIdx 배열 객체 초기화
+        O_DELETE_ITEM_IDX_ARRAY = new Array();
+
+        //alert('C' + "::"+oldFileUrl);
+
+        $('#itemFile').on('change', fnAddAttachFile);
+
+        if (('C' == 'R' && oldFileUrl == '') || 'C' == 'C') {
+            // 항목 초기화
+            initContentsEdit();
+        }
+
+        if ('C' == 'R' && oldFileUrl != '') {
+            $("#itemFile").attr('disabled', true);  // 등록버튼 비활성화
+        }
+
+    }
+
+    /**
+     * 사진/동영상 선택시 change Event
+     */
+    function fnAddAttachFile() {
+
+        var file = $('#itemFile')[0].files[0];
+        var prv_link = "#itemList";
+
+        if (file) {
+            // 올린 파일을 O_ATTACH_FILE_MAP 에 임시 보관 및 key 받기
+            var fileKey = setFileToMap(file);
+            if (fileKey == null) {
+                alert('파일 키를 찾을 수 없습니다.');
+                return;
+            }
+
+            // 사진/동영상 목록에 추가할 태그 생성
+            var addHtml = "";
+
+            // 추가 태그 생성
+            addHtml = '<li><div class="inner"><img src="' + URL.createObjectURL(file) + '" itemIdx="" attachKey="' + fileKey + '" OLD_URL="" alt=""></div><button type="button" class="btn_del" onclick="fnDelItem(this)">삭제</button></li>';
+
+            // 사진/동영상 목록에 생성한 태그 추가
+            $(prv_link).append(addHtml);
+
+            // 사진/동영상 등록 개수 확인 후 추가 버튼 제어
+            vCnt = $(prv_link).children().length;
+
+            $("#itemFile").attr('disabled', true);  // 등록버튼 비활성화
+        }
+
+        /* 사진/동영상 목록 삭제 레이어 */
+        $('.registed_list li').on('mouseover', function () {
+            $(this).addClass('hover');
+        });
+        $('.registed_list li').on('mouseout', function () {
+            $(this).removeClass('hover');
+        });
+        /* 이미지 비율 처리 */
+        registedImgs();
+
+        // 파일선택 항목 초기화
+        clearItemFile($('#itemFile'));
+
+    }
+
+
+    /**
+     * 항목 초기화
+     */
+    function initContentsEdit() {
+
+        // 사진/동영상
+        $("#itemList").empty();
+
+        // 파일선택 항목 초기화
+        clearItemFile($('#itemFile'));
+    }
+
+    /**
+     * 사진/동영상 파일선택 항목 초기화
+     */
+    function clearItemFile(obj) {
+
+        if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+            // Explorer 일때
+            $(obj).replaceWith($(obj).clone(true));
+        } else {
+            // 기타 Browser 일때
+            $(obj).val("");
+        }
+    }
+
+    /**
+     * 컨텐츠 파일 임시저장 Map 객체에 file set
+     */
+    function setFileToMap(file) {
+
+        var attachKeyDate = new Date();
+        var attachKey = attachKeyDate.format("yyyyMMddHHmmss") + attachKeyDate.getMilliseconds();
+
+        if (O_ATTACH_FILE_MAP != null) {
+            O_ATTACH_FILE_MAP.put(attachKey, file);
+            return attachKey;
+        }
+        return null;
+    }
+
+    /**
+     * 사진/동영상 List del item click
+     */
+    function fnDelItem(btnObj) {
+
+//		debug($(btnObj).parent().html());
+
+        document.getElementById("oldFileUrl").value = '';
+
+        var itemIdx = 0;
+        var imgCnt = $(btnObj).parent().find("img").length;
+
+        itemIdx = $(btnObj).parent().find("img").attr("itemIdx");
+
+        // itemIdx가 null이 아닌경우는 등록되어있는 항목으로 삭제 대상에 넣어주어야한다.
+        if (!isNull(itemIdx)) {
+            O_DELETE_ITEM_IDX_ARRAY.push(itemIdx);
+        }
+
+        // 항목 갯수가 Max건수가 아닌경우 plus 추가
+        var addPlusYn = false;
+        var vCnt = $("#itemList").children().length;
+
+        $("#itemFile").attr('disabled', false);   //등록버튼 활성화
+
+        // 화면에서 선택한 항목삭제
+        var idx = $(btnObj).parent().index();
+        $(btnObj).parent().parent().find("li").eq(idx).remove();
+
+        //$(btnObj).parent().find("img").attr("itemIdx");
+    }
+
+    /**
+     * 이미지 비율 처리
+     */
+    function registedImgs() {
+
+        setTimeout(init = function () {
+
+            var $imgWrap = $('.registed_list');
+            $imgWrap.imagesLoaded(function () {
+                var _imgNum = $imgWrap.find('li').length;
+                for (var i = 0; i < _imgNum; i++) {
+                    imgCheckRatio($imgWrap.find('li').eq(i).find('img'));
+                }
+            });
+        }, 400);
+
+    }
+
+    /**
+     * 포스터n스틸컷 : 이미지 비율 체크
+     */
+    function imgCheckRatio(obj) {
+        var boxW = obj.parent().width(),
+            boxH = obj.parent().height(),
+            objW = obj.width(),
+            objH = obj.height();
+
+        if (objW > objH) {
+            obj.parent().addClass('land');
+        } else if (objW < objH) {
+            obj.parent().addClass('port');
+        } else {
+            obj.parent().addClass('stretch');
+        }
+    }
+
+
+    /**
+     * 에러이미지 처리 : 파일업로드.jsp에서 필요하다고 함
+     */
+    function errorImage(obj) {
+        $(obj).attr('src', "/img/common/default-img.png");
+    }
+
+    /*매력 포인트 레이어 열기. */
+    function charmLayer() {
+        jQuery('.charm_list2 input[type=checkbox]').prop("checked", false);      /* .charm_list checkbox 초기화 2016.01.08 yjhan*/
+
+        jQuery('.layer_pop2_re').addClass('on');
+
+        var fwidth = document.body.offsetWidth;
+        var fheight = document.body.clientHeight;
+
+        jQuery('body').bind('touchmove', function (e) {
+            touchScrollRemoveOnLayer(e);
+        });
+        jQuery("#charmWriteForm").attr("style", "width:100%;height:100%;position:fixed;top:" + fheight + "px;left:0px;background-color:White;display:block;z-index:20002;");
+        jQuery("#charmWriteForm").animate({top: "0px"}, {queue: false, duration: "fast"});
+    }
+
+    /*레이어 노출에 따른 터치 이벤트 막기 추가. mwpark_RR2015*/
+    function touchScrollRemoveOnLayer(e) {
+        if (jQuery('#writeForm').css("display") != "none" || jQuery('#charmWriteForm').css("display") != "none") {
+            e.preventDefault();
+        }
+    }
+
+    /*매력 포인트 레이어 닫기. : */
+    function charmCloseWrite() {
+        jQuery('body').unbind('touchmove');
+        jQuery("#charmWriteForm").fadeOut();
+    }
+
+    /* 매력 포인트 투표 등록. mwpark_RR2015*/
+    /* 매력지수 순서 변경(배우연기,스토리,영상미,OST,특수효과 → 감독연출,스토리,영상미,배우연기,OST)    2016.02.04 yjhan*/
+    function charmWriteProc() {
+
+        var sActing = "N";
+        var sStory = "N";
+        var sVisual = "N";
+        var sOst = "N";
+        var sEffect = "N";
+
+        if (jQuery("#charm1-5").prop("checked")) {   //감독연출
+            sEffect = "Y";
+        }
+        if (jQuery("#charm1-2").prop("checked")) {   //스토리
+            sStory = "Y";
+        }
+        if (jQuery("#charm1-3").prop("checked")) {   //영상미
+            sVisual = "Y";
+        }
+        if (jQuery("#charm1-1").prop("checked")) {   //배우연기
+            sActing = "Y";
+        }
+        if (jQuery("#charm1-4").prop("checked")) {   //OST
+            sOst = "Y";
+        }
+
+        if (sActing == "N" && sStory == "N" && sVisual == "N" && sOst == "N" && sEffect == "N") {
+            alert("영화의 매력 포인트를 선택해주세요.");
+            return;
+        }
+
+        var sCommentIdx = document.getElementById("commentIdx").value;
+        var sData = {
+            MovieIdx: strMovieIdx, CommentIdx: sCommentIdx
+            , Effect: sEffect
+            , Story: sStory
+            , Visual: sVisual
+            , Acting: sActing
+            , Ost: sOst
+        };
+
+        //alert(V_MOVIE_IDX + "::"+ V_CONTENTS_IDX);
+        $.ajax({
+            method: "post",
+            url: "/fanpage/saveMovieCmtsCharmPnt",
+            dataType: "json",
+            data: sData,
+            success: function (result) {
+
+                alert(result.resultHmMsg);
+
+                if (result.resultCD == '00000') {
+                    if (result.resultHmCd == '00000') {
+                        //document.frmMainInfoView.submit();
+                        jQuery("#charmWriteForm").fadeOut();
+                        jQuery("#writeForm").fadeOut();
+                        location.replace("/fanpage/mainView?movieIdx=81774&iTab=2");
+                    }
+                }
+            },
+            error: function () {
+                alert('처리 중 에러가 발생하였습니다.\n잠시 후에 다시 이용해 주세요.');
+            }
+        });
+    }
+
+    // 글자수 Check
+    /* $('.textarea_box').on("keyup", function(){
+    	var commentContent = $('#commentContent').val();   // 실 관람평 내용
+    	var chkLeng = 140 - commentContent.length;
+    	if(chkLeng < 0){
+    		$('#commentContent').val( commentContent.substr(0, 140) );
+    	}
+    	else {
+	    	$('.chk_length').text(chkLeng+"자");
+    	}
+    }) */
+
+    // 하단 메뉴바 노출 (카메라)
+    $('.float_btnbox').css("bottom", "0px");
+</script>
+
+
+<!-- 파일업로드 관련 스크립트 include -->
+<!-- //평점 쓰기 끝 -->
+</body>
+</html>
