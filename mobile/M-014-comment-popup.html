@@ -126,10 +126,10 @@
 <body class="bg_white" style="">
 
 
-<!-- 매력포인트 레이어 -->
+<!-- 매력 포인트 레이어 -->
 <section id="charmWriteForm" style="width: 100%; height: 100%; position: fixed; left: 0px; background-color: white; display: block; z-index: 20002; top: 0px;" class="wrap">
     <section class="content_wrap" id="ContainerView">
-        <!-- 매력포인트 레이어 -->
+        <!-- 매력 포인트 레이어 -->
         <div class="layer_pop2_re on" id="charmLayerPop">
             <div class="fogbg"></div>
             <div class="inner charm_popup">
@@ -339,7 +339,7 @@
 
                     alert(result.resultMsg);
 
-                    // 매력포인트 등록 처리
+                    // 매력 포인트 등록 처리
                     if (result.resultCd == "0000" && result.hmResultCd == 0) {
                         document.getElementById("commentIdx").value = result.commentIdx;
                         charmLayer();
@@ -571,7 +571,7 @@
         $(obj).attr('src', "/img/common/default-img.png");
     }
 
-    /*매력포인트 레이어 열기. */
+    /*매력 포인트 레이어 열기. */
     function charmLayer() {
         jQuery('.charm_list2 input[type=checkbox]').prop("checked", false);      /* .charm_list checkbox 초기화 2016.01.08 yjhan*/
 
@@ -594,13 +594,13 @@
         }
     }
 
-    /*매력포인트 레이어 닫기. : */
+    /*매력 포인트 레이어 닫기. : */
     function charmCloseWrite() {
         jQuery('body').unbind('touchmove');
         jQuery("#charmWriteForm").fadeOut();
     }
 
-    /* 매력포인트 투표 등록. mwpark_RR2015*/
+    /* 매력 포인트 투표 등록. mwpark_RR2015*/
     /* 매력지수 순서 변경(배우연기,스토리,영상미,OST,특수효과 → 감독연출,스토리,영상미,배우연기,OST)    2016.02.04 yjhan*/
     function charmWriteProc() {
 
@@ -627,7 +627,7 @@
         }
 
         if (sActing == "N" && sStory == "N" && sVisual == "N" && sOst == "N" && sEffect == "N") {
-            alert("영화의 매력포인트를 선택해주세요.");
+            alert("영화의 매력 포인트를 선택해주세요.");
             return;
         }
 

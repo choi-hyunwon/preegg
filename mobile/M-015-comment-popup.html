@@ -131,7 +131,7 @@
             }
         }
 
-        /*매력포인트 레이어 열기. mwpark_RR2015*/
+        /*매력 포인트 레이어 열기. mwpark_RR2015*/
         function charmLayer(commentIdx) {
 
             jQuery('.charm_list li').removeClass('on');                             /* .charm_list li       초기화 2016.01.08 yjhan*/
@@ -150,7 +150,7 @@
             jQuery("#charmWriteForm").animate({top: "0px"}, {queue: false, duration: "fast"});
         }
 
-        /*매력포인트 레이어 닫기. : mwpark_RR2015*/
+        /*매력 포인트 레이어 닫기. : mwpark_RR2015*/
         function charmCloseWrite() {
             jQuery('body').unbind('touchmove');
             jQuery("#charmWriteForm").fadeOut();
@@ -159,7 +159,7 @@
             movieTab(3);
         }
 
-        /* 매력포인트 투표 등록. mwpark_RR2015*/
+        /* 매력 포인트 투표 등록. mwpark_RR2015*/
         /* 매력지수 순서 변경(배우연기,스토리,영상미,OST,특수효과 → 감독연출,스토리,영상미,배우연기,OST)    2016.02.04 yjhan*/
         function charmWriteProc() {
             var param = {};
@@ -188,7 +188,7 @@
             }
 
             if (param.acting == "N" && param.story == "N" && param.visual == "N" && param.ost == "N" && param.effect == "N") {
-                alert("영화의 매력포인트를 선택해주세요.");
+                alert("영화의 매력 포인트를 선택해주세요.");
                 return;
             }
 
@@ -2513,7 +2513,7 @@
             initChart();
         }
 
-        /*평점 개편으로 매력포인트 체크시 체크 이미지 표시 : 2016.01.04 yjhan*/
+        /*평점 개편으로 매력 포인트 체크시 체크 이미지 표시 : 2016.01.04 yjhan*/
         function chkCharm() {
             jQuery('.charm_list input[type=checkbox]').click(function () {
 

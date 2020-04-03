@@ -236,7 +236,7 @@ chkPoint = function () {
                     var resIndex = arrRes[2];
                     if (resCode == "0000") {
                         if (confirm(resMsg)) {
-                            charmLayer(resIndex);   /*정상적인 평점 등록 후 매력포인트 투표 이동. mwpark_RR2015*/
+                            charmLayer(resIndex);   /*정상적인 평점 등록 후 매력 포인트 투표 이동. mwpark_RR2015*/
                             /* 매력 포인트 레이어 팝업 열기 전 글쓰기 폼을 닫아야 하는 경우 아래 주석 해제. mwpark_RR2015
                             jQuery(".score_write").hide();
                             jQuery("#writeForm").fadeOut();
@@ -1189,7 +1189,7 @@ function addCharm(param) {
     charmAjax.request({ commentIdx: param.commentIdx, movieIdx: param.movieIdx, acting: param.acting, story: param.story, visual: param.visual, ost: param.ost, effect: param.effect, chkState: "updateCharm" });
 }
 
-/*해당영화에 자신의 매력포인트 정보를 가져오기 . mwpark_RR2015*/
+/*해당영화에 자신의 매력 포인트 정보를 가져오기 . mwpark_RR2015*/
 function getMyCharm(commentIdx) {
     //console.log("getMyCharm....");
     //console.log(commentIdx);
@@ -1198,11 +1198,11 @@ function getMyCharm(commentIdx) {
         type: 'xhr',
         onload: function (res) {
             if (!res.status() == 200) {
-                alert("매력포인트를 불러오는데 실패하였습니다. 잠시후 재시도 바랍니다.");
+                alert("매력 포인트를 불러오는데 실패하였습니다. 잠시후 재시도 바랍니다.");
                 return;
             }
             if (res.text().trim() == "ERROR") {
-                alert("매력포인트를 불러오는데 실패하였습니다. 잠시후 재시도 바랍니다.");
+                alert("매력 포인트를 불러오는데 실패하였습니다. 잠시후 재시도 바랍니다.");
                 return;
             }
             var resText = res.text().trim();
@@ -1213,7 +1213,7 @@ function getMyCharm(commentIdx) {
             }
 
             /* charmLayer에서 .charm_list li의 초기화 하도록 변경. 
-            * 매력포인트 체크 표시를 위해 jQuery("#charm1-1").prop("checked", true); → jQuery("#charm1-1").click(); 으로 변경   2016.01.04 yjhan*/
+            * 매력 포인트 체크 표시를 위해 jQuery("#charm1-1").prop("checked", true); → jQuery("#charm1-1").click(); 으로 변경   2016.01.04 yjhan*/
 
             var charmObj = eval("(" + resText + ")");
 

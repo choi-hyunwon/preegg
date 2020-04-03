@@ -1412,12 +1412,12 @@
         <script id="charmPoint" type="text/template">
             <div class="layer-contents on-shadow" style="width:577px;">
                 <div class="popwrap">
-                    <h1>매력포인트</h1>
+                    <h1>매력 포인트</h1>
                     <div class="pop-contents charm-point">
 
                         <div class="charm-cont">
                             <div class="headtxt">
-                                <p>이영화의 매력포인트를 선택해주세요. 중복선택이 가능합니다.</p>
+                                <p>이영화의 매력 포인트를 선택해주세요. 중복선택이 가능합니다.</p>
                             </div>
                             <div class="inp-choose">
                                 <input type="checkbox" id="Effect"/>
@@ -1437,7 +1437,7 @@
                         </div>
 
                     </div>
-                    <button type="button" class="btn-close" id="regCharmCloseBtn">매력포인트 닫기</button>
+                    <button type="button" class="btn-close" id="regCharmCloseBtn">매력 포인트 닫기</button>
                 </div>
             </div>
         </script>
@@ -2492,7 +2492,7 @@
 
                     }
 
-                    // 매력포인트 레이어팝업
+                    // 매력 포인트 레이어팝업
                     function charmPointPop(commentIdx) {
                         var $std = $(this),
                             options = {
@@ -2558,7 +2558,7 @@
                                 Effect = 'Y'
                             }
                             if (acting == 'N' && story == 'N' && visual == 'N' && ostChk == 'N' && Effect == 'N') {
-                                alert("영화의 매력포인트를 선택해주세요.");
+                                alert("영화의 매력 포인트를 선택해주세요.");
                                 return;
                             }
 
@@ -2813,12 +2813,12 @@
         <script id="Script4" type="text/x-jquery-tmpl">
 <div class="layer-contents on-shadow" style="width:577px;" id="my-list-charmLayer">
     <div class="popwrap">
-        <h1>매력포인트</h1>
+        <h1>매력 포인트</h1>
         <div class="pop-contents charm-point">
 
 			<div class="charm-cont">
 				<div class="headtxt">
-					<p>이영화의 매력포인트를 선택해주세요. 중복선택이 가능합니다.</p>
+					<p>이영화의 매력 포인트를 선택해주세요. 중복선택이 가능합니다.</p>
 				</div>
 				<div class="inp-choose">
                     {{if Effect == "Y"}}
@@ -2858,7 +2858,7 @@
 			</div>
             <input type="hidden" id="my-list-charmMovieIdx" value="${MovieIdx}" />
         </div>
-        <button type="button" class="btn-close" id="my-list-charmCloseBtn">매력포인트 닫기</button>
+        <button type="button" class="btn-close" id="my-list-charmCloseBtn">매력 포인트 닫기</button>
     </div>
 </div>
 
@@ -3081,7 +3081,7 @@
 
                     /*[2015-12-15]입력 글자 바이트 end : add_mwpark*/
 
-                    /*[2015-12-15] 매력포인트 가져오기 : add_mwpark*/
+                    /*[2015-12-15] 매력 포인트 가져오기 : add_mwpark*/
                     function GetCharm(commentIdx) {
                         var charmObj = app.movie();
                         if (!charmObj.GetCharmPoint) {
@@ -3106,7 +3106,7 @@
                         };
                     };
 
-                    /*[2015-12-15]  매력포인트 레이어팝업: add_mwpark*/
+                    /*[2015-12-15]  매력 포인트 레이어팝업: add_mwpark*/
                     function charmPointPop(result) {
                         result.MovieIdx = 83171;
                         var $std = $(this),
@@ -3149,7 +3149,7 @@
                                 charmObj.effect = "Y";
                             }
                             if (charmObj.acting == "N" && charmObj.story == "N" && charmObj.visual == "N" && charmObj.ost == "N" && charmObj.effect == "N") {
-                                alert("영화의 매력포인트를 선택해주세요.");
+                                alert("영화의 매력 포인트를 선택해주세요.");
                                 return;
                             }
                             charmingEdit(comIdx, charmObj);
