@@ -473,9 +473,16 @@
 }
 
 
-.mi_btn_list .btn_preegg.on::before {
+.mi_btn_list .btn_preegg.default::before {
+    background-position: 0px -40px;
+}
+.mi_btn_list .btn_preegg.favor::before {
     background-position: -40px -40px;
 }
+.mi_btn_list .btn_preegg.hate::before {
+    background-position: -80px -40px;
+}
+
 
 
 /**
