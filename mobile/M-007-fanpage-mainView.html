@@ -357,12 +357,14 @@
                 </div>
                 <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
                     수정 부분 :
-                    <p>* 프리 에그 아이콘 변경 : .preegg 변경 </span></p>
+                    <p>* 프리에그 아이콘 변경 30*30</p>
+                    <p>.preegg .like .hate 클래스로 분기</p>
                 </div>
+
                 <ul class="fp_btn_list type3">
                     <li class="" data-src="off" id="wishFlag">
                         <a href="javascript:;" onclick="fnMainOpt('FG', $(this));" class="preegg">
-								<span>프리에그</span>
+                            <span>프리에그</span>
                         </a>
                     </li>
                     <li class="">
@@ -372,9 +374,42 @@
                             <span>공유하기</span>
                         </a>
                     </li>
+                    <li><a href="javascript:;" class="reserve"
+                           onclick="alert('선택하신 영화는 현재 예매 준비중으로 상영스케줄이 없습니다.')"><span>예매준비중</span></a></li>
 
-                    <li class="on"><a href="javascript:;" onclick="fnReservation('00', '', 'Y');"
-                                      class="reserve reserve_on"><span>예매하기</span></a></li>
+                </ul>
+                <ul class="fp_btn_list type3">
+                    <li class="" data-src="off" id="wishFlag">
+                        <a href="javascript:;" onclick="fnMainOpt('FG', $(this));" class="preegg like">
+                            <span>프리에그</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:;" onclick="
+															fnShare_Web();
+															" class="share">
+                            <span>공유하기</span>
+                        </a>
+                    </li>
+                    <li><a href="javascript:;" class="reserve"
+                           onclick="alert('선택하신 영화는 현재 예매 준비중으로 상영스케줄이 없습니다.')"><span>예매준비중</span></a></li>
+
+                </ul>
+                <ul class="fp_btn_list type3">
+                    <li class="" data-src="off" id="wishFlag">
+                        <a href="javascript:;" onclick="fnMainOpt('FG', $(this));" class="preegg hate">
+                            <span>프리에그</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:;" onclick="
+															fnShare_Web();
+															" class="share">
+                            <span>공유하기</span>
+                        </a>
+                    </li>
+                    <li><a href="javascript:;" class="reserve"
+                           onclick="alert('선택하신 영화는 현재 예매 준비중으로 상영스케줄이 없습니다.')"><span>예매준비중</span></a></li>
 
                 </ul>
 
