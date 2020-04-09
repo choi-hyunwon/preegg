@@ -1,0 +1,60 @@
+
+
+* 퍼블리싱 ver 0.5
+
+웹사이트 : 
+
+  ☐ W-004-movietrailer.html
+    ☐ .col-playerinfo-preegg 클래스 추가
+    ☐ 버튼 4종 샘플링 처리
+
+  ☐ W-005-detail-view-popup.html
+    ☐ 아이콘 변경에 따른 클래스명 추가
+    ☐ 아이콘 클래그 변경 : "sprite_preegg big favor" "sprite_preegg big hate"
+
+  ☐ W-011-detail-view-preopen.html
+    ☐ .link-count에 클래스 추가
+    ☐ 버튼 3종류 추가 : .favor, .hate
+
+  ☐ W-012-detail-view.html
+    ☐ .link-count에 클래스 추가
+    ☐ 버튼 3종류 추가 : .favor, .hate
+    ☐ 차트 속성 변경 : "fontFamily": 'CJONLYONENEW'
+
+  ☐ W-013-detail-view.html
+    ☐ .link-count에 클래스 추가
+    ☐ 버튼 3종류 추가 : .favor, .hate
+    ☐ 차트 속성 변경 : "fontFamily": 'CJONLYONENEW'
+
+  ☐ W-015-mycgv.html
+    ☐ 프리에그 아이콘 변경
+    ☐ 이미지 파일 추가 : /R2014/images/common/ico/mycgv/icon_preegg.png
+
+  ☐ W-020-detail-view-lt-ie9.html
+    ☐ 신규파일 추가 : ie9 이하 차트 미 노출 케이스
+
+
+ 모바일 : 
+
+  ☐ M-005-fanpage-mainView-preopen.html
+    ☐ .preegg .favor .hate 클래스로 분기
+
+  ☐ M-006-fanpage-mainView.html
+    ☐ .preegg .favor .hate 클래스로 분기
+
+  ☐ M-007-fanpage-mainView.html
+    ☐ .preegg .favor .hate 클래스로 분기
+
+  ☐ M-008-movieDetail-preopen.html
+    ☐ .preegg .favor .hate 클래스로 분기
+
+  ☐ M-009-movieDetail.html
+    ☐ .preegg .favor .hate 클래스로 분기
+
+  ☐ M-010-movieDetail.html
+    ☐ .preegg .favor .hate 클래스로 분기
+
+  ☐ M-011-emotion-popup.html
+    ☐ 프리에그 아이콘 클래스 변경
+
+
