@@ -767,13 +767,21 @@
                         <span class="screentype">
 
         </span>
+                        <div class="edit-publish" style="padding: 10px; background-color: #9b2c98; font-size: 16px; color: #fff;">
+                            수정 부분 : ver 0.5
+                            <p>* .link-count에 클래스 추가</p>
+                            <p>* 버튼 3종류 추가 : .favor, .hate</p>
+                        </div>
+
                         <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
                             수정 부분 :
                             <p>* .btn-like, .count 삭제</p>
                             <p>* 프리 에그 버튼 추가</p>
                         </div>
                         <span class="like">
-                            <a class="link-count" href="#"><i class="sprite_preegg default"></i>관심Egg</a>
+                            <a class="link-count " href="#"><i class="sprite_preegg btn_md default"></i>프리에그</a>
+                            <a class="link-count favor" href="#"><i class="sprite_preegg btn_md favor"></i>프리에그</a>
+                            <a class="link-count hate" href="#"><i class="sprite_preegg btn_md hate"></i>프리에그</a>
                             <a class="link-reservation" href="/ticket/?MOVIE_CD=20022959&amp;MOVIE_CD_GROUP=20022959">예매</a>
                         </span>
 
@@ -1052,12 +1060,17 @@
 
                                     <button type="button" class="btn-prev">이전 페이지 이동</button>
                                     <button type="button" class="btn-next">다음 페이지 이동</button>
+                                    <button type="button" class="btn-next">다음 페이지 이동</button>
                                 </div>
                             </div>
                         </div><!-- .sect-stillcut -->
 
 
                         <div class="sect-grade">
+                            <div class="edit-publish" style="padding: 10px; background-color: #9b2c98; font-size: 16px; color: #fff;">
+                                수정 부분 : ver 0.5
+                                <p>* 차트 속성 변경 : "fontFamily": 'CJONLYONENEW'  </p>
+                            </div>
                             <div class="edit-publish" style="padding: 10px; background-color: #9dc239; font-size: 16px; color: #fff;">
                                 수정 부분 :
                                 <p>* 섹션 전체 재코드 생성 </p>
@@ -1187,13 +1200,13 @@
                                     "autoResize": false,
                                     "color": "rgb(0,0,0)",
                                     "fontSize": 12,
-                                    "fontFamily": "Helvetica",
+                                    "bold": true,
+                                    "fontFamily": 'CJONLYONENEW',
                                     "tapToActivate": false,
                                     "rollOverGraphItem": function () {
                                         console.log('rollOverGraphItem')
 
                                     }
-
                                 });
                                 var chart = AmCharts.makeChart("emotion", {
                                     "type": "radar",
@@ -1273,7 +1286,7 @@
                                     "autoResize": false,
                                     "color": "rgb(0,0,0)",
                                     "fontSize": 12,
-                                    "fontFamily": "Helvetica",
+                                    "fontFamily": 'CJONLYONENEW',
                                     "tapToActivate": false,
                                     "rollOverGraphItem": function () {
                                         console.log('rollOverGraphItem')
