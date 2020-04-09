@@ -21,21 +21,48 @@
     background-position: 0px 0px;
 }
 
-/*.sprite_preegg.selected{
-    width: 16px;
+
+/**
+    프리에그 웹사이트 팝업 선택 버튼
+ */
+
+.sprite_preegg.btn_md {
+    width: 18px;
     height: 20px;
-    background-position: -20px 0px;
 }
-.sprite_preegg.count{
-    width: 16px;
-    height: 20px;
-    background-position: -40px 0px;
+.sprite_preegg.btn_md.default {
+    background-position: -30px 0px;
 }
-.sprite_preegg.detail{
-    width: 16px;
-    height: 20px;
-    background-position: -60px 0px;
-}*/
+
+.sprite_preegg.btn_md.favor {
+    background-position: -50px 0px;
+}
+
+.sprite_preegg.btn_md.hate {
+    background-position: -70px 0px;
+}
+
+
+.sprite_preegg.btn_sm {
+    width: 14px;
+    height: 16px;
+    margin-top: 0 !important;
+}
+.sprite_preegg.btn_sm.default {
+    background-position: -90px 0px;
+}
+
+.sprite_preegg.btn_sm.favor {
+    background-position: -110px 0px;
+}
+
+.sprite_preegg.btn_sm.hate {
+    background-position: -130px 0px;
+}
+
+
+
+
 
 .sprite_preegg.big {
     width: 54px;
@@ -46,17 +73,23 @@
 .sprite_preegg.big.default {
     background-position: 0px -40px;
 }
-
-.sprite_preegg.big.bad {
+.sprite_preegg.big.favor {
     background-position: -60px -40px;
 }
-
-.sprite_preegg.big.good {
+.sprite_preegg.big.hate {
     background-position: -120px -40px;
 }
 
+.sprite_preegg.big.bad {
+    background-position: 0 -140px;
+}
+
+.sprite_preegg.big.good {
+    background-position: -60px -140px;
+}
+
 .sprite_preegg.big.great {
-    background-position: -180px -40px;
+    background-position: -120px -140px;
 }
 
 
@@ -288,25 +321,53 @@
 
 
 .link-count {
-    width: 100px;
+    width: 104px;
     height: 33px;
-    border: 1px solid #cccccc;
-    line-height: 31px;
+    border: 1px solid #222222;
+    line-height: 33px;
     text-align: center;
     display: inline-block;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
     margin-right: 2px;
-    color: #444444;
+    color: #222222;
     font-size: 14px;
     font-weight: 400;
     background-color: #fdfcf0;
 }
-
+.link-count:active {
+    background-color: #fdfcf0;
+}
 .link-count i {
     margin-right: 3px;
 }
+
+.link-count.favor,
+.link-count.hate {
+    background-color: #ffedec;
+    color: #e71a0f;
+    border-color: #e1817c;
+}
+
+.link-count.link-count_sm {
+    width: 97px;
+    height: 25px;
+    border: 0 none;
+    line-height: 25px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.link-count.link-count_sm.favor,
+.link-count.link-count_sm.hate {
+    background-color: #fdfcf0;
+    color: #222222;
+}
+
+
 
 
 /**
@@ -547,5 +608,37 @@
     background: url(../images/sprite/sprite_preegg.png) 0 -110px no-repeat !important;
 
 }
+
+
+
+/**
+    mypage 하트 아이콘 프리에그로 변경
+ */
+.sect-mycgv-reserve.movielog.col4 .box-inner.preegg {
+    background: url(../images/common/ico/mycgv/icon_preegg.png) no-repeat 50% 16px;
+}
+
+
+/**
+    무비 트레일러
+ */
+
+.col-playerinfo-preegg .box-contents {
+    padding-top: 0;
+}
+.col-playerinfo-preegg .box-contents .like a {
+    margin-bottom: 6px;
+}
+
+[class*="col-playerinfo-preegg"] .like .link-reservation {
+    width: 97px !important;
+    height: 25px !important;
+    background: url(../images/sprite/sprite_preegg.png) 0 -110px no-repeat !important;
+
+}
+
+
+
+
 
 
