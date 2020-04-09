@@ -30,6 +30,7 @@
     width: 18px;
     height: 20px;
 }
+
 .sprite_preegg.btn_md.default {
     background-position: -30px 0px;
 }
@@ -48,6 +49,7 @@
     height: 16px;
     margin-top: 0 !important;
 }
+
 .sprite_preegg.btn_sm.default {
     background-position: -90px 0px;
 }
@@ -61,9 +63,6 @@
 }
 
 
-
-
-
 .sprite_preegg.big {
     width: 54px;
     height: 54px;
@@ -73,9 +72,11 @@
 .sprite_preegg.big.default {
     background-position: 0px -40px;
 }
+
 .sprite_preegg.big.favor {
     background-position: -60px -40px;
 }
+
 .sprite_preegg.big.hate {
     background-position: -120px -40px;
 }
@@ -203,6 +204,17 @@
     border: 1px solid #ddd;
     margin-bottom: 20px;
     height: 310px;
+}
+
+.movie_grade .chart_total .sorry {
+    margin-top: 100px;
+    padding-top: 55px;
+    text-align: center;
+    background: url('../images/common/ico/ico_sorry.png') no-repeat 50% 0;
+    font-size: 18px;
+    line-height: 24px;
+    color: #888888;
+    font-weight: 300;
 }
 
 
@@ -336,9 +348,11 @@
     font-weight: 400;
     background-color: #fdfcf0;
 }
+
 .link-count:active {
     background-color: #fdfcf0;
 }
+
 .link-count i {
     margin-right: 3px;
 }
@@ -366,8 +380,6 @@
     background-color: #fdfcf0;
     color: #222222;
 }
-
-
 
 
 /**
@@ -601,6 +613,7 @@
 [class|="sect"][class*="chart"] .like {
     text-align: left !important;
 }
+
 [class|="sect"][class*="wishlist"] .like .link-reservation,
 [class|="sect"][class*="chart"] .like .link-reservation {
     width: 97px !important;
@@ -608,7 +621,6 @@
     background: url(../images/sprite/sprite_preegg.png) 0 -110px no-repeat !important;
 
 }
-
 
 
 /**
@@ -626,6 +638,7 @@
 .col-playerinfo-preegg .box-contents {
     padding-top: 0;
 }
+
 .col-playerinfo-preegg .box-contents .like a {
     margin-bottom: 6px;
 }
