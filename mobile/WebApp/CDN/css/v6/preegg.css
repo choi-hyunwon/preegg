@@ -57,21 +57,21 @@
 .sprite_preegg.big.default {
     background-position: 0px -80px;
 }
-
-/*
-.sprite_preegg.big.selected{
-    background-position: 3px -20px;
-}
-.sprite_preegg.big.count{
-    background-position: 3px -20px;
-}
-.sprite_preegg.big.detail{
-    background-position: 3px -20px;
-}
-*/
-
-.sprite_preegg.big.good {
+.sprite_preegg.big.favor {
     background-position: -40px -80px;
+}
+.sprite_preegg.big.hate {
+    background-position: -80px -80px;
+}
+
+.sprite_preegg.big.bad {
+    background-position: -120px -80px;
+}
+.sprite_preegg.big.good {
+    background-position: -160px -80px;
+}
+.sprite_preegg.big.great {
+    background-position: -200px -80px;
 }
 
 
@@ -98,7 +98,7 @@
 
 .moviePreegg span {
     position: relative;
-    padding-left: 15px
+    padding-left: 20px
 }
 
 .moviePreegg span:before {
@@ -106,8 +106,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 11px;
-    height: 20px;
+    width: 16px;
+    height: 18px;
     background: url('../../images/main/common/sprite_preegg.png');
     background-size: 300px;
 }
@@ -130,17 +130,18 @@
     background-position: 0px 0px;
 }
 
+
 /**
     small
  */
 
 
 .moviePreegg span.small {
-    padding-left: 11px;
+    padding-left: 13px;
 }
 .moviePreegg span.small:before {
     content: '';
-    width: 9px;
+    width: 11px;
     height: 13px;
 }
 
@@ -192,6 +193,12 @@
 
 .fp_btn_list li .preegg:before {
     background-position: 0 -40px;
+}
+.fp_btn_list li .preegg.favor:before {
+    background-position: -40px -40px;
+}
+.fp_btn_list li .preegg.hate:before {
+    background-position: -80px -40px;
 }
 
 
