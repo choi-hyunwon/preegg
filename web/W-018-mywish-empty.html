@@ -663,7 +663,7 @@
                             <div class="inner-contents-log">
                                 <a href="./">
                                     <em>0</em>
-                                    <strong>위시리스트</strong>
+                                    <strong>기대되는 영화</strong>
                                 </a>
                             </div>
                         </div>
@@ -711,7 +711,7 @@
                     <div class="movielog-detail-wrap">
                         <!-- Title & Button Combo -->
                         <div class="tit-mycgv">
-                            <h3>위시리스트</h3>
+                            <h3>기대되는 영화</h3>
                             <p><em>0건</em></p>
                             <div class="sect-sorting">
                                 <label for="order_type" class="hidden">정렬</label>
@@ -787,7 +787,7 @@
                             }
                         });
 
-                        //위시리스트 삭제
+                        //기대되는 영화 삭제
                         $('.sect-wishlist-lst .btn-del').click(function () {
                             RemoveFavoriteMovie($(this).val());
                         });
@@ -802,7 +802,7 @@
                                 successHandler: function (result) {
                                     switch (result.resultCode) {
                                         case "1":
-                                            alert("'위시리스트'에서 삭제되었습니다.");
+                                            alert("'기대되는 영화'에서 삭제되었습니다.");
                                             location.reload();
                                             break;
                                         case "-1":
@@ -847,7 +847,7 @@
 
                                 $("#temp_wishlist").tmpl(result.List).appendTo("#wishlist_container");
 
-                                //위시리스트 삭제
+                                //기대되는 영화 삭제
                                 $('.sect-wishlist-lst .btn-del').click(function () {
                                     RemoveFavoriteMovie($(this).val());
                                 });
