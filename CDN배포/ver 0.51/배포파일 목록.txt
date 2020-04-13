@@ -1,0 +1,44 @@
+CDN배포
+
+버전 : 0.51버전
+일자 : 2020년 04월 09일
+
+
+수정내용
+
+- 아이콘 가이드 수정
+- 선택 안함 아이콘 둥지 제거
+- website : css 버그수정
+- js: amchart.js 추가 (amcharts.js, radar.js)
+
+
+
+mobile
+
+1. CSS
+	경로 : http://img.cgv.co.kr/WebApp/css/v6
+	파일 : preegg.css
+2. image
+	경로 : http://img.cgv.co.kr/WebApp/images/main/common
+	파일 : sprite_preegg.png, sprite_preegg@2x.png, sprite_preegg@3x.png
+
+3. Js
+	경로 : http://img.cgv.co.kr/WebApp/js/
+	파일 : amcharts.js, radar.js
+
+
+website
+
+1. CSS
+	경로 : http://img.cgv.co.kr/R2014/css
+	파일 : preegg.css
+2. image
+	경로 : http://img.cgv.co.kr/R2014/images/sprite
+	파일 : sprite_preegg.png, sprite_preegg@2x.png
+
+	경로 : http://img.cgv.co.kr/R2014/images/common/ico/mycgv
+	파일 : icon_preegg.png
+3. Js
+	경로 : http://img.cgv.co.kr/R2014/js/
+	파일 : amcharts.js, radar.js
+	
