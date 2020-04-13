@@ -1,0 +1,27 @@
+CDN배포
+
+버전 : 0.5버전
+일자 : 2020년 04월 09일
+
+mobile
+
+1. CSS
+	경로 : http://img.cgv.co.kr/WebApp/CDN/css/v6
+	파일 : preegg.css
+2. image
+	경로 : http://img.cgv.co.kr/WebApp/CDN/images/main/common
+	파일 : sprite_preegg.png, sprite_preegg@2x.png, sprite_preegg@3x.png
+
+
+website
+
+1. CSS
+	경로 : http://img.cgv.co.kr/R2014/css
+	파일 : preegg.css
+2. image
+	경로 : http://img.cgv.co.kr/R2014/images/sprite
+	파일 : sprite_preegg.png, sprite_preegg@2x.png
+
+	경로 : http://img.cgv.co.kr/R2014/images/common/ico/mycgv
+	파일 : icon_preegg.png
+
