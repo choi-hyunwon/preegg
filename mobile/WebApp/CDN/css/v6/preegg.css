@@ -142,7 +142,7 @@
 .moviePreegg span.small:before {
     content: '';
     width: 11px;
-    height: 13px;
+    height: 15px;
 }
 
 .moviePreegg span.eggState.small:before {
