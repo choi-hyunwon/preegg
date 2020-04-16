@@ -1,6 +1,6 @@
 /**
-    프리에그(preegg) css version mobile 0.5.1
-    최종 업데이트 : 2020.03.27
+    프리에그(preegg) css version mobile 0.6.0
+    최종 업데이트 : 2020.04.16
     작성자 : 최현원
  */
 
@@ -175,31 +175,53 @@
     html : <a href="javascript:;" onclick="fnMainOpt('FG', $(this));" class="preegg">
  */
 
-.fp_btn_list li .preegg:before {
+.fp_btn_list li a.preegg:before,
+.fp_btn_list li a.share_line:before,
+.fp_btn_list li a.reserve_line:before {
     background: url('../../images/main/common/sprite_preegg.png') no-repeat 0 0;
     background-size: 300px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio:2){
-    .fp_btn_list li .preegg:before {
+    .fp_btn_list li a.preegg:before,
+    .fp_btn_list li a.share_line:before,
+    .fp_btn_list li a.reserve_line:before {
         background-image: url('../../images/main/common/sprite_preegg@2x.png');
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:3){
-    .fp_btn_list li .preegg:before {
+    .fp_btn_list li a.preegg:before,
+    .fp_btn_list li a.share_line:before,
+    .fp_btn_list li a.reserve_line:before {
         background-image: url('../../images/main/common/sprite_preegg@3x.png');
     }
 }
 
-.fp_btn_list li .preegg:before {
+.fp_btn_list li a.preegg:before {
     background-position: 0 -40px;
 }
-.fp_btn_list li .preegg.favor:before {
+.fp_btn_list li a.preegg.favor:before {
     background-position: -40px -40px;
 }
-.fp_btn_list li .preegg.hate:before {
+.fp_btn_list li a.preegg.hate:before {
     background-position: -80px -40px;
 }
+
+.fp_btn_list li a.share_line:before {
+    background-position: -120px -40px;
+}
+.fp_btn_list li a.reserve_line:before {
+    background-position: -160px -40px;
+}
+
+.fp_btn_list li a.reserve_line.on span{
+    color: #ad2b32 !important;
+}
+
+.fp_btn_list li a.reserve_line.on:before {
+    background-position: -200px -40px;
+}
+
 
 
 /**
@@ -360,7 +382,7 @@
     display: block;
     font-size: 11px;
     color: #e37220;
-    font-weight: 300;
+    font-weight: 400;
     padding-top: 3px;
 }
 .movie-chart .rating .box .tooltip {
@@ -445,9 +467,11 @@
     html : <div class="comment_wrap">
  */
 
-.mi_btn_list .btn_preegg{
+.mi_btn_list a{
     position: relative;
 }
+.mi_btn_list .btn_share_line::before,
+.mi_btn_list .btn_reserve_line::before,
 .mi_btn_list .btn_preegg::before {
     content: '';
     position: absolute;
@@ -461,12 +485,16 @@
     background-position: 0 -40px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio:2){
+    .mi_btn_list .btn_share_line::before,
+    .mi_btn_list .btn_reserve_line::before,
     .mi_btn_list .btn_preegg::before {
         background-image: url('../../images/main/common/sprite_preegg@2x.png');
     }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:3){
+    .mi_btn_list .btn_share_line::before,
+    .mi_btn_list .btn_reserve_line::before,
     .mi_btn_list .btn_preegg::before {
         background-image: url('../../images/main/common/sprite_preegg@3x.png');
     }
@@ -482,6 +510,34 @@
 .mi_btn_list .btn_preegg.hate::before {
     background-position: -80px -40px;
 }
+
+.mi_btn_list .btn_share_line::before {
+    background-position: -120px -40px;
+}
+
+.mi_btn_list .btn_reserve_line::before {
+    background-position: -160px -40px;
+}
+.mi_btn_list .btn_reserve_line.on::before {
+    background-position: -200px -40px;
+}
+
+.mi_btn_list .btn_reserve_line span {
+    height: 24px;
+}
+
+.mi_btn_list .btn_reserve_line.on span {
+    color: #ad2b32 !important;
+    height: 24px;
+}
+
+.mi_btn_list .btn_reserve_line span.btn_reserve {
+    background: none;
+}
+.mi_btn_list .btn_reserve_line span.btn_reserve.on {
+    color: #000000;
+}
+
 
 
 
@@ -733,7 +789,7 @@
 }
 .layer_pop2_re .inner.emotion_popup .box .desc_sub {
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 40px;
 }
 .layer_pop2_re .inner.emotion_popup .box .desc_sub strong{
