@@ -1,0 +1,22 @@
+CDN배포
+
+버전 : 0.6.1버전
+일자 : 2020년 04월 16일
+
+
+수정내용
+
+- 상세 아이콘 수정 (모바일)
+- preegg.css 수정 (모바일)
+
+
+
+mobile
+
+1. CSS
+	경로 : http://img.cgv.co.kr/WebApp/css/v6
+	파일 : preegg.css
+2. image
+	경로 : http://img.cgv.co.kr/WebApp/images/main/common
+	파일 : sprite_preegg.png, sprite_preegg@2x.png, sprite_preegg@3x.png
+  
