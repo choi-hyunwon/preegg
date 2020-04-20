@@ -1,6 +1,6 @@
 /**
-    프리에그(preegg) css version mobile 0.6.0
-    최종 업데이트 : 2020.04.16
+    프리에그(preegg) css version mobile 0.6.2
+    최종 업데이트 : 2020.04.20
     작성자 : 최현원
  */
 
@@ -646,7 +646,7 @@
     color: #000;
     vertical-align: middle;
     text-align: left;
-    padding-right: 30px;
+    padding-left: 30px;
     line-height: 18px;
 }
 .charm_popup .box_title .desc span{
@@ -655,6 +655,19 @@
 .charm_popup .box_title .desc span.red{
     color: #F8465B;
 }
+
+@media screen and (max-device-width:360px) {
+    .charm_popup .box_title .desc {
+        font-size: 13px;
+        padding-left: 0;
+    }
+}
+@media screen and (max-device-width:320px) {
+    .charm_popup .box_title .desc {
+        font-size: 12px;
+    }
+}
+
 
 .charm_popup .rating {
     position: relative;
