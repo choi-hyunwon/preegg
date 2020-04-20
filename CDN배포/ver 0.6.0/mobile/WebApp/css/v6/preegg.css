@@ -1,6 +1,6 @@
 /**
-    프리에그(preegg) css version mobile 0.6.2
-    최종 업데이트 : 2020.04.20
+    프리에그(preegg) css version mobile 0.6.0
+    최종 업데이트 : 2020.04.16
     작성자 : 최현원
  */
 
@@ -177,7 +177,6 @@
 
 .fp_btn_list li a.preegg:before,
 .fp_btn_list li a.share_line:before,
-.fp_btn_list li a.notice_line:before,
 .fp_btn_list li a.reserve_line:before {
     background: url('../../images/main/common/sprite_preegg.png') no-repeat 0 0;
     background-size: 300px;
@@ -185,7 +184,6 @@
 @media only screen and (-webkit-min-device-pixel-ratio:2){
     .fp_btn_list li a.preegg:before,
     .fp_btn_list li a.share_line:before,
-    .fp_btn_list li a.notice_line:before,
     .fp_btn_list li a.reserve_line:before {
         background-image: url('../../images/main/common/sprite_preegg@2x.png');
     }
@@ -194,7 +192,6 @@
 @media only screen and (-webkit-min-device-pixel-ratio:3){
     .fp_btn_list li a.preegg:before,
     .fp_btn_list li a.share_line:before,
-    .fp_btn_list li a.notice_line:before,
     .fp_btn_list li a.reserve_line:before {
         background-image: url('../../images/main/common/sprite_preegg@3x.png');
     }
@@ -212,9 +209,6 @@
 
 .fp_btn_list li a.share_line:before {
     background-position: -120px -40px;
-}
-.fp_btn_list li a.notice_line:before {
-    background-position: -240px -40px;
 }
 .fp_btn_list li a.reserve_line:before {
     background-position: -160px -40px;
@@ -655,19 +649,6 @@
 .charm_popup .box_title .desc span.red{
     color: #F8465B;
 }
-
-@media screen and (max-device-width:360px) {
-    .charm_popup .box_title .desc {
-        font-size: 13px;
-        padding-left: 0;
-    }
-}
-@media screen and (max-device-width:320px) {
-    .charm_popup .box_title .desc {
-        font-size: 12px;
-    }
-}
-
 
 .charm_popup .rating {
     position: relative;
