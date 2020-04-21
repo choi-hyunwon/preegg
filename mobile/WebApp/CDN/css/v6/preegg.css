@@ -1,5 +1,5 @@
 /**
-    프리에그(preegg) css version mobile 0.6.2
+    프리에그(preegg) css version mobile 0.6.3
     최종 업데이트 : 2020.04.20
     작성자 : 최현원
  */
@@ -122,9 +122,6 @@
     }
 }
 
-.moviePreegg span:after {
-    content: '%'
-}
 
 .moviePreegg span.eggState:before {
     background-position: 0px 0px;
@@ -732,7 +729,7 @@
     font-size: 16px;
     color: #fff;
     text-align: center;
-    background: linear-gradient(to right,  #f1318a 0%,#ef642f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(to right,  #f1318a 0%,#ef642f 100%₩); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .charm_popup .btn_confirm.disabled{
