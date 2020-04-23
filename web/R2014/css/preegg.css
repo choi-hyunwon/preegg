@@ -1,6 +1,6 @@
 /**
-    프리에그(preegg) css version mobile 0.6.0
-    최종 업데이트 : 2020.04.16
+    프리에그(preegg) css version mobile 0.6.4
+    최종 업데이트 : 2020.04.23
     작성자 : 최현원
  */
 
@@ -672,3 +672,10 @@
 
 
 
+/**
+    mypage 높이 고정 이슈에 따른 변경
+    마이페이지 > 기대되는 영화 페이지에서 버튼이 없는 경우가 있어서 float부분이 레이아웃 깨짐이 발생
+ */
+.movielog-detail-wrap > .sect-wishlist-lst li {
+    height: 360px;
+}
