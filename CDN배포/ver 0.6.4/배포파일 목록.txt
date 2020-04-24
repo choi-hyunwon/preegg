@@ -1,0 +1,25 @@
+CDN배포
+
+버전 : 0.6.4버전
+일자 : 2020년 04월 23일
+
+
+수정내용
+
+- preegg.css 수정 (모바일)
+- 팝업 버튼의 그라데이션값 오타 수정
+- mypage > 기대되는 영화 높이 고정 이슈에 따른 변경 (@박인선님)
+
+
+mobile
+
+1. CSS
+	경로 : http://img.cgv.co.kr/WebApp/css/v6
+	파일 : preegg.css
+
+
+website
+
+1. CSS
+	경로 : http://img.cgv.co.kr/R2014/css
+	파일 : preegg.css

@@ -1,0 +1,18 @@
+CDN배포
+
+버전 : 0.6.2버전
+일자 : 2020년 04월 20일
+
+
+수정내용
+
+- preegg.css 수정 (모바일)
+- 320px에서 글씨 떨어짐 발생하여 예외 처리
+
+
+
+mobile
+
+1. CSS
+	경로 : http://img.cgv.co.kr/WebApp/css/v6
+	파일 : preegg.css

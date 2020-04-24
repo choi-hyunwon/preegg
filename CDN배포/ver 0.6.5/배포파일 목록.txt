@@ -1,0 +1,20 @@
+CDN배포
+
+버전 : 0.6.5버전
+일자 : 2020년 04월 24일
+
+
+수정내용
+
+- preegg.css 수정 (모바일)
+- 무비파인더
+- 특별관
+- 아트하우스
+
+
+
+website
+
+1. CSS
+	경로 : http://img.cgv.co.kr/R2014/css
+	파일 : preegg.css
