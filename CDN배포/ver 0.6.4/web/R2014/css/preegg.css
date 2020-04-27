@@ -1,6 +1,6 @@
 /**
-    프리에그(preegg) css version mobile 0.6.5
-    최종 업데이트 : 2020.04.24
+    프리에그(preegg) css version mobile 0.6.4
+    최종 업데이트 : 2020.04.23
     작성자 : 최현원
  */
 
@@ -679,22 +679,3 @@
 .movielog-detail-wrap > .sect-wishlist-lst li {
     height: 360px;
 }
-
-
-/**
-    무비파인더 높이 고정 이슈에 따른 변경
-    무비파인더에서 검색 결과에서 틀어지는걸 방지하기 위한 소스
- */
-.wrap-movie-finder .box-contents{ height:93px;}
-
-/**
-    무비 special 높이 고정 이슈에 따른 변경
-    무비 special 틀어지는걸 방지하기 위한 소스
- */
-.sect-chart.special li .box-contents{ height:93px;}
-
-/**
-    아트하우스 높이 고정 이슈에 따른 변경
-    아트하우스 틀어지는걸 방지하기 위한 소스
- */
-.wrap-collage-chart li .box-contents{ height:93px;}
