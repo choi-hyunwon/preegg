@@ -14,24 +14,24 @@
 
   ☐ W-005-detail-view-popup.html
     ☐ 786 라인 : <div class="main">이 영화가 기대돼시나요?</div>
-    ☐ 787 라인 : <div class="sub"><em>'기대돼요!'</em>를 선택하시면 <em>'기대돼는 영화'에 추가</em>됩니다.</div>
+    ☐ 787 라인 : <div class="sub"><em>'기대돼요!'</em>를 선택하시면 <em>'기대되는 영화'에 추가</em>됩니다.</div>
  
   ☐ W-010-magazine-detail-view.html
-    ☐ 4201 라인 : title="ScreenX로 만나는 황홀한 경험 `오디세오`가 기대돼는 3가지 이유!">
+    ☐ 4201 라인 : title="ScreenX로 만나는 황홀한 경험 `오디세오`가 기대되는 3가지 이유!">
 
   ☐ W-015-mycgv.html 
-    ☐ 1096 라인 : <h3>기대돼는 영화</h3>
+    ☐ 1096 라인 : <h3>기대되는 영화</h3>
 
   ☐ W-016-mywish.html 
-    ☐ 627 라인 : 기대돼는 영화
-    ☐ 683 라인 : <strong>기대돼는 영화</strong>
-    ☐ 735 라인 : <h3>기대돼는 영화</h3>
+    ☐ 627 라인 : 기대되는 영화
+    ☐ 683 라인 : <strong>기대되는 영화</strong>
+    ☐ 735 라인 : <h3>기대되는 영화</h3>
 
   ☐ W-018-mywish-empty.html
-    ☐ 666 라인 : <strong>기대돼는 영화</strong>
-    ☐ 714 라인 : <h3>기대돼는 영화</h3>
-    ☐ 728 라인 : <p>기대돼는 영화가 없습니다.<br>영화 상세 프리에그에서 '기대돼요!'를 선택하여 영화를 추가해보세요.</p>
-    ☐ 805 라인 : alert("'기대돼는 영화'에서 삭제되었습니다.");
+    ☐ 666 라인 : <strong>기대되는 영화</strong>
+    ☐ 714 라인 : <h3>기대되는 영화</h3>
+    ☐ 728 라인 : <p>기대되는 영화가 없습니다.<br>영화 상세 프리에그에서 '기대돼요!'를 선택하여 영화를 추가해보세요.</p>
+    ☐ 805 라인 : alert("'기대되는 영화'에서 삭제되었습니다.");
 
 
  모바일 : 
@@ -44,13 +44,13 @@
 
   ☐ M-011-emotion-popup.html
     ☐ 126 라인 : <div class="main">이 영화가 기대돼시나요?</div>
-    ☐ 138 라인 : <p class="desc_sub"><strong>'기대돼요!'</strong>를 선택하시면 <strong>'기대돼는 영화'에 추가</strong>됩니다.</p>
+    ☐ 138 라인 : <p class="desc_sub"><strong>'기대돼요!'</strong>를 선택하시면 <strong>'기대되는 영화'에 추가</strong>됩니다.</p>
 
   ☐ M-013-movieWishlist.html
-    ☐ 159 라인 : <div class="title" id="headerTitleArea">기대돼는 영화</div>  
+    ☐ 159 라인 : <div class="title" id="headerTitleArea">기대되는 영화</div>
 
   ☐ M-017-movieWishlist-empty.html
-    ☐ 223 라인 : <li class="noData">기대돼는 영화가 없습니다.<br>영화 상세 프리에그에서 '기대돼요!'를 선택하여<br>영화를 추가해보세요.</li></ul>
-    ☐ 602 라인 : var noData = "<li class='noData'>기대돼는 영화가 없습니다.<br>영화 상세 프리에그에서 '기대돼요!'를 선택하여<br>영화를 추가해보세요.</li>";
+    ☐ 223 라인 : <li class="noData">기대되는 영화가 없습니다.<br>영화 상세 프리에그에서 '기대돼요!'를 선택하여<br>영화를 추가해보세요.</li></ul>
+    ☐ 602 라인 : var noData = "<li class='noData'>기대되는 영화가 없습니다.<br>영화 상세 프리에그에서 '기대돼요!'를 선택하여<br>영화를 추가해보세요.</li>";
 
 
