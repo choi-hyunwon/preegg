@@ -1,0 +1,843 @@
+/**
+    프리에그(preegg) css version mobile 0.6.6
+    최종 업데이트 : 2020.04.27
+    작성자 : 최현원
+ */
+
+
+/**
+    공통 아이콘
+ */
+.sprite_preegg {
+    background: url('../../images/main/common/sprite_preegg.png') no-repeat 0 0;
+    background-size: 300px;
+    display: inline-block;
+    vertical-align: middle;
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .sprite_preegg {
+        background-image: url('../../images/main/common/sprite_preegg@2x.png'); 
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .sprite_preegg {
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
+    }
+}
+
+
+
+.sprite_preegg.default {
+    width: 16px;
+    height: 26px;
+    background-position: 0px 0px;
+}
+
+/*.sprite_preegg.selected{
+    width: 16px;
+    height: 20px;
+    background-position: -20px 0px;
+}
+.sprite_preegg.count{
+    width: 16px;
+    height: 20px;
+    background-position: -40px 0px;
+}
+.sprite_preegg.detail{
+    width: 16px;
+    height: 20px;
+    background-position: -60px 0px;
+}*/
+
+.sprite_preegg.big {
+    width: 36px;
+    height: 36px;
+}
+
+.sprite_preegg.big.default {
+    background-position: 0px -80px;
+}
+.sprite_preegg.big.favor {
+    background-position: -40px -80px;
+}
+.sprite_preegg.big.hate {
+    background-position: -80px -80px;
+}
+
+.sprite_preegg.big.bad {
+    background-position: -120px -80px;
+}
+.sprite_preegg.big.good {
+    background-position: -160px -80px;
+}
+.sprite_preegg.big.great {
+    background-position: -200px -80px;
+}
+
+
+
+.sprite_preegg.close {
+    width: 17px;
+    height: 17px;
+    background-position: -140px 0;
+}
+
+
+/**
+    파일 : main-renewal
+    위치 : 메인 페이지 수정
+    내용 : 프리에그 모듈 추가, 가로형태의 UI에서 사용
+    html : <li class="moviePreegg"><span class="eggState1">?</span></li>
+ */
+
+
+.moviePreegg {
+    position: relative;
+    display: inline-block;
+}
+
+.moviePreegg span {
+    position: relative;
+    padding-left: 20px
+}
+
+.moviePreegg span:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 18px;
+    background: url('../../images/main/common/sprite_preegg.png');
+    background-size: 300px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .moviePreegg span:before {
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .moviePreegg span:before {
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
+    }
+}
+
+
+.moviePreegg span.eggState:before {
+    background-position: 0px 0px;
+}
+
+
+/**
+    small
+ */
+
+
+.moviePreegg span.small {
+    padding-left: 13px;
+}
+.moviePreegg span.small:before {
+    content: '';
+    width: 11px;
+    height: 15px;
+}
+
+.moviePreegg span.eggState.small:before {
+    background-position: -80px 0px;
+}
+
+
+
+/**
+    파일 : M-002-movieList.html
+    위치 : 무비차트 리스트 페이지
+    내용 : 프리에그 모듈 추가
+    html : <span class="moviePreegg"><span class="eggState1">?</span></span>
+ */
+.moviePreegg + .per_reserve:before {
+    display: inline-block;
+    content: 'ㆍ';
+    margin-left: -5px;
+    width: 10px;
+    height: 12px;
+    color: #666;
+}
+
+
+/**
+    파일 : M-007-fanpage-mainView.html
+    위치 : 상세 - 팬페이지
+    내용 : 하트 아이콘 변경
+    참조 : fanpage.css:226
+    html : <a href="javascript:;" onclick="fnMainOpt('FG', $(this));" class="preegg">
+ */
+
+.fp_btn_list li a.preegg:before,
+.fp_btn_list li a.share_line:before,
+.fp_btn_list li a.notice_line:before,
+.fp_btn_list li a.reserve_line:before {
+    background: url('../../images/main/common/sprite_preegg.png') no-repeat 0 0;
+    background-size: 300px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .fp_btn_list li a.preegg:before,
+    .fp_btn_list li a.share_line:before,
+    .fp_btn_list li a.notice_line:before,
+    .fp_btn_list li a.reserve_line:before {
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .fp_btn_list li a.preegg:before,
+    .fp_btn_list li a.share_line:before,
+    .fp_btn_list li a.notice_line:before,
+    .fp_btn_list li a.reserve_line:before {
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
+    }
+}
+
+.fp_btn_list li a.preegg:before {
+    background-position: 0 -40px;
+}
+.fp_btn_list li a.preegg.favor:before {
+    background-position: -40px -40px;
+}
+.fp_btn_list li a.preegg.hate:before {
+    background-position: -80px -40px;
+}
+
+.fp_btn_list li a.share_line:before {
+    background-position: -120px -40px;
+}
+.fp_btn_list li a.notice_line:before {
+    background-position: -240px -40px;
+}
+.fp_btn_list li a.reserve_line:before {
+    background-position: -160px -40px;
+}
+
+.fp_btn_list li a.reserve_line.on span{
+    color: #ad2b32 !important;
+}
+
+.fp_btn_list li a.reserve_line.on:before {
+    background-position: -200px -40px;
+}
+
+
+
+/**
+    파일 : M-007-fanpage-mainView.html
+    위치 : 상세 - 팬페이지
+    내용 : 실관람평 차트 안내 추
+    html : <div class="movie-chart">
+ */
+
+.movie-chart {
+    position: relative;
+    padding: 20px 20px;
+    background-color: #fff;
+}
+
+.movie-chart .comment {
+    position: relative;
+    margin-bottom: 40px;
+
+}
+.movie-chart .comment.no_comment {
+    margin-bottom: 13px;
+}
+
+
+.movie-chart .comment p {
+    text-align: center;
+}
+.movie-chart .comment span{
+    font-size: 18px;
+    line-height: 21px;
+    color: #222222;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.movie-chart .comment .line1:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -35px;
+    width: 24px;
+    height: 18px;
+    background-image: url(../../images/main/common/sprite_preegg.png);
+    background-position: -170px 0;
+    background-size: 300px;
+}
+.movie-chart .comment .line2:after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: -40px;
+    width: 24px;
+    height: 18px;
+    background-image: url(../../images/main/common/sprite_preegg.png);
+    background-position: -200px 0;
+    background-size: 300px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .movie-chart .comment .line1:before {
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .movie-chart .comment .line2:after {
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
+    }
+}
+
+
+
+
+.movie-chart .comment strong {
+    font-weight: bold;
+}
+
+.movie-chart .rating {
+    position: relative;
+    border: 1px solid #F9F9F9;
+    background-color: #F9F9F9;
+    height: 82px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding-top: 29px;
+    text-align: center;
+    margin-bottom: 33px;
+    box-sizing: border-box;
+}
+.movie-chart .rating:before {
+    content: '';
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    background-color: #efefef;
+}
+
+.movie-chart .rating .ico_help {
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    text-indent: -9999em;
+    font-size: 1px;
+    line-height: 1px;
+    vertical-align: middle;
+    background: url(http://img.cgv.co.kr/WebAPP/images/common/btn_help.png) no-repeat 0 0;
+    background-size: 14px;
+    cursor: pointer;
+}
+
+.movie-chart .rating .box {
+    position: relative;
+
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+.movie-chart .rating .box p{
+    width: 50px;
+    text-align: left;
+    padding-left: 37px;
+    margin: 0 auto;
+    position: relative;
+    height: 36px;
+}
+
+.movie-chart .rating .box.box_golden p{
+    width: 60px;
+}
+
+
+
+.movie-chart .rating .box .sprite_preegg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.movie-chart .rating .box .percent {
+    display: block;
+    font-size: 20px;
+    line-height: 1.1;
+    color: #222222;
+}
+
+.movie-chart .rating .box .desc {
+    display: block;
+    font-size: 11px;
+    color: #e37220;
+    font-weight: 400;
+    padding-top: 3px;
+}
+.movie-chart .rating .box .tooltip {
+    width: 49px;
+    height: 15px;
+    background-image: url(../../images/main/common/sprite_preegg.png);
+    background-size: 300px;
+    background-position: -230px 0;
+    position: absolute;
+    top: -12px;
+    left: 37px;
+    font-size: 7px;
+    color: #ffffff;
+    font-size: 0px;
+    line-height: 0px;
+    color: transparent;
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .movie-chart .rating .box .tooltip {
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .movie-chart .rating .box .tooltip {
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
+    }
+}
+
+
+
+
+
+.movie-chart .rating .box.box_golden .tooltip {
+    background-position: -230px -20px;
+}
+
+
+.movie-chart .chart_total {
+    position: relative;
+    height: 150px;
+    margin: 0 -20px;
+}
+
+.movie-chart .chart_total .box {
+    position: relative;
+}
+.movie-chart .chart_total .box:after {
+    content: '';
+    width: 1px;
+    height: 125px;
+    position: absolute;
+    top: 25px;
+    right: -1px;
+    background-color: #eeeeee;
+}
+
+
+
+.movie-chart .chart_total .box .title {
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.movie-chart .chart_total .box .radar-graph {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.movie-chart .chart_total .box .radar-graph canvas {
+    margin: 0 auto;
+}
+
+
+/**
+    파일 : M-010-movieDetail.html
+    위치 : 구 상세 페이지 위시리스트 변
+    내용 : 기존 하트 모양에서 프리애그 모양으로 변
+    html : <div class="comment_wrap">
+ */
+
+.mi_btn_list a{
+    position: relative;
+}
+.mi_btn_list .btn_share_line::before,
+.mi_btn_list .btn_reserve_line::before,
+.mi_btn_list .btn_preegg::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 50%;
+    margin-left: -15px;
+    background-image: url("../../images/main/common/sprite_preegg.png");
+    background-size: 300px;
+    background-position: 0 -40px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .mi_btn_list .btn_share_line::before,
+    .mi_btn_list .btn_reserve_line::before,
+    .mi_btn_list .btn_preegg::before {
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .mi_btn_list .btn_share_line::before,
+    .mi_btn_list .btn_reserve_line::before,
+    .mi_btn_list .btn_preegg::before {
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
+    }
+}
+
+
+.mi_btn_list .btn_preegg.default::before {
+    background-position: 0px -40px;
+}
+.mi_btn_list .btn_preegg.favor::before {
+    background-position: -40px -40px;
+}
+.mi_btn_list .btn_preegg.hate::before {
+    background-position: -80px -40px;
+}
+
+.mi_btn_list .btn_share_line::before {
+    background-position: -120px -40px;
+}
+
+.mi_btn_list .btn_reserve_line::before {
+    background-position: -160px -40px;
+}
+.mi_btn_list .btn_reserve_line.on::before {
+    background-position: -200px -40px;
+}
+
+.mi_btn_list .btn_reserve_line span {
+    height: 24px;
+}
+
+.mi_btn_list .btn_reserve_line.on span {
+    color: #ad2b32 !important;
+    height: 24px;
+}
+
+.mi_btn_list .btn_reserve_line span.btn_reserve {
+    background: none;
+}
+.mi_btn_list .btn_reserve_line span.btn_reserve.on {
+    color: #000000;
+}
+
+
+
+
+/**
+    파일 : M-010-movieDetail.html
+    위치 : 구 상세 페이지
+    내용 : 실관람평이 ?일 경우 노출 화면을 fapage와 동일하게 노출 하기 위해서 css가져옴
+    html : <div class="comment_wrap">
+ */
+
+
+.comment_wrap {
+    margin-top: 10px;
+    background: #fff;
+}
+
+.comment_wrap .comment_cnt {
+    position: relative;
+    padding: 15px 11px;
+    font-size: 14px;
+}
+
+
+
+/**
+    파일 : M-015-comment-popup.html
+    위치 : 매력지수 감성지수 입력 팝업
+    내용 : 관람평 입력 후 작업 되는 플로
+    비고 : 관련 CSS - common.css:2963
+    html : <div class="box_title">
+ */
+.charm_popup {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #fff;
+}
+.charm_popup_full {
+    background: #fff;
+    padding-top: 10px;
+}
+.charm_popup_full .charm_popup{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+
+.charm_popup .popup_title {
+    height: 40px;
+    padding: 0 20px 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 40px;
+    border-bottom: 1px solid #E6E6E6;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.charm_popup .box_title {
+    height: 57px;
+    margin-top: 24px;
+    position: relative;
+    text-align: center;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #EFEFEF;
+    margin-bottom: 20px;
+}
+
+.charm_popup .box_title .icon {
+    width: 53px;
+    height: 69px;
+    display: inline-block;
+    background-image: url(../../images/main/common/sprite_preegg.png);
+    background-size: 300px;
+    background-position: 0 -120px;
+    vertical-align: middle;
+    margin-top: -10px;
+    margin-right: 5px;
+    transform: translateY(-5px);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+    .charm_popup .box_title .icon {
+        background-image: url('../../images/main/common/sprite_preegg@2x.png');
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3){
+    .charm_popup .box_title .icon {
+        background-image: url('../../images/main/common/sprite_preegg@3x.png');
+    }
+}
+
+.charm_popup .box_title .desc {
+    font-size: 14px;
+    display: inline-block;
+    color: #000;
+    vertical-align: middle;
+    text-align: left;
+    padding-right: 30px;
+    line-height: 18px;
+}
+.charm_popup .box_title .desc span{
+    font-weight: bold;
+}
+.charm_popup .box_title .desc span.red{
+    color: #F8465B;
+}
+
+@media screen and (max-device-width:360px) {
+    .charm_popup .box_title .desc {
+        font-size: 13px;
+        padding-right: 0;
+    }
+}
+@media screen and (max-device-width:320px) {
+    .charm_popup .box_title .desc {
+        font-size: 12px;
+    }
+}
+
+
+.charm_popup .rating {
+    position: relative;
+    padding-bottom: 10px;
+}
+.charm_popup .rating .box {
+    margin-bottom: 12px;
+    position: relative;
+}
+.charm_popup .rating .box .title{
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.charm_popup .rating .box .list{
+    position: relative;
+}
+
+.charm_popup .rating .box .list ul {
+    overflow: hidden;
+}
+.charm_popup .rating .box .list ul li {
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 8px;
+}
+.charm_popup .rating .box .list ul li a{
+    padding: 8px 20px;
+    border: 1px solid #D9D9D9;
+    font-size: 14px;
+    color: #222222;
+    display: block;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.charm_popup .rating .box .list ul li.on a{
+    background-color: #FB4357;
+    border-color: #FB4357;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.charm_popup .btn_close {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    overflow: hidden;
+    width: 17px;
+    height: 17px;
+
+    font-size: 0;
+    text-indent: -999em;
+}
+
+.charm_popup .btn_confirm{
+    margin: 0 -20px -12px;
+    display: block;
+    padding: 15px 12px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(to right,  #f1318a 0%,#ef642f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.charm_popup .btn_confirm.disabled{
+    background: #999999 ;
+}
+
+
+/** 
+    내용 : 감성 팝업
+ */
+.layer_pop2_re .inner.emotion_popup{
+
+}
+.layer_pop2_re .inner.emotion_popup .box {
+}
+
+.layer_pop2_re .inner.emotion_popup .box .desc {
+    text-align: center;
+    padding-top: 28px;
+    margin-bottom: 24px;
+}
+.layer_pop2_re .inner.emotion_popup .box .main {
+    font-size: 20px;
+    color: #000000;
+    line-height: 34px;
+    font-weight: 600;
+}
+.layer_pop2_re .inner.emotion_popup .box .sub em {
+    color: #222222;
+}
+
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn {
+    height: 135px;
+    width: 293px;
+    margin: 0 auto 25px ;
+}
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn{
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    float: left;
+    border: 2px solid #F5F5F5;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+}
+
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn:first-child{
+    margin-right: 25px;
+}
+
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn span {
+    display: block;
+    text-align: center;
+    margin: 0 auto 5px;
+    font-size: 14px;
+    color: #444444;
+    font-weight: bold;
+    letter-spacing: -1px;
+    
+}
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn span.sprite_preegg {
+    margin-top: 34px;
+}
+
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn.selected {
+    border-color: #FB4357;
+    background-color: #fff;
+}
+.layer_pop2_re .inner.emotion_popup .box .wrap_btn .btn.selected span {
+    color: #FB4357;
+}
+.layer_pop2_re .inner.emotion_popup .box .desc_sub {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+.layer_pop2_re .inner.emotion_popup .box .desc_sub strong{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
